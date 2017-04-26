@@ -102,11 +102,6 @@
     hide($content['field_tags']);
     print render($content);
   ?>
-    <?php
-		//$block = module_invoke('client-block-9', 'block', '', 0);
-                    //$block = block_load('block', 'client-block-9');
-		print $block['content'].'okokokdd';
-		?>
   <?php
     // Only display the wrapper div if there are tags or links.
     $field_tags = render($content['field_tags']);

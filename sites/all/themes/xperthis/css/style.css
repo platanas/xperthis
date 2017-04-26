@@ -4,6 +4,7 @@
  * Modify this file to override the Bootstrap Framework variables. You can copy
  * these variables directly from ../bootstrap/less/variables.less to this file.
  */
+@import url('https://fonts.googleapis.com/css?family=Rubik');
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -1072,7 +1073,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -1521,7 +1522,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: "Rubik", Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 code {
   padding: 2px 4px;
@@ -5983,7 +5984,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6101,7 +6102,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6826,25 +6827,6 @@ body #admin-menu {
 body #admin-menu .dropdown li {
   line-height: normal;
 }
-body {
-  padding-top: 60px;
-}
-header#navbar {
-  background: #f5b335;
-  height: 40px;
-  position: fixed;
-  top: 0;
-  transition: top 0.5s ease-in-out;
-  width: 100%;
-  max-width: inherit;
-  display: inherit;
-  border-radius: 0;
-  border: 0;
-  z-index: 10;
-}
-header#navbar.nav-up {
-  top: -60px;
-}
 footer {
   background: #ddd;
 }
@@ -6941,6 +6923,34 @@ p:last-child {
 .region-help .block {
   overflow: hidden;
 }
+.navbar-header {
+  clear: both;
+}
+body {
+  padding-top: 120px;
+}
+body.admin-menu {
+  padding-top: 149px;
+}
+header#navbar {
+  background: #f5b335;
+  height: 120px;
+  position: fixed;
+  top: 0;
+  transition: top 0.5s ease-in-out;
+  width: 100%;
+  max-width: inherit;
+  display: inherit;
+  border-radius: 0;
+  border: 0;
+  z-index: 10;
+}
+.admin-menu header#navbar {
+  top: 29px;
+}
+header#navbar.nav-up {
+  top: -120px;
+}
 form#search-block-form {
   margin: 0;
 }
@@ -6950,10 +6960,22 @@ form#search-block-form {
 }
 @media screen and (min-width: 992px) {
   .navbar #block-search-form {
-    float: right;
+    float: left;
   }
 }
 .navbar #block-search-form .input-group-btn {
+  width: auto;
+}
+.navbar #block-locale-language {
+  float: none;
+  margin: 5px 0 5px 5px;
+}
+@media screen and (min-width: 992px) {
+  .navbar #block-locale-language {
+    float: left;
+  }
+}
+.navbar #block-locale-language .input-group-btn {
   width: auto;
 }
 ul.action-links {

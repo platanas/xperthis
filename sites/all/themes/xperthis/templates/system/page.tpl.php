@@ -75,6 +75,10 @@
 ?>
 <header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
+      
+          <?php if (!empty($page['navigation'])): ?>
+            <?php print render($page['navigation']); ?>
+          <?php endif; ?>
     <div class="navbar-header">
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
@@ -104,9 +108,6 @@
           <?php endif; ?>
           <?php if (!empty($secondary_nav)): ?>
             <?php print render($secondary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
           <?php endif; ?>
         </nav>
       </div>
@@ -156,9 +157,15 @@
       <?php print render($page['content']); ?>
     </section>
 
+    
     <?php if (!empty($page['sidebar_second'])): ?>
       <aside class="col-sm-3" role="complementary">
-        <?php print render($page['sidebar_second']); ?>
+        <?php 
+            //dump($page['sidebar_second']);
+            print render($page['sidebar_second']); 
+            $block = module_invoke('webform', 'block_view', 'client-block-'.$node->nid);
+            print render($block['content']);
+        ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
 
