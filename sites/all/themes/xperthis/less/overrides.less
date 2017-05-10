@@ -144,6 +144,88 @@ footer { background: #ddd;}
 #toolbar {
   z-index: 1600;
 }
+.homepage-icons {
+    text-transform: uppercase;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    width: 200px;
+    height: 200px; 
+    color: #0f7db5;
+    margin: 10px;
+}
+
+.homepage-icons-bg {
+    text-transform: uppercase;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 187px;
+    height: 187px;
+    padding: 25px;
+    color: #0f7db5;
+    margin: 5px;
+}
+
+.view-id-news .col{
+  height: 250px;
+  clear: both;
+  margin: 20px 0;
+}
+.pixel-overlay {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url('../img/homepage-headline-pattern.png'); /* or any other overlay image/color */
+}
+.view-id-news .views-field-field-image{
+    position:absolute;
+    z-index:0;
+    height:250px;
+    overflow: hidden;
+}
+
+.view-id-news .views-field-title, .view-id-news .views-field-body, .view-id-news .views-field-type, .view-id-news .views-field-view-node {
+    position:relative;
+    z-index:1;
+}
+.view-id-news .views-field-title h2 {
+    font-size: 1.1em;
+    color: #fff;
+    padding: 20px;
+}
+.view-id-news .views-field-body p {
+    font-size: 1.1em;
+    color: #fff;
+    padding: 0 20px;
+}
+.view-id-news .views-field-type {
+    top: -14px;
+    left: 20px;
+    h3 {
+        background-color: #eab013;
+        padding: 5px 15px;
+        display: inline-block;
+        color: #fff;
+        margin: 0;
+        font-weight: 300;
+        font-size: 1.1em;
+        text-transform: uppercase;
+    }
+}
+
+h1, h2 {
+    .light {
+        font-weight: 300;
+    }
+    .strong {
+        font-weight: 500;
+    }
+}
+.inline-block, .views-field-field-hompage-icon {
+   display: inline-block;
+}
+
 // Adjust z-index of bootstrap modals
 .modal {
   z-index: 1620;
@@ -172,16 +254,7 @@ footer { background: #ddd;}
   width: 1px;
 }
 
-// Branding.
-.navbar .logo {
-  margin-right: -15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  @media @grid-breakpoint {
-    margin-right: 0;
-    padding-left: 0;
-  }
-}
+
 
 // Navigation.
 ul.secondary {
@@ -222,62 +295,8 @@ p:last-child {
 }
 // Navbar
 
-.navbar-header {
-    clear: both;
-}
-body {
-    padding-top: 142px;
-}
-body.admin-menu {
-    padding-top: 149px;
-}
-header#navbar {
-    background: #fff;
-    height: 149px;
-    position: fixed;
-    top: 0;
-    transition: top 0.5s ease-in-out;
-    width: 100%;
-    max-width: inherit;
-    display: inherit;
-    border-radius: 0;
-    border: 0;
-    z-index: 10;
-}
 
-.admin-menu header#navbar {
-    top: 29px;
-}
-header#navbar.nav-up {
-    top: -120px;
-}
 
-// Search form.
-form#search-block-form {
-  margin: 0;
-}
-.navbar #block-search-form {
-  float: none;
-  margin: 5px 0 5px 5px;
-  @media @normal {
-    float: left;
-  }
-
-  .input-group-btn {
-    width: auto;
-  }
-}
-.navbar #block-locale-language {
-  float: none;
-  margin: 5px 0 5px 5px;
-  @media @normal {
-    float: left;
-  }
-
-  .input-group-btn {
-    width: auto;
-  }
-}
 
 // Action Links
 ul.action-links {

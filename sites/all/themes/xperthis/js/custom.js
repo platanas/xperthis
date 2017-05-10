@@ -11,7 +11,7 @@
         $(window).scroll(function(){
             var scroll = $(this).scrollTop();
             $('.banner-wrapper').css({'background-position':'0px '+scroll/2+'px'});
-            console.log('okok');
+            //console.log(scroll/1.5);
         });   
     
 }(jQuery);

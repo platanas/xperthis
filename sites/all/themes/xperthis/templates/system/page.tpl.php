@@ -76,25 +76,25 @@
 <header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
       
-    <?php if (!empty($page['navigation'])): ?>
-      <?php print render($page['navigation']); ?>
-    <?php endif; ?>
-    <div class="navbar-header">
-      <?php if ($logo): ?>
-        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
-      <?php endif; ?>
+    
+    <div class="row">
+        <div class="col-md-2">
+        <?php if ($logo): ?>
+          <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+          </a>
+        <?php endif; ?>
 
-      <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      <?php endif; ?>
-    </div>
+        <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <?php endif; ?>
+      </div>
+    <div class="col-md-5 col-md-offset-1 mt-4">
 
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
       <div class="navbar-collapse collapse" id="navbar-collapse">
@@ -108,20 +108,30 @@
         </nav>
       </div>
     <?php endif; ?>
+    </div>
+    <div class="col-md-4">
+      
+    <?php if (!empty($page['navigation'])): ?>
+        <?php print render($page['navigation']); ?>
+    <?php endif; ?>
+    </div>
   </div>
+    </div>
 </header>
 <div role="hero" id="page-header" class="banner-wrapper">
     <div class="banner-wrapper-pattern">
         <div class="main-container <?php print $container_class; ?>">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center well-lg">
+                <div class="col-md-4 col-md-offset-4 text-center well-lg">
+                    <div class="col-md-12 col-md-offset-1 text-center well-lg">
                     <?php if (!empty($site_slogan)): ?>
-                      <p class="lead"><?php print $site_slogan; ?></p>
+                        <h1 class="lead text-uppercase"><?php print $site_slogan; ?></h1>
                     <?php endif; ?>
-
-                    <?php print render($page['header']); ?>
+                    </div>
                 </div>
             </div>
+        </div>
+            <?php print render($page['header']); ?>
         </div>
     </div>
 </div> <!-- /#page-header -->
