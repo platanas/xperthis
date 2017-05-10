@@ -1,0 +1,198 @@
+<?php
+
+/**
+ * @file
+ * Custom language switcher and links
+ */
+
+/**
+ * Implements hook_theme()
+ */
+
+function custom_language_switcher_theme() {
+  return array(
+    'custom_language_switcher_item_list' => array(
+      'variables' => array(
+        'items' => NULL,
+        'title' => NULL,
+        'type' => NULL,
+        'attributes' => NULL,
+        'wrapper' => NULL
+      )
+    ),
+    'custom_language_switcher_links' => array(
+      'variables' => array(
+        'links' => NULL,
+        'attributes' => NULL,
+        'heading' => NULL
+      )
+    )									 
+  );
+}
+
+/**
+ * Implements hook_theme_registry_alter for theme_links()
+ */
+function custom_language_switcher_theme_registry_alter(&$theme_registry) {
+
+  $mod_path = drupal_get_path('module', 'custom_language_switcher');
+
+  if (isset($theme_registry['links'])) {	
+    $theme_registry['links__locale_block']['theme path'] = $mod_path;
+    $theme_registry['links__locale_block']['function'] = 'custom_language_switcher_links';
+  }
+}
+
+/**
+ * Custom theme_item_list()
+ * The modification allows to customize the list wrapper 
+ * Example:
+ * theme('item_list', array(
+     'items' => $items,
+     'title' => 'List title',
+     'type' => 'ul',
+     'attributes' => $attributes,
+     'wrapper' => array('type' => 'div', 'class' => array('pPanel'), 'id' => 'some_id'),
+     )
+   );
+ */
+function theme_custom_language_switcher_item_list($variables) {
+  $items = $variables['items'];
+  $title = $variables['title'];
+  $type = $variables['type'];
+  $attributes = $variables['attributes'];
+
+  // Jack-PL: Check for the $variables array called 'wrapper'
+  $wrapper = $variables['wrapper'];
+
+  if ($wrapper) {
+    $wrapper_type = array_shift($wrapper); // only the first key 'type' is required
+    $wrapper_attributes = '';
+    foreach ($wrapper as $key => $val) {
+      if (!is_array($val)) {
+        $wrapper_attributes.= ' '.$key.'="'.$val.'"';
+      }
+      else {
+        $wrapper_attributes.= ' '.$key.'="'.implode(' ', $wrapper[$key]).'"';
+      }
+    }
+  }
+
+  // Only output the list container and title, if there are any list items.
+  // Check to see whether the block title exists before adding a header.
+  // Empty headers are not semantic and present accessibility challenges.
+  // Jack-PL: Create custom wrapper
+  
+  $output = $wrapper ? '<'.$wrapper_type . $wrapper_attributes . '>' : '';
+  if (isset($title) && $title !== '') {
+    $output .= '' . $title . '';
+  }
+  if (!empty($items)) {
+    $output .= "<$type" . drupal_attributes($attributes) . '>';
+    $num_items = count($items);
+    foreach ($items as $i => $item) {
+      $attributes = array();
+      $children = array();
+      $data = '';
+      if (is_array($item)) {
+        foreach ($item as $key => $value) {
+          if ($key == 'data') {
+            $data = $value;
+          }
+          elseif ($key == 'children') {
+            $children = $value;
+          }
+          else {
+            $attributes[$key] = $value;
+          }
+        }
+      }
+      else {
+        $data = $item;
+      }
+	  if (count($children) > 0) {
+        // Render nested list.
+        $data .= theme_item_list(array('items' => $children, 'title' => NULL, 'type' => $type, 'attributes' => $attributes));
+      }
+      if ($i == 0) {
+        $attributes['class'][] = 'first';
+      }
+      if ($i == $num_items - 1) {
+        $attributes['class'][] = 'last';
+      }
+      $output .= '' . $data . "\n";
+    }
+    $output .= "";
+  }
+  $output .= $wrapper ? "" : '';
+  return $output;
+}
+function custom_language_switcher_language_switch_links_alter(array &$links, $type, $path) {
+  foreach($links as $key => $link) {
+    $links[$key]['title'] = strtoupper($key);
+  }
+}
+/**
+ * Custom theme_links.
+ */
+function custom_language_switcher_links(&$variables) {
+
+  // the global $language variable tells you what the current language is
+  global $language;
+
+  // an array of list items
+  $items = array();
+  foreach($variables['links'] as $lang => $info) {
+
+    $name = $info['language']->language;
+    $href = isset($info['href']) ? $info['href'] : '';
+    $li_classes = array('list-item-class');
+    // if the global language is that of this item's language, add the active class
+    if($lang === $language->language){
+      $li_classes[] = 'active';
+    }
+    $link_classes = array('lang', '');
+    $options = array(
+      'attributes' => array(
+        'class' => $link_classes),
+        'language' => $info['language'],
+        'html' => true
+       );
+    $link = l($name, $href, $options);
+
+    // display only translated links
+    if ($href) $items[] = array('data' => $link, 'class' => $li_classes);
+  }
+
+  // output
+  $attributes = array('class' => array('language')); 
+  $output = theme_item_list(array(
+    'items' => $items,
+    'title' => '',
+    'type'  => 'ul',
+    'attributes' => $attributes,
+    // You can define your custom wrapper if you wish (it's not required)
+    'wrapper' => array(
+      'type' => 'div',
+      'id' => 'custom-wrapper-language-switcher',
+      'class' => array('custom-wrapper-class')
+    ),
+  ));
+  return $output;
+}
+
+/**
+ * Implements hook_node_view_alter().
+ */
+function custom_language_switcher_node_view_alter(&$build) {
+  if (isset($build['links']['translation'])) {
+    $build['links'] = array(
+      'translation' => array(
+      '#theme' => 'links__node__translation',
+      '#links' => $build['links']['translation']['#links'],
+      '#attributes' => array('id' => 'translation_links', 'class' => array('links'))
+      )
+    );
+  }
+}
+?>

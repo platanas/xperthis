@@ -1,0 +1,7 @@
+
+name = Custom language switcher
+description = Custom Language Switcher and Links
+dependencies[] = locale
+package = My custom modules
+core = 7.x
+files[] = custom_language_switcher.module

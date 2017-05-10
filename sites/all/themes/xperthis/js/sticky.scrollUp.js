@@ -10,7 +10,7 @@
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
-var navbarHeight = 60;
+var navbarHeight = 149;
 console.log($('header').outerHeight());
 
 $(window).scroll(function(event){

@@ -47,31 +47,33 @@
 ?>
 <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 <?php if ($block_html_id == 'block-search-form'){ ?>
-    <a href="#" data-toggle="modal" data-target="#bannerformmodal">Load me</a>
+<ul>
+    <li>
+        <a href="#" data-toggle="modal" data-target="#bannerformmodal"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+    </li>
+    <li>
+        <a href="https://extranet.xperthis.be/" target="_blank">Accès client</a>
+    </li>
+</ul>
 <div class="modal fade bannerformmodal" tabindex="-1" role="dialog" aria-labelledby="bannerformmodal" aria-hidden="true" id="bannerformmodal">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
           <div class="modal-content">
-                <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Contact Form</h4>
-                </div>
+                
                 <div class="modal-body">
 <?php } ?>
-  <?php print render($title_prefix); ?>
-  <?php if ($title): ?>
-    <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
-  <?php endif;?>
-  <?php print render($title_suffix); ?>
+            <?php print render($title_prefix); ?>
+            <?php if ($title): ?>
+              <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
+            <?php endif;?>
+            <?php print render($title_suffix); ?>
 
-  <?php print $content ?>
+            <?php print $content ?>
+              
 <?php if ($block_html_id == 'block-search-form'){ ?>
- </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-blue">Submit</button>
-              </div>          
+            </div>       
         </div>
-        </div>
-      </div>
+    </div>
+</div>
 <?php } ?>
 </section>

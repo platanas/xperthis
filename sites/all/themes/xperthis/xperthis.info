@@ -50,6 +50,7 @@ scripts[] = 'bootstrap/js/transition.js'
 ;;;;;;;;;;;;;;;;;;;;;
 
 scripts[] = 'js/sticky.scrollUp.js'
+scripts[] = 'js/custom.js'
 
 ; Disable the CDN provider so compiled source files can be used.
 settings[bootstrap_cdn] = ''

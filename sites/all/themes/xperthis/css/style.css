@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
 /**
  * Variable Overrides.
  *
@@ -256,8 +257,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../bootstrap/fonts/glyphicons-halflings-regular.eot');
-  src: url('../bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -4494,29 +4495,29 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
-  color: #777;
+  color: #0f7db5;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
+  color: #0b5c86;
   background-color: transparent;
 }
 .navbar-default .navbar-text {
   color: #777;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777;
+  color: #0f7db5;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333;
+  color: #043051;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #555;
-  background-color: #e7e7e7;
+  color: #043051;
+  background-color: transparent;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -4541,23 +4542,23 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #e7e7e7;
-  color: #555;
+  background-color: transparent;
+  color: #043051;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #777;
+    color: #0f7db5;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333;
+    color: #043051;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #555;
-    background-color: #e7e7e7;
+    color: #043051;
+    background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -4567,17 +4568,17 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default .navbar-link {
-  color: #777;
+  color: #0f7db5;
 }
 .navbar-default .navbar-link:hover {
-  color: #333;
+  color: #043051;
 }
 .navbar-default .btn-link {
-  color: #777;
+  color: #0f7db5;
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
-  color: #333;
+  color: #043051;
 }
 .navbar-default .btn-link[disabled]:hover,
 fieldset[disabled] .navbar-default .btn-link:hover,
@@ -6773,6 +6774,7 @@ html.js .autocomplete-throbber.throbbing {
 }
 body {
   position: relative;
+  background-color: #eff6f8;
 }
 body.admin-expanded.admin-vertical.admin-nw .navbar,
 body.admin-expanded.admin-vertical.admin-sw .navbar {
@@ -6927,14 +6929,14 @@ p:last-child {
   clear: both;
 }
 body {
-  padding-top: 120px;
+  padding-top: 142px;
 }
 body.admin-menu {
   padding-top: 149px;
 }
 header#navbar {
-  background: #f5b335;
-  height: 120px;
+  background: #fff;
+  height: 149px;
   position: fixed;
   top: 0;
   transition: top 0.5s ease-in-out;
@@ -7582,4 +7584,82 @@ a.icon-after .glyphicon {
 .btn.icon-after .glyphicon {
   margin-left: .25em;
   margin-right: -0.25em;
+}
+.region-navigation {
+  float: right;
+}
+#block-search-form ul li {
+  position: relative;
+  padding: 10px;
+  display: inline;
+  list-style-type: none;
+}
+#block-search-form ul li:after {
+  content: ' \00b7';
+  position: absolute;
+  right: 0px;
+  width: 2px;
+  color: #aab6c3;
+}
+#block-search-form ul li a {
+  color: #334c67;
+  font-weight: normal;
+}
+#block-search-form ul li a.active,
+#block-search-form ul li a:hover {
+  color: #334c67;
+  font-weight: normal;
+  text-decoration: none;
+}
+#block-locale-language .item-list {
+  text-transform: uppercase;
+}
+#block-locale-language .item-list ul.language {
+  padding: 0;
+}
+#block-locale-language .item-list ul.language li {
+  position: relative;
+  padding: 10px;
+  display: inline;
+  list-style-type: none;
+}
+#block-locale-language .item-list ul.language li:not(:last-child):after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  width: 2px;
+  height: 30%;
+  top: 35%;
+  background: #aab6c3;
+}
+#block-locale-language .item-list ul.language li a {
+  color: #aab6c3;
+  font-weight: normal;
+}
+#block-locale-language .item-list ul.language li a.active,
+#block-locale-language .item-list ul.language li a:hover {
+  color: #334c67;
+  font-weight: bold;
+  text-decoration: none;
+}
+.banner-wrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 72px;
+  background: url(../img/xperthis-home-hero-bottom.png) transparent bottom center no-repeat;
+  background-size: cover;
+}
+.banner-wrapper {
+  position: relative;
+  background: url(../img/gabarit-visuel1-home.jpg) transparent bottom center no-repeat;
+  color: #fff;
+  background-size: cover;
+}
+.banner-wrapper .banner-wrapper-pattern {
+  height: 300px;
+  background: url(../img/pattern.png) transparent repeat;
 }
