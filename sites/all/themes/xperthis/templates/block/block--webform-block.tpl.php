@@ -45,34 +45,14 @@
  * @ingroup templates
  */
 ?>
-<section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-<?php if ($block_html_id == 'block-search-form'){ ?>
-<ul>
-    <li>
-        <a href="#" data-toggle="modal" data-target="#bannerformmodal"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
-    </li>
-    <li>
-        <a href="https://extranet.xperthis.be/" target="_blank">Accès client</a>
-    </li>
-</ul>
-<div class="modal fade bannerformmodal" tabindex="-1" role="dialog" aria-labelledby="bannerformmodal" aria-hidden="true" id="bannerformmodal">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-          <div class="modal-content">
-            <div class="modal-body">
-            <?php } ?>
-            <?php print render($title_prefix); ?>
-            <?php if ($title): ?>
-              <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
-            <?php endif;?>
-            <?php print render($title_suffix); ?>
+<section id="<?php print $block_html_id; ?>" class="container <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-            <?php print $content ?>
-              
-            <?php if ($block_html_id == 'block-search-form'){ ?>
-            </div>       
-        </div>
-    </div>
-</div>
-<?php } ?>
+  <?php print render($title_prefix); ?>
+  <?php if ($title): ?>
+    <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
+  <?php endif;?>
+  <?php print render($title_suffix); ?>
+
+  <?php print $content ?>
+
 </section>

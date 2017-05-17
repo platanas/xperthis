@@ -11,6 +11,7 @@
         $(window).scroll(function(){
             var scroll = $(this).scrollTop();
             $('.banner-wrapper').css({'background-position':'0px '+scroll/2+'px'});
+            $('#block-views-webform-block').css({'background-position':'0px '+scroll/2+'px'});
             //console.log(scroll/1.5);
         });   
     

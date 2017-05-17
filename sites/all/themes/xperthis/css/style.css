@@ -7482,12 +7482,13 @@ footer {
   color: #0f7db5;
   margin: 5px;
 }
-.view-id-news .col {
+#block-views-news-block .view-id-news .col {
   height: 250px;
   clear: both;
   margin: 20px 0;
+  position: relative;
 }
-.pixel-overlay {
+#block-views-news-block .pixel-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -7496,35 +7497,175 @@ footer {
   background: url('../img/homepage-headline-pattern.png');
   /* or any other overlay image/color */
 }
-.view-id-news .views-field-field-image {
+#block-views-news-block .view-id-news .views-field-field-image {
   position: absolute;
   z-index: 0;
   height: 250px;
   overflow: hidden;
 }
-.view-id-news .views-field-title,
-.view-id-news .views-field-body,
-.view-id-news .views-field-type,
-.view-id-news .views-field-view-node {
-  position: relative;
+#block-views-news-block .view-id-news .views-field-title,
+#block-views-news-block .view-id-news .views-field-body,
+#block-views-news-block .view-id-news .views-field-type,
+#block-views-news-block .view-id-news .views-field-view-node,
+#block-views-news-block .view-id-news .views-field-field-date {
+  position: absolute;
   z-index: 1;
 }
-.view-id-news .views-field-title h2 {
+#block-views-news-block .view-id-news .views-field-field-date {
+  top: 20px;
+  left: 20px;
+  color: white;
+  text-align: center;
+  background-color: #1cbdd5;
+  position: absolute;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  width: 80px;
+  padding: 20px 25px 0 25px;
+}
+#block-views-news-block .view-id-news .views-field-field-date-1 {
+  top: 65px;
+  left: 20px;
+  color: white;
+  background-color: #1cbdd5;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  width: 80px;
+  padding: 0 25px 20px 25px;
+}
+#block-views-news-block .view-id-news .views-field-title h2 {
   font-size: 1.1em;
   color: #fff;
   padding: 20px;
 }
-.view-id-news .views-field-body p {
+#block-views-news-block .view-id-news .views-field-body {
+  top: 30px;
+  left: 100px;
+}
+#block-views-news-block .view-id-news .views-field-body p {
   font-size: 1.1em;
   color: #fff;
   padding: 0 20px;
 }
-.view-id-news .views-field-type {
+#block-views-news-block .view-id-news .views-field-type {
   top: -14px;
   left: 20px;
 }
-.view-id-news .views-field-type h3 {
+#block-views-news-block .view-id-news .views-field-type h3 {
+  padding: 5px 17px;
+  display: inline-block;
+  color: #fff;
+  margin: 0;
+  font-weight: 300;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+#block-views-news-block .view-id-news .views-field-type h3.White-Paper {
+  background-color: #da5d80;
+}
+#block-views-news-block .view-id-news .views-field-type h3.Article {
   background-color: #eab013;
+}
+#block-views-news-block .view-id-news .views-field-type h3.Event {
+  background-color: #1cbdd5;
+}
+#block-views-news-block .views-field-view-node {
+  right: 17px;
+  top: 205px;
+}
+#block-views-news-block .views-field-view-node .White-Paper.Fr a {
+  visibility: hidden;
+}
+#block-views-news-block .views-field-view-node .White-Paper.Fr a::before {
+  content: 'Télécharger le White Paper';
+  visibility: visible;
+}
+#block-views-news-block .views-field-view-node .Article.Fr a {
+  visibility: hidden;
+}
+#block-views-news-block .views-field-view-node .Article.Fr a::before {
+  content: 'Lire la suite';
+  visibility: visible;
+}
+#block-views-news-block .views-field-view-node .Event.Fr a {
+  visibility: hidden;
+}
+#block-views-news-block .views-field-view-node .Event.Fr a::before {
+  content: 'En savoir plus';
+  visibility: visible;
+}
+#block-views-news-block-1 .home-headline-card {
+  height: 356px;
+  min-height: 356px;
+  max-height: 356px;
+}
+#block-views-news-block-1 .pixel-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url('../img/homepage-headline-pattern.png');
+  /* or any other overlay image/color */
+}
+#block-views-news-block-1 .view-id-news .views-field-field-image {
+  position: relative;
+  z-index: 0;
+  height: 200px;
+  overflow: hidden;
+}
+#block-views-news-block-1 .view-id-news .views-field-view-node {
+  background-color: white;
+  text-align: right;
+  padding: 20px 0 20px 20px;
+}
+#block-views-news-block-1 .view-id-news .views-field-view-node .White-Paper.Fr a {
+  visibility: hidden;
+}
+#block-views-news-block-1 .view-id-news .views-field-view-node .White-Paper.Fr a::before {
+  content: 'Télécharger le White Paper';
+  visibility: visible;
+}
+#block-views-news-block-1 .view-id-news .views-field-view-node .Article.Fr a {
+  visibility: hidden;
+}
+#block-views-news-block-1 .view-id-news .views-field-view-node .Article.Fr a::before {
+  content: 'Lire la suite';
+  visibility: visible;
+}
+#block-views-news-block-1 .view-id-news .views-field-view-node .Event.Fr a {
+  visibility: hidden;
+}
+#block-views-news-block-1 .view-id-news .views-field-view-node .Event.Fr a::before {
+  content: 'En savoir plus';
+  visibility: visible;
+}
+#block-views-news-block-1 .view-id-news .views-field-title h2 {
+  font-size: 1.1em;
+  color: #fff;
+  padding: 20px;
+}
+#block-views-news-block-1 .view-id-news .views-field-body {
+  background-color: white;
+}
+#block-views-news-block-1 .view-id-news .views-field-body p {
+  font-size: 1.1em;
+  color: #0f7db5;
+  padding: 20px;
+}
+#block-views-news-block-1 .view-id-news .views-field-type {
+  position: relative;
+  z-index: 1;
+  top: 14px;
+  left: 20px;
+}
+#block-views-news-block-1 .view-id-news .views-field-type h3 {
   padding: 5px 15px;
   display: inline-block;
   color: #fff;
@@ -7532,6 +7673,26 @@ footer {
   font-weight: 300;
   font-size: 1.1em;
   text-transform: uppercase;
+}
+#block-views-news-block-1 .view-id-news .views-field-type h3.White-Paper {
+  background-color: #da5d80;
+}
+#block-views-news-block-1 .view-id-news .views-field-type h3.Article {
+  background-color: #eab013;
+}
+#block-views-news-block-1 .view-id-news .views-field-type h3.Event {
+  background-color: #1cbdd5;
+}
+footer.footer {
+  background: transparent;
+  border: 0;
+}
+footer.footer #block-views-webform-block {
+  color: white;
+  padding: 40px 0;
+  background: url('../img/xperthis-home-bg-cta-contact.jpg') center center;
+  /* or any other overlay image/color */
+  background-size: cover;
 }
 h1 .light,
 h2 .light {
