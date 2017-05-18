@@ -1574,39 +1574,39 @@ pre code {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 744px;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 970px;
+    width: 964px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1170px;
+    width: 1164px;
   }
 }
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 .row {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -12px;
+  margin-right: -12px;
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -2973,8 +2973,8 @@ select[multiple].input-lg {
   min-height: 27px;
 }
 .form-horizontal .form-group {
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -12px;
+  margin-right: -12px;
 }
 @media (min-width: 768px) {
   .form-horizontal .control-label {
@@ -2984,7 +2984,7 @@ select[multiple].input-lg {
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
-  right: 15px;
+  right: 12px;
 }
 @media (min-width: 768px) {
   .form-horizontal .form-group-lg .control-label {
@@ -4244,8 +4244,8 @@ form#search-block-form {
 }
 .navbar-collapse {
   overflow-x: visible;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 12px;
+  padding-left: 12px;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
@@ -4289,8 +4289,8 @@ form#search-block-form {
 .container-fluid > .navbar-header,
 .container > .navbar-collapse,
 .container-fluid > .navbar-collapse {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -12px;
+  margin-left: -12px;
 }
 @media (min-width: 768px) {
   .container > .navbar-header,
@@ -4334,7 +4334,7 @@ form#search-block-form {
 }
 .navbar-brand {
   float: left;
-  padding: 15px 15px;
+  padding: 15px 12px;
   font-size: 18px;
   line-height: 20px;
   height: 50px;
@@ -4349,13 +4349,13 @@ form#search-block-form {
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
-    margin-left: -15px;
+    margin-left: -12px;
   }
 }
 .navbar-toggle {
   position: relative;
   float: right;
-  margin-right: 15px;
+  margin-right: 12px;
   padding: 9px 10px;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -4382,7 +4382,7 @@ form#search-block-form {
   }
 }
 .navbar-nav {
-  margin: 7.5px -15px;
+  margin: 7.5px -12px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -4425,9 +4425,9 @@ form#search-block-form {
   }
 }
 .navbar-form {
-  margin-left: -15px;
-  margin-right: -15px;
-  padding: 10px 15px;
+  margin-left: -12px;
+  margin-right: -12px;
+  padding: 10px 12px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -4538,8 +4538,8 @@ form#search-block-form {
 @media (min-width: 768px) {
   .navbar-text {
     float: left;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 12px;
+    margin-right: 12px;
   }
 }
 @media (min-width: 768px) {
@@ -4548,7 +4548,7 @@ form#search-block-form {
   }
   .navbar-right {
     float: right !important;
-    margin-right: -15px;
+    margin-right: -12px;
   }
   .navbar-right ~ .navbar-right {
     margin-right: 0;
@@ -4770,8 +4770,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .navbar-collapse {
   overflow-x: visible;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 12px;
+  padding-left: 12px;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
@@ -4815,8 +4815,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .container-fluid > .navbar-header,
 .container > .navbar-collapse,
 .container-fluid > .navbar-collapse {
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -12px;
+  margin-left: -12px;
 }
 @media (min-width: 768px) {
   .container > .navbar-header,
@@ -4860,7 +4860,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .navbar-brand {
   float: left;
-  padding: 15px 15px;
+  padding: 15px 12px;
   font-size: 18px;
   line-height: 20px;
   height: 50px;
@@ -4875,13 +4875,13 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
-    margin-left: -15px;
+    margin-left: -12px;
   }
 }
 .navbar-toggle {
   position: relative;
   float: right;
-  margin-right: 15px;
+  margin-right: 12px;
   padding: 9px 10px;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -4908,7 +4908,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   }
 }
 .navbar-nav {
-  margin: 7.5px -15px;
+  margin: 7.5px -12px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -4951,9 +4951,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   }
 }
 .navbar-form {
-  margin-left: -15px;
-  margin-right: -15px;
-  padding: 10px 15px;
+  margin-left: -12px;
+  margin-right: -12px;
+  padding: 10px 12px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -5064,8 +5064,8 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 @media (min-width: 768px) {
   .navbar-text {
     float: left;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 12px;
+    margin-right: 12px;
   }
 }
 @media (min-width: 768px) {
@@ -5074,7 +5074,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   }
   .navbar-right {
     float: right !important;
-    margin-right: -15px;
+    margin-right: -12px;
   }
   .navbar-right ~ .navbar-right {
     margin-right: 0;
@@ -5565,8 +5565,8 @@ a.badge:focus {
 .container .jumbotron,
 .container-fluid .jumbotron {
   border-radius: 6px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 .jumbotron .container {
   max-width: 100%;
@@ -7428,6 +7428,71 @@ body #admin-menu {
 body #admin-menu .dropdown li {
   line-height: normal;
 }
+h1 {
+  line-height: 43px;
+  font-size: 31px;
+}
+h1 .header {
+  line-height: 50px;
+  font-size: 36px;
+}
+h1 .header.light {
+  font-weight: 300;
+}
+h1 .header.regular {
+  font-weight: 400;
+}
+h1 .header.medium {
+  font-weight: 500;
+}
+h1.light {
+  font-weight: 300;
+}
+h1.regular {
+  font-weight: 400;
+}
+h1.medium {
+  font-weight: 500;
+}
+h2 {
+  line-height: 35px;
+  font-size: 25px;
+}
+h2.light {
+  font-weight: 300;
+}
+h2.regular {
+  font-weight: 400;
+}
+h2.medium {
+  font-weight: 500;
+}
+h3 {
+  line-height: 30px;
+  font-size: 20px;
+}
+h3.light {
+  font-weight: 300;
+}
+h3.regular {
+  font-weight: 400;
+}
+h3.strong {
+  font-weight: 500;
+}
+p {
+  line-height: 25px;
+  font-size: 16px;
+}
+p.light {
+  font-weight: 300;
+}
+p.regular {
+  font-weight: 400;
+}
+p.strong {
+  font-weight: 500;
+}
 footer {
   background: #ddd;
 }
@@ -7694,14 +7759,6 @@ footer.footer #block-views-webform-block {
   /* or any other overlay image/color */
   background-size: cover;
 }
-h1 .light,
-h2 .light {
-  font-weight: 300;
-}
-h1 .strong,
-h2 .strong {
-  font-weight: 500;
-}
 .inline-block,
 .views-field-field-hompage-icon {
   display: inline-block;
@@ -7944,7 +8001,7 @@ ul li.leaf {
   .form-type-password-confirm .password-help {
     border-left: 1px solid #ddd;
     left: 50%;
-    margin-left: 15px;
+    margin-left: 12px;
     position: absolute;
   }
 }
@@ -8201,8 +8258,8 @@ table .checkbox input[type="checkbox"] {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 7px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
   text-align: right;
 }
 @media (min-width: 768px) {
