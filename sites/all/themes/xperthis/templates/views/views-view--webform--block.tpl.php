@@ -30,7 +30,7 @@
 <div class=" container <?php print $classes; ?>">
  
   <?php if ($rows): ?>
-    <div class=" col-md-8 col-md-offset-2 view-content">
+    <div class=" col-md-8 col-md-offset-2 view-content text-center">
       <?php print $rows; ?>
     </div>
   <?php elseif ($empty): ?>

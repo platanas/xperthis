@@ -7547,6 +7547,13 @@ footer {
   color: #0f7db5;
   margin: 5px;
 }
+#block-views-partner-block {
+  background-color: white;
+}
+footer .region-footer {
+  background: url('../img/xperthis-footer-bg.jpg') bottom repeat-x;
+  /* or any other overlay image/color */
+}
 #block-views-news-block .view-id-news .col {
   height: 250px;
   clear: both;
@@ -7623,7 +7630,7 @@ footer {
   left: 20px;
 }
 #block-views-news-block .view-id-news .views-field-type h3 {
-  padding: 5px 17px;
+  padding: 0px 17px;
   display: inline-block;
   color: #fff;
   margin: 0;
@@ -7731,7 +7738,7 @@ footer {
   left: 20px;
 }
 #block-views-news-block-1 .view-id-news .views-field-type h3 {
-  padding: 5px 15px;
+  padding: 0px 17px;
   display: inline-block;
   color: #fff;
   margin: 0;
