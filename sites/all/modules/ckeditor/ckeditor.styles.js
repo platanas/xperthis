@@ -27,9 +27,18 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Address'			, element : 'address' },
             */
 
-            { name : 'Blue Title'		, element : 'h3', styles : { 'color' : 'Blue' } },
-            { name : 'Red Title'		, element : 'h3', styles : { 'color' : 'Red' } },
-
+            { name : 'light'		, element : 'span', styles : { 'font-weight' : '300' } },
+            { name : 'regular'		, element : 'span', styles : { 'font-weight' : '400' } },
+            { name : 'medium'		, element : 'span', styles : { 'font-weight' : '500' } },
+            {
+                    name : 'header',
+                    element : 'h1',
+                    attributes :
+                    {
+                            'line-height' : '50px',
+                            'font-size' : '36px'
+                    }
+            }
             /* Inline Styles */
 
             // These are core styles available as toolbar buttons. You may opt enabling
@@ -41,7 +50,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Strikethrough'	, element : 'strike' },
             { name : 'Subscript'		, element : 'sub' },
             { name : 'Superscript'		, element : 'sup' },
-            */
+            
 
             { name : 'Marker: Yellow'	, element : 'span', styles : { 'background-color' : 'Yellow' } },
             { name : 'Marker: Green'	, element : 'span', styles : { 'background-color' : 'Lime' } },
@@ -63,9 +72,10 @@ if(typeof(CKEDITOR) !== 'undefined') {
 
             { name : 'Language: RTL'	, element : 'span', attributes : { 'dir' : 'rtl' } },
             { name : 'Language: LTR'	, element : 'span', attributes : { 'dir' : 'ltr' } },
-
-            /* Object Styles */
-
+			*/
+            
+			/* Object Styles */
+			/*
             {
                     name : 'Image on Left',
                     element : 'img',
@@ -87,5 +97,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
                             'align' : 'right'
                     }
             }
+			*/
     ]);
 }

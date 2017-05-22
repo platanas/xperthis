@@ -7436,62 +7436,53 @@ h1 .header {
   line-height: 50px;
   font-size: 36px;
 }
-h1 .header.light {
-  font-weight: 300;
-}
-h1 .header.regular {
-  font-weight: 400;
-}
-h1 .header.medium {
-  font-weight: 500;
-}
-h1.light {
-  font-weight: 300;
-}
-h1.regular {
-  font-weight: 400;
-}
-h1.medium {
-  font-weight: 500;
-}
 h2 {
   line-height: 35px;
   font-size: 25px;
-}
-h2.light {
-  font-weight: 300;
-}
-h2.regular {
-  font-weight: 400;
-}
-h2.medium {
-  font-weight: 500;
 }
 h3 {
   line-height: 30px;
   font-size: 20px;
 }
-h3.light {
+h1.light,
+h2.light,
+h3.light,
+p.light,
+h1.header.light,
+h1 .light,
+h2 .light,
+h3 .light,
+p .light,
+h1.header .light {
   font-weight: 300;
 }
-h3.regular {
+h1.regular,
+h2.regular,
+h3.regular,
+p.regular,
+h1.header.regular,
+h1 .regular,
+h2 .regular,
+h3 .regular,
+p .regular,
+h1.header .regular {
   font-weight: 400;
 }
-h3.strong {
+h1.medium,
+h2.medium,
+h3.medium,
+p.medium,
+h1.header.medium,
+h1 .medum,
+h2 .medum,
+h3 .medum,
+p .medum,
+h1.header .medum {
   font-weight: 500;
 }
 p {
   line-height: 25px;
   font-size: 16px;
-}
-p.light {
-  font-weight: 300;
-}
-p.regular {
-  font-weight: 400;
-}
-p.strong {
-  font-weight: 500;
 }
 footer {
   background: #ddd;
