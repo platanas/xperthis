@@ -14,16 +14,25 @@
 ?>
 
 <div id=" views-bootstrap-grid-<?php print $id ?>" class="container <?php print $classes ?>">
+    <div class="row-partner">
   <?php if ($options['alignment'] == 'horizontal'): ?>
 
     <?php foreach ($items as $row): ?>
       <div class="row">
-        <?php foreach ($row['content'] as $column): ?>
+        <?php 
+        $counter=1;
+        foreach ($row['content'] as $column): ?>
           <div class="col col-lg-<?php print $column_type ?>">
+          <div class="col-<?php print $counter; ?>">
             <?php print $column['content'] ?>
           </div>
-        <?php endforeach ?>
+          </div>
+        <?php 
+        $counter++;
+        endforeach ?>
       </div>
+        
+<div class="clearfix"></div>
     <?php endforeach ?>
 
   <?php else: ?>
@@ -37,6 +46,8 @@
         </div>
       <?php endforeach ?>
     </div>
+<div class="clearfix"></div>
 
   <?php endif ?>
+</div>
 </div>

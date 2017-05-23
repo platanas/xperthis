@@ -7484,9 +7484,6 @@ p {
   line-height: 25px;
   font-size: 16px;
 }
-footer {
-  background: #ddd;
-}
 @media screen and (min-width: 768px) {
   .navbar.container {
     max-width: 720px;
@@ -7537,13 +7534,6 @@ footer {
   padding: 25px;
   color: #0f7db5;
   margin: 5px;
-}
-#block-views-partner-block {
-  background-color: white;
-}
-footer .region-footer {
-  background: url('../img/xperthis-footer-bg.jpg') bottom repeat-x;
-  /* or any other overlay image/color */
 }
 #block-views-news-block .view-id-news .col {
   height: 250px;
@@ -7749,6 +7739,26 @@ footer .region-footer {
 footer.footer {
   background: transparent;
   border: 0;
+  background: #ddd;
+  background: url('../img/xperthis-footer-bg.jpg') bottom repeat-x;
+  /* or any other overlay image/color */
+}
+footer.footer #block-views-partner-block {
+  background-color: white;
+  max-height: 190px;
+  min-height: 190px;
+}
+footer.footer #block-views-partner-block .row img {
+  display: none;
+}
+footer.footer #block-views-partner-block .row:nth-of-type(1) img {
+  display: block;
+}
+footer.footer #block-views-partner-block .view-id-partner .view-content .container .row-partner {
+  position: relative;
+}
+footer.footer #block-views-partner-block .view-id-partner .view-content .container .row-partner .row {
+  position: relative;
 }
 footer.footer #block-views-webform-block {
   color: white;
