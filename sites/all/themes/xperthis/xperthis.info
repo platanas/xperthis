@@ -21,6 +21,12 @@ regions[page_bottom]    = 'Page bottom'
 
 
 ;;;;;;;;;;;;;;;;;;;;;
+;; Settings
+;;;;;;;;;;;;;;;;;;;;;
+
+settings[regionclass][blockgroup_footer_menu][] = container
+
+;;;;;;;;;;;;;;;;;;;;;
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 

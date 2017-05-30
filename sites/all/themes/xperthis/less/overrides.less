@@ -126,7 +126,13 @@ h3 {
     font-size: 20px;
 }
 
-h1, h2, h3, p, h1.header {
+/* Title Menu */
+h4 {
+    line-height: 27px;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, p, h1.header {
     &.light, .light {
         font-weight: 300;
     }
@@ -136,11 +142,20 @@ h1, h2, h3, p, h1.header {
     &.medium, .medum {
         font-weight: 500;
     }
+    &.white, .white {
+        color: white;
+    }
+    &.blue, .blue {
+        color: #0f7db5;
+    }
 }
 
 p {
     line-height: 25px;
     font-size: 16px;
+    &.blue, .blue {
+        color: #0d4866;
+    }
 }
 
 
@@ -432,9 +447,14 @@ footer.footer {
     background: transparent;
     border: 0;
     background: #ddd;
-        background: url('../img/xperthis-footer-bg.jpg') bottom repeat-x; /* or any other overlay image/color */
+    background: url('../img/xperthis-footer-bg.jpg') bottom repeat-x; /* or any other overlay image/color */
 
-
+    .region-blockgroup-footer-menu {
+        color:white;
+        p {
+            font-size: 14px;
+        }
+    }
     .region-footer {
     }
     #block-views-partner-block {
