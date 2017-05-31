@@ -39,8 +39,8 @@ function xperthis_preprocess_simplenews_block_form_1(&$variables) {
   	unset($form['mail']['#title']);
   	$form['mail']['#id'] = 'exampleInputEmail1';
   	$form['mail']['#attributes'] = array('class' => array('form-control'));
-  	$form['mail']['#attributes']['placeholder'] = t('Enter Your Email');
-  	$form['submit']['#value'] = t('Sign Up');
+  	$form['mail']['#attributes']['placeholder'] = t('Adresse Email');
+  	$form['submit']['#value'] = t("M'inscrire");
   	$variables['heading'] = t('en vous inscrivant à notre newsletter ...'); 
  	// Create variables for individual elements.
 	$variables['mail'] = render($form['mail']);

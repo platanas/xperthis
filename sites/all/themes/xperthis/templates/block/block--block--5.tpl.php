@@ -45,24 +45,15 @@
  * @ingroup templates
  */
 ?>
-<div class="contact_form news-form">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 text-center">
-        <h3><?php print t("Ne manquez plus jamais rien de notre actualités");?><br />
-        <span class="light"><?php print $heading;?> </span></h3><br />
-      </div>
-    </div>
-    <div class="row contact_field text-center">
-      <div class="col-sm-offset-3 col-sm-6 sign-up-row clearfix">
-        <div class="input-group">
-            <?php print $mail; ?>
-            <span class="input-group-btn">
-            <?php print $submit; ?>
-            </soan>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<?php print $children; ?>
+<section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+    <div class="container">
+            <?php print render($title_prefix); ?>
+            <?php if ($title): ?>
+              <p class="white medium" <?php print $title_attributes; ?>><?php print $title; ?></p>
+            <?php endif;?>
+            <?php print render($title_suffix); ?>
+
+            <?php print $content ?>
+    </div>   
+           
+</section>

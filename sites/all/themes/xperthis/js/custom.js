@@ -6,8 +6,10 @@
 
 
 +function ($) {
-        $('.modal').insertAfter($('body'));
+        
         var $ = jQuery.noConflict();
+        $('.modal').insertAfter($('body'));
+        console.log($('body'));
         $(window).scroll(function(){
             var scroll = $(this).scrollTop();
             $('.banner-wrapper').css({'background-position':'0px '+scroll/2+'px'});
@@ -21,9 +23,11 @@
             console.log(partnerHeight);
             z=0;
             $('.row-partner').find($('.row')).each(function(){
-                $(this).css('top', -partnerHeight*z+'px');
-                console.log(z);
-                z++;
+                $(this).find($('.col-lg-3')).each(function(){
+                    $(this).css('top', -partnerHeight*z+'px');
+                    console.log(z);
+                });
+                    z++;
             });
             // Define a random integer function
             function random(n) {

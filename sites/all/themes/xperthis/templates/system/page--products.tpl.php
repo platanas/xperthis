@@ -135,7 +135,7 @@
         </div>
     </div>
 </div> <!-- /#page-header -->
-<div class="main-container content <?php print $container_class; ?>">
+<div class="main-container content">
 
   
 
