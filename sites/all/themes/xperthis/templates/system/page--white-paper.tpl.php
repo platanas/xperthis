@@ -117,26 +117,11 @@
     </div>
   </div>
     </div>
+</header> <!-- /#page-header -->
+<div class="main-container content page-no-hero <?php print $container_class; ?>">
+<header role="banner" id="page-header">
+    <?php print render($page['header']); ?>
 </header>
-<div role="hero" id="page-header" class="banner-wrapper">
-    <div class="banner-wrapper-pattern">
-        <div class="main-container <?php print $container_class; ?>">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-4 text-center well-lg">
-                    <div class="col-md-12 col-md-offset-1 text-center well-lg">
-                    <?php if (!empty($site_slogan)): ?>
-                        <h1 class="lead text-uppercase"><?php print $site_slogan; ?></h1>
-                    <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-            <?php print render($page['header']); ?>
-        </div>
-    </div>
-</div> <!-- /#page-header -->
-<div class="main-container content <?php print $container_class; ?>">
-
   
 
   <div class="row">
@@ -168,12 +153,14 @@
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-      <?php print render($page['content']); ?>
     </section>
 
-    
+    <div class="col-sm-8">
+    <?php print render($page['content']); ?>
+    </div>
+      <div class="col-sm-4 block-e-book-download">
     <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-3" role="complementary">
+      <aside class="" role="complementary">
         <?php 
             //dump($page['sidebar_second']);
             print render($page['sidebar_second']); 
@@ -182,12 +169,13 @@
         ?>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
+      </div>
 
   </div>
 </div>
 
 <?php if (!empty($page['footer'])): ?>
-  <footer class="footer <?php print $container_class; ?>">
+  <footer class="footer ">
     <?php print render($page['footer']); ?>
   </footer>
 <?php endif; ?>

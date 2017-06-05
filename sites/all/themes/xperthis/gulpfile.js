@@ -13,4 +13,5 @@ gulp.task('less', function () {
 gulp.task('watch', function() {
   livereload.listen();
   gulp.watch('less/*.less', ['less']);
+  gulp.watch('less/custom/*.less', ['less']);
 });
