@@ -160,21 +160,9 @@
       <?php endif; ?>
     </section>
 
-    <div class="col-sm-8">
+    <div class="col-sm-12">
     <?php print render($page['content']); ?>
     </div>
-      <div class="col-sm-4 block-e-book-download">
-    <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="" role="complementary">
-        <?php 
-            //dump($page['sidebar_second']);
-            print render($page['sidebar_second']); 
-            $block = module_invoke('webform', 'block_view', 'client-block-'.$node->nid);
-            print render($block['content']);
-        ?>
-      </aside>  <!-- /#sidebar-second -->
-    <?php endif; ?>
-      </div>
 
   </div>
 </div>

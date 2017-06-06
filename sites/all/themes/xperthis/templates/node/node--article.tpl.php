@@ -89,7 +89,6 @@
     <?php print render($title_suffix); ?>
     <?php if ($display_submitted): ?>
     <span class="submitted">
-      <?php print $user_picture; ?>
       <?php print $submitted; ?>
     </span>
     <?php endif; ?>
@@ -100,7 +99,6 @@
     hide($content['comments']);
     hide($content['links']);
     hide($content['field_tags']);
-    hide($content['field_subtitle']);
     print render($content);
   ?>
   <?php

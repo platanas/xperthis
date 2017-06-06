@@ -23,6 +23,35 @@ function xperthis_preprocess_page(&$vars) {
   }
 }
 
+/**
+ * Implements template_preprocess_field
+ *
+ */
+function xperthis_preprocess_field(&$vars) {
+  $element = $vars["element"];
+  $name    = $element["#field_name"];
+  switch($name){
+    case 'field_tags' : // this is a (multiple) taxonomy terms reference field that shows links to every term associated
+      foreach ($vars['items'] as $delta => &$item) {
+        // Add and attribute with the tid to each link to the taxonomy term
+        $item['#options']['attributes']['data-tid'] = $item['#options']['entity']->tid;
+        // Add a new class to every link in this field
+        $item['#options']['attributes']['class'][] = 'btn btn-default' ;
+      }
+      // This is a class for the whole field wrapper
+      //$vars['classes_array'][] = 'btn btn-default';
+      $vars['label'] = "Sur le même sujet ";
+    break;
+  }
+}
+
+
+function xperthis_form_alter(&$form, &$form_state, $form_id) {
+  if (!empty($form['actions']) && $form['actions']['submit']) {
+    $form['actions']['submit']['#attributes'] = array('class' => array('btn-primary'));
+  }
+}
+
 function xperthis_theme() {
   return array(
     'simplenews_block_form_1' => array(      
@@ -41,10 +70,11 @@ function xperthis_preprocess_simplenews_block_form_1(&$variables) {
   	$form['mail']['#attributes'] = array('class' => array('form-control'));
   	$form['mail']['#attributes']['placeholder'] = t('Adresse Email');
   	$form['submit']['#value'] = t("M'inscrire");
+	$form['submit']['#attributes'] = array('class' => array('btn-primary'));
   	$variables['heading'] = t('en vous inscrivant à notre newsletter ...'); 
  	// Create variables for individual elements.
 	$variables['mail'] = render($form['mail']);
-	$variables['submit'] = render($form['submit']);	 
+	$variables['submit'] = render($form['submit']);	
 	// Be sure to print the remaining rendered form items.
 	$variables['children'] = drupal_render_children($form);
 }

@@ -138,16 +138,6 @@
       <?php endif; ?>
       <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if (!empty($title)): ?>
-        <h1 class="page-header light"><?php print $title; ?></h1>
-      <?php endif; ?>
-        <?php if(isset($node->field_subtitle['und'][0]['value'])): ?>
-            <h2 class="page-header light">
-                <?php print $node->field_subtitle['und'][0]['value']; ?>
-            </h2>
-        <?php endif; ?>
-      <?php print render($title_suffix); ?>
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>
         <?php print render($tabs); ?>
@@ -160,21 +150,10 @@
       <?php endif; ?>
     </section>
 
-    <div class="col-sm-8">
+    <div class="col-sm-12">
     <?php print render($page['content']); ?>
     </div>
-      <div class="col-sm-4 block-e-book-download">
-    <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="" role="complementary">
-        <?php 
-            //dump($page['sidebar_second']);
-            print render($page['sidebar_second']); 
-            $block = module_invoke('webform', 'block_view', 'client-block-'.$node->nid);
-            print render($block['content']);
-        ?>
-      </aside>  <!-- /#sidebar-second -->
-    <?php endif; ?>
-      </div>
+      
 
   </div>
 </div>

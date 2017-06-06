@@ -106,6 +106,11 @@ body {
     }
   }
 }
+hr {
+    color: #c1ccd5;
+    background-color: #c1ccd5;
+    border-top: 1px solid #c1ccd5;    
+}
 //--Typography-----------------
 h1 {
     line-height: 43px;
@@ -141,7 +146,7 @@ h1, h2, h3, h4, p, h1.header {
     &.regular, .regular {
         font-weight: 400;
     }
-    &.medium, .medum {
+    &.medium, .medium {
         font-weight: 500;
     }
     &.white, .white {
@@ -155,6 +160,7 @@ h1, h2, h3, h4, p, h1.header {
 p {
     line-height: 25px;
     font-size: 16px;
+    color: #0d4866;
     &.blue, .blue {
         color: #0d4866;
     }
@@ -195,27 +201,6 @@ p {
 #toolbar {
   z-index: 1600;
 }
-.homepage-icons {
-    text-transform: uppercase;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    width: 200px;
-    height: 200px; 
-    color: #0f7db5;
-    margin: 10px;
-}
-
-.homepage-icons-bg {
-    text-transform: uppercase;
-    border-radius: 50%;
-    background-color: #fff;
-    width: 187px;
-    height: 187px;
-    padding: 25px;
-    color: #0f7db5;
-    margin: 5px;
-}
-
 
 footer.footer {
     background: transparent;
@@ -337,10 +322,11 @@ ul.secondary {
 }
 
 // Page header.
-.page-header {
-  margin-top: 0;
+h1.page-header, h2.page-header {
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
-
 // Sidebar blocks.
 .region-sidebar-first,
 .region-sidebar-second {

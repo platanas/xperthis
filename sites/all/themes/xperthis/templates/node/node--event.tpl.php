@@ -79,6 +79,7 @@
  * @ingroup templates
  */
 ?>
+<div class="col-sm-8">
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
   <header>
@@ -101,6 +102,9 @@
     hide($content['links']);
     hide($content['field_tags']);
     hide($content['field_subtitle']);
+    hide($content['field_date']);
+    
+    print '<h3 class="regular">'.$title.'</h3>';
     print render($content);
   ?>
   <?php
@@ -117,3 +121,8 @@
   <?php endif; ?>
   <?php print render($content['comments']); ?>
 </article>
+</div>
+<div class="col-sm-4 block-event-info">
+    
+   <?php print render($content['field_date']); ?>
+</div>
