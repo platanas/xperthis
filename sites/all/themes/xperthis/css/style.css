@@ -6,6 +6,7 @@
  * these variables directly from ../bootstrap/less/variables.less to this file.
  */
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import "../fonts/font-awesome/css/font-awesome.min.css";
 html {
@@ -3192,6 +3193,12 @@ fieldset[disabled] .btn-primary.focus {
   color: #4ca9d3;
   background-color: #fff;
 }
+.btn-primary a,
+.btn-primary a:hover,
+.btn-primary a:focus {
+  color: white;
+  text-decoration: none;
+}
 .btn-success {
   color: #fff;
   background-color: #5cb85c;
@@ -3840,6 +3847,9 @@ tbody.collapse.in {
   display: table;
   border-collapse: separate;
 }
+.input-group .btn {
+  border-radius: 0;
+}
 .input-group[class*="col-"] {
   float: none;
   padding-left: 0;
@@ -3949,8 +3959,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
-  border-bottom-right-radius: 24px;
-  border-top-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-top-left-radius: 24px;
 }
 .input-group-addon:first-child {
   border-right: 0;
@@ -3962,8 +3972,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
-  border-bottom-left-radius: 24px;
-  border-top-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-top-right-radius: 24px;
 }
 .input-group-addon:last-child {
   border-left: 0;
@@ -7715,6 +7725,12 @@ and open the template in the editor.
   float: left;
   margin: 0 10px 0 0;
 }
+footer.footer .region-blockgroup-footer-menu p {
+  color: #b2bdc4;
+}
+footer.footer .region-blockgroup-footer-menu p.white {
+  color: white;
+}
 footer.footer.footer-no-front .region-footer {
   background: url(../img/xperthis-footer-shadow.jpg) transparent top repeat-x;
 }
@@ -7790,6 +7806,62 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
+    Created on : 07-juin-2017, 15:16:37
+    Author     : platanas
+*/
+/* PAGE */
+.page-event .field .field-label {
+  color: #0d4866;
+  font-size: 20px;
+  font-weight: 300;
+  border-bottom: 1px solid #c1ccd5;
+  padding: 7px 0;
+}
+.page-event .field.field-name-field-tags .field-label {
+  border-bottom: 0px solid #c1ccd5;
+}
+.page-event .block-event-info {
+  background: url(../img/xperthis-top-bloc-event-bg.jpg) white top center repeat-x;
+}
+.page-event .block-event-info h2,
+.page-event .block-event-info h3 {
+  color: #0d4866;
+}
+.page-event .block-event-info .btn-primary {
+  margin: 80px 0;
+}
+.page-event .block-event-info .event-date {
+  font-family: "Roboto", "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #6ccedd;
+  color: white;
+  padding: 10px;
+  display: block;
+  float: left;
+}
+.page-event .block-event-info .event-date .center-auto {
+  margin: 0 auto;
+}
+.page-event .block-event-info .event-date p {
+  line-height: initial;
+}
+.page-event .block-event-info .event-date .day {
+  font-size: 43px;
+  font-weight: 200;
+  line-height: 43px;
+  padding: 0 7px;
+}
+.page-event .block-event-info .event-date .month {
+  font-size: 20px;
+  line-height: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
     Created on : 05-juin-2017, 17:43:47
     Author     : platanas
 */
@@ -7817,6 +7889,10 @@ h1.lead {
 }
 #block-views-news-block h2.block-title {
   text-align: center;
+  color: #0f7db5;
+}
+#block-views-news-block a {
+  color: white;
 }
 #block-views-news-block .view-id-news .col {
   height: 250px;
@@ -7919,7 +7995,7 @@ h1.lead {
   visibility: hidden;
 }
 #block-views-news-block .views-field-view-node .E-book.Fr a::before {
-  content: 'Télécharger le White Paper';
+  content: "Télécharger l'E-book";
   visibility: visible;
 }
 #block-views-news-block .views-field-view-node .Article.Fr a {
@@ -7965,7 +8041,7 @@ h1.lead {
   visibility: hidden;
 }
 #block-views-news-block-1 .view-id-news .views-field-view-node .E-book.Fr a::before {
-  content: 'Télécharger le White Paper';
+  content: "Télécharger l'E-book";
   visibility: visible;
 }
 #block-views-news-block-1 .view-id-news .views-field-view-node .Article.Fr a {
@@ -8018,6 +8094,105 @@ h1.lead {
 }
 #block-views-news-block-1 .view-id-news .views-field-type h3.Event {
   background-color: #1cbdd5;
+}
+#block-views-webform-block {
+  color: white;
+  padding: 40px 0;
+  background: url('../img/xperthis-home-bg-cta-contact.jpg') center center;
+  /* or any other overlay image/color */
+  background-size: cover;
+}
+#block-views-webform-block .btn-primary {
+  background-color: #0d4866;
+}
+#block-views-webform-block .btn-primary:hover,
+#block-views-webform-block .btn-primary:focus {
+  background-color: #2f91bd;
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07-juin-2017, 10:29:35
+    Author     : platanas
+*/
+.region-navigation {
+  float: right;
+}
+nav ul.menu {
+  display: inline;
+}
+nav ul.menu li {
+  position: relative;
+  display: inline;
+  list-style-type: none;
+}
+nav ul.menu li a {
+  color: #0f7db5;
+}
+nav ul.menu li:not(:last-child):after {
+  content: ' \00b7';
+  position: absolute;
+  right: 0px;
+  top: 15px;
+  width: 2px;
+  color: #0f7db5;
+}
+#block-search-form ul li {
+  position: relative;
+  padding: 10px;
+  display: inline;
+  list-style-type: none;
+}
+#block-search-form ul li:after {
+  content: ' \00b7';
+  position: absolute;
+  right: 0px;
+  width: 2px;
+  color: #aab6c3;
+}
+#block-search-form ul li a {
+  color: #334c67;
+  font-weight: normal;
+}
+#block-search-form ul li a.active,
+#block-search-form ul li a:hover {
+  color: #334c67;
+  font-weight: normal;
+  text-decoration: none;
+}
+#block-locale-language .item-list {
+  text-transform: uppercase;
+}
+#block-locale-language .item-list ul.language {
+  padding: 0;
+}
+#block-locale-language .item-list ul.language li {
+  position: relative;
+  padding: 10px;
+  display: inline;
+  list-style-type: none;
+}
+#block-locale-language .item-list ul.language li:not(:last-child):after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  width: 2px;
+  height: 30%;
+  top: 35%;
+  background: #aab6c3;
+}
+#block-locale-language .item-list ul.language li a {
+  color: #aab6c3;
+  font-weight: normal;
+}
+#block-locale-language .item-list ul.language li a.active,
+#block-locale-language .item-list ul.language li a:hover {
+  color: #334c67;
+  font-weight: bold;
+  text-decoration: none;
 }
 html.overlay-open .navbar-fixed-top {
   z-index: 400;
@@ -8303,13 +8478,6 @@ footer.footer #block-views-partner-block .view-id-partner .view-content .contain
   position: absolute;
   width: 200px;
   height: 100px;
-}
-footer.footer #block-views-webform-block {
-  color: white;
-  padding: 40px 0;
-  background: url('../img/xperthis-home-bg-cta-contact.jpg') center center;
-  /* or any other overlay image/color */
-  background-size: cover;
 }
 .inline-block,
 .views-field-field-hompage-icon {
@@ -8976,63 +9144,6 @@ a.icon-after .glyphicon {
 .btn.icon-after .glyphicon {
   margin-left: .25em;
   margin-right: -0.25em;
-}
-.region-navigation {
-  float: right;
-}
-#block-search-form ul li {
-  position: relative;
-  padding: 10px;
-  display: inline;
-  list-style-type: none;
-}
-#block-search-form ul li:after {
-  content: ' \00b7';
-  position: absolute;
-  right: 0px;
-  width: 2px;
-  color: #aab6c3;
-}
-#block-search-form ul li a {
-  color: #334c67;
-  font-weight: normal;
-}
-#block-search-form ul li a.active,
-#block-search-form ul li a:hover {
-  color: #334c67;
-  font-weight: normal;
-  text-decoration: none;
-}
-#block-locale-language .item-list {
-  text-transform: uppercase;
-}
-#block-locale-language .item-list ul.language {
-  padding: 0;
-}
-#block-locale-language .item-list ul.language li {
-  position: relative;
-  padding: 10px;
-  display: inline;
-  list-style-type: none;
-}
-#block-locale-language .item-list ul.language li:not(:last-child):after {
-  content: '';
-  position: absolute;
-  right: -2px;
-  width: 2px;
-  height: 30%;
-  top: 35%;
-  background: #aab6c3;
-}
-#block-locale-language .item-list ul.language li a {
-  color: #aab6c3;
-  font-weight: normal;
-}
-#block-locale-language .item-list ul.language li a.active,
-#block-locale-language .item-list ul.language li a:hover {
-  color: #334c67;
-  font-weight: bold;
-  text-decoration: none;
 }
 .banner-wrapper:after {
   content: "";

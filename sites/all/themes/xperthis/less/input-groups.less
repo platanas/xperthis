@@ -8,7 +8,9 @@
   position: relative; // For dropdowns
   display: table;
   border-collapse: separate; // prevent input groups from inheriting border styles from table cells when placed within a table
-
+  .btn {
+    border-radius:0;
+    }
   // Undo padding and float of grid classes
   &[class*="col-"] {
     float: none;
@@ -112,7 +114,7 @@
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
-  .border-right-radius(@btn-border-radius-large);
+  .border-left-radius(@btn-border-radius-large);
 }
 .input-group-addon:first-child {
   border-right: 0;
@@ -124,7 +126,7 @@
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
-  .border-left-radius(@btn-border-radius-large);
+  .border-right-radius(@btn-border-radius-large);
 }
 .input-group-addon:last-child {
   border-left: 0;

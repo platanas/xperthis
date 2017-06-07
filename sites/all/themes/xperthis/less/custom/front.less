@@ -35,6 +35,10 @@ h1.lead {
 #block-views-news-block {
     h2.block-title {
         text-align: center;
+        color: @blue-light;
+    }
+    a {
+        color: white;
     }
     .view-id-news .col{
         height: 250px;
@@ -138,7 +142,7 @@ h1.lead {
         .E-book.Fr {
             a {
                 &::before {
-                    content: 'Télécharger le White Paper';
+                    content: "Télécharger l'E-book";
                     visibility: visible;
                 }
                 visibility: hidden;
@@ -198,7 +202,7 @@ h1.lead {
         .E-book.Fr {
             a {
                 &::before {
-                    content: 'Télécharger le White Paper';
+                    content: "Télécharger l'E-book";
                     visibility: visible;
                 }
                 visibility: hidden;
@@ -261,6 +265,19 @@ h1.lead {
             &.Event {
                 background-color: #1cbdd5;
             }
+        }
+    }
+}
+
+#block-views-webform-block {
+    color: white;
+    padding: 40px 0;
+    background: url('../img/xperthis-home-bg-cta-contact.jpg') center center; /* or any other overlay image/color */
+    background-size: cover;
+    .btn-primary {
+        background-color: @blue-darker;
+        &:hover, &:focus {
+            background-color: #2f91bd;
         }
     }
 }

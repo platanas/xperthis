@@ -59,7 +59,7 @@
             <?php print $mail; ?>
             <span class="input-group-btn">
             <?php print $submit; ?>
-            </soan>
+            </span>
         </div>
       </div>
     </div>

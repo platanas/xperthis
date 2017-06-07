@@ -118,7 +118,7 @@
   </div>
     </div>
 </header> <!-- /#page-header -->
-<div class="main-container content page-no-hero <?php print $container_class; ?>">
+<div class="main-container content page-no-hero page-event <?php print $container_class; ?>">
 <header role="banner" id="page-header">
     <?php print render($page['header']); ?>
 </header>

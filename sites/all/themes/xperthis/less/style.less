@@ -4,65 +4,7 @@
 // Base-theme overrides.
 @import 'overrides';
 
-.region-navigation {
-    float: right;
-}
-#block-search-form {
-    ul li {
-        position: relative;
-        padding: 10px;
-        display: inline;
-        list-style-type: none;
-        &:after{
-            content: ' \00b7';
-            position: absolute;
-            right: 0px;
-            width:2px;
-            color: #aab6c3;
-        }
-        a {
-            color: #334c67;
-            font-weight: normal;
-            &.active, &:hover {
-                color: #334c67;
-                font-weight: normal;
-                text-decoration: none;
-            }
-        }
-    }
-}
-#block-locale-language {
-    .item-list{
-        text-transform: uppercase;
-        ul.language {
-            padding: 0;
-            li {
-                position: relative;
-                padding: 10px;
-                display:inline;
-                list-style-type:none;
-                &:not(:last-child):after{
-                    content: '';
-                    position: absolute;
-                    right: -2px;
-                    width:2px;
-                    height: 30%;
-                    top: 35%;
-                    background: #aab6c3;
-                }
-                a {
-                    color: #aab6c3;
-                    font-weight: normal;
-                    &.active, &:hover {
-                        color: #334c67;
-                        font-weight: bold;
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
-    }
-}
+
 .banner-wrapper:after { 
   content:"";
   display:block;

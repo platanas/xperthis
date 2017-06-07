@@ -60,7 +60,16 @@ function xperthis_theme() {
       'path' => drupal_get_path('theme', 'xperthis').'/templates/block',
     ),			
   );
-} 
+}
+
+function xperthis_field($variables) {
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<div class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . ' - &nbsp;</div>';
+  }
+}
 
 function xperthis_preprocess_simplenews_block_form_1(&$variables) {
   	// Shorten the form variable name for easier access.

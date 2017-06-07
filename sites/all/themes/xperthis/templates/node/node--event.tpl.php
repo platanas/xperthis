@@ -102,9 +102,16 @@
     hide($content['links']);
     hide($content['field_tags']);
     hide($content['field_subtitle']);
+    hide($content['field_title_event']);
     hide($content['field_date']);
+    hide($content['field_date_subscription']);
+    hide($content['field_details']);
+    hide($content['registration_link']);
+    hide($content['registration_form']);
+    hide($content['registration_slots_left']);
+    hide($content['field_capacity']);
+    hide($content['field_adresse']);
     
-    print '<h3 class="regular">'.$title.'</h3>';
     print render($content);
   ?>
   <?php
@@ -123,6 +130,31 @@
 </article>
 </div>
 <div class="col-sm-4 block-event-info">
+    <div class="event-date">
+        <p class="light white text-center">
+        <span class="day"><?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'd'); ?></span><br />
+        <span class="month "><?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'M'); ?></span>
+        </p>
+    </div>
+    <div class="clearfix"></div>
+    <?php if (!empty($node->field_date['und'][0]['value2'])){ ?>
+        <?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'H:i'); ?>
+        <?php print format_date(strtotime($node->field_date['und'][0]['value2']), 'custom', 'H:i'); ?>
+    <?php } ?>
+    <?php print '<h3 class="regular">'.render($content['field_title_event']).'</h3>'; ?>
     
-   <?php print render($content['field_date']); ?>
+    <?php print '<div class="text-center"><div class="btn btn-primary">'.render($content['registration_link']).'</div></div>'; ?>
+    <?php //var_dump($content['field_details']['#title']); ?>
+    
+    <?php print '<div class="field field-name-field-adresse field-type-text-long field-label-above"><div class="field-label">'.$content['field_details']['#title'].'</div></div>'; ?>
+    
+    
+    <?php if (!empty(render($content['field_cost']))): ?>
+        <?php print render($content['field_cost']); ?>
+    <?php else: ?>
+        <h4>Gratuit sur inscription</h4>
+    <?php endif ?>
+    <?php print render($content['field_adresse']); ?>
+    
 </div>
+   <?php print '<img src="/'.$base_path . $directory .'/img/xperthis-bottom-bloc-event-bg.jpg" class="img-responsive center-auto" alt="" />'; ?>

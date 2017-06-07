@@ -119,7 +119,7 @@
     </div>
 </header>
 
-<div class="main-container content <?php print $container_class; ?>">
+<div class="main-container content page-no-hero <?php print $container_class; ?>">
 <header role="banner" id="page-header">
     <?php if (!empty($site_slogan)): ?>
       <p class="lead"><?php print $site_slogan; ?></p>
@@ -177,7 +177,7 @@
 </div>
 
 <?php if (!empty($page['footer'])): ?>
-  <footer class="footer">
+  <footer class="footer footer-no-front">
     <?php print render($page['footer']); ?>
   </footer>
 <?php endif; ?>
