@@ -4525,60 +4525,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width: 768px) {
   .navbar-header {
-    float: left;
+    /*float: left;*/
   }
 }
 .navbar-header {
   clear: both;
-}
-header#navbar {
-  background: #fff;
-  height: 142px;
-  position: fixed;
-  top: 0;
-  transition: top 0.5s ease-in-out;
-  width: 100%;
-  max-width: inherit;
-  display: inherit;
-  border-radius: 0;
-  border: 0;
-  z-index: 10;
-}
-header#navbar .mt-4 {
-  padding-top: 85px;
-}
-.admin-menu header#navbar {
-  top: 29px;
-}
-header#navbar.nav-up {
-  top: -120px;
-}
-form#search-block-form {
-  margin: 0;
-}
-.navbar #block-search-form {
-  float: none;
-  margin: 5px 0 5px 5px;
-}
-@media screen and (min-width: 992px) {
-  .navbar #block-search-form {
-    float: left;
-  }
-}
-.navbar #block-search-form .input-group-btn {
-  width: auto;
-}
-.navbar #block-locale-language {
-  float: none;
-  margin: 5px 0 5px 5px;
-}
-@media screen and (min-width: 992px) {
-  .navbar #block-locale-language {
-    float: left;
-  }
-}
-.navbar #block-locale-language .input-group-btn {
-  width: auto;
 }
 .navbar-collapse {
   overflow-x: visible;
@@ -7715,16 +7666,18 @@ and open the template in the editor.
 .page-no-hero {
   padding-top: 162px;
 }
-.field-name-field-tags .field-label {
+.page-no-hero .field.field-name-field-tags .field-label {
   font-weight: normal;
   padding-top: 7px;
+  font-size: 14px;
   color: #0d4866;
 }
-.field-name-field-tags .field-label,
-.field-name-field-tags .field-item {
+.page-no-hero .field.field-name-field-tags .field-label,
+.page-no-hero .field.field-name-field-tags .field-item {
   float: left;
   margin: 0 10px 0 0;
 }
+/* FOOTER */
 footer.footer .region-blockgroup-footer-menu p {
   color: #b2bdc4;
 }
@@ -7733,6 +7686,70 @@ footer.footer .region-blockgroup-footer-menu p.white {
 }
 footer.footer.footer-no-front .region-footer {
   background: url(../img/xperthis-footer-shadow.jpg) transparent top repeat-x;
+}
+footer.footer {
+  background: transparent;
+  border: 0;
+  background: #ddd;
+  background: url('../img/xperthis-footer-bg.jpg') bottom repeat;
+  /* or any other overlay image/color */
+  padding-bottom: 0;
+  padding-top: 0;
+}
+footer.footer .fa-circle {
+  color: #36475a;
+}
+footer.footer .block-simplenews {
+  margin-bottom: 46px;
+}
+footer.footer .block-simplenews h3 {
+  color: #38a7c8;
+}
+footer.footer .region-blockgroup-footer-menu {
+  padding-top: 46px;
+  border-top: 2px solid #36475a;
+  color: #b2bdc4;
+}
+footer.footer .region-blockgroup-footer-menu p {
+  font-size: 14px;
+}
+footer.footer #block-block-5 {
+  background: url('../img/xperthis-part-nrb-bg.jpg') white bottom repeat-x;
+  /* or any other overlay image/color */
+}
+footer.footer #block-views-partner-block {
+  background-color: white;
+  background: url('../img/xperthis-footer-shadow.jpg') white bottom repeat-x;
+  /* or any other overlay image/color */
+  max-height: 200px;
+  min-height: 200px;
+}
+footer.footer #block-views-partner-block .row img {
+  display: none;
+}
+footer.footer #block-views-partner-block .row:nth-of-type(1) img {
+  display: block;
+}
+footer.footer #block-views-partner-block .view-id-partner .view-content .container .row-partner .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+footer.footer #block-views-partner-block .view-id-partner .view-content .container .row-partner .row .col-lg-3 {
+  width: 200px;
+  height: 100px;
+  position: relative;
+  display: block;
+  margin: 10px auto;
+}
+footer.footer #block-views-partner-block .view-id-partner .view-content .container .row-partner .row .col-lg-3 img {
+  position: absolute;
+  width: 200px;
+  height: 100px;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -7816,6 +7833,9 @@ and open the template in the editor.
   font-weight: 300;
   border-bottom: 1px solid #c1ccd5;
   padding: 7px 0;
+}
+.page-event .field-name-field-image {
+  margin-top: 20px;
 }
 .page-event .field.field-name-field-tags .field-label {
   border-bottom: 0px solid #c1ccd5;
@@ -8142,7 +8162,7 @@ nav ul.menu li:not(:last-child):after {
 }
 #block-search-form ul li {
   position: relative;
-  padding: 10px;
+  padding: 12px;
   display: inline;
   list-style-type: none;
 }
@@ -8193,6 +8213,52 @@ nav ul.menu li:not(:last-child):after {
   color: #334c67;
   font-weight: bold;
   text-decoration: none;
+}
+header#navbar {
+  background: #fff;
+  height: 142px;
+  position: fixed;
+  top: 0;
+  transition: top 0.5s ease-in-out;
+  width: 100%;
+  max-width: inherit;
+  display: inherit;
+  border-radius: 0;
+  border: 0;
+  z-index: 10;
+}
+header#navbar p {
+  font-size: 14px;
+}
+header#navbar #block-block-6 {
+  margin-top: 45px;
+}
+header#navbar .mt-4 {
+  padding-top: 85px;
+}
+.admin-menu header#navbar {
+  top: 29px;
+}
+header#navbar.nav-up {
+  top: -120px;
+}
+form#search-block-form {
+  margin: 0;
+}
+.navbar #block-search-form {
+  margin: 5px 0 5px 22px;
+}
+.navbar #block-search-form ul {
+  float: right;
+}
+.navbar #block-search-form .input-group-btn {
+  width: auto;
+}
+.navbar #block-locale-language {
+  margin: 5px 0 5px 5px;
+}
+.navbar #block-locale-language .input-group-btn {
+  width: auto;
 }
 html.overlay-open .navbar-fixed-top {
   z-index: 400;
@@ -8407,6 +8473,10 @@ p .blue {
   margin: 0 auto;
   padding: 0;
 }
+.row-no-padding [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 #overlay-container,
 .overlay-modal-background,
 .overlay-element {
@@ -8414,70 +8484,6 @@ p .blue {
 }
 #toolbar {
   z-index: 1600;
-}
-footer.footer {
-  background: transparent;
-  border: 0;
-  background: #ddd;
-  background: url('../img/xperthis-footer-bg.jpg') bottom repeat;
-  /* or any other overlay image/color */
-  padding-bottom: 0;
-  padding-top: 0;
-}
-footer.footer .fa-circle {
-  color: #36475a;
-}
-footer.footer .block-simplenews {
-  margin-bottom: 46px;
-}
-footer.footer .block-simplenews h3 {
-  color: #38a7c8;
-}
-footer.footer .region-blockgroup-footer-menu {
-  padding-top: 46px;
-  border-top: 2px solid #36475a;
-  color: #b2bdc4;
-}
-footer.footer .region-blockgroup-footer-menu p {
-  font-size: 14px;
-}
-footer.footer #block-block-5 {
-  background: url('../img/xperthis-part-nrb-bg.jpg') white bottom repeat-x;
-  /* or any other overlay image/color */
-}
-footer.footer #block-views-partner-block {
-  background-color: white;
-  background: url('../img/xperthis-footer-shadow.jpg') white bottom repeat-x;
-  /* or any other overlay image/color */
-  max-height: 200px;
-  min-height: 200px;
-}
-footer.footer #block-views-partner-block .row img {
-  display: none;
-}
-footer.footer #block-views-partner-block .row:nth-of-type(1) img {
-  display: block;
-}
-footer.footer #block-views-partner-block .view-id-partner .view-content .container .row-partner .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-}
-footer.footer #block-views-partner-block .view-id-partner .view-content .container .row-partner .row .col-lg-3 {
-  width: 200px;
-  height: 100px;
-  position: relative;
-  display: block;
-  margin: 10px auto;
-}
-footer.footer #block-views-partner-block .view-id-partner .view-content .container .row-partner .row .col-lg-3 img {
-  position: absolute;
-  width: 200px;
-  height: 100px;
 }
 .inline-block,
 .views-field-field-hompage-icon {

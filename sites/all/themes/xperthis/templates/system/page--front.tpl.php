@@ -110,10 +110,11 @@
     <?php endif; ?>
     </div>
     <div class="col-md-4">
-      
-    <?php if (!empty($page['navigation'])): ?>
-        <?php print render($page['navigation']); ?>
-    <?php endif; ?>
+      <div class="row row-no-padding">
+        <?php if (!empty($page['navigation'])): ?>
+            <?php print render($page['navigation']); ?>
+        <?php endif; ?>
+      </div>
     </div>
   </div>
     </div>

@@ -43,62 +43,13 @@
   &:extend(.clearfix all);
 
   @media (min-width: @grid-float-breakpoint) {
-    float: left;
+    /*float: left;*/    
   }
 }
 .navbar-header {
     clear: both;
 }
 
-header#navbar {
-    background: #fff;
-    height: 142px;
-    position: fixed;
-    top: 0;
-    transition: top 0.5s ease-in-out;
-    width: 100%;
-    max-width: inherit;
-    display: inherit;
-    border-radius: 0;
-    border: 0;
-    z-index: 10;
-    .mt-4 {
-        padding-top: 85px;
-    }
-}
-
-.admin-menu header#navbar {
-    top: 29px;
-}
-header#navbar.nav-up {
-    top: -120px;
-}
-// Search form.
-form#search-block-form {
-  margin: 0;
-}
-.navbar #block-search-form {
-  float: none;
-  margin: 5px 0 5px 5px;
-  @media @normal {
-    float: left;
-  }
-
-  .input-group-btn {
-    width: auto;
-  }
-}
-.navbar #block-locale-language {
-  float: none;
-  margin: 5px 0 5px 5px;
-  @media @normal {
-    float: left;
-  }
-
-  .input-group-btn {
-    width: auto;
-  }
-}
 
 // Navbar collapse (body)
 //

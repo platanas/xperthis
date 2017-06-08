@@ -37,6 +37,7 @@ function xperthis_preprocess_field(&$vars) {
         $item['#options']['attributes']['data-tid'] = $item['#options']['entity']->tid;
         // Add a new class to every link in this field
         $item['#options']['attributes']['class'][] = 'btn btn-default' ;
+        //var_dump ($item);
       }
       // This is a class for the whole field wrapper
       //$vars['classes_array'][] = 'btn btn-default';
@@ -63,12 +64,12 @@ function xperthis_theme() {
 }
 
 function xperthis_field($variables) {
-  $output = '';
-
+  //$output = '';
+var_dump ($variables);
   // Render the label, if it's not hidden.
-  if (!$variables['label_hidden']) {
+  /*if (!$variables['label_hidden']) {
     $output .= '<div class="field-label"' . $variables['title_attributes'] . '>' . $variables['label'] . ' - &nbsp;</div>';
-  }
+  }*/
 }
 
 function xperthis_preprocess_simplenews_block_form_1(&$variables) {
@@ -80,6 +81,7 @@ function xperthis_preprocess_simplenews_block_form_1(&$variables) {
   	$form['mail']['#attributes']['placeholder'] = t('Adresse Email');
   	$form['submit']['#value'] = t("M'inscrire");
 	$form['submit']['#attributes'] = array('class' => array('btn-primary'));
+	$form['submit']['#attributes']['onclick'] = "ga('send’,’event’,’Footer’,’Footer’,’Suscribe’, Newsletter, 1)";
   	$variables['heading'] = t('en vous inscrivant à notre newsletter ...'); 
  	// Create variables for individual elements.
 	$variables['mail'] = render($form['mail']);

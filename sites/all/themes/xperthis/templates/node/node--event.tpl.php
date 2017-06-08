@@ -137,10 +137,6 @@
         </p>
     </div>
     <div class="clearfix"></div>
-    <?php if (!empty($node->field_date['und'][0]['value2'])){ ?>
-        <?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'H:i'); ?>
-        <?php print format_date(strtotime($node->field_date['und'][0]['value2']), 'custom', 'H:i'); ?>
-    <?php } ?>
     <?php print '<h3 class="regular">'.render($content['field_title_event']).'</h3>'; ?>
     
     <?php print '<div class="text-center"><div class="btn btn-primary">'.render($content['registration_link']).'</div></div>'; ?>
@@ -154,7 +150,16 @@
     <?php else: ?>
         <h4>Gratuit sur inscription</h4>
     <?php endif ?>
+        
+    <?php if (!empty($node->field_date['und'][0]['value2'])){ ?>
+        <h4>
+        <?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'H:i'); ?>
+            -
+        <?php print format_date(strtotime($node->field_date['und'][0]['value2']), 'custom', 'H:i'); ?>
+        </h4>
+    <?php } ?>
+    <?php print '<div class="field field-name-field-adresse field-type-text-long field-label-above"><div class="field-label">'.$content['field_adresse']['#title'].'</div></div>'; ?>
     <?php print render($content['field_adresse']); ?>
     
 </div>
-   <?php print '<img src="/'.$base_path . $directory .'/img/xperthis-bottom-bloc-event-bg.jpg" class="img-responsive center-auto" alt="" />'; ?>
+   <?php print '<img src="/'. $directory .'/img/xperthis-bottom-bloc-event-bg.jpg" class="img-responsive center-auto" alt="" />'; ?>

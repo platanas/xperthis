@@ -1,0 +1,42 @@
+<?php
+
+// Adding custom link attributes to a views field for ajax calls.
+// See around line 1330 in views_handler_field.inc.(drupal 7)
+
+function custom_views_onclick_views_pre_render(&$view) {
+    if ($view->name == 'products'){
+        if ($view->current_display == 'homepage_products_block' && isset($view->field['field_hompage_icon'])) {
+            //$attributes = array();
+            foreach($view->result as $r => $result) {
+                //[title] is the replacement pattern
+                $attributes = Array('onclick' => "ga('send’,’event’,’Homepage’,’Homepage’,’Click’, [title])");
+                $view->field['field_hompage_icon']->options['alter']['link_attributes']= $attributes;
+            }  
+            
+            //var_dump($view->field['field_hompage_icon']->options);
+            
+            //$attributes = array('onclick' => "ga('send’,’event’,’Homepage’,’Homepage’,’Click’, okok)");
+            //var_dump($view->field['field_hompage_icon']->options['alter']);
+            //var_dump($view->result);
+        }
+    }
+    if ($view->name == 'webform'){
+        if ($view->current_display == 'block' && isset($view->field['title'])) {
+            //$attributes = array();
+            
+            $attributes = Array('onclick' => "ga('send’,’event’,’Homepage’,’Homepage’,’Click’, CTA-Contact)");
+            $view->field['title']->options['alter']['link_attributes']= $attributes;
+            //var_dump($view->field['field_hompage_icon']->options);
+            
+            //$attributes = array('onclick' => "ga('send’,’event’,’Homepage’,’Homepage’,’Click’, okok)");
+            //var_dump($view->field['field_hompage_icon']->options['alter']);
+            //var_dump($view->result);
+        }
+        //var_dump ($view->field);
+        if ($view->current_display == 'block' && isset($view->field['nothing'])) {
+            $attributes = Array('onclick' => "ga('send’,’event’,’Homepage’,’Homepage’,’Click’, CTA-Approach)");
+            $view->field['nothing']->options['alter']['link_attributes']= $attributes;
+        }
+    }
+}
+?>
