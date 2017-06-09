@@ -79,23 +79,8 @@
  * @ingroup templates
  */
 ?>
-<div class="col-sm-8">
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
-  <header>
-    <?php print render($title_prefix); ?>
-    <?php if (!$page && !empty($title)): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-    <?php endif; ?>
-    <?php print render($title_suffix); ?>
-    <?php if ($display_submitted): ?>
-    <span class="submitted">
-      <?php print $user_picture; ?>
-      <?php print $submitted; ?>
-    </span>
-    <?php endif; ?>
-  </header>
-  <?php endif; ?>
+<article id="node-<?php print $node->nid; ?>" class="col-sm-6 <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+    <div class="teasing">
   <?php
     // Hide comments, tags, and links now so that we can render them later.
     hide($content['comments']);
@@ -113,14 +98,10 @@
     hide($content['field_adresse']);
     hide($content['body']);
     print render($content);
-    print 
-    '<div class="field field-name-field-adresse field-type-text-long field-label-above">'
-        . '<div class="field-label">'
-            .$content['body']['#title'].
-        '</div>'
-    . '</div>';
-    print render($content['body']);
   ?>
+    <p class="annotation"><?php print t('Published');?> <?php print date('d/m/Y', $node->published_at);?> </p>
+    <h4<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h4>
+    <?php print render($content['body']); ?>
   <?php
     // Only display the wrapper div if there are tags or links.
     $field_tags = render($content['field_tags']);
@@ -128,45 +109,10 @@
     if ($field_tags || $links):
   ?>
    <footer>
-       <hr />
      <?php print $field_tags; ?>
      <?php print $links; ?>
   </footer>
   <?php endif; ?>
   <?php print render($content['comments']); ?>
-</article>
-</div>
-<div class="col-sm-4 block-event-info">
-    <div class="event-date">
-        <p class="light white text-center">
-        <span class="day"><?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'd'); ?></span><br />
-        <span class="month "><?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'M'); ?></span>
-        </p>
     </div>
-    <div class="clearfix"></div>
-    <?php print '<h3 class="regular">'.render($content['field_title_event']).'</h3>'; ?>
-    
-    <?php print '<div class="text-center"><div class="btn btn-primary">'.render($content['registration_link']).'</div></div>'; ?>
-    <?php //var_dump($content['field_details']['#title']); ?>
-    
-    <?php print '<div class="field field-name-field-adresse field-type-text-long field-label-above"><div class="field-label">'.$content['field_details']['#title'].'</div></div>'; ?>
-    
-    
-    <?php if (!empty(render($content['field_cost']))): ?>
-        <?php print render($content['field_cost']); ?>
-    <?php else: ?>
-        <h4>Gratuit sur inscription</h4>
-    <?php endif ?>
-        
-    <?php if (!empty($node->field_date['und'][0]['value2'])){ ?>
-        <h4>
-        <?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'H:i'); ?>
-            -
-        <?php print format_date(strtotime($node->field_date['und'][0]['value2']), 'custom', 'H:i'); ?>
-        </h4>
-    <?php } ?>
-    <?php print '<div class="field field-name-field-adresse field-type-text-long field-label-above"><div class="field-label">'.$content['field_adresse']['#title'].'</div></div>'; ?>
-    <?php print render($content['field_adresse']); ?>
-    
-</div>
-   <?php print '<img src="/'. $directory .'/img/xperthis-bottom-bloc-event-bg.jpg" class="img-responsive center-auto" alt="" />'; ?>
+</article>

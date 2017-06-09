@@ -7833,6 +7833,7 @@ and open the template in the editor.
   font-weight: 300;
   border-bottom: 1px solid #c1ccd5;
   padding: 7px 0;
+  margin-bottom: 15px;
 }
 .page-event .field-name-field-image {
   margin-top: 20px;
@@ -8229,6 +8230,8 @@ header#navbar {
 }
 header#navbar p {
   font-size: 14px;
+  line-height: 20px;
+  margin: 0;
 }
 header#navbar #block-block-6 {
   margin-top: 45px;
@@ -8259,6 +8262,26 @@ form#search-block-form {
 }
 .navbar #block-locale-language .input-group-btn {
   width: auto;
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09-juin-2017, 16:08:42
+    Author     : platanas
+*/
+.node-teaser .teasing {
+  background-color: white;
+}
+.node-teaser .teasing h4,
+.node-teaser .teasing p {
+  padding: 25px 0 0 25px;
+}
+.node-teaser .teasing footer .list-inline {
+  text-align: right;
+  padding: 25px 25px 25px 0;
 }
 html.overlay-open .navbar-fixed-top {
   z-index: 400;
@@ -8448,6 +8471,10 @@ p {
 p.blue,
 p .blue {
   color: #0d4866;
+}
+p.annotation {
+  color: #93a2b3;
+  font-size: 12px;
 }
 @media screen and (min-width: 768px) {
   .navbar.container {
