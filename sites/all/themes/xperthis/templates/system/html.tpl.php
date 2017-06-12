@@ -92,4 +92,19 @@
   <?php print $page; ?>
   <?php print $page_bottom; ?>
 </body>
+
+<div class="modal fade bannerformmodal" tabindex="-1" role="dialog" aria-labelledby="bannerformmodal" aria-hidden="true" id="bannerformmodal">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-content">
+                <div class="modal-body">
+                <?php
+                $block = module_invoke('search', 'block_view', 'search');
+                print render($block); 
+                ?>
+                </div>       
+            </div>
+        </div>
+    </div>
+</div>
 </html>

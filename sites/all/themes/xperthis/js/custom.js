@@ -8,7 +8,7 @@
 +function ($) {
         
         var $ = jQuery.noConflict();
-        $('.modal').insertAfter($('body'));
+        $('#bannerformmodal').insertAfter($('.modal-backdrop'));
         console.log($('body'));
         $(window).scroll(function(){
             var scroll = $(this).scrollTop();

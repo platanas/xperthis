@@ -75,8 +75,7 @@
 ?>
 <header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
-      
-    
+
     <div class="row">
         <div class="col-md-2">
         <?php if ($logo): ?>
@@ -123,9 +122,8 @@
 <header role="banner" id="page-header">
     <?php print render($page['header']); ?>
 </header>
-  
 
-  <div class="row">
+    <div class="row">
 
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3" role="complementary">
@@ -157,11 +155,9 @@
       <?php print render($page['content']); ?>
     </section>
 
-    dsqdsq
     <?php if (!empty($page['sidebar_second'])): ?>
       <aside class="col-sm-3" role="complementary">
         <?php 
-            //dump($page['sidebar_second']);
             print render($page['sidebar_second']); 
             print render($block['content']);
         ?>
@@ -176,4 +172,3 @@
     <?php print render($page['footer']); ?>
   </footer>
 <?php endif; ?>
-

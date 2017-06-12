@@ -146,8 +146,22 @@
     <div class="clearfix"></div>
     <?php print '<h3 class="regular">'.render($content['field_title_event']).'</h3>'; ?>
     
-    <?php print '<div class="text-center"><div class="btn btn-primary">'.render($content['registration_link']).'</div></div>'; ?>
+    <?php //print '<div class="text-center"><div class="btn btn-primary">'.render($content['registration_link']).'</div></div>'; ?>
+    <div class="text-center"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registration-modal"><?php print t('Subscribe'); ?></button></div>
+    <div class="modal fade registration-modal" tabindex="-1" role="dialog" aria-labelledby="registration-modal" aria-hidden="true" id="registration-modal">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+              <div class="modal-content">
+                <div class="modal-body">
+                    <?php print render($content['registration_form']); ?>
+                </div>       
+            </div>
+        </div>
+    </div>
+    </div>
+        
     <?php //var_dump($content['field_details']['#title']); ?>
+                
     
     <?php print '<div class="field field-name-field-adresse field-type-text-long field-label-above"><div class="field-label">'.$content['field_details']['#title'].'</div></div>'; ?>
     
