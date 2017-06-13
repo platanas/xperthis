@@ -3123,7 +3123,7 @@ fieldset[disabled] .btn-default.focus {
 .btn-default:hover,
 .btn-default:focus,
 .btn-default.focus {
-  background-color: #79bfde;
+  background-color: transparent;
 }
 .btn-default a {
   color: white;
@@ -3131,7 +3131,7 @@ fieldset[disabled] .btn-default.focus {
 .btn-default a:hover,
 .btn-default a:focus,
 .btn-default a.focus {
-  background-color: #79bfde;
+  background-color: transparent;
   color: white;
   text-decoration: none;
 }
@@ -7910,6 +7910,49 @@ and open the template in the editor.
   font-weight: 400;
   text-transform: uppercase;
 }
+/*Next event bloc */
+#block-views-news-block-2 {
+  margin-left: 10px;
+}
+#block-views-news-block-2 h2.block-title {
+  font-weight: 300;
+}
+#block-views-news-block-2 .view-id-news .views-field-field-date {
+  font-family: "Roboto", "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #6ccedd;
+  color: white;
+  padding: 16px 10px 19px;
+  margin-right: 5px;
+  display: block;
+  float: left;
+}
+#block-views-news-block-2 .view-id-news .views-field-field-date p {
+  line-height: initial;
+}
+#block-views-news-block-2 .view-id-news .views-field-field-date .date-day {
+  font-size: 43px;
+  font-weight: 200;
+  line-height: 43px;
+  padding: 0 7px;
+  text-align: center;
+}
+#block-views-news-block-2 .view-id-news .views-field-field-date .date-month {
+  font-size: 20px;
+  line-height: 10px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+#block-views-news-block-2 .view-id-news .views-field-field-date-1 {
+  color: white;
+  background-color: #1cbdd5;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  width: 80px;
+  padding: 0 25px 20px 25px;
+}
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -8317,6 +8360,51 @@ and open the template in the editor.
   padding: 25px 25px 25px 0;
 }
 /* TAGS BLOCS */
+#block-views-news-tags-block-1 .view-display-id-block_1 {
+  background: url(../img/xperthis-categorie-bg.png) transparent repeat-y left top;
+  padding: 38px 0px;
+}
+#block-views-news-tags-block-1 .view-display-id-block_1 ul {
+  padding: 0;
+  margin: 0;
+}
+#block-views-news-tags-block-1 .view-display-id-block_1 ul li {
+  list-style-type: none;
+  padding-left: 38px;
+}
+#block-views-news-tags-block-1 .view-display-id-block_1 ul li.active {
+  background: url(../img/xperthis-categorie-selected.png) no-repeat left top;
+}
+#block-views-news-tags-block-1 .view-display-id-block_1 ul li .categories {
+  padding: 2px 0 0 12px;
+}
+#block-views-news-tags-block-1 .view-display-id-block_1 ul li a {
+  color: #0d4866;
+}
+#block-views-news-tags-block-1 .view-display-id-block_1 ul li a:hover,
+#block-views-news-tags-block-1 .view-display-id-block_1 ul li a:focus,
+#block-views-news-tags-block-1 .view-display-id-block_1 ul li a:active {
+  text-decoration: none;
+}
+#block-views-news-tags-block-1 .view-display-id-block_1 ul li a:hover {
+  font-weight: 500;
+  color: #0f7db5;
+}
+#block-views-news-tags-block-1 .view-display-id-block_1 ul li a.active {
+  font-weight: 500;
+  color: #0f7db5;
+}
+#block-views-news-tags-block-1 .view-display-id-block_1 ul li:has(.categories) {
+  list-style-image: url(../img/xperthis-categorie-selected.png);
+}
+#block-views-news-tags-block-1 h2.block-title {
+  font-weight: 300;
+  margin-left: 10px;
+}
+/* TAGS BLOCS */
+#block-views-news-tags-block {
+  margin-left: 10px;
+}
 #block-views-news-tags-block h2.block-title {
   font-weight: 300;
 }

@@ -8,8 +8,8 @@
 +function ($) {
         
         var $ = jQuery.noConflict();
-        $('#bannerformmodal').insertAfter($('.modal-backdrop'));
-        console.log($('body'));
+        
+        
         $(window).scroll(function(){
             var scroll = $(this).scrollTop();
             $('.banner-wrapper').css({'background-position':'0px '+scroll/2+'px'});
@@ -18,6 +18,7 @@
         });
         
         setTimeout(function(){
+            $('li:has(> .categories .active)').addClass("active");
             var partnerHeight = $(".row-partner .row").height();
             $('.row-partner').css('max-height', partnerHeight+'px');
             console.log(partnerHeight);

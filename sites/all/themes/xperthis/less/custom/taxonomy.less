@@ -22,7 +22,53 @@ and open the template in the editor.
 }
 
 /* TAGS BLOCS */
+#block-views-news-tags-block-1 {
+    .view-display-id-block_1 {
+        background: url(../img/xperthis-categorie-bg.png) transparent repeat-y left top;
+        padding: 38px 0px;
+        ul {
+            padding:0;
+            margin: 0;
+            li {
+                list-style-type: none;
+                padding-left: 38px;
+
+                &.active {
+                    background: url(../img/xperthis-categorie-selected.png) no-repeat left top;
+                    
+                }
+                .categories {
+                    padding: 2px 0 0 12px;
+                }
+                a {
+                    color: @blue-darker;
+                    &:hover, &:focus, &:active {
+                        text-decoration: none;
+                    }
+                    &:hover {
+                        font-weight: 500;
+                        color: @blue-light;
+                    }
+                    &.active {
+                        font-weight: 500;
+                        color: @blue-light;
+                    }
+                }
+            }
+            li:has(.categories) {
+                list-style-image: url(../img/xperthis-categorie-selected.png);
+            }
+        }
+        
+    }
+    h2.block-title {
+        font-weight: 300;
+        margin-left: 10px;
+    }
+}
+/* TAGS BLOCS */
 #block-views-news-tags-block {
+    margin-left: 10px;
     h2.block-title {
         font-weight: 300;
     }
