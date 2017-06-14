@@ -49,7 +49,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <h3><?php print t("Ne manquez plus jamais rien de notre actualités");?><br />
+        <h3><?php print t("never miss our news");?><br />
         <span class="light"><?php print $heading;?> </span></h3><br />
       </div>
     </div>

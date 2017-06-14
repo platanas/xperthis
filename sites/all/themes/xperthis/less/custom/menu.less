@@ -11,8 +11,10 @@ and open the template in the editor.
     float: right;
 }
 nav {
+    text-align: center;
     ul.menu {
-        display: inline;
+        display: inline-block;
+        float: none;
             li {
             position: relative;
             display: inline;
@@ -107,7 +109,7 @@ header#navbar {
         margin: 0; 
     }
     #block-block-6 {
-        margin-top: 45px;
+        margin-top: 55px;
     }
     .mt-4 {
         padding-top: 85px;
@@ -126,9 +128,9 @@ form#search-block-form {
 }
 .navbar #block-search-form {
 
-  margin: 5px 0 5px 22px;
+  margin-top: 5px;
   ul {
-      float: right;
+      margin-left: 14px;
   }
 
   .input-group-btn {
@@ -136,8 +138,16 @@ form#search-block-form {
   }
 }
 .navbar #block-locale-language {
-  margin: 5px 0 5px 5px;
-  
+  margin-top: 5px;
+  .item-list {
+      margin-left: 25px;
+      .first {
+          padding-left: 0;
+      }
+      .last {
+          padding-right: 0;
+      }
+  }
 
   .input-group-btn {
     width: auto;

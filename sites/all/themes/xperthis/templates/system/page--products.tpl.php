@@ -75,9 +75,7 @@
 ?>
 <header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
-      
-    
-    <div class="row">
+    <div class="row col-md-12">
         <div class="col-md-2">
         <?php if ($logo): ?>
           <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
@@ -94,7 +92,7 @@
           </button>
         <?php endif; ?>
       </div>
-    <div class="col-md-5 col-md-offset-1 mt-4">
+    <div class="col-md-6 col-md-offset-1 mt-4">
 
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
       <div class="navbar-collapse collapse" id="navbar-collapse">
@@ -109,11 +107,12 @@
       </div>
     <?php endif; ?>
     </div>
-    <div class="col-md-4">
-      
-    <?php if (!empty($page['navigation'])): ?>
-        <?php print render($page['navigation']); ?>
-    <?php endif; ?>
+    <div class="col-md-3">
+      <div class="row row-no-padding">
+        <?php if (!empty($page['navigation'])): ?>
+            <?php print render($page['navigation']); ?>
+        <?php endif; ?>
+      </div>
     </div>
   </div>
     </div>
@@ -123,7 +122,7 @@
         <div class="main-container <?php print $container_class; ?>">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center well-lg">
-                    <div class="col-md-12 col-md-offset-1 text-center well-lg">
+                    <div class="col-md-12 text-center well-lg">
                     <?php if (!empty($site_slogan)): ?>
                         <h1 class="lead text-uppercase"><?php print $site_slogan; ?></h1>
                     <?php endif; ?>

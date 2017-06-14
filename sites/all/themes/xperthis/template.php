@@ -105,7 +105,7 @@ function xperthis_preprocess_simplenews_block_form_1(&$variables) {
   	$form['submit']['#value'] = t("Subscribe");
 	$form['submit']['#attributes'] = array('class' => array('btn-primary'));
 	$form['submit']['#attributes']['onclick'] = "ga('send’,’event’,’Footer’,’Footer’,’Suscribe’, Newsletter, 1)";
-  	$variables['heading'] = t('en vous inscrivant à notre newsletter ...'); 
+  	$variables['heading'] = t('Subscribe to our newsletter'); 
  	// Create variables for individual elements.
 	$variables['mail'] = render($form['mail']);
 	$variables['submit'] = render($form['submit']);	

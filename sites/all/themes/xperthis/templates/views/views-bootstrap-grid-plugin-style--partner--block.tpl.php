@@ -15,6 +15,7 @@
 
 <div id=" views-bootstrap-grid-<?php print $id ?>" class="container <?php print $classes ?>">
     <div class="row-partner">
+        <h3 class="text-center"><?php print t('they trust us'); ?></h3>
   <?php if ($options['alignment'] == 'horizontal'): ?>
 
     <?php foreach ($items as $row): ?>

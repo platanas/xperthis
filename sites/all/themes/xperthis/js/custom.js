@@ -18,7 +18,14 @@
         });
         
         setTimeout(function(){
-            $('li:has(> .categories .active)').addClass("active");
+            //console.log($('li .categories a)').hasClass('active'));
+            if ($('li .categories a').hasClass('active')) {
+                $('li:has(> .categories .active)').addClass("active");
+            } else {            
+                $('li.all .categories a').addClass("active");
+                $('li.all').addClass("active");
+                console.log('ok');
+            }
             var partnerHeight = $(".row-partner .row").height();
             $('.row-partner').css('max-height', partnerHeight+'px');
             console.log(partnerHeight);

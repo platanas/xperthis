@@ -38,5 +38,15 @@ function custom_views_onclick_views_pre_render(&$view) {
             $view->field['nothing']->options['alter']['link_attributes']= $attributes;
         }
     }
+    if ($view->name == 'news') {
+        if ($view->current_display == 'block') {
+             $view->build_info['title'] = t('Headline xperthis');
+        }
+    }
+    if ($view->name == 'partner') {
+        if ($view->current_display == 'block') {
+             $view->build_info['title'] = t('they trust us');
+        }
+    }
 }
 ?>

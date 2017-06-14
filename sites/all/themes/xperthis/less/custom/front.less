@@ -69,34 +69,29 @@ h1.lead {
         position: absolute;
         z-index: 1;
     }
-    .view-id-news .views-field-field-date{
+    .view-id-news .views-field-nothing{
+        font-family: @font-family-date;
+        background-color: @turquoise;
+        color: white;
+        padding: 16px 10px 19px;
+        position: absolute;
+        left: 20px;
         top: 20px;
-        left: 20px;
-        color: white;
-        text-align:center;
-        background-color: #1cbdd5;
-        position: absolute;
-        z-index: 1;
-        font-weight: 300;
-        font-size: 1.7em;
-        text-transform: uppercase;
-        width: 80px;
-        padding: 20px 25px 0 25px;
-    }
+        .date-day{
+            font-size: 43px;
+            font-weight: 200;
+            line-height: 43px;
+            padding: 0 7px;
+            text-align: center;
+        }
     
-    .view-id-news .views-field-field-date-1 {
-        top: 65px;
-        left: 20px;
-        color: white;
-        background-color: #1cbdd5;
-        position: absolute;
-        text-align:center;
-        z-index: 1;
-        font-weight: 300;
-        font-size: 1.1em;
-        text-transform: uppercase;
-        width: 80px;
-        padding: 0 25px 20px 25px;
+        .date-month {
+            font-size: 20px;
+            line-height: 10px;
+            font-weight: 400;
+            text-align: center;
+            text-transform: uppercase;
+        }
     }
     .view-id-news .views-field-title h2 {
         font-size: 1.1em;
@@ -274,6 +269,9 @@ h1.lead {
     padding: 40px 0;
     background: url('../img/xperthis-home-bg-cta-contact.jpg') center center; /* or any other overlay image/color */
     background-size: cover;
+    h2 {
+        color: white;
+    }
     .btn-primary {
         background-color: @blue-darker;
         &:hover, &:focus {

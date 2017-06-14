@@ -6750,7 +6750,8 @@ button.close {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-#bannerformmodal #edit-actions--4 {
+#bannerformmodal #edit-actions--4,
+#bannerformmodal #edit-actions--2 {
   display: none;
 }
 #bannerformmodal form#search-block-form {
@@ -7914,6 +7915,10 @@ and open the template in the editor.
 #block-views-news-block-2 {
   margin-left: 10px;
 }
+#block-views-news-block-2 .col {
+  height: 100px;
+  clear: both;
+}
 #block-views-news-block-2 h2.block-title {
   font-weight: 300;
 }
@@ -8020,33 +8025,28 @@ h1.lead {
   position: absolute;
   z-index: 1;
 }
-#block-views-news-block .view-id-news .views-field-field-date {
+#block-views-news-block .view-id-news .views-field-nothing {
+  font-family: "Roboto", "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #6ccedd;
+  color: white;
+  padding: 16px 10px 19px;
+  position: absolute;
+  left: 20px;
   top: 20px;
-  left: 20px;
-  color: white;
-  text-align: center;
-  background-color: #1cbdd5;
-  position: absolute;
-  z-index: 1;
-  font-weight: 300;
-  font-size: 1.7em;
-  text-transform: uppercase;
-  width: 80px;
-  padding: 20px 25px 0 25px;
 }
-#block-views-news-block .view-id-news .views-field-field-date-1 {
-  top: 65px;
-  left: 20px;
-  color: white;
-  background-color: #1cbdd5;
-  position: absolute;
+#block-views-news-block .view-id-news .views-field-nothing .date-day {
+  font-size: 43px;
+  font-weight: 200;
+  line-height: 43px;
+  padding: 0 7px;
   text-align: center;
-  z-index: 1;
-  font-weight: 300;
-  font-size: 1.1em;
+}
+#block-views-news-block .view-id-news .views-field-nothing .date-month {
+  font-size: 20px;
+  line-height: 10px;
+  font-weight: 400;
+  text-align: center;
   text-transform: uppercase;
-  width: 80px;
-  padding: 0 25px 20px 25px;
 }
 #block-views-news-block .view-id-news .views-field-title h2 {
   font-size: 1.1em;
@@ -8199,6 +8199,9 @@ h1.lead {
   /* or any other overlay image/color */
   background-size: cover;
 }
+#block-views-webform-block h2 {
+  color: white;
+}
 #block-views-webform-block .btn-primary {
   background-color: #0d4866;
 }
@@ -8218,8 +8221,12 @@ and open the template in the editor.
 .region-navigation {
   float: right;
 }
+nav {
+  text-align: center;
+}
 nav ul.menu {
-  display: inline;
+  display: inline-block;
+  float: none;
 }
 nav ul.menu li {
   position: relative;
@@ -8310,7 +8317,7 @@ header#navbar p {
   margin: 0;
 }
 header#navbar #block-block-6 {
-  margin-top: 45px;
+  margin-top: 55px;
 }
 header#navbar .mt-4 {
   padding-top: 85px;
@@ -8325,16 +8332,25 @@ form#search-block-form {
   margin: 0;
 }
 .navbar #block-search-form {
-  margin: 5px 0 5px 22px;
+  margin-top: 5px;
 }
 .navbar #block-search-form ul {
-  float: right;
+  margin-left: 14px;
 }
 .navbar #block-search-form .input-group-btn {
   width: auto;
 }
 .navbar #block-locale-language {
-  margin: 5px 0 5px 5px;
+  margin-top: 5px;
+}
+.navbar #block-locale-language .item-list {
+  margin-left: 25px;
+}
+.navbar #block-locale-language .item-list .first {
+  padding-left: 0;
+}
+.navbar #block-locale-language .item-list .last {
+  padding-right: 0;
 }
 .navbar #block-locale-language .input-group-btn {
   width: auto;
