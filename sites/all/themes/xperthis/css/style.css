@@ -7911,18 +7911,114 @@ and open the template in the editor.
   font-weight: 400;
   text-transform: uppercase;
 }
+.not-front .page-header {
+  font-weight: 300;
+  color: #0f7db5;
+  border-bottom: 2px solid #dee8ee;
+  margin-bottom: 30px;
+}
+.not-front .page-header:first-letter {
+  text-transform: uppercase;
+}
+/* Event LIsting */
+.node-teaser-event {
+  height: 190px;
+}
+.node-teaser-event .field-type-image {
+  float: left;
+  margin-right: 30px;
+}
+.node-teaser-event .event-details {
+  height: 190px;
+}
+.node-teaser-event .event-details .red {
+  color: #e95e50;
+}
+.node-teaser-event .event-details h3 {
+  padding-top: 25px;
+  color: #0d4866;
+}
+.node-teaser-event .event-details a {
+  color: #58afd6;
+  text-decoration: underline;
+}
+.node-teaser-event .event-date-listing {
+  position: absolute;
+  top: 0;
+  left: 23px;
+}
+.node-teaser-event .event-date-listing .date {
+  padding-top: 11px;
+  border-right: 2px solid #a7e2eb;
+  width: 82px;
+}
+.node-teaser-event .event-date-listing .hour {
+  padding-top: 25px;
+  width: 107px;
+}
+.node-teaser-event .event-date-listing .date,
+.node-teaser-event .event-date-listing .hour {
+  font-family: "Roboto", "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #6ccedd;
+  color: white;
+  height: 82px;
+  display: block;
+  float: left;
+}
+.node-teaser-event .event-date-listing .date p,
+.node-teaser-event .event-date-listing .hour p {
+  line-height: initial;
+}
+.node-teaser-event .event-date-listing .date .date-day,
+.node-teaser-event .event-date-listing .hour .date-day {
+  font-size: 43px;
+  font-weight: 200;
+  line-height: 43px;
+  padding: 0 7px;
+  text-align: center;
+}
+.node-teaser-event .event-date-listing .date .date-month,
+.node-teaser-event .event-date-listing .hour .date-month {
+  font-size: 20px;
+  line-height: 10px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+.node-teaser-event .event-date-listing .date .hour-start,
+.node-teaser-event .event-date-listing .hour .hour-start {
+  text-align: center;
+}
+.node-teaser-event .event-date-listing .date .hour-end,
+.node-teaser-event .event-date-listing .hour .hour-end {
+  text-align: center;
+}
 /*Next event bloc */
-#block-views-news-block-2 {
+#block-views-news-block-3 .pull-left {
+  margin-right: 20px;
+}
+#block-views-news-block-3 p {
+  font-weight: 500;
+}
+#block-views-news-block-3 a {
+  color: #0d4866;
+}
+#block-views-news-block-2,
+#block-views-news-block-3 {
   margin-left: 10px;
 }
-#block-views-news-block-2 .col {
+#block-views-news-block-2 .col,
+#block-views-news-block-3 .col {
   height: 100px;
   clear: both;
 }
-#block-views-news-block-2 h2.block-title {
+#block-views-news-block-2 h2.block-title,
+#block-views-news-block-3 h2.block-title {
   font-weight: 300;
+  margin-top: 6px;
 }
-#block-views-news-block-2 .view-id-news .views-field-field-date {
+#block-views-news-block-2 .view-id-news .views-field-field-date,
+#block-views-news-block-3 .view-id-news .views-field-field-date {
   font-family: "Roboto", "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #6ccedd;
   color: white;
@@ -7931,24 +8027,28 @@ and open the template in the editor.
   display: block;
   float: left;
 }
-#block-views-news-block-2 .view-id-news .views-field-field-date p {
+#block-views-news-block-2 .view-id-news .views-field-field-date p,
+#block-views-news-block-3 .view-id-news .views-field-field-date p {
   line-height: initial;
 }
-#block-views-news-block-2 .view-id-news .views-field-field-date .date-day {
+#block-views-news-block-2 .view-id-news .views-field-field-date .date-day,
+#block-views-news-block-3 .view-id-news .views-field-field-date .date-day {
   font-size: 43px;
   font-weight: 200;
   line-height: 43px;
   padding: 0 7px;
   text-align: center;
 }
-#block-views-news-block-2 .view-id-news .views-field-field-date .date-month {
+#block-views-news-block-2 .view-id-news .views-field-field-date .date-month,
+#block-views-news-block-3 .view-id-news .views-field-field-date .date-month {
   font-size: 20px;
   line-height: 10px;
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
 }
-#block-views-news-block-2 .view-id-news .views-field-field-date-1 {
+#block-views-news-block-2 .view-id-news .views-field-field-date-1,
+#block-views-news-block-3 .view-id-news .views-field-field-date-1 {
   color: white;
   background-color: #1cbdd5;
   text-align: center;
@@ -8335,7 +8435,7 @@ form#search-block-form {
   margin-top: 5px;
 }
 .navbar #block-search-form ul {
-  margin-left: 14px;
+  margin-left: 5px;
 }
 .navbar #block-search-form .input-group-btn {
   width: auto;

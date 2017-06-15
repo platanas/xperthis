@@ -61,17 +61,107 @@ and open the template in the editor.
         }
     }
 }
-
+.not-front {
+    .page-header {
+        font-weight: 300;
+        color: #0f7db5;
+        border-bottom: 2px solid #dee8ee;
+        margin-bottom: 30px;
+        &:first-letter {
+            text-transform: uppercase;
+        }
+    }
+}
+/* Event LIsting */
+.node-teaser-event {
+    height: 190px;
+    .field-type-image {
+        float: left;
+        margin-right: 30px;
+    }
+    .event-details {
+        height: 190px;
+        .red {
+            color: @red;
+        }
+        h3 {
+            padding-top: 25px;
+            color: @blue-darker;
+        }
+        a {
+            color: @blue-xtra-light;
+            text-decoration: underline;
+        }
+    }
+    .event-date-listing {
+        position: absolute;
+        top: 0;
+        left: 23px;
+        .date {
+            padding-top: 11px;
+            border-right: 2px solid #a7e2eb;
+            width: 82px;
+        }
+        .hour {
+            padding-top: 25px;
+            width: 107px;
+        }
+        .date, .hour {
+            font-family: @font-family-date;
+            background-color: @turquoise;
+            color: white;
+            height: 82px;
+            display: block;
+            float: left;
+            p {
+                line-height: initial;
+            }
+            .date-day {
+                font-size: 43px;
+                font-weight: 200;
+                line-height: 43px;
+                padding: 0 7px;
+                text-align: center;
+            }
+            .date-month {
+                font-size: 20px;
+                line-height: 10px;
+                font-weight: 400;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .hour-start {
+                text-align: center;
+            }
+            .hour-end {
+                text-align: center;
+            }
+        }
+    }
+}
 /*Next event bloc */
-
-#block-views-news-block-2 {
+#block-views-news-block-3 {
+    .pull-left {
+        margin-right: 20px;
+    }
+    p {
+        font-weight: 500;
+    }
+    a {
+        color:@blue-darker;
+    }
+}
+#block-views-news-block-2,
+#block-views-news-block-3 {
     margin-left: 10px;
+    
     .col {
         height: 100px;
         clear: both;
     }
     h2.block-title {
         font-weight: 300;
+        margin-top: 6px;
     }
     
     .view-id-news .views-field-field-date {

@@ -101,6 +101,7 @@
     hide($content['comments']);
     hide($content['links']);
     hide($content['field_tags']);
+    hide($content['field_categories']);
     hide($content['field_subtitle']);
     hide($content['field_title_event']);
     hide($content['field_date']);
@@ -139,8 +140,8 @@
 <div class="col-sm-4 block-event-info">
     <div class="event-date">
         <p class="light white text-center">
-        <span class="day"><?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'd'); ?></span><br />
-        <span class="month "><?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'M'); ?></span>
+        <span class="day"><?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'd', 'Europe/Brussels'); ?></span><br />
+        <span class="month "><?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'M', 'Europe/Brussels'); ?></span>
         </p>
     </div>
     <div class="clearfix"></div>

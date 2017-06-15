@@ -161,7 +161,7 @@
         <?php 
             //dump($page['sidebar_second']);
             print render($page['sidebar_second']); 
-            $block = module_invoke('webform', 'block_view', 'client-block-'.$node->nid);
+            //$block = module_invoke('webform', 'block_view', 'client-block-'.$node->nid);
             print render($block['content']);
         ?>
       </aside>  <!-- /#sidebar-second -->

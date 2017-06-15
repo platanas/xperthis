@@ -79,7 +79,7 @@
  * @ingroup templates
  */
 ?>
-<article id="node-<?php print $node->nid; ?>" class="col-sm-6 <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<article id="node-<?php print $node->nid; ?>" class="col-md-12 node-teaser-event <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
     <div class="teasing">
   <?php
     // Hide comments, tags, and links now so that we can render them later.
@@ -87,7 +87,6 @@
     hide($content['links']);
     hide($content['field_tags']);
     hide($content['field_subtitle']);
-    hide($content['field_title_event']);
     hide($content['field_date']);
     hide($content['field_date_subscription']);
     hide($content['field_details']);
@@ -97,11 +96,35 @@
     hide($content['field_capacity']);
     hide($content['field_adresse']);
     hide($content['body']);
-    print render($content);
-  ?>
-    <p class="annotation"><?php print t('Published');?> <?php print date('d/m/Y', $node->published_at);?> </p>
-    <h4<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h4>
-    <?php print render($content['body']); ?>
+    date_default_timezone_set('Europe/Brussels');
+    ?>
+    <div class="event-date-listing">
+        <div class="date">
+            <div class="date-day">
+                <?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'd', 'Europe/Brussels'); ?>
+            </div>
+            <div class="date-month">
+                <?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'M', 'Europe/Brussels'); ?>
+            </div>
+        </div>
+        <div class="hour">
+            <div class="hour-start">
+                <?php print format_date(strtotime($node->field_date['und'][0]['value'].' Europe/Brussels'), 'custom', 'H:i', 'Europe/Brussels'); ?>
+            </div>
+            <div class="hour-end">
+                <?php print format_date(strtotime($node->field_date['und'][0]['value2'].' Europe/Brussels'), 'custom', 'H:i', 'Europe/Brussels'); ?>
+            </div>
+        </div>
+    </div>
+    <?php
+        print render($content);
+    ?>
+    <div class="event-details">
+        <?php //var_dump($node->field_date); ?>
+        <?php print $node->field_title_event['und'][0]['value']; ?>
+        <p class="annotation"><i class="fa fa-map-marker fa-lg red" aria-hidden="true"></i> <?php print strip_tags($node->field_adresse['und'][0]['value']); ?></p>
+        <a href="<?php print $node_url; ?>"><?php print t('see more'); ?></a>
+    </div>
   <?php
     // Only display the wrapper div if there are tags or links.
     $field_tags = render($content['field_tags']);
@@ -113,6 +136,5 @@
      <?php print $links; ?>
   </footer>
   <?php endif; ?>
-  <?php print render($content['comments']); ?>
     </div>
 </article>
