@@ -24,13 +24,21 @@
 
 // Branding.
 .navbar .logo {
-    margin-top: 44px;
     margin-right: -15px;
     padding-left: 15px;
     padding-right: 15px;
-    @media @grid-breakpoint {
+    img {
+        margin-top: 44px;
+    }
+    @media(max-width:@grid-float-breakpoint){
         margin-right: 0;
         padding-left: 0;
+        padding-right: 0;
+        img {
+            height: 60px;
+            margin-top: 10px;
+        }
+        
     }
 }
 

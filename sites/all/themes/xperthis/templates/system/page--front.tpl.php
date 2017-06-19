@@ -74,54 +74,13 @@
  */
 ?>
 <header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
-  <div class="<?php print $container_class; ?>">
-    <div class="row col-md-12">
-        <div class="col-md-2">
-        <?php if ($logo): ?>
-          <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-          </a>
-        <?php endif; ?>
-
-        <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-            <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        <?php endif; ?>
-      </div>
-    <div class="col-md-6 col-md-offset-1 mt-4">
-
-    <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-      <div class="navbar-collapse collapse" id="navbar-collapse">
-        <nav role="navigation">
-          <?php if (!empty($primary_nav)): ?>
-            <?php print render($primary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($secondary_nav)): ?>
-            <?php print render($secondary_nav); ?>
-          <?php endif; ?>
-        </nav>
-      </div>
-    <?php endif; ?>
-    </div>
-    <div class="col-md-3">
-      <div class="row row-no-padding">
-        <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
-        <?php endif; ?>
-      </div>
-    </div>
-  </div>
-    </div>
+  <?php include $directory . '/templates/inc/header.tpl.inc'; ?>
 </header>
 <div role="hero" id="page-header" class="banner-wrapper">
     <div class="banner-wrapper-pattern">
         <div class="main-container <?php print $container_class; ?>">
             <div class="row">
-                <div class="col-md-4 col-md-offset-4 text-center well-lg">
+                <div class="col-md-6 col-md-offset-3 text-center ">
                     <div class="col-md-12 text-center well-lg">
                     <?php if (!empty($site_slogan)): ?>
                         <h1 class="lead text-uppercase"><?php print $site_slogan; ?></h1>
@@ -134,9 +93,9 @@
         </div>
     </div>
 </div> <!-- /#page-header -->
-<div class="main-container content <?php print $container_class; ?>">
+<div class="main-container content">
 
-  <div class="row">
+  <div class="<?php print $container_class; ?>">
 
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3" role="complementary">

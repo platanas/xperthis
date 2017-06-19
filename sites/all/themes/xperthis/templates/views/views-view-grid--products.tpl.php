@@ -18,7 +18,7 @@
         
         <?php foreach ($columns as $column_number => $item): ?>
         
-        <div class="col-md-<?php if ($column_number==1){ print '4';  } elseif  ($column_number==2){ print '3';  } else {print '3 col-md-offset-1';}  ?> text-center"> <div class="homepage-icons inline-block"><div class="homepage-icons-bg"><?php print $item; ?></div></div></div>
+        <div class="col-md-<?php if ($column_number==1){ print '4';  } elseif  ($column_number==2){ print '3';  } else {print '3 col-md-offset-1';}  ?> col-sm-4 text-center"> <div class="homepage-icons inline-block"><div class="homepage-icons-bg"><?php print $item; ?></div></div></div>
         <?php endforeach; ?>
     </div>
     <?php endforeach; ?>

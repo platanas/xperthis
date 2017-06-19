@@ -112,4 +112,3 @@ function xperthis_preprocess_simplenews_block_form_1(&$variables) {
 	// Be sure to print the remaining rendered form items.
 	$variables['children'] = drupal_render_children($form);
 }
-

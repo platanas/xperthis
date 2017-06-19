@@ -1445,7 +1445,7 @@ dt {
 dd {
   margin-left: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .dl-horizontal dt {
     float: left;
     width: 160px;
@@ -3659,7 +3659,7 @@ tbody.collapse.in {
   bottom: 100%;
   margin-bottom: 2px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-right .dropdown-menu {
     left: auto;
     right: 0;
@@ -4506,24 +4506,31 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar {
     border-radius: 4px;
   }
 }
 .navbar .logo {
-  margin-top: 44px;
   margin-right: -15px;
   padding-left: 15px;
   padding-right: 15px;
 }
-@media screen and (min-width: 768px) {
+.navbar .logo img {
+  margin-top: 44px;
+}
+@media (max-width: 992px) {
   .navbar .logo {
     margin-right: 0;
     padding-left: 0;
+    padding-right: 0;
+  }
+  .navbar .logo img {
+    height: 60px;
+    margin-top: 10px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-header {
     /*float: left;*/
   }
@@ -4542,7 +4549,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -4581,7 +4588,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: -12px;
   margin-left: -12px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .container > .navbar-header,
   .container-fluid > .navbar-header,
   .container > .navbar-collapse,
@@ -4594,7 +4601,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   z-index: 1000;
   border-width: 0 0 1px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-static-top {
     border-radius: 0;
   }
@@ -4606,7 +4613,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   left: 0;
   z-index: 1030;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     border-radius: 0;
@@ -4635,7 +4642,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand > img {
   display: block;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: -12px;
@@ -4665,7 +4672,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-toggle {
     display: none;
   }
@@ -4678,7 +4685,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-bottom: 10px;
   line-height: 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -4700,7 +4707,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     background-image: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-nav {
     float: left;
     margin: 0;
@@ -4775,7 +4782,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     top: 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-form .form-group {
     margin-bottom: 5px;
   }
@@ -4783,7 +4790,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-bottom: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-form {
     width: auto;
     border: 0;
@@ -4824,14 +4831,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-text {
     float: left;
     margin-left: 12px;
     margin-right: 12px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-left {
     float: left !important;
   }
@@ -4898,7 +4905,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
   color: #043051;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #4ca9d3;
   }
@@ -4994,7 +5001,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   background-color: #080808;
   color: #fff;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
     border-color: #080808;
   }
@@ -5047,12 +5054,12 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar {
     border-radius: 4px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-header {
     float: left;
   }
@@ -5068,7 +5075,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -5107,7 +5114,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   margin-right: -12px;
   margin-left: -12px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .container > .navbar-header,
   .container-fluid > .navbar-header,
   .container > .navbar-collapse,
@@ -5120,7 +5127,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   z-index: 1000;
   border-width: 0 0 1px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-static-top {
     border-radius: 0;
   }
@@ -5132,7 +5139,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   left: 0;
   z-index: 1030;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-fixed-top,
   .navbar-fixed-bottom {
     border-radius: 0;
@@ -5161,7 +5168,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .navbar-brand > img {
   display: block;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: -12px;
@@ -5191,7 +5198,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-toggle {
     display: none;
   }
@@ -5204,7 +5211,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding-bottom: 10px;
   line-height: 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -5226,7 +5233,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     background-image: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-nav {
     float: left;
     margin: 0;
@@ -5301,7 +5308,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     top: 0;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-form .form-group {
     margin-bottom: 5px;
   }
@@ -5309,7 +5316,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     margin-bottom: 0;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-form {
     width: auto;
     border: 0;
@@ -5350,14 +5357,14 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-text {
     float: left;
     margin-left: 12px;
     margin-right: 12px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-left {
     float: left !important;
   }
@@ -5424,7 +5431,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   background-color: transparent;
   color: #043051;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #4ca9d3;
   }
@@ -5520,7 +5527,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   background-color: #080808;
   color: #fff;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
     border-color: #080808;
   }
@@ -7697,6 +7704,19 @@ and open the template in the editor.
     Created on : 31-mai-2017, 17:18:10
     Author     : platanas
 */
+body {
+  margin-bottom: 463px;
+}
+.main-container.content {
+  background-color: #eff6f8;
+  padding-bottom: 45px;
+}
+.not-front .main-container.content {
+  -webkit-box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
+  -moz-box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
+  box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
+  min-height: 100vh;
+}
 .page-no-hero {
   padding-top: 162px;
 }
@@ -7719,16 +7739,19 @@ footer.footer .region-blockgroup-footer-menu p.white {
   color: white;
 }
 footer.footer.footer-no-front .region-footer {
-  background: url(../img/xperthis-footer-shadow.jpg) transparent top repeat-x;
+  background-color: white;
+  -webkit-box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
+  -moz-box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
+  box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
+  /*background: url(../img/xperthis-footer-shadow.png) transparent top repeat-x;*/
 }
 footer.footer {
-  background: transparent;
   border: 0;
-  background: #ddd;
-  background: url('../img/xperthis-footer-bg.jpg') bottom repeat;
-  /* or any other overlay image/color */
+  background: transparent;
+  /*background: url('../img/xperthis-footer-bg.jpg') bottom repeat; /* or any other overlay image/color */
   padding-bottom: 0;
   padding-top: 0;
+  margin-top: 0;
 }
 footer.footer .fa-circle {
   color: #36475a;
@@ -7753,8 +7776,10 @@ footer.footer #block-block-5 {
 }
 footer.footer #block-views-partner-block {
   background-color: white;
-  background: url('../img/xperthis-footer-shadow.jpg') white bottom repeat-x;
-  /* or any other overlay image/color */
+  -webkit-box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
+  -moz-box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
+  box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
+  /*background: url('../img/xperthis-footer-shadow.png') transparent bottom repeat-x; /* or any other overlay image/color */
   max-height: 200px;
   min-height: 200px;
 }
@@ -7784,6 +7809,30 @@ footer.footer #block-views-partner-block .view-id-partner .view-content .contain
   position: absolute;
   width: 200px;
   height: 100px;
+}
+footer .sticky-footer-behind {
+  position: fixed;
+  background: url('../img/xperthis-footer-bg.jpg') bottom repeat;
+  /* or any other overlay image/color */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 463px;
+  color: #fff;
+  z-index: -1;
+}
+@media (max-width: 992px) {
+  body {
+    margin-bottom: 620px;
+  }
+  footer .sticky-footer-behind {
+    height: 620px;
+  }
+  #block-views-partner-block,
+  #block-menu-menu-about,
+  #block-menu-menu-our-offer {
+    display: none;
+  }
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -8298,6 +8347,9 @@ h1.lead {
   background: url('../img/xperthis-home-bg-cta-contact.jpg') center center;
   /* or any other overlay image/color */
   background-size: cover;
+  -webkit-box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
+  -moz-box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
+  box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
 }
 #block-views-webform-block h2 {
   color: white;
@@ -8308,6 +8360,33 @@ h1.lead {
 #block-views-webform-block .btn-primary:hover,
 #block-views-webform-block .btn-primary:focus {
   background-color: #2f91bd;
+}
+.banner-wrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 72px;
+  background: url(../img/xperthis-home-hero-bottom.png) transparent bottom center no-repeat;
+  background-size: cover;
+}
+.banner-wrapper {
+  position: relative;
+  background: url(../img/gabarit-visuel1-home.jpg) transparent bottom center no-repeat;
+  color: #fff;
+  background-size: cover;
+}
+.banner-wrapper .banner-wrapper-pattern {
+  height: 602px;
+  background: url(../img/pattern.png) transparent repeat;
+  padding-top: 142px;
+}
+@media (max-width: 992px) {
+  .banner-wrapper .banner-wrapper-pattern {
+    padding-top: 50px;
+  }
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -8398,6 +8477,29 @@ nav ul.menu li:not(:last-child):after {
   font-weight: bold;
   text-decoration: none;
 }
+.navbar-burger {
+  display: none;
+  margin-right: 12px;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 0px solid transparent;
+  border-radius: 4px;
+}
+.navbar-burger .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+.navbar-burger .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+.navbar-burger .icon-bar {
+  background-color: #888;
+}
 header#navbar {
   background: #fff;
   height: 142px;
@@ -8436,6 +8538,7 @@ form#search-block-form {
 }
 .navbar #block-search-form ul {
   margin-left: 5px;
+  padding: 0;
 }
 .navbar #block-search-form .input-group-btn {
   width: auto;
@@ -8444,7 +8547,7 @@ form#search-block-form {
   margin-top: 5px;
 }
 .navbar #block-locale-language .item-list {
-  margin-left: 25px;
+  margin-left: 15px;
 }
 .navbar #block-locale-language .item-list .first {
   padding-left: 0;
@@ -8454,6 +8557,41 @@ form#search-block-form {
 }
 .navbar #block-locale-language .input-group-btn {
   width: auto;
+}
+.product-navigation-block {
+  background-color: white;
+  border-top: 1px solid #dee8ee;
+}
+.product-navigation-block .menu {
+  display: inline-block;
+}
+.product-navigation-block .menu li {
+  float: left;
+}
+.product-navigation-block .menu li a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.product-navigation-block .menu li:not(:last-child):after {
+  content: ' \00b7';
+  position: absolute;
+  right: 0px;
+  top: 15px;
+  width: 2px;
+  color: #dee8ee;
+}
+@media (max-width: 992px) {
+  .navbar-burger {
+    display: block;
+    margin-top: 26px;
+  }
+  .menu-primary,
+  .menu-secondary {
+    display: none;
+  }
+  header#navbar {
+    height: 80px;
+  }
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -9428,26 +9566,4 @@ a.icon-after .glyphicon {
 .btn.icon-after .glyphicon {
   margin-left: .25em;
   margin-right: -0.25em;
-}
-.banner-wrapper:after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 72px;
-  background: url(../img/xperthis-home-hero-bottom.png) transparent bottom center no-repeat;
-  background-size: cover;
-}
-.banner-wrapper {
-  position: relative;
-  background: url(../img/gabarit-visuel1-home.jpg) transparent bottom center no-repeat;
-  color: #fff;
-  background-size: cover;
-}
-.banner-wrapper .banner-wrapper-pattern {
-  height: 602px;
-  background: url(../img/pattern.png) transparent repeat;
-  padding-top: 142px;
 }
