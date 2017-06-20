@@ -11,8 +11,6 @@
  */
 ?>
 <div class="container <?php print $class; ?>"<?php print $attributes; ?>>
-  
-
     <?php foreach ($rows as $row_number => $columns): ?>
     <div <?php if ($row_classes[$row_number]) { print 'class="row ' . $row_classes[$row_number] .'"';  } ?>>
         

@@ -71,25 +71,30 @@ h1.lead {
     }
     .view-id-news .views-field-nothing{
         font-family: @font-family-date;
-        background-color: @turquoise;
         color: white;
-        padding: 16px 10px 19px;
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        .date-day{
+        float: left;
+        position: relative;
+        margin-top: -20px;
+        .date-day {
+            background-color: @turquoise;
+            margin-left: 20px;
+            margin-right: 20px;
             font-size: 43px;
             font-weight: 200;
             line-height: 43px;
-            padding: 0 7px;
+            padding: 10px 17px 0 17px;
             text-align: center;
         }
     
         .date-month {
+            background-color: @turquoise;
+            margin-left: 20px;
+            margin-right: 20px;
             font-size: 20px;
             line-height: 10px;
             font-weight: 400;
             text-align: center;
+            padding: 0px 17px 19px 17px;
             text-transform: uppercase;
         }
     }
@@ -101,7 +106,6 @@ h1.lead {
     
     .view-id-news .views-field-body {
         top: 30px;
-        left: 100px;
         p {
             font-size: 1.1em;
             color: #fff;
@@ -161,6 +165,16 @@ h1.lead {
                 visibility: hidden;
             }
         }
+        .Fr {
+            a {
+                &::before {
+                    text-decoration: underline;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                }
+            }
+        }
     }
 }
 #block-views-news-block-1 {
@@ -188,6 +202,36 @@ h1.lead {
         z-index:0;
         height:200px;
         overflow: hidden;
+    }
+    
+    .view-id-news .views-field-nothing{
+        font-family: @font-family-date;
+        color: white;
+        float: left;
+        position: relative;
+        margin-top: -20px;
+        .date-day {
+            background-color: @turquoise;
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 43px;
+            font-weight: 200;
+            line-height: 43px;
+            padding: 10px 17px 0 17px;
+            text-align: center;
+        }
+    
+        .date-month {
+            background-color: @turquoise;
+            margin-left: 20px;
+            margin-right: 20px;
+            font-size: 20px;
+            line-height: 10px;
+            font-weight: 400;
+            text-align: center;
+            padding: 0px 17px 19px 17px;
+            text-transform: uppercase;
+        }
     }
 
     .view-id-news .views-field-view-node {
@@ -219,6 +263,18 @@ h1.lead {
                     visibility: visible;
                 }
                 visibility: hidden;
+            }
+        }
+        
+        .Fr {
+            a {
+                &::before {
+                    color: @blue-xtra-light;
+                    text-decoration: underline;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
             }
         }
     }
@@ -297,7 +353,7 @@ h1.lead {
 }
 .banner-wrapper {
     position:relative;
-    background: url(../img/gabarit-visuel1-home.jpg) transparent bottom center no-repeat;
+    background: url(../img/gabarit-visuel1-home.jpg) white bottom center no-repeat;
     color: #fff;
     background-size: cover;
     .banner-wrapper-pattern {

@@ -40,6 +40,17 @@
         }
         
     }
+    @media(max-width:320px){
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        img {
+            height: inherit;
+            margin-top: 16px;
+            width: 100%;
+        }
+        
+    }
 }
 
 // Navbar heading
@@ -71,8 +82,8 @@
 
 .navbar-collapse {
   overflow-x: visible;
-  padding-right: @navbar-padding-horizontal;
-  padding-left:  @navbar-padding-horizontal;
+  padding-right: 0;
+  padding-left:  0;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
   &:extend(.clearfix all);

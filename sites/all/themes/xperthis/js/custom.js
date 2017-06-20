@@ -50,25 +50,25 @@
             var row = $('#block-views-partner-block div.row .col-1');
             var n = images.length;
             var x = row.length;
-            console.log(n);
-            console.log(x);
+            //console.log(n);
+            //console.log(x);
             var current = random(n);
             var currentRow = random(x);
-            console.log(current);
+            //console.log(current);
             row.eq(0).children('img').show();
             images.eq(current).show();
             images.eq(current).hide();
 
             // Periodically, we fadeOut the current image and fadeIn a random one
             var interval_id = setInterval(function () {
-            console.log(current);
+            //console.log(current);
                 var currentClass = images.eq(current).parent().parent().parent().attr('class');
                 var ok = false;
                 var currentKeep = current;
                 var bloc = $('#block-views-partner-block div.row .'+currentClass);
                 //var currentClass = bloc.length;
                 var currentClassCol = random(currentClass);
-                console.log(currentClass);
+                //console.log(currentClass);
                 
                 images.eq(current).fadeOut(transition_time, function () {
                     var currentClassCol = random(currentClass);

@@ -74,7 +74,7 @@
  */
 ?>
 <header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
-  <?php include $directory . '/templates/inc/header.tpl.inc'; ?>
+  <?php include $directory . '/templates/inc/headerTaxonomy.tpl.inc'; ?>
 </header>
 <div class="main-container content page-no-hero ">
 <header role="banner" id="page-header">
@@ -82,7 +82,6 @@
 </header>
 
     <div class="<?php print $container_class; ?>">
-
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3" role="complementary">
         <?php print render($page['sidebar_first']); ?>

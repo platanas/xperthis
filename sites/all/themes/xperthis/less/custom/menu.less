@@ -127,6 +127,11 @@ header#navbar {
     border-radius: 0;
     border: 0;
     z-index: 10;
+    .logo {
+        img {
+            transition: all 0.5s ease-in-out;
+        }
+    }
     p {
         font-size: 14px;
         line-height: 20px;
@@ -143,8 +148,15 @@ header#navbar {
 .admin-menu header#navbar {
     top: 29px;
 }
+.admin-menu header#navbar.nav-up {
+    top: -25px;
+}
 header#navbar.nav-up {
-    top: -120px;
+    top: -45px;
+}
+header#navbar.nav-up .logo img {
+    margin-top: 50px;
+    transform: scale(0.7); 
 }
 // Search form.
 form#search-block-form {
@@ -187,7 +199,7 @@ form#search-block-form {
             float:left;
             a {
                 padding-top: 15px;
-                padding-bottom: 15px;
+                padding-bottom: 10px;
             }
         }
         li:not(:last-child):after {
@@ -212,6 +224,10 @@ form#search-block-form {
     header#navbar {
         height: 80px;
     }
+}
+
+@media(max-width:320px){
+    
 }
 @media(min-width:768px){
     

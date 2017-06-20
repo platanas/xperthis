@@ -20,6 +20,7 @@
     <div class="menu-primary col-md-6 col-md-offset-1 mt-4">
 
     
+        
         <p><a href="/fr/taxonomy/term/all" ><?php print t('News').'</a> > '.$title; ?></p>
     </div>
     <div class="col-md-3 menu-secondary">
