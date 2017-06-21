@@ -11,7 +11,7 @@
               </a>
             <?php endif; ?>
         </div>
-        <div class="col-md-2 col-sm-4 col-xs-6 text-center ">
+        <div class="col-md-2 col-sm-4 col-xs-6 text-center logo-container">
         <?php if ($logo): ?>
           <a class="logo navbar-btn " href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
             <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
@@ -41,4 +41,5 @@
       </div>
     </div>
   </div>
-    </div>
+    <img src="/<?php print $directory . '/img/xperthis-menuHeader-bg-shadow.png'; ?>" alt="" class="pull-left" />
+</div>

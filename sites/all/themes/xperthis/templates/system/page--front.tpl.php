@@ -80,12 +80,10 @@
     <div class="banner-wrapper-pattern">
         <div class="main-container <?php print $container_class; ?>">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3 text-center ">
-                    <div class="col-md-12 text-center well-lg">
+                <div class="col-md-4 col-md-offset-4 text-center ">
                     <?php if (!empty($site_slogan)): ?>
                         <h1 class="lead text-uppercase"><?php print $site_slogan; ?></h1>
                     <?php endif; ?>
-                    </div>
                 </div>
             </div>
         </div>

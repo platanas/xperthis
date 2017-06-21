@@ -76,28 +76,9 @@
 <header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
     <?php 
     include $directory . '/templates/inc/header.tpl.inc'; 
-    $block = module_invoke('menu', 'block_view', 'menu-our-offer');
-    print '<div class="row product-navigation-block"><div class="col-md-12  text-center">'.render($block['content']).'</div></div>';
     ?>
-</header>
-<div role="hero" id="page-header" class="banner-wrapper">
-    <div class="banner-wrapper-pattern">
-        <div class="main-container <?php print $container_class; ?>">
-            <div class="row">
-                <div class="col-md-4 col-md-offset-4 text-center well-lg">
-                    <div class="col-md-12 text-center well-lg">
-                    <?php if (!empty($site_slogan)): ?>
-                        <h1 class="lead text-uppercase"><?php print $site_slogan; ?></h1>
-                    <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-            <?php print render($page['header']); ?>
-        </div>
-    </div>
-</div> <!-- /#page-header -->
-<div class="main-container content">
+</header> <!-- /#page-header -->
+<div class="main-container content page-no-hero page-products ">
 
   
 

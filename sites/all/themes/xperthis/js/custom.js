@@ -17,23 +17,35 @@
             //console.log(scroll/1.5);
         });
         
+        
         setTimeout(function(){
-            //console.log($('li .categories a)').hasClass('active'));
+            // Whole icon product homepage clickable
+            $(".homepage-icons-bg").click(function() {
+                window.location = $(this).find('.views-field-field-hompage-icon').find('.field-content').find("a").attr("href"); 
+                return false;
+            });
+            $(".pixel-overlay").hover(
+                function() {
+                  $( this ).addClass( "no-overlay" );
+                }, function() {
+                  $( this ).removeClass( "no-overlay" );
+                }
+            );
             if ($('li .categories a').hasClass('active')) {
                 $('li:has(> .categories .active)').addClass("active");
             } else {            
                 $('li.all .categories a').addClass("active");
                 $('li.all').addClass("active");
-                console.log('ok');
+                //console.log('ok');
             }
             var partnerHeight = $(".row-partner .row").height();
             $('.row-partner').css('max-height', partnerHeight+'px');
-            console.log(partnerHeight);
+            //console.log(partnerHeight);
             z=0;
             $('.row-partner').find($('.row')).each(function(){
                 $(this).find($('.col-lg-3')).each(function(){
                     $(this).css('top', -partnerHeight*z+'px');
-                    console.log(z);
+                    //console.log(z);
                 });
                     z++;
             });
@@ -92,7 +104,6 @@
                         current = random(n);
                         if (images.eq(current).css('opacity')==1){
                             ok=true;
-                            console.log('okok');
                         }
                     }
                     currentRow = random(x);

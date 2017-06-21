@@ -9,6 +9,9 @@ and open the template in the editor.
 */
 h1.lead {
     color: white;
+    font-size: 30px;
+    margin-top: 70px;
+    margin-bottom: 60px;
 }
 
 .homepage-icons {
@@ -22,17 +25,32 @@ h1.lead {
 }
 
 .homepage-icons-bg {
+    cursor: pointer;
     text-transform: uppercase;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: rgba(255,255,255,1);
     width: 187px;
     height: 187px;
     padding: 25px;
     color: #0f7db5;
     margin: 5px;
+    transition: all 0.5s ease-in-out;
+    h3 {
+        font-weight: 400;
+        font-size: 18px;
+        padding-top: 0;
+        margin-top: 0;
+    }
+    .img-responsive {
+        width: 73px;
+    }
+    &:hover {
+        background-color: rgba(255,255,255,0.9);
+    }
 }
 
 #block-views-news-block {
+    margin-top: 60px;
     h2.block-title {
         text-align: center;
         color: @blue-light;
@@ -47,12 +65,16 @@ h1.lead {
         position: relative;
     }
     .pixel-overlay {
-          position:absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          background: url('../img/homepage-headline-pattern.png'); /* or any other overlay image/color */
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url('../img/homepage-headline-pattern.png'); /* or any other overlay image/color */
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            opacity: 0;
+        }
     }
     .view-id-news .views-field-field-image{
         position:absolute;
@@ -62,7 +84,7 @@ h1.lead {
     }
 
     .view-id-news .views-field-title, 
-    .view-id-news .views-field-body, 
+    .view-id-news .views-field-body,  
     .view-id-news .views-field-type, 
     .view-id-news .views-field-view-node, 
     .view-id-news .views-field-field-date {
@@ -75,6 +97,7 @@ h1.lead {
         float: left;
         position: relative;
         margin-top: -20px;
+        
         .date-day {
             background-color: @turquoise;
             margin-left: 20px;
@@ -85,7 +108,6 @@ h1.lead {
             padding: 10px 17px 0 17px;
             text-align: center;
         }
-    
         .date-month {
             background-color: @turquoise;
             margin-left: 20px;
@@ -106,6 +128,7 @@ h1.lead {
     
     .view-id-news .views-field-body {
         top: 30px;
+        width: 350px;
         p {
             font-size: 1.1em;
             color: #fff;
@@ -117,7 +140,7 @@ h1.lead {
         top: -14px;
         left: 20px;
         h3 {
-            padding: 0px 17px;
+            padding: 0px 15px;
             display: inline-block;
             color: #fff;
             margin: 0;
@@ -130,7 +153,7 @@ h1.lead {
             &.Article {
                 background-color: #eab013;
             }
-            &.Event {
+            &.Evénement {
                 background-color: #1cbdd5;
             }
         }
@@ -156,7 +179,7 @@ h1.lead {
                 visibility: hidden;
             }
         }
-        .Event.Fr {
+        .Evénement.Fr {
             a {
                 &::before {
                     content: 'En savoir plus';
@@ -179,9 +202,13 @@ h1.lead {
 }
 #block-views-news-block-1 {
     .home-headline-card {
-        height: 356px;
-        min-height: 356px;
-        max-height: 356px;
+        height: 400px;
+        min-height: 400px;
+        max-height: 400px;
+    }
+    
+    .view-footer {
+        margin: 40px 0 0 0;
     }
     
     .views-field-view-node {
@@ -189,12 +216,16 @@ h1.lead {
     }
     
     .pixel-overlay {
-          position:absolute;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          background: url('../img/homepage-headline-pattern.png'); /* or any other overlay image/color */
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url('../img/homepage-headline-pattern.png'); /* or any other overlay image/color */
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            opacity: 0;
+        }
     }
     
     .view-id-news .views-field-field-image{
@@ -203,7 +234,22 @@ h1.lead {
         height:200px;
         overflow: hidden;
     }
-    
+    .views-field-field-title-event {
+        background: white;
+        margin: 0;
+        height: 100px;
+        
+        h3 {
+            margin: 0;
+            font-size: 16px;
+            color: @blue-darker;
+            padding: 10px 20px;
+        }
+        
+        p {
+            padding: 10px 20px
+        }
+    }
     .view-id-news .views-field-nothing{
         font-family: @font-family-date;
         color: white;
@@ -256,7 +302,7 @@ h1.lead {
                 visibility: hidden;
             }
         }
-        .Event.Fr {
+        .Evénement.Fr {
             a {
                 &::before {
                     content: 'En savoir plus';
@@ -285,14 +331,6 @@ h1.lead {
         padding: 20px;
     }
     
-    .view-id-news .views-field-body {
-        background-color: white;
-        p {
-            font-size: 1.1em;
-            color: #0f7db5;
-            padding: 20px;
-        }
-    }
     
     .view-id-news .views-field-type {
         position: relative;
@@ -300,7 +338,7 @@ h1.lead {
         top: 14px;
         left: 20px;
         h3 {
-            padding: 0px 17px;
+            padding: 0px 15px;
             display: inline-block;
             color: #fff;
             margin: 0;
@@ -313,7 +351,7 @@ h1.lead {
             &.Article {
                 background-color: #eab013;
             }
-            &.Event {
+            &.Evénement {
                 background-color: #1cbdd5;
             }
         }
@@ -328,6 +366,20 @@ h1.lead {
     -webkit-box-shadow: 0px 6px 14px 0px rgba(35,31,32,0.35);
     -moz-box-shadow: 0px 6px 14px 0px rgba(35,31,32,0.35);
     box-shadow: 0px 6px 14px 0px rgba(35,31,32,0.35);
+    .views-field-body {
+        margin-top: 20px;
+        margin-bottom: 46px;
+    }
+    .views-field-nothing {
+        text-transform: lowercase;
+        a {
+            text-decoration: underline;
+            color: white;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
     h2 {
         color: white;
     }
@@ -357,7 +409,7 @@ h1.lead {
     color: #fff;
     background-size: cover;
     .banner-wrapper-pattern {
-        height:602px;
+        height:660px;
         background: url(../img/pattern.png) transparent repeat;
         padding-top: 142px;
     }

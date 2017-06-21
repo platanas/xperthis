@@ -10,18 +10,15 @@
               </a>
             <?php endif; ?>
         </div>
-        <div class="col-md-2 col-sm-4 col-xs-6 text-center ">
+        <div class="col-md-2 col-sm-4 col-xs-6 text-center logo-container">
         <?php if ($logo): ?>
           <a class="logo navbar-btn " href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
             <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
           </a>
         <?php endif; ?>
       </div>
-    <div class="menu-primary col-md-6 col-md-offset-1 mt-4">
-
-    
-        
-        <p><a href="/fr/taxonomy/term/all" ><?php print t('News').'</a> > '.$title; ?></p>
+    <div class="menu-news col-md-7 mt-4">
+        <p class="annotation"><a href="/fr/taxonomy/term/all" ><?php print t('News').'</a> <span class="breadcrumb-rail">></span> '.truncate_utf8($title, 50, false, true, 1); ?></p>
     </div>
     <div class="col-md-3 menu-secondary">
       <div class="row row-no-padding">
@@ -31,4 +28,5 @@
       </div>
     </div>
   </div>
-    </div>
+    <img src="/<?php print $directory . '/img/xperthis-menuHeader-bg-shadow.png'; ?>" alt="" class="pull-left" />
+</div>

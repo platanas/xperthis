@@ -22,5 +22,5 @@
  * the view is modified.
  */
 ?>
-<div class="pixel-overlay"></div>
+
 <?php print $output; ?>
