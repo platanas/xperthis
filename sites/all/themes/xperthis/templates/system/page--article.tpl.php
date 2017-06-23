@@ -74,9 +74,8 @@
  */
 ?>
 
-<header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
-  <?php include $directory . '/templates/inc/headerActu.tpl.inc'; ?>
-</header> <!-- /#page-header -->
+<?php include $directory . '/templates/inc/headerActu.tpl.inc'; ?>
+
 <div class="main-container content page-no-hero ">
 <header role="banner" id="page-header">
     <?php print render($page['header']); ?>

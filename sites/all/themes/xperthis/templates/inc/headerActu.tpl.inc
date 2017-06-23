@@ -1,3 +1,4 @@
+<header id="navbar" role="banner" class="menu-article nav-down <?php print $navbar_classes; ?>">
 <div class="<?php print $container_class; ?>">
     <div class="row col-md-12">
         <div class="col-sm-4 col-xs-3 navbar-burger">
@@ -30,3 +31,4 @@
   </div>
     <img src="/<?php print $directory . '/img/xperthis-menuHeader-bg-shadow.png'; ?>" alt="" class="pull-left" />
 </div>
+</header> <!-- /#page-header -->

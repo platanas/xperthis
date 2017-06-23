@@ -15,21 +15,18 @@ nav {
     ul.menu {
         display: inline-block;
         float: none;
-            > li {
+            li {
             position: relative;
             display: inline;
             list-style-type: none;
             a {
                 color: @blue-light;
-                &:hover {
-                    color: @blue-darker;
-                }
             }
             &:not(:last-child):after{
                 content: ' \00b7';
                 position: absolute;
                 right: 0px;
-                top: 15px;
+                top: 0px;
                 width:2px;
                 color: @blue-light;
             }
@@ -117,19 +114,24 @@ nav {
       background-color: @navbar-default-toggle-icon-bar-bg;
     }
 }
-.navbar-nav > li > .dropdown-menu {
-    padding: 0;
+.navbar-nav.nav > li.dropdown.open {
+    position: static;
+}
+
+.navbar-nav.nav .dropdown-menu {
+    left: 0 !important;
+    right: 0 !important;
     box-shadow: none;
-    .active a {
-        color: @blue-darker;
-    }
-}
-.navbar-nav.nav .dropdown-menu > li { 
-    background-color: #eff6f8;
-    border-bottom: 1px solid white;
+    border-top: 1px solid black;
+    margin: 3px auto 0 auto;
+    background: #fff;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+    min-width: 100vw;
 }
 
-
+.navbar-nav.nav .dropdown-menu > li { display: inline; text-align: center; }
 
 .navbar-nav.nav .dropdown-menu > li > a {
     width: auto !important;
@@ -138,6 +140,7 @@ nav {
     padding-top: 0;
     padding-bottom: 0;
     margin: 0;
+    display:initial;
 }
 header#navbar {
     background: #fff;
@@ -152,9 +155,13 @@ header#navbar {
     border: 0;
     z-index: 10;
     nav {
-        height: 50px;
-        .caret {
-            display: none;
+            padding-top: 17px;
+            padding-bottom: 7px;
+        li > a {
+            display:initial;
+            .caret {
+                display: none;
+            }
         }
     }
     .logo-container {
@@ -176,7 +183,9 @@ header#navbar {
     }
     .menu-primary {
         transition: all 0.5s ease-in-out;
-        padding-top: 85px;
+        /*padding-top: 85px;*/
+        position: relative;
+        top: -66px;
     }
     .menu-news {
         transition: all 0.5s ease-in-out;
@@ -203,7 +212,10 @@ header#navbar.nav-up {
         margin-top: 61px;
     }
     .menu-primary {
-        padding-top: 91px;
+        top: -64px;
+        .navbar-nav.nav .dropdown-menu {
+            margin: 1px auto 0 auto;
+        }
     }
     .menu-news {
         padding-top: 110px;
@@ -287,11 +299,11 @@ form#search-block-form {
                 padding-bottom: 10px;
             }
         }
-        > li:not(:last-child):after {
+        li:not(:last-child):after {
             content: ' \00b7';
             position: absolute;
             right: 0px;
-            top: 15px;
+            top: 0px;
             width: 2px;
             color: #dee8ee;
         }

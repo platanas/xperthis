@@ -99,6 +99,8 @@
     hide($content['comments']);
     hide($content['links']);
     hide($content['field_tags']);
+    
+    print '<p class="annotation">'. t('Published').' '.date('d/m/Y', $node->published_at).' </p>';
     print render($content);
   ?>
   <?php
