@@ -9,7 +9,6 @@
         
         var $ = jQuery.noConflict();
         
-        
         $(window).scroll(function(){
             var scroll = $(this).scrollTop();
             $('.banner-wrapper').css({'background-position':'0px '+scroll/2+'px'});
@@ -19,6 +18,12 @@
         
         
         setTimeout(function(){
+            
+        $('ul.nav li.dropdown').hover(function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+          }, function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+          });
             // Whole icon product homepage clickable
             $(".homepage-icons-bg").click(function() {
                 window.location = $(this).find('.views-field-field-hompage-icon').find('.field-content').find("a").attr("href"); 

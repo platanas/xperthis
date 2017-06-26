@@ -79,7 +79,7 @@
     <?php print render($page['header']); ?>
 </header>
 
-    <div class="<?php print $container_class; ?>">
+    <div class="<?php print $container_class; ?> page-taxonomy">
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3" role="complementary">
         <?php print render($page['sidebar_first']); ?>

@@ -4899,14 +4899,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 .navbar-default .navbar-toggle {
-  border-color: #ddd;
+  border-color: #0f7db5;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #ddd;
+  background-color: #0d4866;
 }
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #888;
+  background-color: #0f7db5;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
@@ -5062,17 +5062,16 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #444;
 }
 .breadcrumb {
-  padding: 8px 15px;
-  margin-bottom: 20px;
+  /*padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;*/
+  margin-bottom: 0px;
   list-style: none;
-  background-color: #f5f5f5;
   border-radius: 4px;
 }
 .breadcrumb > li {
   display: inline-block;
 }
 .breadcrumb > li + li:before {
-  content: "/\00a0";
+  content: ">\00a0";
   padding: 0 5px;
   color: #ccc;
 }
@@ -7170,6 +7169,56 @@ and open the template in the editor.
 .paragraphs-item-image-background-block .col-lg-12 {
   padding: 20px;
 }
+.paragraphs-item-testimonials {
+  background: url('../img/xperthis-testimonial-bg.jpg');
+  background-size: cover;
+  padding-top: 65px;
+  padding-bottom: 30px;
+  color: #0d4866;
+}
+.paragraphs-item-testimonials p {
+  padding-top: 12px;
+}
+.paragraphs-item-testimonials img {
+  border-radius: 50%;
+  border: 2px solid white;
+  padding: 2px;
+  height: 140px;
+  width: 140px;
+  text-align: center;
+  margin: 0 auto;
+}
+/* paragraphs-item-card- ... */
+.card {
+  margin: 30px 0;
+}
+.card-square {
+  background-color: white;
+}
+.card-square h4 {
+  padding: 30px 20px;
+  text-align: center;
+}
+.card-square p {
+  padding: 10px 20px;
+  color: #0d4866;
+}
+.card-square footer .list-inline {
+  text-align: right;
+  padding: 20px;
+}
+.card-square .btn {
+  width: 100%;
+}
+.card-round img {
+  border-radius: 50%;
+  border: 2px;
+  padding: 2px;
+  height: 214px;
+  width: 214px;
+  text-align: center;
+  margin: 0 auto;
+}
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -7191,6 +7240,14 @@ body {
   -moz-box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
   box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
   min-height: 100vh;
+}
+.not-front .page-header {
+  font-weight: 300;
+  color: #0f7db5;
+  margin-bottom: 30px;
+}
+.not-front .page-header:first-letter {
+  text-transform: uppercase;
 }
 .page-no-hero {
   padding-top: 162px;
@@ -7409,6 +7466,7 @@ and open the template in the editor.
 }
 .page-event .block-event-info .btn-primary {
   margin: 80px 0;
+  width: 100%;
 }
 .page-event .block-event-info .event-date {
   font-family: "Roboto", "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -7436,14 +7494,8 @@ and open the template in the editor.
   font-weight: 400;
   text-transform: uppercase;
 }
-.not-front .page-header {
-  font-weight: 300;
-  color: #0f7db5;
+.page-event .not-front .page-header {
   border-bottom: 2px solid #dee8ee;
-  margin-bottom: 30px;
-}
-.not-front .page-header:first-letter {
-  text-transform: uppercase;
 }
 /* Event LIsting */
 .node-teaser-event {
@@ -7658,7 +7710,7 @@ h1.lead {
   transition: all 0.5s ease-in-out;
 }
 #block-views-news-block .pixel-overlay:hover {
-  opacity: 0;
+  opacity: 0.4;
 }
 #block-views-news-block .view-id-news .views-field-field-image {
   position: absolute;
@@ -7788,7 +7840,7 @@ h1.lead {
   transition: all 0.5s ease-in-out;
 }
 #block-views-news-block-1 .pixel-overlay:hover {
-  opacity: 0;
+  opacity: 0.4;
 }
 #block-views-news-block-1 .view-id-news .views-field-field-image {
   position: relative;
@@ -8055,7 +8107,6 @@ nav ul.menu > li:not(:last-child):after {
 }
 .navbar-burger {
   display: none;
-  margin-right: 12px;
   padding: 9px 10px;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -8069,12 +8120,13 @@ nav ul.menu > li:not(:last-child):after {
   width: 22px;
   height: 2px;
   border-radius: 1px;
+  color: #0f7db5;
 }
 .navbar-burger .icon-bar + .icon-bar {
   margin-top: 4px;
 }
 .navbar-burger .icon-bar {
-  background-color: #888;
+  background-color: #0f7db5;
 }
 .navbar-nav > li > .dropdown-menu {
   padding: 0;
@@ -8145,12 +8197,6 @@ header#navbar .menu-news .breadcrumb-rail {
 .admin-menu header#navbar {
   top: 29px;
 }
-.admin-menu header#navbar.nav-up {
-  top: -45px;
-}
-header#navbar.nav-up {
-  top: -68px;
-}
 header#navbar.nav-up #block-block-6 {
   margin-top: 61px;
 }
@@ -8165,30 +8211,54 @@ header#navbar.nav-up .logo img {
   margin-top: 65px;
   transform: scale(0.51);
 }
-header#navbar.menu-article {
-  height: 95px;
+header#navbar.menu-breadcrumb.nav-up .logo img {
+  margin-top: 37px;
+  transform: none;
 }
-header#navbar.menu-article nav {
+header#navbar.menu-breadcrumb,
+header#navbar.menu-breadcrumb.nav-up {
+  height: 95px;
+  top: 0px;
+}
+header#navbar.menu-breadcrumb nav,
+header#navbar.menu-breadcrumb.nav-up nav {
   height: 50px;
 }
-header#navbar.menu-article .logo-container {
+header#navbar.menu-breadcrumb .logo-container,
+header#navbar.menu-breadcrumb.nav-up .logo-container {
   height: 95px;
 }
-header#navbar.menu-article .logo img {
+header#navbar.menu-breadcrumb .logo img,
+header#navbar.menu-breadcrumb.nav-up .logo img {
   width: 106px;
   margin-top: 37px;
 }
-header#navbar.menu-article #block-block-6 {
+header#navbar.menu-breadcrumb #block-block-6,
+header#navbar.menu-breadcrumb.nav-up #block-block-6 {
   margin-top: 51px;
 }
-header#navbar.menu-article .menu-news {
+header#navbar.menu-breadcrumb .menu-news,
+header#navbar.menu-breadcrumb.nav-up .menu-news {
   transition: all 0.5s ease-in-out;
   padding-top: 65px;
   padding-left: 30px;
 }
-header#navbar.menu-article .menu-news .breadcrumb-rail {
+header#navbar.menu-breadcrumb .menu-news .breadcrumb-rail,
+header#navbar.menu-breadcrumb.nav-up .menu-news .breadcrumb-rail {
   padding: 0 20px;
   color: #dee8ee;
+}
+.admin-menu header#navbar.menu-breadcrumb {
+  top: 29px;
+}
+.admin-menu header#navbar.menu-breadcrumb.nav-up {
+  top: 29px;
+}
+.admin-menu header#navbar.nav-up {
+  top: -45px;
+}
+header#navbar.nav-up {
+  top: -68px;
 }
 form#search-block-form {
   margin: 0;
@@ -8246,10 +8316,12 @@ form#search-block-form {
     margin-top: 26px;
   }
   .menu-primary,
-  .menu-secondary {
+  .menu-secondary,
+  .menu-news {
     display: none;
   }
-  header#navbar {
+  header#navbar,
+  header#navbar .logo-container {
     height: 80px;
   }
 }
@@ -8262,14 +8334,14 @@ and open the template in the editor.
     Created on : 09-juin-2017, 16:08:42
     Author     : platanas
 */
-.node-teaser .teasing {
+.page-taxonomy .node-teaser .teasing {
   background-color: white;
 }
-.node-teaser .teasing h4,
-.node-teaser .teasing p {
+.page-taxonomy .node-teaser .teasing h4,
+.page-taxonomy .node-teaser .teasing p {
   padding: 25px 0 0 25px;
 }
-.node-teaser .teasing footer .list-inline {
+.page-taxonomy .node-teaser .teasing footer .list-inline {
   text-align: right;
   padding: 25px 25px 25px 0;
 }
@@ -8331,6 +8403,30 @@ and open the template in the editor.
 #block-views-news-tags-block .views-row {
   float: left;
   margin: 0 5px 5px 0;
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24-juin-2017, 11:51:01
+    Author     : platanas
+*/
+.main-container.content.page-products {
+  padding-bottom: 0;
+}
+.main-container.content.page-products .node-teaser .teasing {
+  background-color: white;
+}
+.main-container.content.page-products .node-teaser .teasing h4,
+.main-container.content.page-products .node-teaser .teasing p {
+  padding: 20px;
+  text-align: center;
+}
+.main-container.content.page-products .node-teaser .teasing footer .list-inline {
+  text-align: right;
+  padding: 20px;
 }
 html.overlay-open .navbar-fixed-top {
   z-index: 400;
@@ -8441,6 +8537,15 @@ h3 {
 h4 {
   line-height: 27px;
   font-size: 18px;
+}
+.light {
+  font-weight: 300;
+}
+.regular {
+  font-weight: 400;
+}
+.medium {
+  font-weight: 500;
 }
 h1.light,
 h2.light,

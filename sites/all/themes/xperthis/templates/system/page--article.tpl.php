@@ -74,7 +74,7 @@
  */
 ?>
 
-<?php include $directory . '/templates/inc/headerActu.tpl.inc'; ?>
+<?php include $directory . '/templates/inc/headerNews.tpl.inc'; ?>
 
 <div class="main-container content page-no-hero ">
 <header role="banner" id="page-header">

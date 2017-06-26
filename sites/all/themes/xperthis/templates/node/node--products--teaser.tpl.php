@@ -79,7 +79,8 @@
  * @ingroup templates
  */
 ?>
-<article id="node-<?php print $node->nid; ?>" class="col-sm-6 <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
     <div class="teasing">
   <?php
     // Hide comments, tags, and links now so that we can render them later.
@@ -87,21 +88,14 @@
     hide($content['links']);
     hide($content['field_tags']);
     hide($content['field_subtitle']);
-    hide($content['field_title_event']);
-    hide($content['field_date']);
-    hide($content['field_date_subscription']);
-    hide($content['field_details']);
-    hide($content['registration_link']);
-    hide($content['registration_form']);
-    hide($content['registration_slots_left']);
-    hide($content['field_capacity']);
-    hide($content['field_adresse']);
     hide($content['body']);
-    print render($content);
+    //  print render($content);
   ?>
-    <p class="annotation"><?php print t('Published');?> <?php print date('d/m/Y', $node->published_at);?> </p>
-    <h4<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h4>
+    <h4<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print render($content['field_subtitle']); ?></a></h4>
     <?php print render($content['body']); ?>
+    <footer>
+    <p><a href="<?php print $node_url; ?>"><?php print t('read more'); ?></a></p>
+    </footer>
   <?php
     // Only display the wrapper div if there are tags or links.
     $field_tags = render($content['field_tags']);

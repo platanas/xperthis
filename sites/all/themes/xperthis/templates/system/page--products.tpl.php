@@ -73,13 +73,19 @@
  * @ingroup templates
  */
 ?>
-<header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
+<?php if (!empty($title)): ?>
     <?php 
-    include $directory . '/templates/inc/header.tpl.inc'; 
+    include $directory . '/templates/inc/headerProducts.tpl.inc'; 
     ?>
-</header> <!-- /#page-header -->
+<?php else: ?>
+    <header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
+      <?php include $directory . '/templates/inc/header.tpl.inc'; ?>
+    </header>
+<?php endif; ?>
 <div class="main-container content page-no-hero page-products ">
-
+<header role="banner" id="page-header">
+    <?php print render($page['header']); ?>
+</header>
   
 
   <div class="">
@@ -94,11 +100,11 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+      
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>
-        <h1 class="page-header"><?php print $title; ?></h1>
+        <h1 class="page-header"><?php print $node->field_subtitle['und'][0]['value']; ?></h1>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>

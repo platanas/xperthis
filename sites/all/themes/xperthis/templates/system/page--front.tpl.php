@@ -73,7 +73,7 @@
  * @ingroup templates
  */
 ?>
-<header id="navbar" role="banner" class="nav-down navbar  navbar-default">
+<header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
   <?php include $directory . '/templates/inc/header.tpl.inc'; ?>
 </header>
 <div role="hero" id="page-header" class="banner-wrapper">
