@@ -13,7 +13,9 @@ h1.lead {
     margin-top: 70px;
     margin-bottom: 60px;
 }
-
+.text-alignment {
+    text-align: right;
+}
 .homepage-icons {
     text-transform: uppercase;
     border-radius: 50%;
@@ -34,7 +36,6 @@ h1.lead {
     padding: 25px;
     color: #0f7db5;
     margin: 5px;
-    transition: all 0.5s ease-in-out;
     h3 {
         font-weight: 400;
         font-size: 18px;
@@ -422,5 +423,58 @@ h1.lead {
         .banner-wrapper-pattern {
             padding-top: 50px;
         }
+    }
+    
+    .text-alignment, .text-alignment-adjust {
+        text-align: center;
+    }
+    .homepage-icons {
+        text-transform: uppercase;
+        border-radius: 50px;
+        border: 2px solid #fff;
+        width: 300px;
+        height: 100px; 
+        color: #0f7db5;
+        margin: 10px;   
+    }
+    .views-field-field-hompage-icon {
+        float:left;
+    }
+    .homepage-icons-bg {
+        cursor: pointer;
+        text-transform: uppercase;
+        border-radius: 50px;
+        background-color: rgba(255,255,255,1);
+        width: 286px;
+        height: 88px;
+        padding: 15px 27px;
+        color: #0f7db5;
+        margin: 5px;
+        h3 {
+            font-weight: 400;
+            font-size: 18px;
+            padding-top: 0;
+            margin-top: 0;
+        }
+        .img-responsive {
+            width: 61px;
+        }
+        &:hover {
+            background-color: rgba(255,255,255,0.9);
+        }
+    }
+}
+@media(max-width:320px){
+    
+}
+@media(min-width:768px){
+    
+}
+@media(min-width:992px){
+    
+}
+@media(max-width:1200px){
+    h1.lead {
+        font-size: 24px;   
     }
 }

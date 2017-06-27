@@ -3042,9 +3042,9 @@ select[multiple].input-lg {
 .btn.active {
   outline: 0;
   background-image: none;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 .btn.disabled,
 .btn[disabled],
@@ -3134,6 +3134,10 @@ fieldset[disabled] .btn-default.focus {
   background-color: transparent;
   color: white;
   text-decoration: none;
+}
+.btn-default a.active {
+  color: #0d4866;
+  border-color: #0d4866;
 }
 .btn-primary {
   text-transform: uppercase;
@@ -7241,6 +7245,9 @@ body {
   box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
   min-height: 100vh;
 }
+.page-article .field-name-field-image {
+  margin: 20px 0;
+}
 .not-front .page-header {
   font-weight: 300;
   color: #0f7db5;
@@ -7650,6 +7657,9 @@ h1.lead {
   margin-top: 70px;
   margin-bottom: 60px;
 }
+.text-alignment {
+  text-align: right;
+}
 .homepage-icons {
   text-transform: uppercase;
   border-radius: 50%;
@@ -7669,7 +7679,6 @@ h1.lead {
   padding: 25px;
   color: #0f7db5;
   margin: 5px;
-  transition: all 0.5s ease-in-out;
 }
 .homepage-icons-bg h3 {
   font-weight: 400;
@@ -8012,6 +8021,50 @@ h1.lead {
   .banner-wrapper .banner-wrapper-pattern {
     padding-top: 50px;
   }
+  .text-alignment,
+  .text-alignment-adjust {
+    text-align: center;
+  }
+  .homepage-icons {
+    text-transform: uppercase;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    width: 300px;
+    height: 100px;
+    color: #0f7db5;
+    margin: 10px;
+  }
+  .views-field-field-hompage-icon {
+    float: left;
+  }
+  .homepage-icons-bg {
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 50px;
+    background-color: #ffffff;
+    width: 286px;
+    height: 88px;
+    padding: 15px 27px;
+    color: #0f7db5;
+    margin: 5px;
+  }
+  .homepage-icons-bg h3 {
+    font-weight: 400;
+    font-size: 18px;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .homepage-icons-bg .img-responsive {
+    width: 61px;
+  }
+  .homepage-icons-bg:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+@media (max-width: 1200px) {
+  h1.lead {
+    font-size: 24px;
+  }
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -8194,8 +8247,8 @@ header#navbar .menu-news .breadcrumb-rail {
   padding: 0 20px;
   color: #dee8ee;
 }
-.admin-menu header#navbar {
-  top: 29px;
+header#navbar.nav-up {
+  top: -68px;
 }
 header#navbar.nav-up #block-block-6 {
   margin-top: 61px;
@@ -8211,54 +8264,42 @@ header#navbar.nav-up .logo img {
   margin-top: 65px;
   transform: scale(0.51);
 }
-header#navbar.menu-breadcrumb.nav-up .logo img {
-  margin-top: 37px;
-  transform: none;
-}
-header#navbar.menu-breadcrumb,
-header#navbar.menu-breadcrumb.nav-up {
-  height: 95px;
+header#navbar.menu-breadcrumb {
+  height: 80px;
   top: 0px;
 }
-header#navbar.menu-breadcrumb nav,
-header#navbar.menu-breadcrumb.nav-up nav {
+header#navbar.menu-breadcrumb nav {
   height: 50px;
 }
-header#navbar.menu-breadcrumb .logo-container,
-header#navbar.menu-breadcrumb.nav-up .logo-container {
-  height: 95px;
+header#navbar.menu-breadcrumb .logo-container {
+  height: 80px;
 }
-header#navbar.menu-breadcrumb .logo img,
-header#navbar.menu-breadcrumb.nav-up .logo img {
-  width: 106px;
+header#navbar.menu-breadcrumb .logo img {
+  transition: none;
+  margin-top: 5px;
+  transform: scale(0.511);
+}
+header#navbar.menu-breadcrumb #block-block-6 {
   margin-top: 37px;
 }
-header#navbar.menu-breadcrumb #block-block-6,
-header#navbar.menu-breadcrumb.nav-up #block-block-6 {
-  margin-top: 51px;
-}
-header#navbar.menu-breadcrumb .menu-news,
-header#navbar.menu-breadcrumb.nav-up .menu-news {
+header#navbar.menu-breadcrumb .menu-news {
   transition: all 0.5s ease-in-out;
-  padding-top: 65px;
+  padding-top: 50px;
   padding-left: 30px;
 }
-header#navbar.menu-breadcrumb .menu-news .breadcrumb-rail,
-header#navbar.menu-breadcrumb.nav-up .menu-news .breadcrumb-rail {
+header#navbar.menu-breadcrumb .menu-news .breadcrumb-rail {
   padding: 0 20px;
   color: #dee8ee;
 }
-.admin-menu header#navbar.menu-breadcrumb {
-  top: 29px;
-}
+/* ADMIN MENU PRIMARY NAV */
+/* TOP SPACING FOR ADMIN MENU */
+.admin-menu header#navbar,
+.admin-menu header#navbar.menu-breadcrumb,
 .admin-menu header#navbar.menu-breadcrumb.nav-up {
   top: 29px;
 }
 .admin-menu header#navbar.nav-up {
   top: -45px;
-}
-header#navbar.nav-up {
-  top: -68px;
 }
 form#search-block-form {
   margin: 0;
@@ -8324,6 +8365,55 @@ form#search-block-form {
   header#navbar .logo-container {
     height: 80px;
   }
+  .admin-menu header#navbar.nav-up {
+    top: 29px;
+  }
+  header#navbar.nav-up {
+    height: 80px;
+  }
+  header#navbar.nav-up .logo img {
+    height: 60px;
+    margin-top: 10px;
+    transform: scale(1);
+  }
+  header#navbar.menu-breadcrumb.nav-up .logo img {
+    height: 60px;
+    margin-top: 10px;
+  }
+  header#navbar.menu-breadcrumb,
+  header#navbar.menu-breadcrumb.nav-up {
+    height: 80px;
+    top: 0px;
+  }
+  header#navbar.menu-breadcrumb nav,
+  header#navbar.menu-breadcrumb.nav-up nav {
+    height: 50px;
+  }
+  header#navbar.menu-breadcrumb .logo-container,
+  header#navbar.menu-breadcrumb.nav-up .logo-container {
+    height: 80px;
+  }
+  header#navbar.menu-breadcrumb .logo img,
+  header#navbar.menu-breadcrumb.nav-up .logo img {
+    height: 60px;
+    margin-top: 10px;
+    transform: scale(1);
+  }
+  header#navbar.menu-breadcrumb #block-block-6,
+  header#navbar.menu-breadcrumb.nav-up #block-block-6 {
+    margin-top: 51px;
+  }
+  header#navbar.menu-breadcrumb .menu-news,
+  header#navbar.menu-breadcrumb.nav-up .menu-news {
+    transition: all 0.5s ease-in-out;
+    padding-top: 65px;
+    padding-left: 30px;
+  }
+  header#navbar.menu-breadcrumb .menu-news .breadcrumb-rail,
+  header#navbar.menu-breadcrumb.nav-up .menu-news .breadcrumb-rail {
+    padding: 0 20px;
+    color: #dee8ee;
+  }
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -8339,7 +8429,7 @@ and open the template in the editor.
 }
 .page-taxonomy .node-teaser .teasing h4,
 .page-taxonomy .node-teaser .teasing p {
-  padding: 25px 0 0 25px;
+  padding: 25px 20px 0 25px;
 }
 .page-taxonomy .node-teaser .teasing footer .list-inline {
   text-align: right;
@@ -8381,7 +8471,7 @@ and open the template in the editor.
   color: #0f7db5;
 }
 #block-views-news-tags-block-1 .view-display-id-block_1 ul li:has(.categories) {
-  list-style-image: url(../img/xperthis-categorie-selected.png);
+  list-style-image: url('../img/xperthis-categorie-selected.png');
 }
 #block-views-news-tags-block-1 h2.block-title {
   font-weight: 300;
@@ -8396,9 +8486,12 @@ and open the template in the editor.
 }
 #block-views-news-tags-block .btn-default {
   padding: 5px 20px;
-}
-#block-views-news-tags-block .btn-default a {
   color: #337ab7;
+}
+#block-views-news-tags-block .btn-default:hover,
+#block-views-news-tags-block .btn-default.active {
+  color: #0d4866;
+  border-color: #0d4866;
 }
 #block-views-news-tags-block .views-row {
   float: left;
@@ -8427,6 +8520,76 @@ and open the template in the editor.
 .main-container.content.page-products .node-teaser .teasing footer .list-inline {
   text-align: right;
   padding: 20px;
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-juin-2017, 9:27:32
+    Author     : platanas
+*/
+#modalBackdrop {
+  background-color: #0d2537 !important;
+  opacity: 0.9 !important;
+}
+#block-views-news-block-4 {
+  position: fixed;
+  z-index: 10000;
+  overflow: hidden;
+  /*Change to your own dimensions*/
+  height: 150px;
+  width: 269px;
+  /*Change to your own colors*/
+  border: 1px solid #b3b3b3;
+  background: #efefef;
+}
+#block-views-news-block-4 .view-display-id-block_4 {
+  margin-top: 7px;
+}
+#block-views-news-block-4 img {
+  margin: 0 5px;
+}
+#block-views-news-block-4 h2 {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+  margin: 10px 0 0 5px;
+  line-height: 20px;
+}
+#block-views-news-block-4 h4 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  margin: 5px 0 0 5px;
+  line-height: 20px;
+}
+#block-views-news-block-4 p {
+  font-size: 14px;
+  margin: 5px 0 0 5px;
+}
+#block-views-news-block-4 .views-field-view-node {
+  float: right;
+  margin: 10px 10px 5px 0px;
+}
+#block-views-news-block-4.hidden {
+  display: none;
+}
+#block-views-news-block-4 .close {
+  position: absolute;
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  z-index: 1002;
+  /*Change here the close button position*/
+  right: 10px;
+  top: 10px;
+}
+@media (max-width: 992px) {
+  #block-views-news-block-4 {
+    display: none;
+  }
 }
 html.overlay-open .navbar-fixed-top {
   z-index: 400;

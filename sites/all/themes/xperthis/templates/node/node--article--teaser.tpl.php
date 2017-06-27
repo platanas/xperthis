@@ -100,7 +100,7 @@
     print render($content);
   ?>
     <p class="annotation"><?php print t('Published');?> <?php print date('d/m/Y', $node->published_at);?> </p>
-    <h4<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h4>
+    <h4<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print truncate_utf8($title, 30, false, true, 1); ?></a></h4>
     <?php print render($content['body']); ?>
   <?php
     // Only display the wrapper div if there are tags or links.

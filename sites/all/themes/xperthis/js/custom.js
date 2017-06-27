@@ -8,6 +8,20 @@
 +function ($) {
         
         var $ = jQuery.noConflict();
+        $(document).ready(function () {
+
+        $("#block-views-news-block-4").cornerSlider({
+                showAtScrollingHeight : 800,
+                        directionEffect       : "right",
+                speedEffect           : 300,
+                        right                 : 20,
+                        bottom                : 200,
+                cookieMinutesToExpiry : 15,
+                        //onClose               : function() {
+                            //alert("Not to be seen again in the near future.");
+                        //},
+            });
+        });
         
         $(window).scroll(function(){
             var scroll = $(this).scrollTop();

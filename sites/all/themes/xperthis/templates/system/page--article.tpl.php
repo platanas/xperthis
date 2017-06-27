@@ -82,7 +82,7 @@
 </header>
   
 
-  <div class="<?php print $container_class; ?>">
+  <div class="page-article <?php print $container_class; ?>">
 
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3" role="complementary">

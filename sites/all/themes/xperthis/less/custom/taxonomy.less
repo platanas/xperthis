@@ -11,7 +11,7 @@ and open the template in the editor.
     .node-teaser .teasing{
         background-color: white;
         h4, p {
-            padding:25px 0 0 25px;
+            padding:25px 20px 0 25px;
         }
         footer {
             .list-inline {
@@ -36,7 +36,6 @@ and open the template in the editor.
 
                 &.active {
                     background: url(../img/xperthis-categorie-selected.png) no-repeat left top;
-                    
                 }
                 .categories {
                     padding: 2px 0 0 12px;
@@ -57,16 +56,17 @@ and open the template in the editor.
                 }
             }
             li:has(.categories) {
-                list-style-image: url(../img/xperthis-categorie-selected.png);
+                list-style-image: url('../img/xperthis-categorie-selected.png');
             }
-        }
-        
+        }        
     }
+    
     h2.block-title {
         font-weight: 300;
         margin-left: 10px;
     }
 }
+
 /* TAGS BLOCS */
 #block-views-news-tags-block {
     margin-left: 10px;
@@ -75,9 +75,12 @@ and open the template in the editor.
     }
     .btn-default {
         padding: 5px 20px;
-        a {
-            color: #337ab7;
-        }
+        color: #337ab7;
+        &:hover,
+        &.active {
+            color: @blue-darker;
+            border-color: @blue-darker;
+        }        
     }
     .views-row {
         float: left;

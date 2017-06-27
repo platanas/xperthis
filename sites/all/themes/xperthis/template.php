@@ -1,4 +1,20 @@
 <?php
+
+/**
+ * Allows modules to alter mmenu class settings.
+ */
+function xperthis_mmenu_class_alter(&$classes) {
+  $module_path = drupal_get_path('module', 'mmenu');
+  $classes['mm-basic']['css'] = array(
+    $module_path . '/themes/mm-basic/css/custom.css',
+  );
+}
+
+function UI_lang() {
+    global $language;
+    return $language->language; 
+}
+
 /**
  * @file
  * The primary PHP file for this theme.

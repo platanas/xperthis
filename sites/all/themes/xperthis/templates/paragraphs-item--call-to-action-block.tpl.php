@@ -29,8 +29,8 @@
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content text-center"<?php print $content_attributes; ?>>
-    <span class="field-content btn btn-default">
-        <a href="<?php print render($content['field_link']['#items'][0]['url']); ?>">
+    <span class="field-content ">
+        <a class="btn btn-primary" href="<?php print render($content['field_link']['#items'][0]['url']); ?>">
             <?php print render($content['field_link']['#items'][0]['title']); ?>
         </a>
     </span>

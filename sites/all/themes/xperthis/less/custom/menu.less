@@ -190,11 +190,9 @@ header#navbar {
     }
 }
 
-.admin-menu header#navbar {
-    top: 29px;
-}
 
 header#navbar.nav-up {
+    top: -68px;
     #block-block-6 {
         margin-top: 61px;
     }
@@ -211,34 +209,29 @@ header#navbar.nav-up {
     }
 }
 
-header#navbar.menu-breadcrumb.nav-up {
-    .logo img {
-        margin-top: 37px;
-        transform: none; 
-    }
-}
 
-header#navbar.menu-breadcrumb, header#navbar.menu-breadcrumb.nav-up {
-    height: 95px;
+header#navbar.menu-breadcrumb {
+    height: 80px;
     top: 0px;
     nav {
         height: 50px;
     }
     .logo-container {
-        height: 95px;
+        height: 80px;
     }
     .logo {
         img {
-            width: 106px;
-            margin-top: 37px; 
+            transition: none;
+            margin-top: 5px; 
+            transform: scale(0.511); 
         }
     }
     #block-block-6 {
-        margin-top: 51px;
+        margin-top: 37px;
     }
     .menu-news {
         transition: all 0.5s ease-in-out;
-        padding-top: 65px;
+        padding-top: 50px;
         padding-left: 30px;
         .breadcrumb-rail {
             padding: 0 20px;
@@ -246,18 +239,18 @@ header#navbar.menu-breadcrumb, header#navbar.menu-breadcrumb.nav-up {
         }
     }
 }
-.admin-menu header#navbar.menu-breadcrumb {
+
+
+/* ADMIN MENU PRIMARY NAV */
+/* TOP SPACING FOR ADMIN MENU */
+.admin-menu header#navbar, .admin-menu header#navbar.menu-breadcrumb, .admin-menu header#navbar.menu-breadcrumb.nav-up {
     top: 29px;
 }
-.admin-menu header#navbar.menu-breadcrumb.nav-up {
-    top: 29px;
-}
+
 .admin-menu header#navbar.nav-up {
     top: -45px;
 }
-header#navbar.nav-up {
-    top: -68px;
-}
+
 // Search form.
 form#search-block-form {
   margin: 0;
@@ -323,6 +316,56 @@ form#search-block-form {
     }
     header#navbar, header#navbar .logo-container {
         height: 80px;
+    }
+    
+    .admin-menu header#navbar.nav-up {
+        top: 29px;
+    }
+    header#navbar.nav-up {
+        
+        height: 80px;   
+        .logo img {
+            height: 60px;
+            margin-top: 10px;
+            transform: scale(1);
+        }
+    }
+
+    header#navbar.menu-breadcrumb.nav-up {
+        .logo img {
+            height: 60px;
+            margin-top: 10px;
+        }
+    }
+
+    header#navbar.menu-breadcrumb, header#navbar.menu-breadcrumb.nav-up {
+        height: 80px;
+        top: 0px;
+        nav {
+            height: 50px;
+        }
+        .logo-container {
+            height: 80px;
+        }
+        .logo {
+            img {
+                height: 60px;
+                margin-top: 10px;
+                transform: scale(1);
+            }
+        }
+        #block-block-6 {
+            margin-top: 51px;
+        }
+        .menu-news {
+            transition: all 0.5s ease-in-out;
+            padding-top: 65px;
+            padding-left: 30px;
+            .breadcrumb-rail {
+                padding: 0 20px;
+                color: @inactive;
+            }
+        }
     }
 }
 
