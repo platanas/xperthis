@@ -51,6 +51,34 @@ function xperthis_preprocess_page(&$vars) {
     //print 'ok';
     $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
   }
+   // remove some unwanted tabs
+    if (user_is_anonymous()) {
+      xperthis_remove_tabs('Register', $variables);
+    }
+}
+
+function xperthis_remove_tabs($label, &$variables) {
+  // Remove from primary tabs
+  $i = 0;
+  if (is_array($variables['tabs']['#primary'])) {
+    foreach ($variables['tabs']['#primary'] as $primary_tab) {
+      if ($primary_tab['#link']['title'] == $label) {
+        unset($variables['tabs']['#primary'][$i]);
+      }
+      ++$i;
+    }
+  }
+
+  // Remove from secondary tabs
+  $i = 0;
+  if (is_array($variables['tabs']['#secondary'])) {
+    foreach ($variables['tabs']['#secondary'] as $secondary_tab) {
+      if ($secondary_tab['#link']['title'] == $label) {
+        unset($variables['tabs']['#secondary'][$i]);
+      }
+      ++$i;
+    }
+  }
 }
 /**
  * Implements template_preprocess_node()

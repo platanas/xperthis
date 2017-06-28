@@ -76,7 +76,7 @@
 
 <?php include $directory . '/templates/inc/headerNews.tpl.inc'; ?>
 
-<div class="main-container content page-no-hero ">
+<div class="main-container content page-thin-menu ">
 <header role="banner" id="page-header">
     <?php print render($page['header']); ?>
 </header>

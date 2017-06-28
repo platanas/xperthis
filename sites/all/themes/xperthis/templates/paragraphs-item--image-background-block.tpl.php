@@ -26,8 +26,10 @@
  * @see template_process()
  */
 ?>
+<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
     <div class="col-lg-12 white text-center" style="background:url(<?php print file_create_url($content['field_image']['#items'][0]['uri']); ?>) center center no-repeat;padding: 20px 0 40px 0;">
         <h2 class="white" ><?php print render($content['field_title']); ?></h2>
         <?php print render($content['field_paragraph']); ?>
         <?php //var_dump($content['field_image']); ?>
     </div>
+</div>

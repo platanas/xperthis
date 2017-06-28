@@ -8,11 +8,58 @@ and open the template in the editor.
     Author     : platanas
 */
 
-#modalBackdrop {
+#modalBackdrop, .modal-backdrop {
     background-color: #0d2537 !important;
     opacity: 0.9 !important;
 }
-
+#registration-modal {
+    top: 0;
+}
+div.modal-forms-modal-content, .registration-modal {
+    font-family: rubik;
+    .popups-close {
+        background: url(../img/xperthis-close-modal.png) top left no-repeat;
+        width: 30px;
+        height: 30px;
+        &:hover {
+        background: url(../img/xperthis-close-modal.png) top left no-repeat;
+            
+        }
+    }
+    label {
+        display:none;
+    }
+    .popups-container {
+        overflow: hidden;
+        height: 100%;
+        background: #fff;
+        text-align: left;
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+    }
+    .modal-content {
+        padding: 2em 4em 2em 4em;
+        background: #eff6f8;
+        .form-actions {
+            text-align: right;
+        }
+    }
+    .modal-header {
+        padding: 2em 4em 2em 4em;
+        background-color: @blue-light;
+        color: white;
+        h2, h3 {
+            color: white;
+        }
+        .modal-title {
+            display: block;
+            color: #fff;
+            text-align: center;
+            font-weight: 200;
+        }
+    }
+}
 #block-views-news-block-4 {
     position:fixed;
     z-index:10000;

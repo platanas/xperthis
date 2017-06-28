@@ -115,7 +115,7 @@
     hide($content['body']);
     print render($content);
     print 
-    '<div class="field field-name-field-adresse field-type-text-long field-label-above">'
+    '<div class="field field-name-field-body field-type-text-long field-label-above">'
         . '<div class="field-label">'
             .$content['body']['#title'].
         '</div>'
@@ -151,20 +151,24 @@
     <div class="text-center"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registration-modal"><?php print t('Subscribe'); ?></button></div>
     <div class="modal fade registration-modal" tabindex="-1" role="dialog" aria-labelledby="registration-modal" aria-hidden="true" id="registration-modal">
         <div class="modal-dialog modal-md">
+            <div class="modal-header popups-title">         
+                <span id="modal-title" class="modal-title">
+                    <h2><?php print t('Subscribe'); ?></h2>
+                        <?php print '<h3 class="regular">'.render($content['field_title_event']).'</h3>'; ?></span>              
+                <div class="clear-block"></div>      
+            </div>
             <div class="modal-content">
-              <div class="modal-content">
                 <div class="modal-body">
                     <?php print render($content['registration_form']); ?>
                 </div>       
             </div>
-        </div>
     </div>
     </div>
         
     <?php //var_dump($content['field_details']['#title']); ?>
                 
     
-    <?php print '<div class="field field-name-field-adresse field-type-text-long field-label-above"><div class="field-label">'.$content['field_details']['#title'].'</div></div>'; ?>
+    <?php print '<div class="field field-name-field-details field-type-text-long field-label-above"><div class="field-label">'.$content['field_details']['#title'].'</div></div>'; ?>
     
     
     <?php if (!empty(render($content['field_cost']))): ?>
@@ -175,12 +179,14 @@
         
     <?php if (!empty($node->field_date['und'][0]['value2'])){ ?>
         <h4>
-        <?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'H:i'); ?>
+        <?php 
+        
+        print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'H:i',  date_default_timezone_get()); ?>
             -
-        <?php print format_date(strtotime($node->field_date['und'][0]['value2']), 'custom', 'H:i'); ?>
+        <?php print format_date(strtotime($node->field_date['und'][0]['value2']), 'custom', 'H:i',  date_default_timezone_get()); ?>
         </h4>
     <?php } ?>
-    <?php print '<div class="field field-name-field-adresse field-type-text-long field-label-above"><div class="field-label">'.$content['field_adresse']['#title'].'</div></div>'; ?>
+    <?php print '<div class="field field-name-field-adresse-title field-type-text-long field-label-above"><div class="field-label">'.$content['field_adresse']['#title'].'</div></div>'; ?>
     <?php print render($content['field_adresse']); ?>
     
 </div>

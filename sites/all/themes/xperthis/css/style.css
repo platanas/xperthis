@@ -3471,6 +3471,7 @@ fieldset[disabled] .btn-link:focus {
   font-size: 18px;
   line-height: 1.3333333;
   border-radius: 24px;
+  font-weight: 200;
 }
 .btn-sm,
 .btn-group-sm > .btn {
@@ -7166,9 +7167,11 @@ and open the template in the editor.
     Created on : 31-mai-2017, 17:18:10
     Author     : platanas
 */
+.entity-paragraphs-item {
+  margin: 30px 0 0 0;
+}
 .paragraphs-item-image-background-block {
   color: white;
-  margin: 20px 0;
 }
 .paragraphs-item-image-background-block .col-lg-12 {
   padding: 20px;
@@ -7232,6 +7235,12 @@ and open the template in the editor.
     Created on : 31-mai-2017, 17:18:10
     Author     : platanas
 */
+.tabs--primary {
+  display: none;
+}
+.logged-in .tabs--primary {
+  display: block;
+}
 body {
   margin-bottom: 523px;
 }
@@ -7259,14 +7268,27 @@ body {
 .page-no-hero {
   padding-top: 162px;
 }
-.page-no-hero .field.field-name-field-tags .field-label {
+.page-thin-menu {
+  padding-top: 100px;
+}
+.page-thin-menu .view-id-products {
+  padding-top: 104px;
+}
+.page-no-hero > .container,
+.page-thin-menu > .container {
+  padding-top: 42px;
+}
+.page-no-hero .field.field-name-field-tags .field-label,
+.page-thin-menu .field.field-name-field-tags .field-label {
   font-weight: normal;
   padding-top: 7px;
   font-size: 14px;
   color: #0d4866;
 }
 .page-no-hero .field.field-name-field-tags .field-label,
-.page-no-hero .field.field-name-field-tags .field-item {
+.page-thin-menu .field.field-name-field-tags .field-label,
+.page-no-hero .field.field-name-field-tags .field-item,
+.page-thin-menu .field.field-name-field-tags .field-item {
   float: left;
   margin: 0 10px 0 0;
 }
@@ -7389,6 +7411,9 @@ and open the template in the editor.
   /* .squaredThree */
   /* end .squaredThree */
 }
+.block-e-book-download .webform-component-email label {
+  display: none;
+}
 .block-e-book-download h2 {
   text-align: center;
 }
@@ -7413,7 +7438,8 @@ and open the template in the editor.
   position: absolute;
   top: 0;
   left: 0;
-  background: #0ecda1 ;
+  opacity: 0.5;
+  background: transparent ;
   border-radius: 0px;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 1px 0px rgba(255, 255, 255, 0.25);
 }
@@ -7428,17 +7454,83 @@ and open the template in the editor.
   border-top: none;
   border-right: none;
   background: transparent;
-  opacity: 0.3;
+  opacity: 1;
   transform: rotate(-45deg);
 }
 .block-e-book-download .squared label:hover::after {
   opacity: 0.7;
-}
-.block-e-book-download .squared input[type=checkbox] {
-  visibility: hidden;
-}
-.block-e-book-download .squared input[type=checkbox]:checked + label:after {
   opacity: 1;
+}
+.block-e-book-download .squared label input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+  padding: 0;
+  margin: 0;
+  margin-left: -20px;
+  background: #0ecda1;
+  opacity: 0.2;
+}
+.block-e-book-download .squared label input[type=checkbox]:checked {
+  opacity: 1;
+  background: #0ecda1;
+}
+/* Highlighted E-book */
+#block-views-news-block-6 h2.block-title {
+  text-align: center;
+  color: #0f7db5;
+}
+#block-views-news-block-6 a {
+  color: white;
+}
+#block-views-news-block-6 .view-id-news .col {
+  height: 230px;
+  clear: both;
+  margin: 20px 0;
+  position: relative;
+}
+#block-views-news-block-6 .pixel-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url('../img/homepage-headline-pattern.png');
+  /* or any other overlay image/color */
+  transition: all 0.5s ease-in-out;
+}
+#block-views-news-block-6 .pixel-overlay:hover {
+  /*opacity: 0.4;*/
+}
+#block-views-news-block-6 .view-id-news .views-field-field-image {
+  position: absolute;
+  z-index: 0;
+  height: 230px;
+  overflow: hidden;
+}
+#block-views-news-block-6 .view-id-news .views-field-title,
+#block-views-news-block-6 .view-id-news .views-field-field-subtitle,
+#block-views-news-block-6 .view-id-news .views-field-view-node {
+  position: absolute;
+  z-index: 1;
+}
+#block-views-news-block-6 .view-id-news .views-field-field-subtitle h2 {
+  color: #fff;
+}
+#block-views-news-block-6 .view-id-news .views-field-title {
+  width: 100%;
+  top: 90px;
+  text-align: center;
+}
+#block-views-news-block-6 .view-id-news .views-field-field-subtitle {
+  top: 50px;
+  width: 100%;
+  text-align: center;
+}
+#block-views-news-block-6 .views-field-view-node {
+  top: 175px;
+  width: 100%;
+  text-align: center;
 }
 /*
 To change this license header, choose License Headers in Project Properties.
@@ -7450,16 +7542,22 @@ and open the template in the editor.
     Author     : platanas
 */
 /* PAGE */
+.page-event .container {
+  padding-top: 42px;
+}
 .page-event .field .field-label {
   color: #0d4866;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 300;
   border-bottom: 1px solid #c1ccd5;
-  padding: 7px 0;
+  padding: 43px 0 7px 0;
   margin-bottom: 15px;
 }
 .page-event .field-name-field-image {
   margin-top: 20px;
+}
+.page-event .field-name-field-adresse {
+  margin-bottom: 185px;
 }
 .page-event .field.field-name-field-tags .field-label {
   border-bottom: 0px solid #c1ccd5;
@@ -7514,9 +7612,11 @@ and open the template in the editor.
 }
 .node-teaser-event .event-details {
   height: 190px;
+  background: #fff;
 }
 .node-teaser-event .event-details .red {
   color: #e95e50;
+  padding-right: 7px;
 }
 .node-teaser-event .event-details h3 {
   padding-top: 25px;
@@ -8530,9 +8630,69 @@ and open the template in the editor.
     Created on : 27-juin-2017, 9:27:32
     Author     : platanas
 */
-#modalBackdrop {
+#modalBackdrop,
+.modal-backdrop {
   background-color: #0d2537 !important;
   opacity: 0.9 !important;
+}
+#registration-modal {
+  top: 0;
+}
+div.modal-forms-modal-content,
+.registration-modal {
+  font-family: rubik;
+}
+div.modal-forms-modal-content .popups-close,
+.registration-modal .popups-close {
+  background: url(../img/xperthis-close-modal.png) top left no-repeat;
+  width: 30px;
+  height: 30px;
+}
+div.modal-forms-modal-content .popups-close:hover,
+.registration-modal .popups-close:hover {
+  background: url(../img/xperthis-close-modal.png) top left no-repeat;
+}
+div.modal-forms-modal-content label,
+.registration-modal label {
+  display: none;
+}
+div.modal-forms-modal-content .popups-container,
+.registration-modal .popups-container {
+  overflow: hidden;
+  height: 100%;
+  background: #fff;
+  text-align: left;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+div.modal-forms-modal-content .modal-content,
+.registration-modal .modal-content {
+  padding: 2em 4em 2em 4em;
+  background: #eff6f8;
+}
+div.modal-forms-modal-content .modal-content .form-actions,
+.registration-modal .modal-content .form-actions {
+  text-align: right;
+}
+div.modal-forms-modal-content .modal-header,
+.registration-modal .modal-header {
+  padding: 2em 4em 2em 4em;
+  background-color: #0f7db5;
+  color: white;
+}
+div.modal-forms-modal-content .modal-header h2,
+.registration-modal .modal-header h2,
+div.modal-forms-modal-content .modal-header h3,
+.registration-modal .modal-header h3 {
+  color: white;
+}
+div.modal-forms-modal-content .modal-header .modal-title,
+.registration-modal .modal-header .modal-title {
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-weight: 200;
 }
 #block-views-news-block-4 {
   position: fixed;

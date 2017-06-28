@@ -82,7 +82,7 @@
       <?php include $directory . '/templates/inc/header.tpl.inc'; ?>
     </header>
 <?php endif; ?>
-<div class="main-container content page-no-hero page-products ">
+<div class="main-container content page-thin-menu page-products ">
 <header role="banner" id="page-header">
     <?php print render($page['header']); ?>
 </header>

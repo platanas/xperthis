@@ -52,7 +52,7 @@
         <a href="#" data-toggle="modal" data-target="#bannerformmodal"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
     </li>
     <li>
-        <a href="https://extranet.xperthis.be/" target="_blank">Accès client</a>
+        <a href="https://extranet.xperthis.be/" target="_blank"><?php print t('client acces'); ?></a>
     </li>
 </ul>       <?php } else { ?>
             <?php print render($title_prefix); ?>

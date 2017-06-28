@@ -7,13 +7,21 @@ and open the template in the editor.
     Created on : 31-mai-2017, 17:18:10
     Author     : platanas
 */
-
+.tabs--primary {
+    display: none;
+}
+.logged-in {
+    .tabs--primary {
+        display: block;
+    }
+}
 body{
   margin-bottom:523px;
 }
 .main-container.content {
     background-color: #eff6f8;
     padding-bottom: 45px;
+    
 }
 .not-front .main-container.content {
     -webkit-box-shadow: 0px 6px 14px 0px rgba(35,31,32,0.35);
@@ -38,6 +46,17 @@ body{
 }
 .page-no-hero {
     padding-top: 162px;
+}
+.page-thin-menu {
+    padding-top: 100px;
+    .view-id-products {
+        padding-top: 104px;
+    }
+}
+.page-no-hero, .page-thin-menu {
+    > .container {
+        padding-top: 42px;
+    }
     .field.field-name-field-tags {
     .field-label {
         font-weight: normal;

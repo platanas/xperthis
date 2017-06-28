@@ -9,6 +9,9 @@ and open the template in the editor.
 */
 
 .block-e-book-download {
+    .webform-component-email label {
+        display:none;
+    }
     background-color: #dae4eb;
     padding-bottom: 20px;
     h2 {
@@ -35,7 +38,8 @@ and open the template in the editor.
         position: absolute;
         top: 0;
         left: 0;
-        background: #0ecda1 ;
+        opacity: 0.5;
+        background: transparent ;
         border-radius: 0px;
         box-shadow: inset 0px 1px 1px rgba(0,0,0,0.25), 0px 1px 0px rgba(255,255,255,.25);
         &:after {
@@ -49,19 +53,94 @@ and open the template in the editor.
           border-top: none;
           border-right: none;
           background: transparent;
-          opacity: 0.3;
+          
+          opacity: 1;
           transform: rotate(-45deg);
         }
         &:hover::after {
           opacity: 0.7;
-        }
-      }
-      input[type=checkbox] {
-        visibility: hidden;
-        &:checked + label:after {
           opacity: 1;
-        }    
+        } 
+        
+      input[type=checkbox] {
+        width: 20px;
+        height: 20px;
+        -webkit-appearance: none;
+        padding: 0;
+        margin: 0;
+        margin-left: -20px;
+        background: #0ecda1;
+        opacity: 0.2;
+        &:checked{
+            opacity: 1;
+            background: #0ecda1;
+        }     
+      }
       }
     }
     /* end .squaredThree */
+}
+
+/* Highlighted E-book */
+
+#block-views-news-block-6 {
+    
+    h2.block-title {
+        text-align: center;
+        color: @blue-light;
+    }
+    a {
+        color: white;
+    }
+    .view-id-news .col{
+        height: 230px;
+        clear: both;
+        margin: 20px 0;
+        position: relative;
+    }
+    .pixel-overlay {
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url('../img/homepage-headline-pattern.png'); /* or any other overlay image/color */
+        transition: all 0.5s ease-in-out;
+        &:hover {
+            /*opacity: 0.4;*/
+        }
+    }
+    .view-id-news .views-field-field-image{
+        position:absolute;
+        z-index:0;
+        height:230px;
+        overflow: hidden;
+    }
+
+    .view-id-news .views-field-title,
+    .view-id-news .views-field-field-subtitle,  
+    .view-id-news .views-field-view-node {
+        position: absolute;
+        z-index: 1;
+    }
+    .view-id-news .views-field-field-subtitle h2 {
+        color: #fff;
+    }
+    
+    .view-id-news .views-field-title {
+        width: 100%;
+        top: 90px;
+        text-align: center;
+    }
+    .view-id-news .views-field-field-subtitle {
+        top: 50px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .views-field-view-node {
+        top: 175px;
+        width: 100%;
+        text-align: center;
+    }
 }
