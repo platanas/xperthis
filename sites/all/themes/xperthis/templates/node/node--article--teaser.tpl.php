@@ -100,19 +100,17 @@
     print render($content);
   ?>
     <p class="annotation"><?php print t('Published');?> <?php print date('d/m/Y', $node->published_at);?> </p>
-    <h4<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print truncate_utf8($title, 30, false, true, 1); ?></a></h4>
     <?php print render($content['body']); ?>
   <?php
-    // Only display the wrapper div if there are tags or links.
-    $field_tags = render($content['field_tags']);
-    $links = render($content['links']);
-    if ($field_tags || $links):
+  
   ?>
    <footer>
-     <?php print $field_tags; ?>
-     <?php print $links; ?>
+       <ul class="links list-inline">
+           <li class="node-readmore first last">
+               <a href="<?php print $node_url; ?>" rel="tag" title="Test d'article"><?php print t('see more'); ?><span class="element-invisible"> de Test d'article</span></a>
+           </li>
+        </ul>
   </footer>
-  <?php endif; ?>
   <?php print render($content['comments']); ?>
     </div>
 </article>

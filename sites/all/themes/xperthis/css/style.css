@@ -7260,7 +7260,7 @@ body {
 .not-front .page-header {
   font-weight: 300;
   color: #0f7db5;
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 }
 .not-front .page-header:first-letter {
   text-transform: uppercase;
@@ -7405,6 +7405,12 @@ and open the template in the editor.
     Created on : 31-mai-2017, 17:18:10
     Author     : platanas
 */
+.page-e-book .col-sm-8 h1.page-header {
+  margin-bottom: 0;
+}
+.page-e-book .col-sm-8 h2.page-header {
+  color: #0d4866;
+}
 .block-e-book-download {
   background-color: #dae4eb;
   padding-bottom: 20px;
@@ -7486,7 +7492,7 @@ and open the template in the editor.
 #block-views-news-block-6 .view-id-news .col {
   height: 230px;
   clear: both;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
   position: relative;
 }
 #block-views-news-block-6 .pixel-overlay {
@@ -7599,12 +7605,13 @@ and open the template in the editor.
   font-weight: 400;
   text-transform: uppercase;
 }
-.page-event .not-front .page-header {
-  border-bottom: 2px solid #dee8ee;
+.page-evenements.not-front .page-header {
+  border-bottom: 3px solid #dee8ee;
 }
 /* Event LIsting */
 .node-teaser-event {
   height: 190px;
+  margin-bottom: 40px;
 }
 .node-teaser-event .field-type-image {
   float: left;
@@ -7687,6 +7694,9 @@ and open the template in the editor.
 #block-views-news-block-3 a {
   color: #0d4866;
 }
+#block-views-news-block-3 .col-first {
+  margin-top: 26px;
+}
 #block-views-news-block-2,
 #block-views-news-block-3 {
   margin-left: 10px;
@@ -7699,7 +7709,9 @@ and open the template in the editor.
 #block-views-news-block-2 h2.block-title,
 #block-views-news-block-3 h2.block-title {
   font-weight: 300;
-  margin-top: 6px;
+  padding-top: 6px;
+  padding-bottom: 36px;
+  margin-bottom: 0;
 }
 #block-views-news-block-2 .view-id-news .views-field-field-date,
 #block-views-news-block-3 .view-id-news .views-field-field-date {
@@ -7756,6 +7768,9 @@ h1.lead {
   font-size: 30px;
   margin-top: 70px;
   margin-bottom: 60px;
+}
+.front .pagination {
+  display: none;
 }
 .text-alignment {
   text-align: right;
@@ -7841,6 +7856,7 @@ h1.lead {
   float: left;
   position: relative;
   margin-top: -20px;
+  top: 50px;
 }
 #block-views-news-block .view-id-news .views-field-nothing .date-day {
   background-color: #6ccedd;
@@ -7869,7 +7885,8 @@ h1.lead {
   padding: 20px;
 }
 #block-views-news-block .view-id-news .views-field-body {
-  top: 30px;
+  position: relative;
+  top: 34px;
   width: 350px;
 }
 #block-views-news-block .view-id-news .views-field-body p {
@@ -8534,6 +8551,20 @@ and open the template in the editor.
 .page-taxonomy .node-teaser .teasing footer .list-inline {
   text-align: right;
   padding: 25px 25px 25px 0;
+}
+.page-taxonomy .node-article .teasing .field-type-text-with-summary {
+  min-height: 74px;
+}
+.page-taxonomy .node-article .teasing p {
+  padding: 0px 20px 0 25px;
+  color: #0f7db5;
+}
+.page-taxonomy .node-article .teasing p.annotation {
+  padding: 25px 20px 0 25px;
+  color: #93a2b3;
+}
+.page-taxonomy .node-article .teasing a {
+  color: #58afd6;
 }
 /* TAGS BLOCS */
 #block-views-news-tags-block-1 .view-display-id-block_1 {

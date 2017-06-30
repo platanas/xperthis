@@ -56,6 +56,7 @@ scripts[] = 'bootstrap/js/transition.js'
 ;;;;;;;;;;;;;;;;;;;;;
 
 scripts[] = 'js/corner-slider/src/assets/js/jquery.cornerslider.js'
+scripts[] = 'js/jquery.scrolldepth.min.js'
 scripts[] = 'js/sticky.scrollUp.js'
 scripts[] = 'js/custom.js'
 

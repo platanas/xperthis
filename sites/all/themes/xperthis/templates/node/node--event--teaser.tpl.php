@@ -131,10 +131,6 @@
     $links = render($content['links']);
     if ($field_tags || $links):
   ?>
-   <footer>
-     <?php print $field_tags; ?>
-     <?php print $links; ?>
-  </footer>
   <?php endif; ?>
     </div>
 </article>

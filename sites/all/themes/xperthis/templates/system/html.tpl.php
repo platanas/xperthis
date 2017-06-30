@@ -83,6 +83,11 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NK438KS');</script>
     <!-- End Google Tag Manager -->
+    <script>
+jQuery(function() {
+  jQuery.scrollDepth();
+});
+</script>
 </head>
 <body<?php print $body_attributes; ?>>
   <div id="skip-link">

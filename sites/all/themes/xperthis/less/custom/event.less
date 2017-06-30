@@ -69,16 +69,17 @@ and open the template in the editor.
         }
     }
 }
-.page-event {
-    .not-front {
+.page-evenements {
+    &.not-front {
         .page-header {
-            border-bottom: 2px solid #dee8ee;
+            border-bottom: 3px solid #dee8ee;
         }
     }
 }
 /* Event LIsting */
 .node-teaser-event {
     height: 190px;
+    margin-bottom: 40px;
     .field-type-image {
         float: left;
         margin-right: 30px;
@@ -157,6 +158,11 @@ and open the template in the editor.
         color:@blue-darker;
     }
 }
+#block-views-news-block-3 {
+    .col-first {
+        margin-top: 26px;
+    }
+}
 #block-views-news-block-2,
 #block-views-news-block-3 {
     margin-left: 10px;
@@ -167,7 +173,9 @@ and open the template in the editor.
     }
     h2.block-title {
         font-weight: 300;
-        margin-top: 6px;
+        padding-top: 6px;
+        padding-bottom: 36px;
+        margin-bottom: 0;
     }
     
     .view-id-news .views-field-field-date {

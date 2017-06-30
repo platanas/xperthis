@@ -148,7 +148,7 @@
     <?php print '<h3 class="regular">'.render($content['field_title_event']).'</h3>'; ?>
     
     <?php //print '<div class="text-center"><div class="btn btn-primary">'.render($content['registration_link']).'</div></div>'; ?>
-    <div class="text-center"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registration-modal"><?php print t('Subscribe'); ?></button></div>
+    <div class="text-center"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registration-modal" onclick="ga('send','event','Event-Details','Event-Details','Register', <?php print $title; ?>);"><?php print t('Subscribe'); ?></button></div>
     <div class="modal fade registration-modal" tabindex="-1" role="dialog" aria-labelledby="registration-modal" aria-hidden="true" id="registration-modal">
         <div class="modal-dialog modal-md">
             <div class="modal-header popups-title">         

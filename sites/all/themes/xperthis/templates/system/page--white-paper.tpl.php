@@ -76,7 +76,7 @@
 <header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
   <?php include $directory . '/templates/inc/header.tpl.inc'; ?>
 </header> <!-- /#page-header -->
-<div class="main-container content page-no-hero ">
+<div class="main-container content page-no-hero page-e-book ">
 <header role="banner" id="page-header">
     <?php print render($page['header']); ?>
 </header>
