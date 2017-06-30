@@ -4522,7 +4522,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-right: 15px;
 }
 .navbar .logo img {
-  margin-top: 44px;
+  margin-top: 40px;
 }
 @media (max-width: 992px) {
   .navbar .logo {
@@ -7242,7 +7242,7 @@ and open the template in the editor.
   display: block;
 }
 body {
-  margin-bottom: 523px;
+  margin-bottom: 580px;
 }
 .main-container.content {
   background-color: #eff6f8;
@@ -7314,6 +7314,15 @@ footer.footer {
   padding-top: 0;
   margin-top: 0;
 }
+footer.footer ul.menu.nav li a:hover,
+footer.footer ul.menu.nav li:hover {
+  text-decoration: underline;
+}
+footer.footer ul.menu.nav li a,
+footer.footer ul.menu.nav li {
+  font-weight: 100;
+  color: #95A2AB;
+}
 footer.footer .fa-circle {
   color: #36475a;
 }
@@ -7324,17 +7333,36 @@ footer.footer .block-simplenews {
 footer.footer .block-simplenews h3 {
   color: #38a7c8;
 }
+footer.footer .block-simplenews .input-group-btn:last-child > .btn,
+footer.footer .block-simplenews .input-group-btn:last-child > .btn-group {
+  padding: 10px 20px;
+  /* add */
+}
 footer.footer .region-blockgroup-footer-menu {
   padding-top: 46px;
   border-top: 2px solid #36475a;
   color: #b2bdc4;
+  margin-bottom: 20px;
 }
 footer.footer .region-blockgroup-footer-menu p {
   font-size: 14px;
+  color: #95A2AB;
+}
+footer.footer .region-blockgroup-footer-menu #block-block-4 ul li {
+  padding-bottom: 10px;
+  /* add */
+}
+footer.footer .region-blockgroup-footer-menu #block-block-4 ul li a {
+  font-weight: 100;
+  /* add */
+  color: #95A2AB;
+  /* previous : #dee8ee */
 }
 footer.footer #block-block-5 {
   background: url('../img/xperthis-part-nrb-bg.jpg') white bottom repeat-x;
   /* or any other overlay image/color */
+  padding-top: 10px;
+  padding-bottom: 13px;
 }
 footer.footer #block-views-partner-block {
   background-color: white;
@@ -7379,16 +7407,16 @@ footer .sticky-footer-behind {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 523px;
+  height: 580px;
   color: #fff;
   z-index: -1;
 }
 @media (max-width: 992px) {
   body {
-    margin-bottom: 620px;
+    margin-bottom: 677px;
   }
   footer .sticky-footer-behind {
-    height: 620px;
+    height: 677px;
   }
   #block-views-partner-block,
   #block-menu-menu-about,
@@ -7798,8 +7826,9 @@ h1.lead {
 .homepage-icons-bg h3 {
   font-weight: 400;
   font-size: 18px;
-  padding-top: 0;
+  padding-top: 10px;
   margin-top: 0;
+  line-height: 24px;
 }
 .homepage-icons-bg .img-responsive {
   width: 73px;
@@ -7813,6 +7842,7 @@ h1.lead {
 #block-views-news-block h2.block-title {
   text-align: center;
   color: #0f7db5;
+  padding-bottom: 20px;
 }
 #block-views-news-block a {
   color: white;
@@ -7904,7 +7934,7 @@ h1.lead {
   color: #fff;
   margin: 0;
   font-weight: 300;
-  font-size: 1.1em;
+  font-size: 12px;
   text-transform: uppercase;
 }
 #block-views-news-block .view-id-news .views-field-type h3.E-book {
@@ -7982,7 +8012,7 @@ h1.lead {
 #block-views-news-block-1 .views-field-field-title-event h3 {
   margin: 0;
   font-size: 16px;
-  color: #0d4866;
+  color: #0E72AB;
   padding: 10px 20px;
 }
 #block-views-news-block-1 .views-field-field-title-event p {
@@ -8066,7 +8096,7 @@ h1.lead {
   color: #fff;
   margin: 0;
   font-weight: 300;
-  font-size: 1.1em;
+  font-size: 12px;
   text-transform: uppercase;
 }
 #block-views-news-block-1 .view-id-news .views-field-type h3.E-book {
@@ -8107,10 +8137,11 @@ h1.lead {
 }
 #block-views-webform-block .btn-primary {
   background-color: #0d4866;
+  padding: 10px 15px;
 }
 #block-views-webform-block .btn-primary:hover,
 #block-views-webform-block .btn-primary:focus {
-  background-color: #2f91bd;
+  background-color: #21637F;
 }
 .banner-wrapper:after {
   content: "";
@@ -8150,6 +8181,7 @@ h1.lead {
     height: 100px;
     color: #0f7db5;
     margin: 10px;
+    max-width: 225px;
   }
   .views-field-field-hompage-icon {
     float: left;
@@ -8194,6 +8226,7 @@ and open the template in the editor.
 */
 .region-navigation {
   float: right;
+  margin-top: 10px;
 }
 nav {
   text-align: center;
@@ -8346,14 +8379,16 @@ header#navbar p {
   font-size: 14px;
   line-height: 20px;
   margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 header#navbar #block-block-6 {
   transition: all 0.5s ease-in-out;
-  margin-top: 55px;
+  margin-top: 35px;
 }
 header#navbar .menu-primary {
   transition: all 0.5s ease-in-out;
-  padding-top: 85px;
+  padding-top: 70px;
 }
 header#navbar .menu-news {
   transition: all 0.5s ease-in-out;
@@ -8368,10 +8403,10 @@ header#navbar.nav-up {
   top: -68px;
 }
 header#navbar.nav-up #block-block-6 {
-  margin-top: 61px;
+  margin-top: 45px;
 }
 header#navbar.nav-up .menu-primary {
-  padding-top: 91px;
+  padding-top: 85px;
 }
 header#navbar.nav-up .menu-news {
   padding-top: 110px;
@@ -8472,6 +8507,8 @@ form#search-block-form {
   .navbar-burger {
     display: block;
     margin-top: 26px;
+    float: right;
+    right: 10px;
   }
   .menu-primary,
   .menu-secondary,

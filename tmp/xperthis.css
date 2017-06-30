@@ -1,0 +1,125 @@
+/* --------------------------------------------------
+	HEADER
+-------------------------------------------------- */
+
+/* ---- Accès client ---- */
+.region-navigation {
+    margin-top: 10px;		/* add */
+}
+
+/* ---- Logo ---- */
+.navbar .logo img {
+    margin-top: 40px;		/* previous : 44px */
+}
+
+/* ---- Menu ---- */
+header#navbar .menu-primary {
+    padding-top: 70px;		/* previous : 82px */
+}
+header#navbar.nav-up .menu-primary {
+    padding-top: 85px; 		/* previous : 91px */
+}
+
+/* ---- CTA ---- */
+header#navbar p {
+    padding-left: 20px; 	/* add */
+    padding-right: 20px; 	/* add */
+}
+header#navbar #block-block-6 {
+    margin-top: 35px;		/* previous : 55px */
+}
+header#navbar.nav-up #block-block-6 {
+	margin-top: 45px;		/* previous : 61px; */
+}
+
+/* ---- Picto ---- */
+.homepage-icons-bg h3 {
+	margin-top: 10px; 		/* previous : 0 */
+	line-height: 24px;		/* add */
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 992px) 
+.navbar-burger {
+    float: right;			/* add */
+    right: 10px;			/* add */
+}
+
+@media (max-width: 992px)
+.homepage-icons-bg h3 {
+    max-width: 225px;		/* add */
+}
+
+/* --------------------------------------------------
+	CONTENT
+-------------------------------------------------- */
+
+/* ---- News ---- */
+#block-views-news-block-1 .view-id-news .views-field-type h3 {
+	font-size: 12px;		/* previous : 1.1em */
+}
+#block-views-news-block .view-id-news .views-field-type h3 {
+	font-size: 12px;		/* previous : 1.1em */
+}
+#block-views-news-block-1 .views-field-field-title-event h3 {
+	color: #0E72AB;			/* previous : #0d4866 */
+}
+#block-views-news-block h2.block-title {
+	padding-bottom: 20px;	/* add */
+}
+
+/* ---- CTA Contact ---- */
+#block-views-webform-block .btn-primary {
+    padding: 10px 15px;
+}
+#block-views-webform-block .btn-primary:hover, #block-views-webform-block .btn-primary:focus {
+    background-color: #21637F; /* previous : #2f91bd */
+}
+
+/* --------------------------------------------------
+	FOOTER
+-------------------------------------------------- */
+
+/* ---- Footer ---- */
+footer .sticky-footer-behind {
+	height: 580px;			/* previous : 523px */
+}
+
+/* ---- Part of NRB Group ---- */
+footer.footer #block-block-5 {
+	padding-top: 10px;			/* add */
+	padding-bottom: 13px;		/* add */
+}
+
+/* ---- Newsletter ---- */
+.input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group {
+    padding: 10px 20px;		/* add */
+}
+.form-control {
+    /* height: 34px; */
+    padding: 10px 20px;		/* previous : 6px 12px */
+}
+
+/* ---- Social icons ---- */
+.region-blockgroup-footer-menu #block-block-4 ul li {
+	padding-bottom: 10px;	/* add */
+}
+
+/* ---- Sitemap (create) ---- */
+footer ul.menu.nav li a:hover, footer ul.menu.nav li:hover {
+	text-decoration: underline;
+}
+
+footer ul.menu.nav li a, footer ul.menu.nav li {
+    font-weight: 100;
+    color: #95A2AB;
+}
+
+.region-blockgroup-footer-menu #block-block-4 ul li a {
+	font-weight: 100;		/* add */
+    color: #95A2AB;			/* previous : #dee8ee */
+}
+
+footer.footer .region-blockgroup-footer-menu p {
+    color: #95A2AB;			/* previous : #b2bdc4 */
+}
