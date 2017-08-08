@@ -88,6 +88,7 @@ jQuery(function() {
   jQuery.scrollDepth();
 });
 </script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-576c5522c9272c0b"></script> 
 </head>
 <body<?php print $body_attributes; ?>>
   <div id="skip-link">

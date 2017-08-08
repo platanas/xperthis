@@ -1,5 +1,13 @@
 <div class="<?php print $container_class; ?>">
-    <div class="row col-md-12">
+    <div class="col-md-12 menu-secondary">
+        <div class="">
+          <?php if (!empty($page['navigation'])): ?>
+              <?php print render($page['navigation']); ?>
+          <?php endif; ?>
+        </div>
+    </div>
+    
+    <div class="col-md-12">
         
         <div class="col-md-2 col-md-offset-0 col-sm-4 col-xs-6 col-sm-offset-4 col-xs-offset-3 text-center logo-container">
             <?php if ($logo): ?>
@@ -36,8 +44,8 @@
         
     <div class="col-md-3 menu-secondary">
       <div class="row row-no-padding">
-        <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
+        <?php if (!empty($page['navigationContact'])): ?>
+            <?php print render($page['navigationContact']); ?>
         <?php endif; ?>
       </div>
     </div>

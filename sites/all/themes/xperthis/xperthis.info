@@ -9,6 +9,7 @@ base theme = bootstrap
 ;;;;;;;;;;;;;;;;;;;;;
 
 regions[navigation]     = 'Navigation'
+regions[navigationContact]     = 'NavigationContact'
 regions[header]         = 'Top Bar'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
@@ -57,7 +58,7 @@ scripts[] = 'bootstrap/js/transition.js'
 
 scripts[] = 'js/corner-slider/src/assets/js/jquery.cornerslider.js'
 scripts[] = 'js/jquery.scrolldepth.min.js'
-scripts[] = 'js/sticky.scrollUp.js'
+//scripts[] = 'js/sticky.scrollUp.js'
 scripts[] = 'js/custom.js'
 
 ; Disable the CDN provider so compiled source files can be used.

@@ -4521,9 +4521,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-left: 15px;
   padding-right: 15px;
 }
-.navbar .logo img {
-  margin-top: 40px;
-}
 @media (max-width: 992px) {
   .navbar .logo {
     margin-right: 0;
@@ -7333,6 +7330,9 @@ footer.footer .block-simplenews {
 footer.footer .block-simplenews h3 {
   color: #38a7c8;
 }
+footer.footer .block-simplenews #exampleInputEmail1 {
+  padding: 20px;
+}
 footer.footer .block-simplenews .input-group-btn:last-child > .btn,
 footer.footer .block-simplenews .input-group-btn:last-child > .btn-group {
   padding: 10px 20px;
@@ -7343,6 +7343,8 @@ footer.footer .region-blockgroup-footer-menu {
   border-top: 2px solid #36475a;
   color: #b2bdc4;
   margin-bottom: 20px;
+  min-height: 234px;
+  max-height: 234px;
 }
 footer.footer .region-blockgroup-footer-menu p {
   font-size: 14px;
@@ -7351,6 +7353,7 @@ footer.footer .region-blockgroup-footer-menu p {
 footer.footer .region-blockgroup-footer-menu #block-block-4 ul li {
   padding-bottom: 10px;
   /* add */
+  display: inline;
 }
 footer.footer .region-blockgroup-footer-menu #block-block-4 ul li a {
   font-weight: 100;
@@ -7363,6 +7366,21 @@ footer.footer #block-block-5 {
   /* or any other overlay image/color */
   padding-top: 10px;
   padding-bottom: 13px;
+  height: 68px;
+}
+footer.footer #block-block-5 div.copyright {
+  padding: 12px 0 0 0;
+  float: left;
+}
+footer.footer #block-block-5 p {
+  color: #fff;
+  font-size: 10px;
+}
+footer.footer #block-block-5 p a {
+  color: #fff;
+}
+footer.footer #block-block-5 p a:hover {
+  color: #fff;
 }
 footer.footer #block-views-partner-block {
   background-color: white;
@@ -7576,6 +7594,9 @@ and open the template in the editor.
     Author     : platanas
 */
 /* PAGE */
+.page-event .node-event {
+  padding: 0 36px 0 0;
+}
 .page-event .container {
   padding-top: 42px;
 }
@@ -8181,7 +8202,6 @@ h1.lead {
     height: 100px;
     color: #0f7db5;
     margin: 10px;
-    max-width: 225px;
   }
   .views-field-field-hompage-icon {
     float: left;
@@ -8225,7 +8245,6 @@ and open the template in the editor.
     Author     : platanas
 */
 .region-navigation {
-  float: right;
   margin-top: 10px;
 }
 nav {
@@ -8254,18 +8273,14 @@ nav ul.menu > li:not(:last-child):after {
   width: 2px;
   color: #0f7db5;
 }
+#block-search-form {
+  float: left;
+}
 #block-search-form ul li {
   position: relative;
   padding: 12px;
   display: inline;
   list-style-type: none;
-}
-#block-search-form ul li:after {
-  content: ' \00b7';
-  position: absolute;
-  right: 0px;
-  width: 2px;
-  color: #aab6c3;
 }
 #block-search-form ul li a {
   color: #334c67;
@@ -8277,6 +8292,38 @@ nav ul.menu > li:not(:last-child):after {
   font-weight: normal;
   text-decoration: none;
 }
+#block-menu-menu-secondary-menu {
+  float: left;
+}
+#block-menu-menu-secondary-menu ul li {
+  float: left;
+  position: relative;
+  padding: 0;
+  display: inline;
+  list-style-type: none;
+}
+#block-menu-menu-secondary-menu ul li a {
+  color: #334c67;
+  font-weight: normal;
+  padding: 4px 7px 4px 11px;
+}
+#block-menu-menu-secondary-menu ul li a:before {
+  content: ' \00b7';
+  position: absolute;
+  left: 0px;
+  top: 3px;
+  width: 2px;
+  color: #aab6c3;
+}
+#block-menu-menu-secondary-menu ul li a.active,
+#block-menu-menu-secondary-menu ul li a:hover {
+  color: #334c67;
+  font-weight: normal;
+  text-decoration: none;
+}
+#block-locale-language {
+  float: left;
+}
 #block-locale-language .item-list {
   text-transform: uppercase;
 }
@@ -8285,7 +8332,7 @@ nav ul.menu > li:not(:last-child):after {
 }
 #block-locale-language .item-list ul.language li {
   position: relative;
-  padding: 10px;
+  padding: 1px 10px 10px 10px;
   display: inline;
   list-style-type: none;
 }
@@ -8295,7 +8342,7 @@ nav ul.menu > li:not(:last-child):after {
   right: -2px;
   width: 2px;
   height: 30%;
-  top: 35%;
+  top: 19%;
   background: #aab6c3;
 }
 #block-locale-language .item-list ul.language li a {
@@ -8305,7 +8352,6 @@ nav ul.menu > li:not(:last-child):after {
 #block-locale-language .item-list ul.language li a.active,
 #block-locale-language .item-list ul.language li a:hover {
   color: #334c67;
-  font-weight: bold;
   text-decoration: none;
 }
 .navbar-burger {
@@ -8353,9 +8399,8 @@ nav ul.menu > li:not(:last-child):after {
 header#navbar {
   background: #fff;
   height: 142px;
-  position: fixed;
-  top: 0;
-  transition: top 0.5s ease-in-out;
+  margin-bottom: 0;
+  position: absolute;
   width: 100%;
   max-width: inherit;
   display: inherit;
@@ -8370,7 +8415,7 @@ header#navbar nav .caret {
   display: none;
 }
 header#navbar .logo-container {
-  height: 142px;
+  height: 97px;
 }
 header#navbar .logo img {
   transition: all 0.5s ease-in-out;
@@ -8388,7 +8433,7 @@ header#navbar #block-block-6 {
 }
 header#navbar .menu-primary {
   transition: all 0.5s ease-in-out;
-  padding-top: 70px;
+  padding-top: 30px;
 }
 header#navbar .menu-news {
   transition: all 0.5s ease-in-out;
@@ -8442,13 +8487,6 @@ header#navbar.menu-breadcrumb .menu-news {
 header#navbar.menu-breadcrumb .menu-news .breadcrumb-rail {
   padding: 0 20px;
   color: #dee8ee;
-}
-/* ADMIN MENU PRIMARY NAV */
-/* TOP SPACING FOR ADMIN MENU */
-.admin-menu header#navbar,
-.admin-menu header#navbar.menu-breadcrumb,
-.admin-menu header#navbar.menu-breadcrumb.nav-up {
-  top: 29px;
 }
 .admin-menu header#navbar.nav-up {
   top: -45px;

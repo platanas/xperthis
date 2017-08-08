@@ -8,7 +8,7 @@ and open the template in the editor.
     Author     : platanas
 */
 .region-navigation {
-    float: right;
+    
     margin-top: 10px;
 }
 nav {
@@ -38,18 +38,12 @@ nav {
     }
 }
 #block-search-form {
+    float:left;
     ul li {
         position: relative;
         padding: 12px;
         display: inline;
         list-style-type: none;
-        &:after{
-            content: ' \00b7';
-            position: absolute;
-            right: 0px;
-            width:2px;
-            color: #aab6c3;
-        }
         a {
             color: #334c67;
             font-weight: normal;
@@ -61,14 +55,43 @@ nav {
         }
     }
 }
+#block-menu-menu-secondary-menu {
+    float:left;
+    ul li {
+        float:left;
+        position: relative;
+        padding: 0;
+        display: inline;
+        list-style-type: none;
+        a {
+        &:before{
+            content: ' \00b7';
+            position: absolute;
+            left: 0px;
+            top: 3px;
+            width:2px;
+            color: #aab6c3;
+        }
+            color: #334c67;
+            font-weight: normal;
+            padding: 4px 7px 4px 11px;
+            &.active, &:hover {
+                color: #334c67;
+                font-weight: normal;
+                text-decoration: none;
+            }
+        }
+    }
+}
 #block-locale-language {
+    float:left;
     .item-list{
         text-transform: uppercase;
         ul.language {
             padding: 0;
             li {
                 position: relative;
-                padding: 10px;
+                padding: 1px 10px 10px 10px;
                 display:inline;
                 list-style-type:none;
                 &:not(:last-child):after{
@@ -77,7 +100,7 @@ nav {
                     right: -2px;
                     width:2px;
                     height: 30%;
-                    top: 35%;
+                    top: 19%;
                     background: #aab6c3;
                 }
                 a {
@@ -85,7 +108,6 @@ nav {
                     font-weight: normal;
                     &.active, &:hover {
                         color: #334c67;
-                        font-weight: bold;
                         text-decoration: none;
                     }
                 }
@@ -144,9 +166,8 @@ nav {
 header#navbar {
     background: #fff;
     height: 142px;
-    position: fixed;
-    top: 0;
-    transition: top 0.5s ease-in-out;
+    margin-bottom: 0;
+    position:absolute;
     width: 100%;
     max-width: inherit;
     display: inherit;
@@ -160,7 +181,7 @@ header#navbar {
         }
     }
     .logo-container {
-        height: 142px;
+        height: 97px;;
     }
     .logo {
         img {
@@ -180,7 +201,7 @@ header#navbar {
     }
     .menu-primary {
         transition: all 0.5s ease-in-out;
-        padding-top: 70px;
+        padding-top: 30px;
     }
     .menu-news {
         transition: all 0.5s ease-in-out;
@@ -244,11 +265,7 @@ header#navbar.menu-breadcrumb {
 }
 
 
-/* ADMIN MENU PRIMARY NAV */
-/* TOP SPACING FOR ADMIN MENU */
-.admin-menu header#navbar, .admin-menu header#navbar.menu-breadcrumb, .admin-menu header#navbar.menu-breadcrumb.nav-up {
-    top: 29px;
-}
+
 
 .admin-menu header#navbar.nav-up {
     top: -45px;

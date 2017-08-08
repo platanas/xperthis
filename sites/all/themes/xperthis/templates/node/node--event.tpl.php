@@ -110,8 +110,10 @@
     hide($content['registration_link']);
     hide($content['registration_form']);
     hide($content['registration_slots_left']);
+    hide($content['registration_unregistrable_reason']);
     hide($content['field_capacity']);
     hide($content['field_adresse']);
+    hide($content['field_price']);
     hide($content['body']);
     print render($content);
     print 
@@ -147,6 +149,10 @@
     <div class="clearfix"></div>
     <?php print '<h3 class="regular">'.render($content['field_title_event']).'</h3>'; ?>
     
+    <?php if (!empty(render($content['field_price']))): ?>
+        <h4 class="light"><?php print render($content['field_price']); ?></h4>
+    <?php endif ?>
+        
     <?php //print '<div class="text-center"><div class="btn btn-primary">'.render($content['registration_link']).'</div></div>'; ?>
     <div class="text-center"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registration-modal" onclick="ga('send','event','Event-Details','Event-Details','Register', <?php print $title; ?>);"><?php print t('Subscribe'); ?></button></div>
     <div class="modal fade registration-modal" tabindex="-1" role="dialog" aria-labelledby="registration-modal" aria-hidden="true" id="registration-modal">
@@ -169,23 +175,7 @@
                 
     
     <?php print '<div class="field field-name-field-details field-type-text-long field-label-above"><div class="field-label">'.$content['field_details']['#title'].'</div></div>'; ?>
-    
-    
-    <?php if (!empty(render($content['field_cost']))): ?>
-        <?php print render($content['field_cost']); ?>
-    <?php else: ?>
-        <h4>Gratuit sur inscription</h4>
-    <?php endif ?>
-        
-    <?php if (!empty($node->field_date['und'][0]['value2'])){ ?>
-        <h4>
-        <?php 
-        
-        print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'H:i',  date_default_timezone_get()); ?>
-            -
-        <?php print format_date(strtotime($node->field_date['und'][0]['value2']), 'custom', 'H:i',  date_default_timezone_get()); ?>
-        </h4>
-    <?php } ?>
+    <?php print render($content['field_details']); ?>
     <?php print '<div class="field field-name-field-adresse-title field-type-text-long field-label-above"><div class="field-label">'.$content['field_adresse']['#title'].'</div></div>'; ?>
     <?php print render($content['field_adresse']); ?>
     

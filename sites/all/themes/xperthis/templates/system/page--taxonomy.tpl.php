@@ -73,7 +73,10 @@
  * @ingroup templates
  */
 ?>
-  <?php include $directory . '/templates/inc/headerTaxonomy.tpl.inc'; ?>
+  
+<header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
+  <?php include $directory . '/templates/inc/header.tpl.inc'; ?>
+</header>
 <div class="main-container content page-thin-menu ">
 <header role="banner" id="page-header">
     <?php print render($page['header']); ?>

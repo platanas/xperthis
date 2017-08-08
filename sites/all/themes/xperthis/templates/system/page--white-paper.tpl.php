@@ -73,9 +73,10 @@
  * @ingroup templates
  */
 ?>
+
 <header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
   <?php include $directory . '/templates/inc/header.tpl.inc'; ?>
-</header> <!-- /#page-header -->
+</header>
 <div class="main-container content page-no-hero page-e-book ">
 <header role="banner" id="page-header">
     <?php print render($page['header']); ?>
@@ -100,11 +101,6 @@
       <?php if (!empty($title)): ?>
         <h1 class="page-header light"><?php print $title; ?></h1>
       <?php endif; ?>
-        <?php if(isset($node->field_subtitle['und'][0]['value'])): ?>
-            <h2 class="page-header light">
-                <?php print $node->field_subtitle['und'][0]['value']; ?>
-            </h2>
-        <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>

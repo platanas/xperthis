@@ -99,11 +99,16 @@
     hide($content['comments']);
     hide($content['links']);
     hide($content['field_tags']);
+    hide($content['field_display_in_article_list']);
+    hide($content['body']);
+    
     
     print '<p class="annotation">'. t('Published').' '.date('d/m/Y', $node->published_at).' </p>';
     print render($content);
   ?>
+    <div class="addthis_sharing_toolbox"></div>
   <?php
+    print render($content['body']);
     // Only display the wrapper div if there are tags or links.
     $field_tags = render($content['field_tags']);
     $links = render($content['links']);

@@ -73,7 +73,9 @@
  * @ingroup templates
  */
 ?>
-<?php include $directory . '/templates/inc/headerEvent.tpl.inc'; ?>
+<header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
+  <?php include $directory . '/templates/inc/header.tpl.inc'; ?>
+</header>
 <!-- /#page-header -->
 <div class="main-container content page-no-hero page-event ">
 <header role="banner" id="page-header">

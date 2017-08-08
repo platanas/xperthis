@@ -101,8 +101,15 @@
     hide($content['links']);
     hide($content['field_tags']);
     hide($content['field_subtitle']);
+    hide($content['body']);
     print render($content);
-  ?>
+    ?>
+    <?php if(!empty(render($content['field_subtitle']))): ?>
+        <h3 class="light">
+            <?php print render($content['field_subtitle']); ?>
+        </h3>
+    <?php endif; ?>
+    <?php print render($content['body']); ?>
   <?php
     // Only display the wrapper div if there are tags or links.
     $field_tags = render($content['field_tags']);
