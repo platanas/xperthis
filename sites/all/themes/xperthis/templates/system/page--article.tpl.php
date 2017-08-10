@@ -96,7 +96,10 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+        <ol class="breadcrumb">
+            <li><a href="/<?php print $language->language; ?>/taxonomy/term/all" class="disabled active-trail"><?php print t('News'); ?></a></li>
+            <li class="active"><?php print $title; ?></li>
+        </ol>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>

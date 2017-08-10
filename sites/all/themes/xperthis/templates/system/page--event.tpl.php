@@ -84,7 +84,6 @@
   
 
   <div class="<?php print $container_class; ?>">
-
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3" role="complementary">
         <?php print render($page['sidebar_first']); ?>
@@ -95,7 +94,9 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+      <ol class="breadcrumb"><li><a href="/<?php print $language->language; ?>/evenements" class="disabled"><?php print t('Event'); ?></a></li>
+            <li class="active"><?php print truncate_utf8($title, 50, false, true, 1); ?></li>
+        </ol>
       <a id="main-content"></a>
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>

@@ -96,10 +96,18 @@
       <?php endif; ?>
       <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>
+      <div class="col-sm-8 no-padding">
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>
         <h1 class="page-header"><?php print $title; ?></h1>
       <?php endif; ?>
+      </div>
+      <div class="col-sm-2 no-padding">
+          <a href="" class="sliding-u-r-l">A venir</a>
+      </div>
+      <div class="col-sm-2 no-padding">
+          <a href="" class="sliding-u-r-l">Passé</a>
+      </div>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>
@@ -134,4 +142,3 @@
     <?php print render($page['footer']); ?>
   </footer>
 <?php endif; ?>
-

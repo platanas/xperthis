@@ -3203,6 +3203,9 @@ fieldset[disabled] .btn-primary.focus {
   color: white;
   text-decoration: none;
 }
+.btn-primary.darker {
+  background-color: #0d4866;
+}
 .btn-success {
   color: #fff;
   background-color: #5cb85c;
@@ -7170,6 +7173,24 @@ and open the template in the editor.
 .paragraphs-item-image-background-block {
   color: white;
 }
+.paragraphs-item-image-background-block .btn {
+  margin-top: 86px;
+}
+.paragraphs-item-image-background-block p {
+  color: white;
+}
+.paragraphs-item-image-background-block h1 {
+  color: white;
+}
+.paragraphs-item-image-background-block h2 {
+  color: white;
+}
+.paragraphs-item-image-background-block h3 {
+  color: white;
+}
+.paragraphs-item-image-background-block h4 {
+  color: white;
+}
 .paragraphs-item-image-background-block .col-lg-12 {
   padding: 20px;
 }
@@ -7263,17 +7284,23 @@ body {
   text-transform: uppercase;
 }
 .page-no-hero {
-  padding-top: 162px;
+  padding-top: 142px;
+}
+.page-no-hero .content-product-page {
+  padding-top: 62px;
 }
 .page-thin-menu {
-  padding-top: 100px;
+  padding-top: 142px;
+}
+.page-thin-menu .content-product-page {
+  padding-top: 62px;
 }
 .page-thin-menu .view-id-products {
   padding-top: 104px;
 }
 .page-no-hero > .container,
 .page-thin-menu > .container {
-  padding-top: 42px;
+  padding-top: 62px;
 }
 .page-no-hero .field.field-name-field-tags .field-label,
 .page-thin-menu .field.field-name-field-tags .field-label {
@@ -7528,6 +7555,9 @@ and open the template in the editor.
   background: #0ecda1;
 }
 /* Highlighted E-book */
+#block-views-news-block-6 {
+  display: none;
+}
 #block-views-news-block-6 h2.block-title {
   text-align: center;
   color: #0f7db5;
@@ -7594,6 +7624,33 @@ and open the template in the editor.
     Author     : platanas
 */
 /* PAGE */
+.sliding-u-r-l {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+  width: 100%;
+  padding-top: 22px;
+  text-align: center;
+  border-bottom: 3px solid #dee8ee;
+}
+.sliding-u-r-l:hover {
+  text-underline: none;
+}
+.sliding-u-r-l:after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+.sliding-u-r-l:hover:after {
+  width: 100%;
+  background: blue;
+}
 .page-event .node-event {
   padding: 0 36px 0 0;
 }
@@ -7958,24 +8015,24 @@ h1.lead {
   font-size: 12px;
   text-transform: uppercase;
 }
-#block-views-news-block .view-id-news .views-field-type h3.E-book {
+#block-views-news-block .view-id-news .views-field-type h3.White-Paper {
   background-color: #da5d80;
 }
 #block-views-news-block .view-id-news .views-field-type h3.Article {
   background-color: #eab013;
 }
-#block-views-news-block .view-id-news .views-field-type h3.Evénement {
+#block-views-news-block .view-id-news .views-field-type h3.Evenement {
   background-color: #1cbdd5;
 }
 #block-views-news-block .views-field-view-node {
   right: 17px;
   top: 205px;
 }
-#block-views-news-block .views-field-view-node .E-book.Fr a {
+#block-views-news-block .views-field-view-node .White-Paper.Fr a {
   visibility: hidden;
 }
-#block-views-news-block .views-field-view-node .E-book.Fr a::before {
-  content: "Télécharger l'E-book";
+#block-views-news-block .views-field-view-node .White-Paper.Fr a::before {
+  content: "Télécharger le White Paper";
   visibility: visible;
 }
 #block-views-news-block .views-field-view-node .Article.Fr a {
@@ -7985,10 +8042,10 @@ h1.lead {
   content: 'Lire la suite';
   visibility: visible;
 }
-#block-views-news-block .views-field-view-node .Evénement.Fr a {
+#block-views-news-block .views-field-view-node .Evenement.Fr a {
   visibility: hidden;
 }
-#block-views-news-block .views-field-view-node .Evénement.Fr a::before {
+#block-views-news-block .views-field-view-node .Evenement.Fr a::before {
   content: 'En savoir plus';
   visibility: visible;
 }
@@ -8072,11 +8129,11 @@ h1.lead {
   text-align: right;
   padding: 20px 0 20px 20px;
 }
-#block-views-news-block-1 .view-id-news .views-field-view-node .E-book.Fr a {
+#block-views-news-block-1 .view-id-news .views-field-view-node .White-Paper.Fr a {
   visibility: hidden;
 }
-#block-views-news-block-1 .view-id-news .views-field-view-node .E-book.Fr a::before {
-  content: "Télécharger l'E-book";
+#block-views-news-block-1 .view-id-news .views-field-view-node .White-Paper.Fr a::before {
+  content: "Télécharger le White Paper";
   visibility: visible;
 }
 #block-views-news-block-1 .view-id-news .views-field-view-node .Article.Fr a {
@@ -8086,10 +8143,10 @@ h1.lead {
   content: 'Lire la suite';
   visibility: visible;
 }
-#block-views-news-block-1 .view-id-news .views-field-view-node .Evénement.Fr a {
+#block-views-news-block-1 .view-id-news .views-field-view-node .Evenement.Fr a {
   visibility: hidden;
 }
-#block-views-news-block-1 .view-id-news .views-field-view-node .Evénement.Fr a::before {
+#block-views-news-block-1 .view-id-news .views-field-view-node .Evenement.Fr a::before {
   content: 'En savoir plus';
   visibility: visible;
 }
@@ -8120,13 +8177,13 @@ h1.lead {
   font-size: 12px;
   text-transform: uppercase;
 }
-#block-views-news-block-1 .view-id-news .views-field-type h3.E-book {
+#block-views-news-block-1 .view-id-news .views-field-type h3.White-Paper {
   background-color: #da5d80;
 }
 #block-views-news-block-1 .view-id-news .views-field-type h3.Article {
   background-color: #eab013;
 }
-#block-views-news-block-1 .view-id-news .views-field-type h3.Evénement {
+#block-views-news-block-1 .view-id-news .views-field-type h3.Evenement {
   background-color: #1cbdd5;
 }
 #block-views-webform-block {
@@ -9084,6 +9141,10 @@ p.annotation {
   padding: 0;
 }
 .row-no-padding [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.no-padding {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }

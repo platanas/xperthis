@@ -78,12 +78,9 @@
   <?php include $directory . '/templates/inc/header.tpl.inc'; ?>
 </header>
 <div class="main-container content page-thin-menu page-products ">
-<header role="banner" id="page-header">
-    <?php print render($page['header']); ?>
-</header>
-  
 
-  <div class="">
+
+  <div class="content-product-page">
 
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3" role="complementary">
@@ -95,13 +92,10 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
+      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       
       <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if (!empty($title)): ?>
-        <h1 class="page-header"><?php print $node->field_subtitle['und'][0]['value']; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
+      
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>
         <?php print render($tabs); ?>

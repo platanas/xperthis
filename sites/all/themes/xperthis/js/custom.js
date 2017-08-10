@@ -21,6 +21,10 @@
                             //alert("Not to be seen again in the near future.");
                         //},
             });
+            console.log('ok');
+            $("#block-views-news-block-6").insertAfter(".view-taxonomy-term .view-content .views-row-1");
+            $("#block-views-news-block-6").css('display', 'block');
+
         });
         
         $(window).scroll(function(){
