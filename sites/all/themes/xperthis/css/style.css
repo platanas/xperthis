@@ -7624,24 +7624,64 @@ and open the template in the editor.
     Author     : platanas
 */
 /* PAGE */
+/* LEFT TO RIGHT */
+.sliding-u-l-r {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3px;
+  width: 100%;
+  padding-top: 19px;
+  text-align: center;
+  border-bottom: 3px solid #dee8ee;
+  color: #93a2b3;
+}
+.sliding-u-l-r.active {
+  border-bottom: 3px solid #4ca9d3;
+  color: #93a2b3;
+}
+.sliding-u-l-r:hover {
+  text-decoration: none;
+  color: #4ca9d3;
+}
+.sliding-u-l-r:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 0;
+  bottom: -3px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+.sliding-u-l-r:hover:after {
+  width: 100%;
+  background: #4ca9d3;
+}
 .sliding-u-r-l {
   display: inline-block;
   position: relative;
   padding-bottom: 3px;
   width: 100%;
-  padding-top: 22px;
+  padding-top: 19px;
   text-align: center;
   border-bottom: 3px solid #dee8ee;
+  color: #93a2b3;
+}
+.sliding-u-r-l.active {
+  border-bottom: 3px solid #4ca9d3;
+  color: #93a2b3;
 }
 .sliding-u-r-l:hover {
-  text-underline: none;
+  text-decoration: none;
+  color: #4ca9d3;
 }
 .sliding-u-r-l:after {
   content: '';
   display: block;
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -3px;
   height: 3px;
   width: 0;
   background: transparent;
@@ -7649,7 +7689,7 @@ and open the template in the editor.
 }
 .sliding-u-r-l:hover:after {
   width: 100%;
-  background: blue;
+  background: #4ca9d3;
 }
 .page-event .node-event {
   padding: 0 36px 0 0;
@@ -7711,7 +7751,8 @@ and open the template in the editor.
   font-weight: 400;
   text-transform: uppercase;
 }
-.page-evenements.not-front .page-header {
+.page-evenements.not-front .page-header,
+.page-evenements-passes.not-front .page-header {
   border-bottom: 3px solid #dee8ee;
 }
 /* Event LIsting */
@@ -8015,7 +8056,7 @@ h1.lead {
   font-size: 12px;
   text-transform: uppercase;
 }
-#block-views-news-block .view-id-news .views-field-type h3.White-Paper {
+#block-views-news-block .view-id-news .views-field-type h3.Whitepaper {
   background-color: #da5d80;
 }
 #block-views-news-block .view-id-news .views-field-type h3.Article {
@@ -8028,10 +8069,10 @@ h1.lead {
   right: 17px;
   top: 205px;
 }
-#block-views-news-block .views-field-view-node .White-Paper.Fr a {
+#block-views-news-block .views-field-view-node .Whitepaper.Fr a {
   visibility: hidden;
 }
-#block-views-news-block .views-field-view-node .White-Paper.Fr a::before {
+#block-views-news-block .views-field-view-node .Whitepaper.Fr a::before {
   content: "Télécharger le White Paper";
   visibility: visible;
 }
@@ -8129,10 +8170,10 @@ h1.lead {
   text-align: right;
   padding: 20px 0 20px 20px;
 }
-#block-views-news-block-1 .view-id-news .views-field-view-node .White-Paper.Fr a {
+#block-views-news-block-1 .view-id-news .views-field-view-node .Whitepaper.Fr a {
   visibility: hidden;
 }
-#block-views-news-block-1 .view-id-news .views-field-view-node .White-Paper.Fr a::before {
+#block-views-news-block-1 .view-id-news .views-field-view-node .Whitepaper.Fr a::before {
   content: "Télécharger le White Paper";
   visibility: visible;
 }
@@ -8177,7 +8218,7 @@ h1.lead {
   font-size: 12px;
   text-transform: uppercase;
 }
-#block-views-news-block-1 .view-id-news .views-field-type h3.White-Paper {
+#block-views-news-block-1 .view-id-news .views-field-type h3.Whitepaper {
   background-color: #da5d80;
 }
 #block-views-news-block-1 .view-id-news .views-field-type h3.Article {
@@ -8436,6 +8477,7 @@ nav ul.menu > li:not(:last-child):after {
 }
 .navbar-nav > li > .dropdown-menu {
   padding: 0;
+  left: 12px;
   box-shadow: none;
 }
 .navbar-nav > li > .dropdown-menu .active a {

@@ -156,3 +156,13 @@ function xperthis_preprocess_simplenews_block_form_1(&$variables) {
 	// Be sure to print the remaining rendered form items.
 	$variables['children'] = drupal_render_children($form);
 }
+
+/**
+* Implements HOOK_webform_component_render_alter().
+ * Translate Placeholder : Automatically add to interface translation
+*/
+function xperthis_webform_component_render_alter(&$element, $component) {
+ if (isset($element['#attributes']['placeholder'])) {
+   $element['#attributes']['placeholder'] = t($element['#attributes']['placeholder']);
+ }
+}

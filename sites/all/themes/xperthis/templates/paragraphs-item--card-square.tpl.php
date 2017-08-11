@@ -36,12 +36,17 @@ endif;
 if (empty($content['field_title_card_2'])):
 $offset = 'col-md-offset-4';
 endif;
+if (!empty($content['field_title_card_4'])):
+$col = 'col-md-3';
+else:
+$col = 'col-md-4';
+endif;
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content container"<?php print $content_attributes; ?>>
         <div class="row">
             <?php  if (!empty($content['field_title'])): ?>
-            <div class="col-md-4 <?php  print $offset; ?> text-center">
+            <div class=" <?php  print $offset; ?> <?php  print $col; ?> text-center">
                 <div class="card card-square ">
                 <?php if (!empty($content['field_link']['#items'][0]['url'])): ?>
                 <a href="<?php print render($content['field_link']['#items'][0]['url']); ?>">
@@ -67,7 +72,7 @@ endif;
             </div>
             <?php endif; ?>
             <?php  if (!empty($content['field_title_card_2'])): ?>
-            <div class="col-md-4 text-center">
+            <div class=" <?php  print $col; ?> text-center">
                 <div class="card card-square ">
                 <?php if (!empty($content['field_link_card_2']['#items'][0]['url'])): ?>
                 <a href="<?php print render($content['field_link_card_2']['#items'][0]['url']); ?>">
@@ -93,7 +98,7 @@ endif;
             </div>
             <?php endif; ?>
             <?php  if (!empty($content['field_title_card_3'])): ?>
-            <div class="col-md-4 text-center">
+            <div class=" <?php  print $col; ?> text-center">
                 <div class="card card-square ">
                 <?php if (!empty($content['field_link_card_3']['#items'][0]['url'])): ?>
                 <a href="<?php print render($content['field_link_card_3']['#items'][0]['url']); ?>">
@@ -110,6 +115,32 @@ endif;
                         <button class="field-content btn btn-primary">
                             <a href="<?php print render($content['field_link_card_3']['#items'][0]['url']); ?>">
                                 <?php print render($content['field_link_card_3']['#items'][0]['title']); ?>
+                            </a>
+                        </button>
+                    <p>
+                </div>
+                <?php endif; ?>
+                </div>
+            </div>
+            <?php endif; ?>
+            <?php  if (!empty($content['field_title_card_4'])): ?>
+            <div class=" <?php  print $col; ?> text-center">
+                <div class="card card-square ">
+                <?php if (!empty($content['field_link_card_4']['#items'][0]['url'])): ?>
+                <a href="<?php print render($content['field_link_card_4']['#items'][0]['url']); ?>">
+                <?php endif; ?>
+                    <?php print render($content['field_image_card_4']); ?>
+                <?php if (!empty($content['field_link_card_4']['#items'][0]['url'])): ?>
+                </a>
+                <?php endif; ?>
+                <h3 class="regular"><?php print render($content['field_title_card_4']); ?></h3>
+                <p><?php print strip_tags(render($content['field_paragraph_card_4'])); ?></p>
+                <?php if (!empty($content['field_link_card_4']['#items'][0]['url'])): ?>
+                <div class="wrapper-btn">
+                    <p>
+                        <button class="field-content btn btn-primary">
+                            <a href="<?php print render($content['field_link_card_4']['#items'][0]['url']); ?>">
+                                <?php print render($content['field_link_card_4']['#items'][0]['title']); ?>
                             </a>
                         </button>
                     <p>

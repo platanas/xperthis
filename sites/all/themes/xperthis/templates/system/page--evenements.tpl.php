@@ -102,6 +102,12 @@
         <h1 class="page-header"><?php print $title; ?></h1>
       <?php endif; ?>
       </div>
+      <div class="col-sm-2 no-padding">
+          <a href="/<?php print $language->language; ?>/evenements" class="sliding-u-r-l active">A venir</a>
+      </div>
+      <div class="col-sm-2 no-padding">
+          <a href="/<?php print $language->language; ?>/evenements-passes" class="sliding-u-l-r">Passé</a>
+      </div>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>

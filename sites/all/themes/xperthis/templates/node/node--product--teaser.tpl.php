@@ -79,54 +79,23 @@
  * @ingroup templates
  */
 ?>
-<div class="col-sm-8">
+
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
-  <header>
-    <?php print render($title_prefix); ?>
-    <?php if (!$page && !empty($title)): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-    <?php endif; ?>
-    <?php print render($title_suffix); ?>
-    <?php if ($display_submitted): ?>
-    <span class="submitted">
-      <?php print $user_picture; ?>
-      <?php print $submitted; ?>
-    </span>
-    <?php endif; ?>
-  </header>
-  <?php endif; ?>
+    <div class="teasing">
   <?php
     // Hide comments, tags, and links now so that we can render them later.
     hide($content['comments']);
     hide($content['links']);
     hide($content['field_tags']);
-    hide($content['field_categories']);
-    hide($content['field_display_in_article_list']);
-    hide($content['field_link']);
     hide($content['field_subtitle']);
-    hide($content['field_title_event']);
-    hide($content['field_date']);
-    hide($content['field_date_subscription']);
-    hide($content['field_details']);
-    //hide($content['registration_link']);
-    //hide($content['registration_form']);
-    //hide($content['registration_slots_left']);
-    //hide($content['registration_unregistrable_reason']);
-    hide($content['field_capacity']);
-    hide($content['field_adresse']);
-    hide($content['field_price']);
     hide($content['body']);
-    print_r(var_dump($content));
-    print render($content);
-    print 
-    '<div class="field field-name-field-body field-type-text-long field-label-above">'
-        . '<div class="field-label">'
-            .$content['body']['#title'].
-        '</div>'
-    . '</div>';
-    print render($content['body']);
+    //  print render($content);
   ?>
+    <h4<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print render($content['field_subtitle']); ?></a></h4>
+    <?php print render($content['body']); ?>
+    <footer>
+    <p><a href="<?php print $node_url; ?>"><?php print t('read more'); ?></a></p>
+    </footer>
   <?php
     // Only display the wrapper div if there are tags or links.
     $field_tags = render($content['field_tags']);
@@ -134,57 +103,10 @@
     if ($field_tags || $links):
   ?>
    <footer>
-       <hr />
      <?php print $field_tags; ?>
      <?php print $links; ?>
   </footer>
   <?php endif; ?>
   <?php print render($content['comments']); ?>
+    </div>
 </article>
-</div>
-<div class="col-sm-4 block-event-info">
-    <div class="event-date">
-        <p class="light white text-center">
-        <span class="day"><?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'd', 'Europe/Brussels'); ?></span><br />
-        <span class="month "><?php print format_date(strtotime($node->field_date['und'][0]['value']), 'custom', 'M', 'Europe/Brussels'); ?></span>
-        </p>
-    </div>
-    <div class="clearfix"></div>
-    <?php print '<h3 class="regular">'.render($content['field_title_event']).'</h3>'; ?>
-    
-    <?php if (!empty(render($content['field_price']))): ?>
-        <h4 class="light"><?php print render($content['field_price']); ?></h4>
-    <?php endif ?>
-    <?php if (!empty($content['registration_link'])): ?>
-    <?php //print '<div class="text-center"><div class="btn btn-primary">'.render($content['registration_link']).'</div></div>'; ?>
-    <div class="text-center"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registration-modal" onclick="ga('send','event','Event-Details','Event-Details','Register', <?php print $title; ?>);"><?php print t('Subscribe'); ?></button></div>
-    <div class="modal fade registration-modal" tabindex="-1" role="dialog" aria-labelledby="registration-modal" aria-hidden="true" id="registration-modal">
-        <div class="modal-dialog modal-md">
-            <div class="modal-header popups-title">         
-                <span id="modal-title" class="modal-title">
-                    <h2><?php print t('Subscribe'); ?></h2>
-                        <?php print '<h3 class="regular">'.render($content['field_title_event']).'</h3>'; ?></span>              
-                <div class="clear-block"></div>      
-            </div>
-            <div class="modal-content">
-                <div class="modal-body">
-                    <?php print render($content['registration_form']); ?>
-                </div>       
-            </div>
-    </div>
-    </div>
-    <?php else: ?>
-        <div class="text-center">
-            <a type="button" class="btn btn-primary" href="<?php print $content['field_link_card_4']['#items'][0]['url']; ?>" onclick="ga('send','event','Event-Details','Event-Details','Register', <?php print $content['field_link_card_4']['#items'][0]['title']; ?>);"><?php print t('Subscribe'); ?></a>
-        </div>
-    <?php endif; ?>
-    <?php //var_dump($content['field_details']['#title']); ?>
-                
-    
-    <?php print '<div class="field field-name-field-details field-type-text-long field-label-above"><div class="field-label">'.$content['field_details']['#title'].'</div></div>'; ?>
-    <?php print render($content['field_details']); ?>
-    <?php print '<div class="field field-name-field-adresse-title field-type-text-long field-label-above"><div class="field-label">'.$content['field_adresse']['#title'].'</div></div>'; ?>
-    <?php print render($content['field_adresse']); ?>
-    
-</div>
-   <?php print '<img src="/'. $directory .'/img/xperthis-bottom-bloc-event-bg.jpg" class="img-responsive center-auto" alt="" />'; ?>
