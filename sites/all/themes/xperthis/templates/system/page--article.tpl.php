@@ -96,10 +96,14 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-        <ol class="breadcrumb">
-            <li><a href="/<?php print $language->language; ?>/taxonomy/term/all" class="disabled active-trail"><?php print t('News'); ?></a></li>
-            <li class="active"><?php print $title; ?></li>
-        </ol>
+        
+        <div class="breadcrumb">
+            <span class="inline odd first"><a href="/fr">Home</a></span>
+            <span class="delimiter">&gt;</span>
+            <span class="inline even"><a href="/<?php print $language->language; ?>/taxonomy/term/all" class="disabled active-trail"><?php print t('News'); ?></a></span>
+            <span class="delimiter">&gt;</span>
+            <span class="active"><?php print $title; ?></span>
+        </div>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>

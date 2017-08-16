@@ -164,6 +164,9 @@ h1.lead {
             &.Article {
                 background-color: #eab013;
             }
+            &.Artikel {
+                background-color: #eab013;
+            }
             &.Evenement {
                 background-color: #1cbdd5;
             }
@@ -175,8 +178,21 @@ h1.lead {
         .Whitepaper.Fr {
             a {
                 &::before {
-                    content: "Télécharger le White Paper";
+                    content: "Télécharger le Whitepaper";
                     visibility: visible;
+                    float: right;
+                    padding-right: 20px;
+                }
+                visibility: hidden;
+            }
+        }
+        .Whitepaper.Ne {
+            a {
+                &::before {
+                    content: "Downloaden Whitepaper";
+                    visibility: visible;
+                    float: right;
+                    padding-right: 20px;
                 }
                 visibility: hidden;
             }
@@ -186,6 +202,19 @@ h1.lead {
                 &::before {
                     content: 'Lire la suite';
                     visibility: visible;
+                    float: right;
+                    padding-right: 20px;
+                }
+                visibility: hidden;
+            }
+        }
+        .Artikel.Ne {
+            a {
+                &::before {
+                    content: 'Lees verder';
+                    visibility: visible;
+                    float: right;
+                    padding-right: 20px;
                 }
                 visibility: hidden;
             }
@@ -195,11 +224,24 @@ h1.lead {
                 &::before {
                     content: 'En savoir plus';
                     visibility: visible;
+                    float: right;
+                    padding-right: 20px;
                 }
                 visibility: hidden;
             }
         }
-        .Fr {
+        .Evenement.Ne {
+            a {
+                &::before {
+                    content: 'Lees verder';
+                    visibility: visible;
+                    float: right;
+                    padding-right: 20px;
+                }
+                visibility: hidden;
+            }
+        }
+        .Fr, .Ne {
             a {
                 &::before {
                     text-decoration: underline;
@@ -298,8 +340,21 @@ h1.lead {
         .Whitepaper.Fr {
             a {
                 &::before {
-                    content: "Télécharger le White Paper";
+                    content: "Télécharger le Whitepaper";
                     visibility: visible;
+                    float: right;
+                    padding-right: 20px;
+                }
+                visibility: hidden;
+            }
+        }
+        .Whitepaper.Ne {
+            a {
+                &::before {
+                    content: "Downloaden Whitepaper";
+                    visibility: visible;
+                    float: right;
+                    padding-right: 20px;
                 }
                 visibility: hidden;
             }
@@ -309,6 +364,19 @@ h1.lead {
                 &::before {
                     content: 'Lire la suite';
                     visibility: visible;
+                    float: right;
+                    padding-right: 20px;
+                }
+                visibility: hidden;
+            }
+        }
+        .Artikel.Ne {
+            a {
+                &::before {
+                    content: 'Lees verder';
+                    visibility: visible;
+                    float: right;
+                    padding-right: 20px;
                 }
                 visibility: hidden;
             }
@@ -318,12 +386,25 @@ h1.lead {
                 &::before {
                     content: 'En savoir plus';
                     visibility: visible;
+                    float: right;
+                    padding-right: 20px;
+                }
+                visibility: hidden;
+            }
+        }
+        .Evenement.Ne {
+            a {
+                &::before {
+                    content: 'Lees verder';
+                    visibility: visible;
+                    float: right;
+                    padding-right: 20px;
                 }
                 visibility: hidden;
             }
         }
         
-        .Fr {
+        .Fr, Ne {
             a {
                 &::before {
                     color: @blue-xtra-light;
@@ -360,6 +441,9 @@ h1.lead {
                 background-color: #da5d80;
             }
             &.Article {
+                background-color: #eab013;
+            }
+            &.Artikel {
                 background-color: #eab013;
             }
             &.Evenement {

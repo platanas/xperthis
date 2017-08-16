@@ -109,22 +109,23 @@
     hide($content['field_date']);
     hide($content['field_date_subscription']);
     hide($content['field_details']);
-    //hide($content['registration_link']);
-    //hide($content['registration_form']);
-    //hide($content['registration_slots_left']);
-    //hide($content['registration_unregistrable_reason']);
+    hide($content['registration_link']);
+    hide($content['registration_form']);
+    hide($content['registration_slots_left']);
+    hide($content['registration_unregistrable_reason']);
     hide($content['field_capacity']);
     hide($content['field_adresse']);
     hide($content['field_price']);
     hide($content['body']);
-    print_r(var_dump($content));
     print render($content);
+    if (isset($content['body']['#title'])):
     print 
-    '<div class="field field-name-field-body field-type-text-long field-label-above">'
+        '<div class="field field-name-field-body field-type-text-long field-label-above">'
         . '<div class="field-label">'
             .$content['body']['#title'].
         '</div>'
     . '</div>';
+    endif;
     print render($content['body']);
   ?>
   <?php
@@ -155,7 +156,21 @@
     <?php if (!empty(render($content['field_price']))): ?>
         <h4 class="light"><?php print render($content['field_price']); ?></h4>
     <?php endif ?>
-    <?php if (!empty($content['registration_link'])): ?>
+    <?php if ($content['registration_unregistrable_reason']['#access'] == true): ?>
+        <?php if (!empty($content['field_link']['#items'][0]['title'])): ?>
+            <div class="text-center">
+                <a type="button" class="btn btn-primary" href="<?php print $content['field_link']['#items'][0]['url']; ?>" 
+                   onclick="ga('send','event','Event-Details','Event-Details','Register', <?php print $content['field_link']['#items'][0]['title']; ?>);">
+                    <?php print $content['field_link']['#items'][0]['title']; ?>
+                </a>
+            </div>
+        <?php else: ?>
+            <div class="text-center">
+                <h4 class="light"><?php print t('the subscription are closed'); ?></h4>
+            </div>
+        <?php endif; ?>
+    <?php else: ?>
+        
     <?php //print '<div class="text-center"><div class="btn btn-primary">'.render($content['registration_link']).'</div></div>'; ?>
     <div class="text-center"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registration-modal" onclick="ga('send','event','Event-Details','Event-Details','Register', <?php print $title; ?>);"><?php print t('Subscribe'); ?></button></div>
     <div class="modal fade registration-modal" tabindex="-1" role="dialog" aria-labelledby="registration-modal" aria-hidden="true" id="registration-modal">
@@ -173,17 +188,17 @@
             </div>
     </div>
     </div>
-    <?php else: ?>
-        <div class="text-center">
-            <a type="button" class="btn btn-primary" href="<?php print $content['field_link_card_4']['#items'][0]['url']; ?>" onclick="ga('send','event','Event-Details','Event-Details','Register', <?php print $content['field_link_card_4']['#items'][0]['title']; ?>);"><?php print t('Subscribe'); ?></a>
-        </div>
     <?php endif; ?>
     <?php //var_dump($content['field_details']['#title']); ?>
                 
     
+    <?php if (isset($content['field_details']['#title'])): ?>
     <?php print '<div class="field field-name-field-details field-type-text-long field-label-above"><div class="field-label">'.$content['field_details']['#title'].'</div></div>'; ?>
+    <?php endif; ?>
     <?php print render($content['field_details']); ?>
+    <?php if (isset($content['field_adresse']['#title'])): ?>
     <?php print '<div class="field field-name-field-adresse-title field-type-text-long field-label-above"><div class="field-label">'.$content['field_adresse']['#title'].'</div></div>'; ?>
+    <?php endif; ?>
     <?php print render($content['field_adresse']); ?>
     
 </div>

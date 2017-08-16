@@ -92,7 +92,9 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
+        <div class="container">
       <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+        </div>
       
       <a id="main-content"></a>
       

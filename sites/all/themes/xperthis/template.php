@@ -165,4 +165,7 @@ function xperthis_webform_component_render_alter(&$element, $component) {
  if (isset($element['#attributes']['placeholder'])) {
    $element['#attributes']['placeholder'] = t($element['#attributes']['placeholder']);
  }
+ if (isset($element['#description'])) {
+   $element['#description'] = t($element['#description']);
+ }
 }

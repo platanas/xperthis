@@ -94,9 +94,13 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-      <ol class="breadcrumb"><li><a href="/<?php print $language->language; ?>/evenements" class="disabled"><?php print t('Event'); ?></a></li>
-            <li class="active"><?php print truncate_utf8($title, 50, false, true, 1); ?></li>
-        </ol>
+        <div class="breadcrumb">
+            <span class="inline odd first"><a href="/fr">Home</a></span>
+            <span class="delimiter">&gt;</span>
+            <span class="inline even"><a href="/<?php print $language->language; ?>/evenements" class="disabled"><?php print t('Event'); ?></a></span>
+            <span class="delimiter">&gt;</span>
+            <span class="active"><?php print truncate_utf8($title, 50, false, true, 1); ?></span>
+        </div>
       <a id="main-content"></a>
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>
