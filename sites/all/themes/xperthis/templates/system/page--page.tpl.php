@@ -97,6 +97,8 @@
         <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
     </div>
       <a id="main-content"></a>
+      
+        <div class="container">
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>
         <?php print render($tabs); ?>
@@ -107,6 +109,7 @@
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+        </div>
       <?php print render($page['content']); ?>
     </section>
 

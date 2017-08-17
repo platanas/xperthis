@@ -8,6 +8,8 @@
  * - $options['type'] will either be ul or ol.
  * @ingroup views_templates
  */
+global $language ;
+$lang_name = $language->language ;
 ?>
 <?php print $wrapper_prefix; ?>
   <?php if (!empty($title)) : ?>
@@ -16,7 +18,7 @@
   <?php print $list_type_prefix; ?>
     <li class="all">
         <div class="categories">
-            <a href="/fr/taxonomy/term/all" ><?php print t('all'); ?></a>
+            <a href="/<?php print $language->language; ?>/taxonomy/term/all" ><?php print t('all'); ?></a>
         </div>
     </li>
     <?php foreach ($rows as $id => $row): ?>

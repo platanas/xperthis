@@ -21,7 +21,7 @@
 ?>
 <?php print $progressbar; ?>
 
-<div class="webform-confirmation">
+<div class="col-sm-12 no-padding webform-confirmation">
   <?php if ($confirmation_message): ?>
     <?php print $confirmation_message ?>
   <?php else: ?>

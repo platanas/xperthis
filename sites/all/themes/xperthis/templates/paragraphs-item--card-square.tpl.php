@@ -91,7 +91,7 @@ endif;
                                 <?php print render($content['field_link_card_2']['#items'][0]['title']); ?>
                             </a>
                         </button>
-                    <p>
+                    </p>
                 </div>
                 <?php endif; ?>
                 </div>
@@ -117,7 +117,7 @@ endif;
                                 <?php print render($content['field_link_card_3']['#items'][0]['title']); ?>
                             </a>
                         </button>
-                    <p>
+                    </p>
                 </div>
                 <?php endif; ?>
                 </div>
@@ -143,7 +143,7 @@ endif;
                                 <?php print render($content['field_link_card_4']['#items'][0]['title']); ?>
                             </a>
                         </button>
-                    <p>
+                    </p>
                 </div>
                 <?php endif; ?>
                 </div>

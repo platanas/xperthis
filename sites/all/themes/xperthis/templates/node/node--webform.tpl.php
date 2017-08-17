@@ -79,38 +79,43 @@
  * @ingroup templates
  */
 ?>
-<article id="node-<?php print $node->nid; ?>" class="col-sm-6 <?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-    <div class="teasing">
+<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+  <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
+  <header>
+    <?php print render($title_prefix); ?>
+    <?php if (!$page && !empty($title)): ?>
+    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+    <?php endif; ?>
+    <?php print render($title_suffix); ?>
+    <?php if ($display_submitted): ?>
+    <span class="submitted">
+      <?php print $submitted; ?>
+    </span>
+    <?php endif; ?>
+  </header>
+  <?php endif; ?>
   <?php
     // Hide comments, tags, and links now so that we can render them later.
     hide($content['comments']);
     hide($content['links']);
     hide($content['field_tags']);
-    hide($content['field_subtitle']);
-    hide($content['field_title_event']);
-    hide($content['field_date']);
-    hide($content['field_date_subscription']);
-    hide($content['field_details']);
-    hide($content['registration_link']);
-    hide($content['registration_form']);
-    hide($content['registration_slots_left']);
-    hide($content['field_capacity']);
-    hide($content['field_adresse']);
+    hide($content['field_display_in_article_list']);
     hide($content['body']);
+    
     print render($content);
   ?>
-    <p class="annotation"><?php print t('Published');?> <?php print date('d/m/Y', $node->published_at);?> </p>
-    <?php print '<p>'.strip_tags(render($content['body'])).'</p>'; ?>
+    
   <?php
-  
+    // Only display the wrapper div if there are tags or links.
+    $field_tags = render($content['field_tags']);
+    $links = render($content['links']);
+    if ($field_tags || $links):
   ?>
    <footer>
-       <ul class="links list-inline">
-           <li class="node-readmore first last">
-               <a href="<?php print $node_url; ?>" rel="tag" title=""><?php print t('see more'); ?></a>
-           </li>
-        </ul>
+       <hr />
+     <?php print $field_tags; ?>
+     <?php print $links; ?>
   </footer>
+  <?php endif; ?>
   <?php print render($content['comments']); ?>
-    </div>
 </article>

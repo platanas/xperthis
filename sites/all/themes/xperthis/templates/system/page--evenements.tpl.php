@@ -98,15 +98,13 @@
       <a id="main-content"></a>
       <div class="col-sm-8 no-padding">
       <?php print render($title_prefix); ?>
-      <?php if (!empty($title)): ?>
-        <h1 class="page-header"><?php print $title; ?></h1>
-      <?php endif; ?>
+        <h1 class="page-header"><?php print t('events'); ?></h1>
       </div>
       <div class="col-sm-2 no-padding">
-          <a href="/<?php print $language->language; ?>/evenements" class="sliding-u-r-l active">A venir</a>
+          <a href="/<?php print $language->language; ?>/evenements" class="sliding-u-r-l active"><?php print t('incoming'); ?></a>
       </div>
       <div class="col-sm-2 no-padding">
-          <a href="/<?php print $language->language; ?>/evenements-passes" class="sliding-u-l-r">Passé</a>
+          <a href="/<?php print $language->language; ?>/evenements-passes" class="sliding-u-l-r"><?php print t('past'); ?></a>
       </div>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>

@@ -202,4 +202,4 @@
     <?php print render($content['field_adresse']); ?>
     
 </div>
-   <?php print '<img src="/'. $directory .'/img/xperthis-bottom-bloc-event-bg.jpg" class="img-responsive center-auto" alt="" />'; ?>
+   <?php print '<img src="/'. $directory .'/img/xperthis-bottom-bloc-event-bg.jpg" class="img-responsive center-auto pull-right" alt="" />'; ?>

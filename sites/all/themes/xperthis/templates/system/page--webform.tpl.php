@@ -73,14 +73,16 @@
  * @ingroup templates
  */
 ?>
-
 <header id="navbar" role="banner" class="nav-down <?php print $navbar_classes; ?>">
   <?php include $directory . '/templates/inc/header.tpl.inc'; ?>
 </header>
-<div class="main-container content page-thin-menu page-products ">
+<div class="main-container content page-no-hero ">
+<header role="banner" id="page-header">
+    <?php print render($page['header']); ?>
+</header>
+  
 
-
-  <div class="content-product-page">
+  <div class="<?php print $container_class; ?>">
 
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3" role="complementary">
@@ -88,17 +90,18 @@
       </aside>  <!-- /#sidebar-first -->
     <?php endif; ?>
 
-    <section>
+    <section<?php print $content_column_class; ?>>
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-        <div class="container">
       <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
-        </div>
-      
       <a id="main-content"></a>
-      
-        <div class="container">
+      <div class="col-sm-12 no-padding">
+      <?php print render($title_prefix); ?>
+      <?php if (!empty($title)): ?>
+        <h1 class="page-header"><?php print $title; ?></h1>
+      <?php endif; ?>
+      <?php print render($title_suffix); ?>
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>
         <?php print render($tabs); ?>
@@ -109,17 +112,17 @@
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-        </div>
+      </div>
       <?php print render($page['content']); ?>
     </section>
 
     
     <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-3" role="complementary">
+      <aside class="col-sm-4" role="complementary">
         <?php 
             //dump($page['sidebar_second']);
             print render($page['sidebar_second']); 
-            $block = module_invoke('webform', 'block_view', 'client-block-'.$node->nid);
+            //$block = module_invoke('webform', 'block_view', 'client-block-'.$node->nid);
             print render($block['content']);
         ?>
       </aside>  <!-- /#sidebar-second -->
@@ -129,8 +132,7 @@
 </div>
 
 <?php if (!empty($page['footer'])): ?>
-  <footer class="footer">
+  <footer class="footer footer-no-front">
     <?php print render($page['footer']); ?>
   </footer>
 <?php endif; ?>
-
