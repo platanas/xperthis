@@ -39,23 +39,7 @@ function xperthis_form_search_block_form_alter(&$form, &$form_state, $form_id) {
     // Alternative (HTML5) placeholder attribute instead of using the javascript
     $form['search_block_form']['#attributes']['placeholder'] = t('Search');
 }
-/**
- * Implements template_preprocess_page()
- */
-function xperthis_preprocess_page(&$vars) {
-  // Remove 'Promoted to front page' nodes
-  if ($vars['is_front']) {
-    unset($vars['page']['content']['system_main']['nodes']);
-  }
-  if (isset($vars['node']->type)) {
-    //print 'ok';
-    $vars['theme_hook_suggestions'][] = 'page__' . $vars['node']->type;
-  }
-   // remove some unwanted tabs
-    if (user_is_anonymous()) {
-      xperthis_remove_tabs('Register', $variables);
-    }
-}
+
 
 function xperthis_remove_tabs($label, &$variables) {
   // Remove from primary tabs

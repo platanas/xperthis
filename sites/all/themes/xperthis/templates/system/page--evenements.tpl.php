@@ -98,13 +98,13 @@
       <a id="main-content"></a>
       <div class="col-sm-8 no-padding">
       <?php print render($title_prefix); ?>
-        <h1 class="page-header"><?php print t('events'); ?></h1>
+        <h1 class="page-header"><?php print t('Events'); ?></h1>
       </div>
       <div class="col-sm-2 no-padding">
-          <a href="/<?php print $language->language; ?>/evenements" class="sliding-u-r-l active"><?php print t('incoming'); ?></a>
+          <a href="/<?php print $language->language; ?>/evenements" class="sliding-u-r-l active" onclick="ga('send','event','Events-List','Events-List','Click', A venir);"><?php print t('incoming'); ?></a>
       </div>
       <div class="col-sm-2 no-padding">
-          <a href="/<?php print $language->language; ?>/evenements-passes" class="sliding-u-l-r"><?php print t('past'); ?></a>
+          <a href="/<?php print $language->language; ?>/evenements-passes" class="sliding-u-l-r" onclick="ga('send','event','Events-List','Events-List','Click', Passé);"><?php print t('past'); ?></a>
       </div>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
@@ -122,7 +122,7 @@
 
     
     <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-4" role="complementary">
+      <aside class="col-md-4 col-sm-12 col-xs-12" role="complementary">
         <?php 
             //dump($page['sidebar_second']);
             print render($page['sidebar_second']); 

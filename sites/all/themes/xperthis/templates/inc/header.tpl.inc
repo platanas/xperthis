@@ -11,7 +11,7 @@
         
         <div class="col-md-2 col-md-offset-0 col-sm-4 col-xs-6 col-sm-offset-4 col-xs-offset-3 text-center logo-container">
             <?php if ($logo): ?>
-              <a class="logo navbar-btn " onclick="ga('send','event','Header','Header','Click', BackHome);" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+              <a class="logo navbar-btn " onclick="ga('send','event','Header','Click', BackHome);" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
                 <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
               </a>
             <?php endif; ?>
@@ -27,7 +27,7 @@
             <?php endif; ?>
         </div>
         
-    <div class="menu-primary col-md-6 col-md-offset-1 mt-4">
+    <div class="menu-primary col-md-8 mt-4">
         <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
           <div class="navbar-collapse collapse" id="navbar-collapse">
             <nav role="navigation">
@@ -42,7 +42,7 @@
         <?php endif; ?>
     </div>
         
-    <div class="col-md-3 menu-secondary">
+    <div class="col-md-2 menu-secondary">
       <div class="row row-no-padding">
         <?php if (!empty($page['navigationContact'])): ?>
             <?php print render($page['navigationContact']); ?>

@@ -123,7 +123,7 @@
     <div class="col-sm-8">
     <?php print render($page['content']); ?>
     </div>
-      <div class="col-sm-4 block-e-book-download">
+      <div class="col-md-4 col-sm-12 col-xs-12 block-e-book-download">
     <?php if (!empty($page['sidebar_second'])): ?>
       <aside class="" role="complementary">
         <?php 
@@ -132,6 +132,13 @@
             $block = module_invoke('webform', 'block_view', 'client-block-'.$node->nid);
             print render($block['content']);
         ?>
+        // Track submission events.
+            <script>
+                 $('.block-e-book-download .webform-client-form').submit(function() {
+                    ga('send','event','Whitepaper','Download', '<?php print $title; ?>', 1)
+
+                });
+            </script>
       </aside>  <!-- /#sidebar-second -->
     <?php endif; ?>
       </div>

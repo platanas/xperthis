@@ -118,7 +118,7 @@
 
     
     <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-4" role="complementary">
+      <aside class="col-md-4 col-sm-12 col-xs-12" role="complementary">
         <?php 
             //dump($page['sidebar_second']);
             print render($page['sidebar_second']); 

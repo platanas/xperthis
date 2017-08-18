@@ -8,8 +8,12 @@ and open the template in the editor.
     Author     : platanas
 */
 .page-taxonomy {
+    .col-sm-8 {
+        padding-right: 53px;
+    }
     .node-teaser .teasing{
         background-color: white;
+        margin-bottom: 20px;
         h4, p {
             padding:25px 20px 0 25px;
         }
@@ -93,12 +97,15 @@ and open the template in the editor.
     }
     .btn-default {
         padding: 5px 20px;
-        color: #337ab7;
+        color: #93a2b3;
         &:hover,
         &.active {
-            color: @blue-darker;
-            border-color: @blue-darker;
-        }        
+            color: #4ca9d3;
+            border-color: #4ca9d3;
+        }
+        &.active {
+            background-color: #e5f7ff;
+        }
     }
     .views-row {
         float: left;

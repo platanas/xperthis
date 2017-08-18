@@ -5,7 +5,7 @@
  * Modify this file to override the Bootstrap Framework variables. You can copy
  * these variables directly from ../bootstrap/less/variables.less to this file.
  */
-@import url('thtps://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import "../fonts/font-awesome/css/font-awesome.min.css";
@@ -1586,7 +1586,7 @@ pre code {
 }
 @media (min-width: 992px) {
   .container {
-    width: 964px;
+    width: 100%;
   }
 }
 @media (min-width: 1200px) {
@@ -3004,8 +3004,6 @@ select[multiple].input-lg {
   font-weight: 300;
   display: inline-block;
   margin-bottom: 0;
-  padding-left: 20px;
-  padding-right: 20px;
   font-weight: 20px;
   text-align: center;
   vertical-align: middle;
@@ -3014,7 +3012,7 @@ select[multiple].input-lg {
   background-image: none;
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: 6px 12px;
+  padding: 6px 20px;
   font-size: 14px;
   line-height: 1.42857143;
   border-radius: 24px;
@@ -3035,7 +3033,7 @@ select[multiple].input-lg {
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: #4ca9d3;
+  color: #93a2b3;
   text-decoration: none;
 }
 .btn:active,
@@ -3064,27 +3062,27 @@ fieldset[disabled] a.btn {
   margin-top: 20px;
 }
 .btn-default {
-  color: #4ca9d3;
+  color: #93a2b3;
   background-color: transparent;
-  border-color: #4ca9d3;
+  border-color: #93a2b3;
 }
 .btn-default:focus,
 .btn-default.focus {
-  color: #4ca9d3;
+  color: #93a2b3;
   background-color: rgba(0, 0, 0, 0);
-  border-color: #1f6280;
+  border-color: #526275;
 }
 .btn-default:hover {
-  color: #4ca9d3;
+  color: #93a2b3;
   background-color: rgba(0, 0, 0, 0);
-  border-color: #2d8bb5;
+  border-color: #6f839a;
 }
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #4ca9d3;
+  color: #93a2b3;
   background-color: rgba(0, 0, 0, 0);
-  border-color: #2d8bb5;
+  border-color: #6f839a;
 }
 .btn-default:active:hover,
 .btn-default.active:hover,
@@ -3095,9 +3093,9 @@ fieldset[disabled] a.btn {
 .btn-default:active.focus,
 .btn-default.active.focus,
 .open > .dropdown-toggle.btn-default.focus {
-  color: #4ca9d3;
+  color: #93a2b3;
   background-color: rgba(0, 0, 0, 0);
-  border-color: #1f6280;
+  border-color: #526275;
 }
 .btn-default:active,
 .btn-default.active,
@@ -3114,11 +3112,11 @@ fieldset[disabled] .btn-default:focus,
 .btn-default[disabled].focus,
 fieldset[disabled] .btn-default.focus {
   background-color: transparent;
-  border-color: #4ca9d3;
+  border-color: #93a2b3;
 }
 .btn-default .badge {
   color: transparent;
-  background-color: #4ca9d3;
+  background-color: #93a2b3;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -3205,6 +3203,95 @@ fieldset[disabled] .btn-primary.focus {
 }
 .btn-primary.darker {
   background-color: #0d4866;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #79bfde;
+}
+.btn-primary-cta {
+  text-transform: uppercase;
+  font-size: 18px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: 300;
+  color: #fff;
+  background-color: #4ca9d3;
+  border-color: transparent;
+}
+.btn-primary-cta:focus,
+.btn-primary-cta.focus {
+  color: #fff;
+  background-color: #2f91bd;
+  border-color: rgba(0, 0, 0, 0);
+}
+.btn-primary-cta:hover {
+  color: #fff;
+  background-color: #2f91bd;
+  border-color: rgba(0, 0, 0, 0);
+}
+.btn-primary-cta:active,
+.btn-primary-cta.active,
+.open > .dropdown-toggle.btn-primary-cta {
+  color: #fff;
+  background-color: #2f91bd;
+  border-color: rgba(0, 0, 0, 0);
+}
+.btn-primary-cta:active:hover,
+.btn-primary-cta.active:hover,
+.open > .dropdown-toggle.btn-primary-cta:hover,
+.btn-primary-cta:active:focus,
+.btn-primary-cta.active:focus,
+.open > .dropdown-toggle.btn-primary-cta:focus,
+.btn-primary-cta:active.focus,
+.btn-primary-cta.active.focus,
+.open > .dropdown-toggle.btn-primary-cta.focus {
+  color: #fff;
+  background-color: #287ba1;
+  border-color: rgba(0, 0, 0, 0);
+}
+.btn-primary-cta:active,
+.btn-primary-cta.active,
+.open > .dropdown-toggle.btn-primary-cta {
+  background-image: none;
+}
+.btn-primary-cta.disabled:hover,
+.btn-primary-cta[disabled]:hover,
+fieldset[disabled] .btn-primary-cta:hover,
+.btn-primary-cta.disabled:focus,
+.btn-primary-cta[disabled]:focus,
+fieldset[disabled] .btn-primary-cta:focus,
+.btn-primary-cta.disabled.focus,
+.btn-primary-cta[disabled].focus,
+fieldset[disabled] .btn-primary-cta.focus {
+  background-color: #4ca9d3;
+  border-color: transparent;
+}
+.btn-primary-cta .badge {
+  color: #4ca9d3;
+  background-color: #fff;
+}
+.btn-primary-cta a,
+.btn-primary-cta a:hover,
+.btn-primary-cta a:focus {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+}
+.btn-primary-cta.darker {
+  background-color: #0d4866;
+}
+.btn-primary-cta:hover,
+.btn-primary-cta:focus,
+.btn-primary-cta:active {
+  background-color: #79bfde;
+}
+.btn-primary-cta.btn-lg {
+  padding: 14px 62px;
+  font-size: 20px;
+  line-height: 1.3333333;
+  border-radius: 33px;
+  font-weight: 200;
 }
 .btn-success {
   color: #fff;
@@ -3470,10 +3557,10 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-lg,
 .btn-group-lg > .btn {
-  padding: 10px 16px;
-  font-size: 18px;
+  padding: 20px 30px;
+  font-size: 20px;
   line-height: 1.3333333;
-  border-radius: 24px;
+  border-radius: 33px;
   font-weight: 200;
 }
 .btn-sm,
@@ -7493,6 +7580,9 @@ and open the template in the editor.
     Created on : 31-mai-2017, 17:18:10
     Author     : platanas
 */
+.page-e-book .col-sm-8 {
+  padding-right: 36px;
+}
 .page-e-book .col-sm-8 h1.page-header {
   margin-bottom: 0;
 }
@@ -7577,6 +7667,9 @@ and open the template in the editor.
   text-align: center;
   color: #0f7db5;
 }
+#block-views-news-block-6 h2 {
+  margin-top: 0;
+}
 #block-views-news-block-6 a {
   color: white;
 }
@@ -7616,7 +7709,7 @@ and open the template in the editor.
 }
 #block-views-news-block-6 .view-id-news .views-field-title {
   width: 100%;
-  top: 90px;
+  top: 85px;
   text-align: center;
 }
 #block-views-news-block-6 .view-id-news .views-field-field-subtitle {
@@ -7625,7 +7718,7 @@ and open the template in the editor.
   text-align: center;
 }
 #block-views-news-block-6 .views-field-view-node {
-  top: 175px;
+  top: 147px;
   width: 100%;
   text-align: center;
 }
@@ -7716,6 +7809,10 @@ and open the template in the editor.
 .sliding-u-r-l:hover:after {
   width: 100%;
   background: #4ca9d3;
+}
+.page-evenements .col-sm-8.contextual-links-region,
+.page-evenements-passes .col-sm-8.contextual-links-region {
+  padding-right: 53px;
 }
 .page-event .node-event {
   padding: 0 36px 0 0;
@@ -8102,7 +8199,7 @@ h1.lead {
   visibility: hidden;
 }
 #block-views-news-block .views-field-view-node .Whitepaper.Fr a::before {
-  content: "Télécharger le Whitepaper";
+  content: "Télécharger le Whitepaper >";
   visibility: visible;
   float: right;
   padding-right: 20px;
@@ -8111,7 +8208,7 @@ h1.lead {
   visibility: hidden;
 }
 #block-views-news-block .views-field-view-node .Whitepaper.Ne a::before {
-  content: "Downloaden Whitepaper";
+  content: "Downloaden Whitepaper >";
   visibility: visible;
   float: right;
   padding-right: 20px;
@@ -8120,7 +8217,7 @@ h1.lead {
   visibility: hidden;
 }
 #block-views-news-block .views-field-view-node .Article.Fr a::before {
-  content: 'Lire la suite';
+  content: 'Lire la suite >';
   visibility: visible;
   float: right;
   padding-right: 20px;
@@ -8129,7 +8226,7 @@ h1.lead {
   visibility: hidden;
 }
 #block-views-news-block .views-field-view-node .Artikel.Ne a::before {
-  content: 'Lees verder';
+  content: 'Lees verder >';
   visibility: visible;
   float: right;
   padding-right: 20px;
@@ -8138,7 +8235,7 @@ h1.lead {
   visibility: hidden;
 }
 #block-views-news-block .views-field-view-node .Evenement.Fr a::before {
-  content: 'En savoir plus';
+  content: 'En savoir plus >';
   visibility: visible;
   float: right;
   padding-right: 20px;
@@ -8147,7 +8244,7 @@ h1.lead {
   visibility: hidden;
 }
 #block-views-news-block .views-field-view-node .Evenement.Ne a::before {
-  content: 'Lees verder';
+  content: 'Lees verder >';
   visibility: visible;
   float: right;
   padding-right: 20px;
@@ -8238,7 +8335,7 @@ h1.lead {
   visibility: hidden;
 }
 #block-views-news-block-1 .view-id-news .views-field-view-node .Whitepaper.Fr a::before {
-  content: "Télécharger le Whitepaper";
+  content: "Télécharger le Whitepaper >";
   visibility: visible;
   float: right;
   padding-right: 20px;
@@ -8247,7 +8344,7 @@ h1.lead {
   visibility: hidden;
 }
 #block-views-news-block-1 .view-id-news .views-field-view-node .Whitepaper.Ne a::before {
-  content: "Downloaden Whitepaper";
+  content: "Downloaden Whitepaper >";
   visibility: visible;
   float: right;
   padding-right: 20px;
@@ -8256,7 +8353,7 @@ h1.lead {
   visibility: hidden;
 }
 #block-views-news-block-1 .view-id-news .views-field-view-node .Article.Fr a::before {
-  content: 'Lire la suite';
+  content: 'Lire la suite >';
   visibility: visible;
   float: right;
   padding-right: 20px;
@@ -8265,7 +8362,7 @@ h1.lead {
   visibility: hidden;
 }
 #block-views-news-block-1 .view-id-news .views-field-view-node .Artikel.Ne a::before {
-  content: 'Lees verder';
+  content: 'Lees verder >';
   visibility: visible;
   float: right;
   padding-right: 20px;
@@ -8274,7 +8371,7 @@ h1.lead {
   visibility: hidden;
 }
 #block-views-news-block-1 .view-id-news .views-field-view-node .Evenement.Fr a::before {
-  content: 'En savoir plus';
+  content: 'En savoir plus >';
   visibility: visible;
   float: right;
   padding-right: 20px;
@@ -8283,7 +8380,7 @@ h1.lead {
   visibility: hidden;
 }
 #block-views-news-block-1 .view-id-news .views-field-view-node .Evenement.Ne a::before {
-  content: 'Lees verder';
+  content: 'Lees verder >';
   visibility: visible;
   float: right;
   padding-right: 20px;
@@ -8362,7 +8459,7 @@ h1.lead {
 }
 #block-views-webform-block .btn-primary:hover,
 #block-views-webform-block .btn-primary:focus {
-  background-color: #21637F;
+  background-color: #3d6d85;
 }
 .banner-wrapper:after {
   content: "";
@@ -8817,8 +8914,12 @@ and open the template in the editor.
     Created on : 09-juin-2017, 16:08:42
     Author     : platanas
 */
+.page-taxonomy .col-sm-8 {
+  padding-right: 53px;
+}
 .page-taxonomy .node-teaser .teasing {
   background-color: white;
+  margin-bottom: 20px;
 }
 .page-taxonomy .node-teaser .teasing h4,
 .page-taxonomy .node-teaser .teasing p {
@@ -8893,12 +8994,15 @@ and open the template in the editor.
 }
 #block-views-news-tags-block .btn-default {
   padding: 5px 20px;
-  color: #337ab7;
+  color: #93a2b3;
 }
 #block-views-news-tags-block .btn-default:hover,
 #block-views-news-tags-block .btn-default.active {
-  color: #0d4866;
-  border-color: #0d4866;
+  color: #4ca9d3;
+  border-color: #4ca9d3;
+}
+#block-views-news-tags-block .btn-default.active {
+  background-color: #e5f7ff;
 }
 #block-views-news-tags-block .views-row {
   float: left;
@@ -9267,7 +9371,7 @@ p.annotation {
 }
 @media screen and (min-width: 992px) {
   .navbar.container {
-    max-width: 940px;
+    max-width: 76%;
   }
 }
 @media screen and (min-width: 1200px) {

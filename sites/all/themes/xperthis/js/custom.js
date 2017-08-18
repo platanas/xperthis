@@ -7,6 +7,12 @@
 
 +function ($) {
         
+        // Track submission events.
+        $('.block-e-book-download .webform-client-form').submit(function() {
+            ga('send','event','Whitepaper','Download', {nomduwhitepaper}, 1)
+
+        });
+        
         var $ = jQuery.noConflict();
         $(document).ready(function () {
 
