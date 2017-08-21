@@ -75,10 +75,6 @@ function xperthis_preprocess_page(&$variables) {
     //print 'ok';
     $variables['theme_hook_suggestions'][] = 'page__' . $variables['node']->type;
   }
-   // remove some unwanted tabs
-    if (user_is_anonymous()) {
-      bootstrap_remove_tabs('Register', $variables);
-    }
 }
 
 /**

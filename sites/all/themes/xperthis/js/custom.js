@@ -12,7 +12,7 @@
             ga('send','event','Whitepaper','Download', {nomduwhitepaper}, 1)
 
         });
-        
+           
         var $ = jQuery.noConflict();
         $(document).ready(function () {
 
@@ -33,7 +33,13 @@
             
             //$(".webform-confirmation").insertAfter(".col-sm-8 .page-header");
             //$(".webform-confirmation").css('display', 'block');
-
+                    console.log('ok'); 
+            $( ".date-month .date-display-single" ).each(function() {
+               if ($('.date-month .date-display-single').text().length == 3){
+                   console.log($('.date-month .date-display-single').text().length); 
+                   $(this).text($(this).text()+'.');
+               }
+            });
         });
         
         $(window).scroll(function(){

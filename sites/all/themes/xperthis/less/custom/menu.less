@@ -9,7 +9,7 @@ and open the template in the editor.
 */
 .region-navigation {
     
-    margin-top: 10px;
+    margin-top: 5px;
 }
 nav {
     text-align: center;
@@ -39,18 +39,24 @@ nav {
 }
 #block-search-form {
     float:left;
+    ul {        
+        margin-bottom: 0;
+    }
     ul li {
         position: relative;
         padding: 12px;
         display: inline;
         list-style-type: none;
         a {
-            color: #334c67;
+            color: #255a75;
             font-weight: normal;
             &.active, &:hover {
-                color: #334c67;
+                color: #255a75;
                 font-weight: normal;
                 text-decoration: none;
+            }
+            span.glyphicon-search {
+                font-weight: bold;
             }
         }
     }
@@ -63,52 +69,70 @@ nav {
         padding: 0;
         display: inline;
         list-style-type: none;
+        &.last {
+            a {
+                &:after {
+                    content: ' \00b7';
+                    position: absolute;
+                    right: 0px;
+                    top: 5px;
+                    width:2px;
+                    color: #b5b7bc;
+                }
+            }
+        }
         a {
         &:before{
             content: ' \00b7';
             position: absolute;
             left: 0px;
-            top: 3px;
+            top: 5px;
             width:2px;
-            color: #aab6c3;
+            color: #b5b7bc;
         }
-            color: #334c67;
+            color: @blue-darker;
             font-weight: normal;
-            padding: 4px 7px 4px 11px;
+            padding: 5px 13px 4px 17px;
             &.active, &:hover {
-                color: #334c67;
+                color: @blue-darker;
                 font-weight: normal;
-                text-decoration: none;
+                text-decoration: underline;
             }
         }
     }
 }
 #block-locale-language {
     float:left;
+    ul {        
+        margin-bottom: 0;
+    }
     .item-list{
         text-transform: uppercase;
         ul.language {
             padding: 0;
             li {
                 position: relative;
-                padding: 1px 10px 10px 10px;
+                padding: 1px 10px 0px 10px;
                 display:inline;
                 list-style-type:none;
                 &:not(:last-child):after{
                     content: '';
                     position: absolute;
                     right: -2px;
-                    width:2px;
-                    height: 30%;
+                    width: 1px;
+                    height: 75%;
                     top: 19%;
-                    background: #aab6c3;
+                    background: #93a2b3;
                 }
                 a {
-                    color: #aab6c3;
+                    color: #93a2b3;
                     font-weight: normal;
                     &.active, &:hover {
-                        color: #334c67;
+                        color: @blue-darker;
                         text-decoration: none;
+                    }
+                    &.active {
+                        font-weight:bold;
                     }
                 }
             }
@@ -166,7 +190,7 @@ nav {
 
 header#navbar {
     background: #fff;
-    height: 142px;
+    height: 134px;
     margin-bottom: 0;
     position:absolute;
     width: 100%;
@@ -198,11 +222,11 @@ header#navbar {
     }
     #block-block-6 {
         transition: all 0.5s ease-in-out;
-        margin-top: 35px;
+        margin-top: 43px;
     }
     .menu-primary {
         transition: all 0.5s ease-in-out;
-        padding-top: 30px;
+        padding-top: 35px;
     }
     .menu-news {
         transition: all 0.5s ease-in-out;
@@ -277,12 +301,7 @@ form#search-block-form {
   margin: 0;
 }
 .navbar #block-search-form {
-
-  margin-top: 5px;
-  ul {
-      margin-left: 5px;
-      padding:0;
-  }
+  margin-top: 6px;
 
   .input-group-btn {
     width: auto;

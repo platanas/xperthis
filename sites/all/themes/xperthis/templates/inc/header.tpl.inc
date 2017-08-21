@@ -51,5 +51,4 @@
     </div>
         
   </div>
-    <img src="/<?php print $directory . '/img/xperthis-menuHeader-bg-shadow.png'; ?>" alt="" class="pull-left" />
 </div>
