@@ -11,7 +11,7 @@
         
         <div class="col-md-2 col-md-offset-0 col-sm-4 col-xs-6 col-sm-offset-4 col-xs-offset-3 text-center logo-container">
             <?php if ($logo): ?>
-              <a class="logo navbar-btn " onclick="ga('send','event','Header','Click', BackHome);" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+              <a class="logo navbar-btn " onclick="ga('send','event','Header','Click', 'BackHome');" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
                 <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
               </a>
             <?php endif; ?>

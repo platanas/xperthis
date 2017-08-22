@@ -28,16 +28,22 @@
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
     <div class="col-lg-12 white text-center" style="background:url(<?php print file_create_url($content['field_image']['#items'][0]['uri']); ?>) center center no-repeat;padding: 86px 0 86px 0;">
+        <div class="container">
         <?php print render($content['field_paragraph']); ?>
         <?php //var_dump($content['field_image']); ?>
         <?php if (!empty($content['field_link']['#items'][0]['url'])) { ?>
         <div class="content text-center"<?php print $content_attributes; ?>>
-            <span class="field-content btn btn-primary btn-lg darker">
-                <a class="" href="<?php print render($content['field_link']['#items'][0]['url']); ?>">
+            <span class="field-content btn btn-primary darker">
+                <a class="" href="<?php print render($content['field_link']['#items'][0]['url']); ?>"   
+                <?php if ($content['field_label'][0]['#markup'] != '' ): ?>
+                    onclick="ga('send','event','<?php print $content['field_category'][0]['#markup']; ?>','Click', '<?php print $content['field_label'][0]['#markup']; ?>');"
+                <?php endif; ?>
+                >
                     <?php print render($content['field_link']['#items'][0]['title']); ?>
                 </a>
             </span>
         </div>
         <?php } ?>
+    </div>
     </div>
 </div>

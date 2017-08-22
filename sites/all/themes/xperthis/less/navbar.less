@@ -443,12 +443,23 @@
   .navbar-nav {
     > li > a {
       color: @navbar-default-link-color;
-
+      &:after {
+            display:block;
+            content:attr(title);
+            font-weight:bold;
+            height:1px;
+            color:transparent;
+            overflow:hidden;
+            visibility:hidden;
+            margin-bottom:-1px;
+        }
       &:hover,
       &:focus {
         color: @navbar-default-link-hover-color;
         background-color: @navbar-default-link-hover-bg;
-        text-decoration: underline;
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 3px #007cb8 solid;
       }
     }
     > .active > a {
@@ -457,6 +468,9 @@
       &:focus {
         color: @navbar-default-link-active-color;
         background-color: @navbar-default-link-active-bg;
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 3px #007cb8 solid;
       }
     }
     > .disabled > a {

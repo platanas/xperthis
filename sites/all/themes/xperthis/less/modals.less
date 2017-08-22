@@ -32,7 +32,44 @@
     // Search form.
     form#search-block-form {
         margin: 0;
-        
+    }
+    #search-block-form--2 {
+        margin-top: 150px;
+        #edit-actions--3 {
+            display: none;
+        }
+        .input-group .form-control:first-child {
+            border-bottom-left-radius: 23px;
+            border-top-left-radius: 23px;
+        }
+        .form-control {
+            border: 1px solid #fff;
+            height: 46px;
+            color: #93a2b3;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            -webkit-box-shadow: inset 3px 3px 0px rgba(235, 235, 235, 0.75);
+            -moz-box-shadow: inset 3px 3px 0px rgba(235, 235, 235, 0.75);
+            box-shadow: inset 3px 3px 0px rgba(235, 235, 235, 0.75);
+
+        }
+        .input-group-btn:last-child > .btn {
+            border-bottom-right-radius: 23px;
+            border-top-right-radius: 23px;
+        }
+        .input-group-btn > .btn {
+            position: relative;
+            height: 46px;
+            -webkit-box-shadow: inset -3px 3px 0px rgba(235, 235, 235, 0.75);
+            -moz-box-shadow: inset -3px 3px 0px rgba(235, 235, 235, 0.75);
+            box-shadow: inset -3px 3px 0px rgba(235, 235, 235, 0.75);
+            &.btn-primary {
+                text-transform: uppercase;
+                color: @btn-primary-bg;
+                background-color: #fff;
+                border-color: transparent;
+            }
+        }
     }
     .navbar #block-search-form {
         float: none;

@@ -17,6 +17,7 @@ and open the template in the editor.
 }
 body{
   margin-bottom:580px;
+  z-index: 0;
 }
 .main-container.content {
     background-color: #eff6f8;
@@ -31,14 +32,16 @@ body{
 }
 .page-article {
     .field-name-field-image {
-        margin: 20px 0;
+        margin: 0 0 20px;
+    }
+    .addthis_sharing_toolbox {
+        margin-bottom: 15px;
     }
 }
 .not-front {
     .page-header {
         font-weight: 300;
         color: #0f7db5;
-        margin-bottom: 36px;
         &:first-letter {
             text-transform: uppercase;
         }
@@ -53,7 +56,7 @@ body{
 .page-thin-menu {
     padding-top: 142px;
     .content-product-page {
-        padding-top:62px;
+        padding-top:20px;
     }
     .view-id-products {
         padding-top: 104px;
@@ -61,7 +64,7 @@ body{
 }
 .page-no-hero, .page-thin-menu {
     > .container {
-        padding-top: 62px;
+        padding-top: 25px;
     }
     .field.field-name-field-tags {
     .field-label {
@@ -170,6 +173,15 @@ footer.footer {
         div.copyright{
             padding: 12px 0 0 0;
             float: left;
+            ul { 
+                padding-left: 0;
+                li {
+                    display: inline;
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    margin-right: 25px;
+                }
+            }
         }
         div.partof {
             
@@ -235,7 +247,7 @@ footer.footer {
     
     
 }
-footer .sticky-footer-behind{
+footer .sticky-footer-behind, footer .region-blockgroup-sticky-footer-behind{
   position:fixed;
   background: url('../img/xperthis-footer-bg.jpg') bottom repeat; /* or any other overlay image/color */
   bottom:0;

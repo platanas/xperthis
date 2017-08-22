@@ -84,7 +84,7 @@ body.imce {
 }
 #browse-wrapper {
   overflow: hidden;
-  height: 260px;
+    height: 260px !important;
   clear: both;
 }
 #browse-resizer {}
