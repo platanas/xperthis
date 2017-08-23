@@ -18,7 +18,7 @@ $lang_name = $language->language ;
   <?php print $list_type_prefix; ?>
     <li class="all">
         <div class="categories">
-            <a href="/<?php print $language->language; ?>/taxonomy/term/all" ><?php print t('all'); ?></a>
+            <a href="/<?php print $language->language; ?>/taxonomy/term/all" ><?php print t('All'); ?></a>
         </div>
     </li>
     <?php foreach ($rows as $id => $row): ?>

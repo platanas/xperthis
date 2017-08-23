@@ -26,12 +26,17 @@
  *
  * @ingroup views_templates
  */
+global $language ;
+$lang_name = $language->language ;
 ?>
 <div class=" container <?php print $classes; ?>">
  
   <?php if ($rows): ?>
     <div class=" col-md-8 col-md-offset-2 view-content text-center">
       <?php print $rows; ?>
+        <br />
+        
+        <p class="white">ou <a class="white" href="<?php if ($language->language == 'nl') { print '/nl/node/29'; } else if ($language->language == 'fr') { print '/fr/node/29';} ?>"><?php print t('discover our approach'); ?></a></p>
     </div>
   <?php elseif ($empty): ?>
     <div class="view-empty">

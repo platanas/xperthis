@@ -32,7 +32,7 @@
   <div class="content text-center"<?php print $content_attributes; ?>>
     <span class="field-content ">
         <a class="btn btn-primary" href="<?php print render($content['field_link']['#items'][0]['url']); ?>" 
-           <?php if ($content['field_label'][0]['#markup'] != '' ): ?>
+           <?php if (isset($content['field_label'][0]['#markup']) && $content['field_label'][0]['#markup'] != '' ): ?>
                 onclick="ga('send','event','<?php print $content['field_category'][0]['#markup']; ?>','Click', '<?php print $content['field_label'][0]['#markup']; ?>');"
                 <?php endif; ?>
            >

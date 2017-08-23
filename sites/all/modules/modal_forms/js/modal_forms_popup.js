@@ -9,7 +9,7 @@ Drupal.theme.prototype.ModalFormsPopup = function () {
   html += '    <div class="popups-container">';
   html += '      <div class="modal-header popups-title">';
   html += '        <span id="modal-title" class="modal-title"></span>';
-  html += '        <span class="popups-close close">' + Drupal.CTools.Modal.currentSettings.closeText + '</span>';
+  html += '        <span class="popups-close close" onclick="ga(\'send\',\'event\',\'Contact\',\'Contact\',\'Cancel\', \'Cancel\')">' + Drupal.CTools.Modal.currentSettings.closeText + '</span>';
   html += '        <div class="clear-block"></div>';
   html += '      </div>';
   html += '      <div class="modal-scroll"><div id="modal-content" class="modal-content popups-body"></div></div>';

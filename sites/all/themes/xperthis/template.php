@@ -101,9 +101,13 @@ function xperthis_preprocess_field(&$vars) {
 
 function xperthis_form_alter(&$form, &$form_state, $form_id) {
     if (!empty($form['actions']) && $form['actions']['submit']) {
-          $form['actions']['submit']['#attributes'] = array('class' => array('btn-primary'));
+        $form['actions']['submit']['#attributes'] = array('class' => array('btn-primary'));
+    }
+    if ($form_id == 'webform_client_form_16' || $form_id == 'webform_client_form_38' ){
+        $form['actions']['submit']['#attributes'] = array('onclick' => array("ga('send','event','Contact','Contact','Send', 'Send', 1);"));
     }
 }
+
 
 function xperthis_theme() {
   return array(

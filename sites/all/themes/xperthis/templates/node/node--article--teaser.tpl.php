@@ -99,7 +99,7 @@
     hide($content['body']);
     print render($content);
   ?>
-    <p class="annotation"><?php print t('Published');?> <?php print date('d/m/Y', $node->published_at);?> </p>
+    <p class="annotation"><?php print t('Published on');?> <?php print date('d/m/Y', $node->published_at);?> </p>
     <?php print '<p>'.strip_tags(render($content['body'])).'</p>'; ?>
   <?php
   

@@ -132,8 +132,9 @@
             $block = module_invoke('webform', 'block_view', 'client-block-'.$node->nid);
             print render($block['content']);
         ?>
-        // Track submission events.
+        
             <script>
+                // Track submission events.
                  $('.block-e-book-download .webform-client-form').submit(function() {
                     ga('send','event','Whitepaper','Download', '<?php print $title; ?>', 1)
 

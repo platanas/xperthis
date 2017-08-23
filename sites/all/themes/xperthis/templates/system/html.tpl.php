@@ -83,12 +83,16 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NK438KS');</script>
     <!-- End Google Tag Manager -->
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-576c5522c9272c0b"></script> 
     <script>
 jQuery(function() {
   jQuery.scrollDepth();
 });
+ var addthis_config = {
+    data_ga_property: 'UA-123456-1'
+ }; 
 </script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-576c5522c9272c0b"></script> 
 </head>
 <body<?php print $body_attributes; ?>>
   <div id="skip-link">
