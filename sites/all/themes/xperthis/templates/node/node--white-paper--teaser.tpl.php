@@ -99,8 +99,7 @@
     hide($content['body']);
     print render($content);
   ?>
-    <p class="annotation"><?php print t('Published on');?> <?php print date('d/m/Y', $node->published_at);?> </p>
-    <?php print '<p>'.strip_tags(render($content['body'])).'</p>'; ?>
+    <?php print '<p>'.truncate_utf8(strip_tags($title), 80, TRUE, TRUE).'</p>'; ?>
    <footer>
        <ul class="links list-inline">
            <li class="node-readmore first last">

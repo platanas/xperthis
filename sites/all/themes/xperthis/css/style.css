@@ -7326,8 +7326,12 @@ and open the template in the editor.
 .content-product-page .col-sm-12 {
   background-color: #eff6f8;
 }
-.entity-paragraphs-item {
-  margin: 30px 0 0 0;
+.container.entity.entity-paragraphs-item.paragraphs-item-call-to-action-block,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-left-block,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-right-block,
+.container.entity.entity-paragraphs-item.paragraphs-item-text-block,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-block {
+  padding: 28px 0;
 }
 .wrapper-btn {
   padding-bottom: 25px;
@@ -7438,6 +7442,9 @@ body {
   -moz-box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
   box-shadow: 0px 6px 14px 0px rgba(35, 31, 32, 0.35);
   min-height: 100vh;
+}
+.col-sm-8 {
+  padding-left: 0;
 }
 .page-article h1.page-header {
   padding-top: 10px;
@@ -7635,6 +7642,7 @@ and open the template in the editor.
 */
 .page-e-book .col-sm-8 {
   padding-right: 36px;
+  padding-left: 12px;
 }
 .page-e-book .col-sm-8 h1.page-header {
   margin-bottom: 0;
@@ -7772,7 +7780,7 @@ and open the template in the editor.
 }
 #block-views-news-block-6 .view-id-news .views-field-title {
   width: 100%;
-  top: 85px;
+  top: 75px;
   text-align: center;
 }
 #block-views-news-block-6 .view-id-news .views-field-field-subtitle {
@@ -7781,7 +7789,7 @@ and open the template in the editor.
   text-align: center;
 }
 #block-views-news-block-6 .views-field-view-node {
-  top: 147px;
+  top: 137px;
   width: 100%;
   text-align: center;
 }
@@ -7878,9 +7886,6 @@ and open the template in the editor.
 .page-evenements .col-sm-8.contextual-links-region,
 .page-evenements-passes .col-sm-8.contextual-links-region {
   padding-right: 53px;
-}
-.page-event .col-sm-8 {
-  padding-left: 0;
 }
 .page-event .node-event {
   padding: 0 36px 0 0;
@@ -8208,6 +8213,7 @@ h1.lead {
 #block-views-news-block .view-id-news .views-field-title,
 #block-views-news-block .view-id-news .views-field-body,
 #block-views-news-block .view-id-news .views-field-type,
+#block-views-news-block .view-id-news .views-field-views-conditional,
 #block-views-news-block .view-id-news .views-field-views-conditional-1,
 #block-views-news-block .view-id-news .views-field-views-conditional-2,
 #block-views-news-block .view-id-news .views-field-views-conditional-3,
@@ -8251,6 +8257,11 @@ h1.lead {
   padding: 20px;
   font-weight: 400;
 }
+#block-views-news-block .view-id-news .views-field-title h2.Evenement,
+#block-views-news-block .view-id-news .views-field-title h2.Event {
+  left: 104px;
+  position: absolute;
+}
 #block-views-news-block .view-id-news .views-field-body {
   position: relative;
   top: 34px;
@@ -8287,6 +8298,7 @@ h1.lead {
 #block-views-news-block .view-id-news .views-field-type h3.Event {
   background-color: #1cbdd5;
 }
+#block-views-news-block .views-field-views-conditional,
 #block-views-news-block .views-field-views-conditional-1,
 #block-views-news-block .views-field-views-conditional-2,
 #block-views-news-block .views-field-views-conditional-3,
@@ -8294,6 +8306,7 @@ h1.lead {
   right: 17px;
   top: 205px;
 }
+#block-views-news-block .views-field-views-conditional a,
 #block-views-news-block .views-field-views-conditional-1 a,
 #block-views-news-block .views-field-views-conditional-2 a,
 #block-views-news-block .views-field-views-conditional-3 a,
@@ -8301,6 +8314,7 @@ h1.lead {
   padding-right: 20px;
   text-decoration: underline;
 }
+#block-views-news-block .views-field-views-conditional a:hover,
 #block-views-news-block .views-field-views-conditional-1 a:hover,
 #block-views-news-block .views-field-views-conditional-2 a:hover,
 #block-views-news-block .views-field-views-conditional-3 a:hover,
@@ -8418,6 +8432,7 @@ footer.footer #block-views-partner-block .view-id-partner .view-content .contain
   padding: 0px 17px 19px 17px;
   text-transform: uppercase;
 }
+#block-views-news-block-1 .view-id-news .views-field-views-conditional,
 #block-views-news-block-1 .view-id-news .views-field-views-conditional-1,
 #block-views-news-block-1 .view-id-news .views-field-views-conditional-2,
 #block-views-news-block-1 .view-id-news .views-field-views-conditional-3,
@@ -8426,6 +8441,7 @@ footer.footer #block-views-partner-block .view-id-partner .view-content .contain
   text-align: right;
   padding: 20px 0 20px 20px;
 }
+#block-views-news-block-1 .view-id-news .views-field-views-conditional a,
 #block-views-news-block-1 .view-id-news .views-field-views-conditional-1 a,
 #block-views-news-block-1 .view-id-news .views-field-views-conditional-2 a,
 #block-views-news-block-1 .view-id-news .views-field-views-conditional-3 a,
@@ -8434,6 +8450,7 @@ footer.footer #block-views-partner-block .view-id-partner .view-content .contain
   color: #58afd6;
   text-decoration: underline;
 }
+#block-views-news-block-1 .view-id-news .views-field-views-conditional a:hover,
 #block-views-news-block-1 .view-id-news .views-field-views-conditional-1 a:hover,
 #block-views-news-block-1 .view-id-news .views-field-views-conditional-2 a:hover,
 #block-views-news-block-1 .view-id-news .views-field-views-conditional-3 a:hover,
@@ -8532,6 +8549,16 @@ footer.footer #block-views-partner-block .view-id-partner .view-content .contain
   height: 660px;
   background: url(../img/pattern.png) transparent repeat;
   padding-top: 142px;
+}
+.confirm-primal,
+.errors-primal {
+  margin-top: 30px;
+}
+#block-simplenews-1 div.alert-danger {
+  display: none;
+}
+#block-simplenews-1 .errors-primal div.alert-danger {
+  display: block;
 }
 @media (max-width: 992px) {
   .banner-wrapper .banner-wrapper-pattern {
@@ -8790,6 +8817,7 @@ header#navbar nav .caret {
 }
 header#navbar .logo-container {
   height: 97px;
+  padding-left: 12px !important;
 }
 header#navbar .logo {
   padding-left: 0;
@@ -9007,14 +9035,21 @@ and open the template in the editor.
 }
 .page-taxonomy .teasing img.img-responsive {
   max-height: 200px;
+  min-height: 200px;
 }
 .page-taxonomy .node-teaser .teasing {
   background-color: white;
   margin-bottom: 20px;
+  min-height: 380px;
 }
 .page-taxonomy .node-teaser .teasing h4,
 .page-taxonomy .node-teaser .teasing p {
   padding: 25px 20px 0 25px;
+}
+.page-taxonomy .node-teaser .teasing footer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 .page-taxonomy .node-teaser .teasing footer .list-inline {
   text-align: right;
@@ -9024,8 +9059,7 @@ and open the template in the editor.
   min-height: 74px;
 }
 .page-taxonomy .node-article .teasing p {
-  padding: 0px 20px 0 25px;
-  color: #4da9d6;
+  padding: 25px 20px 0 25px;
 }
 .page-taxonomy .node-article .teasing p.annotation {
   padding: 25px 20px 0 25px;
@@ -9094,6 +9128,9 @@ and open the template in the editor.
 }
 #block-views-news-tags-block .btn-default.active {
   background-color: #e5f7ff;
+  display: none;
+  padding: 0px;
+  margin: 0;
 }
 #block-views-news-tags-block .views-row {
   float: left;
@@ -9139,6 +9176,10 @@ and open the template in the editor.
 }
 #registration-modal {
   top: 0;
+}
+.form-item-account,
+#edit-return {
+  display: none;
 }
 div.modal-forms-modal-content,
 .registration-modal {

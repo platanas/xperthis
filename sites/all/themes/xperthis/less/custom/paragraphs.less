@@ -10,8 +10,14 @@ and open the template in the editor.
 .content-product-page .col-sm-12 {
     background-color: #eff6f8;
 }
-.entity-paragraphs-item {
-    margin: 30px 0 0 0;
+.container.entity.entity-paragraphs-item {
+    &.paragraphs-item-call-to-action-block,
+    &.paragraphs-item-image-left-block,
+    &.paragraphs-item-image-right-block,
+    &.paragraphs-item-text-block,
+    &.paragraphs-item-image-block {
+    padding: 28px 0;
+    }
 }
 .wrapper-btn {
     padding-bottom: 25px;

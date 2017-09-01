@@ -39,6 +39,8 @@ function xperthis_form_search_block_form_alter(&$form, &$form_state, $form_id) {
 
     // Alternative (HTML5) placeholder attribute instead of using the javascript
     $form['search_block_form']['#attributes']['placeholder'] = t('Search');
+    $form['search_block_form']['#attributes'] ['autofocus']= 'autofocus';
+    
 }
 
 
@@ -106,6 +108,48 @@ function xperthis_form_alter(&$form, &$form_state, $form_id) {
     if ($form_id == 'webform_client_form_16' || $form_id == 'webform_client_form_38' ){
         $form['actions']['submit']['#attributes'] = array('onclick' => array("ga('send','event','Contact','Contact','Send', 'Send', 1);"));
     }
+    
+    switch ($form_id) {
+        case 'simplenews_block_form_1'://add your form_id
+            $form['submit']['#ajax'] = array(
+            'callback' => 'xperthis_simplenews_block_form_ajax_submit',
+            'wrapper' => 'block-simplenews-1',
+            'method' => 'replace',
+            'effect' => 'fade',
+            'progress' => array('type' => 'none'),
+          );
+          $form['submit']['#executes_submit_callback'] = TRUE;
+          unset($form['#submit']);
+          unset($form['#validate']);
+        break;
+    } 
+}
+
+/**
+ * Ajax callback to reload the image field
+ */
+function xperthis_simplenews_block_form_ajax_submit($form, $form_state) {
+  $return = '<div id="block-simplenews-1" class="block container block-simplenews first odd">';
+  
+  if (!valid_email_address($form_state['values']['mail'])) {
+      $return .= render($form);
+    $return .= '<section class="errors-primal col-md-6 col-md-offset-3"><div class="alert alert-block alert-danger messages error">' . t('The e-mail address is not valid.') . '</div></section>';
+    
+    $return .= '</div>';
+    return $return;
+  }
+  else {
+    if (module_exists('simplenews')) {
+    module_load_include('inc', 'simplenews', 'views/simplenews.subscription');
+    $tid = $form['#tid'];
+    $account = simplenews_load_user_by_mail($form_state['values']['mail']);
+    $confirm = simplenews_require_double_opt_in($tid, $account);
+    $subscription = simplenews_subscribe_user($form_state['values']['mail'], $tid, $confirm, 'website');
+    $return .= '<section class="confirm-primal col-md-6 col-md-offset-3"><div class="alert alert-block alert-success messages success">'. t('You have been subscribed.') . '</div></section>';
+    $return .= '</div>';
+      return $return;
+    }
+  }
 }
 
 

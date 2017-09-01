@@ -122,7 +122,7 @@
     print 
         '<div class="field field-name-field-body field-type-text-long field-label-above">'
         . '<div class="field-label">'
-            .$content['body']['#title'].
+            .t('program').
         '</div>'
     . '</div>';
     endif;
@@ -156,7 +156,9 @@
     <?php if (!empty(render($content['field_price']))): ?>
         <h4 class="light"><?php print render($content['field_price']); ?></h4>
     <?php endif ?>
-    <?php if ($content['registration_unregistrable_reason']['#access'] == true): ?>
+    <?php //if ($content['registration_unregistrable_reason']['#access'] == true): ?>
+        <?php if (empty(render($content['registration_form'])) || render($content['registration_form']) == 'Array'): ?>
+        
         <?php if (!empty($content['field_link']['#items'][0]['title'])): ?>
             <div class="text-center">
                 <a type="button" class="btn btn-primary" href="<?php print $content['field_link']['#items'][0]['url']; ?>" 
@@ -193,11 +195,11 @@
                 
     
     <?php if (isset($content['field_details']['#title'])): ?>
-    <?php print '<div class="field field-name-field-details field-type-text-long field-label-above"><div class="field-label">'.$content['field_details']['#title'].'</div></div>'; ?>
+    <?php print '<div class="field field-name-field-details field-type-text-long field-label-above"><div class="field-label">'.t('details').'</div></div>'; ?>
     <?php endif; ?>
     <?php print render($content['field_details']); ?>
     <?php if (isset($content['field_adresse']['#title'])): ?>
-    <?php print '<div class="field field-name-field-adresse-title field-type-text-long field-label-above"><div class="field-label">'.$content['field_adresse']['#title'].'</div></div>'; ?>
+    <?php print '<div class="field field-name-field-adresse-title field-type-text-long field-label-above"><div class="field-label">'.t('Place').'</div></div>'; ?>
     <?php endif; ?>
     <?php print render($content['field_adresse']); ?>
     

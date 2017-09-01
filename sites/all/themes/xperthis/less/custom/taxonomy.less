@@ -19,14 +19,19 @@ and open the template in the editor.
     }
     .teasing img.img-responsive {
         max-height: 200px;
+        min-height: 200px;
     }
     .node-teaser .teasing{
         background-color: white;
         margin-bottom: 20px;
+        min-height: 380px;
         h4, p {
             padding:25px 20px 0 25px;
         }
         footer {
+            position:absolute;
+            bottom:20px;
+            right:20px;
             .list-inline {
                 text-align: right;
                 padding: 25px 25px 25px 0;
@@ -39,8 +44,7 @@ and open the template in the editor.
                 min-height: 74px;
             }
             p {
-                padding: 0px 20px 0 25px;
-                color: @blue-light;
+                padding: 25px 20px 0 25px;
                 &.annotation {
                     padding:25px 20px 0 25px; 
                     color: #93a2b3;
@@ -114,6 +118,9 @@ and open the template in the editor.
         }
         &.active {
             background-color: #e5f7ff;
+            display: none;
+            padding: 0px;
+            margin: 0;
         }
     }
     .views-row {

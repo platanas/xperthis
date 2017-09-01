@@ -95,6 +95,7 @@ h1.lead {
     .view-id-news .views-field-title, 
     .view-id-news .views-field-body,  
     .view-id-news .views-field-type, 
+    .view-id-news .views-field-views-conditional,
     .view-id-news .views-field-views-conditional-1, 
     .view-id-news .views-field-views-conditional-2, 
     .view-id-news .views-field-views-conditional-3, 
@@ -138,6 +139,10 @@ h1.lead {
         color: #fff;
         padding: 20px;
         font-weight: 400;
+        &.Evenement, &.Event {
+            left: 104px;
+            position: absolute;
+        }
     }
     
     .view-id-news .views-field-body {
@@ -176,6 +181,7 @@ h1.lead {
             }
         }
     }
+    .views-field-views-conditional, 
     .views-field-views-conditional-1, 
     .views-field-views-conditional-2, 
     .views-field-views-conditional-3, 
@@ -321,6 +327,7 @@ footer.footer {
         }
     }
 
+    .view-id-news .views-field-views-conditional,
     .view-id-news .views-field-views-conditional-1, 
     .view-id-news .views-field-views-conditional-2, 
     .view-id-news .views-field-views-conditional-3, 
@@ -435,6 +442,16 @@ footer.footer {
     }
 }
 
+.confirm-primal,
+.errors-primal {
+    margin-top: 30px;
+}
+#block-simplenews-1 div.alert-danger {
+    display: none;
+}
+#block-simplenews-1 .errors-primal div.alert-danger {
+    display: block;
+}
 
 
 @media(max-width:@grid-float-breakpoint){

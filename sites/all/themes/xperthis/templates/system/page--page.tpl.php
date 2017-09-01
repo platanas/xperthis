@@ -89,16 +89,15 @@
     <?php endif; ?>
 
     <section<?php print $content_column_class; ?>>
+        <div class="container">
+        <div class="col-sm-12">
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
         
-    <div class="<?php print $container_class; ?>">
         <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
-    </div>
       <a id="main-content"></a>
       
-        <div class="container">
       <?php print $messages; ?>
       <?php if (!empty($tabs)): ?>
         <?php print render($tabs); ?>
@@ -109,6 +108,7 @@
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+        </div>
         </div>
       <?php print render($page['content']); ?>
     </section>

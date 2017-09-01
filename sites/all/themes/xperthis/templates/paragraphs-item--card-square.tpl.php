@@ -42,7 +42,7 @@ else:
 $col = 'col-md-4';
 endif;
 ?>
-<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<div class="container <?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content container"<?php print $content_attributes; ?>>
         <div class="row">
             <?php  if (!empty($content['field_title'])): ?>
