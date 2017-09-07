@@ -78,10 +78,11 @@ h1.lead {
         height: 100%;
         top: 0;
         left: 0;
+        opacity: 0.75;
         background: url('../img/homepage-headline-pattern.png'); /* or any other overlay image/color */
         transition: all 0.5s ease-in-out;
         &:hover {
-            opacity: 0.4;
+            opacity: 0;
         }
     }
     .view-id-news .views-field-field-image{
@@ -134,14 +135,15 @@ h1.lead {
             text-transform: uppercase;
         }
     }
-    .view-id-news .views-field-title h2 {
+    .view-id-news .views-field-title p {
         font-size: 1.1em;
         color: #fff;
         padding: 20px;
         font-weight: 400;
-        &.Evenement, &.Event {
+        &.Evenement, &.Evenements, &.Event, &.Events {
             left: 104px;
-            position: absolute;
+            top: 5px;
+            position: relative;
         }
     }
     
@@ -176,7 +178,7 @@ h1.lead {
             &.Artikel {
                 background-color: #eab013;
             }
-            &.Evenement, &.Event  {
+            &.Evenement, &.Evenements, &.Event, &.Events  {
                 background-color: #1cbdd5;
             }
         }
@@ -267,10 +269,11 @@ footer.footer {
         height: 100%;
         top: 0;
         left: 0;
+        opacity: 0.75;
         background: url('../img/homepage-headline-pattern.png'); /* or any other overlay image/color */
         transition: all 0.5s ease-in-out;
         &:hover {
-            opacity: 0.4;
+            opacity: 0;
         }
     }
     
@@ -374,7 +377,7 @@ footer.footer {
             &.Artikel {
                 background-color: #eab013;
             }
-            &.Evenement, &.Event {
+            &.Evenement, &.Evenements, &.Event, &.Events {
                 background-color: #1cbdd5;
             }
         }

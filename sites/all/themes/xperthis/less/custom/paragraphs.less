@@ -50,11 +50,19 @@ and open the template in the editor.
 .paragraphs-item-testimonials {
     background: url('../img/xperthis-testimonial-bg.jpg') center center; 
     background-size: cover;
-    padding-top: 65px;
-    padding-bottom: 30px;
+    padding-top: 150px;
+    padding-bottom: 60px;
+
+
+    p.quote {
+    font-size: 20px;
+    line-height: 32px;
+    font-style: italic;
+    }
     color: @blue-darker;
     p {
         padding-top: 12px;
+        font-weight: 300;
     }
     img {
         
@@ -66,6 +74,25 @@ and open the template in the editor.
         text-align: center;
         margin: 0 auto;
     }
+}
+
+.container.entity.entity-paragraphs-item.paragraphs-item-image-right-block h1, 
+.container.entity.entity-paragraphs-item.paragraphs-item-image-left-block h1,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-right-block h2, 
+.container.entity.entity-paragraphs-item.paragraphs-item-image-left-block h2,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-right-block h3, 
+.container.entity.entity-paragraphs-item.paragraphs-item-image-left-block h3,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-right-block h4, 
+.container.entity.entity-paragraphs-item.paragraphs-item-image-left-block h4,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-right-block p, 
+.container.entity.entity-paragraphs-item.paragraphs-item-image-left-block p {
+margin-top:0;
+}
+
+.entity-paragraphs-item {
+    ul li, ul, ol, ol li, li {
+    font-size: 16px;
+}
 }
 
 /* paragraphs-item-card- ... */

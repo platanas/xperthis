@@ -27,7 +27,7 @@
  */
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
-    <div class="col-lg-12 white text-center" style="background:url(<?php print file_create_url($content['field_image']['#items'][0]['uri']); ?>) center center no-repeat;padding: 86px 0 86px 0;">
+    <div class="col-lg-12 white text-center" style="background:url(<?php print file_create_url($content['field_image']['#items'][0]['uri']); ?>) center center no-repeat;background-size:cover;padding: 86px 0 86px 0;">
         <div class="container">
         <?php print render($content['field_paragraph']); ?>
         <?php //var_dump($content['field_image']); ?>

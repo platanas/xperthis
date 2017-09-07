@@ -124,9 +124,10 @@
         <?php if (isset($node->field_title_event['und'][0]['value'])): ?>
         <?php print $node->field_title_event['und'][0]['value']; ?>
         <?php endif; ?>
-        <?php if (isset($node->field_adresse['und'][0]['value'])): ?>
-        <p class="annotation"><i class="fa fa-map-marker fa-lg red" aria-hidden="true"></i> <?php print strip_tags($node->field_adresse['und'][0]['value']); ?></p>
+        <?php if (isset($node->field_short_address['und'][0]['value'])): ?>
+        <p class="annotation"><i class="fa fa-map-marker fa-lg red" aria-hidden="true"></i> <?php print strip_tags($node->field_short_address['und'][0]['value']); ?></p>
         <?php endif; ?>
+        
         <a href="<?php print $node_url; ?>"><?php print t('see more'); ?></a>
     </div>
   <?php

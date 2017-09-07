@@ -29,7 +29,6 @@
 <div class="clearfix"></div>
 <div class="container <?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content container"<?php print $content_attributes; ?>>
-      <div class="row">
         <div class="col-lg-4">
             <?php print render($content['field_image']); ?>
         </div>
@@ -37,6 +36,5 @@
             <h2><?php print render($content['field_title']); ?></h2>
             <?php print render($content['field_paragraph']); ?>
         </div> 
-      </div>
   </div>
 </div>

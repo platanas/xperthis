@@ -29,10 +29,8 @@
 <div class="clearfix"></div>
 <div class="container <?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content container"<?php print $content_attributes; ?>>
-      <div class="row">
         <div class="col-lg-12">
             <?php print render($content['field_paragraph']); ?>
         </div> 
-      </div>
   </div>
 </div>

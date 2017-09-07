@@ -44,7 +44,6 @@ endif;
 ?>
 <div class="container <?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content container"<?php print $content_attributes; ?>>
-        <div class="row">
             <?php  if (!empty($content['field_title'])): ?>
             <div class="<?php  print $col; ?> <?php  print $offset; ?> text-center">
                 <div class="card card-round">
@@ -56,7 +55,7 @@ endif;
                 </a>
                 <?php endif; ?>
 
-                <h3 class="regular"><?php print render($content['field_title']); ?></h3>
+                <h3 class="medium"><?php print render($content['field_title']); ?></h3>
                 <p><?php print strip_tags(render($content['field_paragraph'])); ?></p>
                 <?php if (!empty($content['field_link']['#items'][0]['url'])): ?>
                 <span class="field-content btn btn-primary">
@@ -79,7 +78,7 @@ endif;
                 </a>
                 <?php endif; ?>
 
-                <h3 class="regular"><?php print render($content['field_title_card_2']); ?></h3>
+                <h3 class="medium"><?php print render($content['field_title_card_2']); ?></h3>
                 <p><?php print strip_tags(render($content['field_paragraph_card_2'])); ?></p>
                 <?php if (!empty($content['field_link_card_2']['#items'][0]['url'])): ?>
                 <span class="field-content btn btn-primary">
@@ -102,7 +101,7 @@ endif;
                 </a>
                 <?php endif; ?>
 
-                <h3 class="regular"><?php print render($content['field_title_card_3']); ?></h3>
+                <h3 class="medium"><?php print render($content['field_title_card_3']); ?></h3>
                 <p><?php print strip_tags(render($content['field_paragraph_card_3'])); ?></p>
                 <?php if (!empty($content['field_link_card_3']['#items'][0]['url'])): ?>
                 <span class="field-content btn btn-primary">
@@ -125,7 +124,7 @@ endif;
                 </a>
                 <?php endif; ?>
 
-                <h3 class="regular"><?php print render($content['field_title_card_4']); ?></h3>
+                <h3 class="medium"><?php print render($content['field_title_card_4']); ?></h3>
                 <p><?php print strip_tags(render($content['field_paragraph_card_4'])); ?></p>
                 <?php if (!empty($content['field_link_card_4']['#items'][0]['url'])): ?>
                 <span class="field-content btn btn-primary">
@@ -137,6 +136,5 @@ endif;
                 </div>
             </div>
             <?php endif; ?>
-        </div>
     </div>
 </div>

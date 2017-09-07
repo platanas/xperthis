@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Views-Events-news feature.
+ */
+
+include_once 'views_events_news.features.inc';

@@ -6,13 +6,13 @@
 
 
 +function ($) {
+        var $ = jQuery.noConflict();
         
         // Track submission events.
         $('.block-e-book-download .webform-client-form').submit(function() {
             ga('send','event','Whitepaper','Download', {nomduwhitepaper}, 1)
 
         });
-        var $ = jQuery.noConflict();
         $(document).ready(function () {
             $('.modal').on('shown.bs.modal', function() {
             $(this).find('[autofocus]').focus();
@@ -20,16 +20,16 @@
         });
 
         $("#block-views-news-block-4").cornerSlider({
-                showAtScrollingHeight : 800,
-                directionEffect       : "right",
-                speedEffect           : 300,
-                right                 : 20,
-                bottom                : 200,
-                cookieMinutesToExpiry : 15,
-                //onClose               : function() {
-                //alert("Not to be seen again in the near future.");
-                //},
-            });
+            showAtScrollingHeight : 800,
+            directionEffect       : "right",
+            speedEffect           : 300,
+            right                 : 20,
+            bottom                : 200,
+            cookieMinutesToExpiry : 15,
+            //onClose               : function() {
+            //alert("Not to be seen again in the near future.");
+            //},
+        });
             
             $("#block-views-news-block-6").insertAfter(".view-taxonomy-term .view-content .views-row-1");
             $("#block-views-news-block-6").css('display', 'block');
@@ -37,9 +37,10 @@
             //$(".webform-confirmation").insertAfter(".col-sm-8 .page-header");
             //$(".webform-confirmation").css('display', 'block');
             
-            $( ".date-month .date-display-single" ).each(function() {
-               if ($('.date-month .date-display-single').text().length == 3){
-                   //console.log($('.date-month .date-display-single').text().length); 
+            //console.log($('.date-month .date-display-single').text().length); 
+            
+            $(".date-month .date-display-single").each(function() {
+               if ($(this).text().length == 3){
                    $(this).text($(this).text()+'.');
                }
             });

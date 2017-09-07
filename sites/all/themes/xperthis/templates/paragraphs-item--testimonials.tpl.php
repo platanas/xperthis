@@ -33,13 +33,14 @@
           <div class="col-md-2 col-md-offset-1">
             <?php print render($content['field_image']); ?>
           </div>
-          <div class="col-md-9">
+          <div class="col-md-8">
         <?php print render($content['field_title']); ?>
               
-        <p><span class="medium"><?php print strip_tags(render($content['field_testimonial_name'])); ?></span>
-        , <?php print strip_tags(render($content['field_testimonial_function'])); ?>
+        <p><span class="medium"><?php print strip_tags(render($content['field_testimonial_name'])); ?></span>,
+        <?php print strip_tags(render($content['field_testimonial_function'])); ?>
         - <?php print strip_tags(render($content['field_testimonial_society'])); ?>
-        <br />
+        </p>
+        <p class="quote">
         <?php print strip_tags(render($content['field_paragraph'])); ?></p>
           <p class="text-right">
             <a href="<?php print render($content['field_link']['#items'][0]['url']); ?>">

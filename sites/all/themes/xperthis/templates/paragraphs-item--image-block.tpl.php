@@ -29,10 +29,9 @@
 <div class="clearfix"></div>
 <div class="container <?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content container"<?php print $content_attributes; ?>>
-      <div class="row">
+      
         <div class="col-lg-12 center-block text-center">
-            <img typeof="foaf:Image" class="img-responsive center-block" src="<?php print file_create_url($content['field_image']['#items'][0]['uri']); ?>" width="140" height="140">
+            <img typeof="foaf:Image" class="img-responsive center-block" src="<?php print file_create_url($content['field_image']['#items'][0]['uri']); ?>" >
         </div> 
-      </div>
   </div>
 </div>

@@ -7363,12 +7363,18 @@ and open the template in the editor.
 .paragraphs-item-testimonials {
   background: url('../img/xperthis-testimonial-bg.jpg') center center;
   background-size: cover;
-  padding-top: 65px;
-  padding-bottom: 30px;
+  padding-top: 150px;
+  padding-bottom: 60px;
   color: #0d4866;
+}
+.paragraphs-item-testimonials p.quote {
+  font-size: 20px;
+  line-height: 32px;
+  font-style: italic;
 }
 .paragraphs-item-testimonials p {
   padding-top: 12px;
+  font-weight: 300;
 }
 .paragraphs-item-testimonials img {
   border-radius: 50%;
@@ -7378,6 +7384,25 @@ and open the template in the editor.
   width: 140px;
   text-align: center;
   margin: 0 auto;
+}
+.container.entity.entity-paragraphs-item.paragraphs-item-image-right-block h1,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-left-block h1,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-right-block h2,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-left-block h2,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-right-block h3,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-left-block h3,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-right-block h4,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-left-block h4,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-right-block p,
+.container.entity.entity-paragraphs-item.paragraphs-item-image-left-block p {
+  margin-top: 0;
+}
+.entity-paragraphs-item ul li,
+.entity-paragraphs-item ul,
+.entity-paragraphs-item ol,
+.entity-paragraphs-item ol li,
+.entity-paragraphs-item li {
+  font-size: 16px;
 }
 /* paragraphs-item-card- ... */
 .card {
@@ -8196,12 +8221,13 @@ h1.lead {
   height: 100%;
   top: 0;
   left: 0;
+  opacity: 0.75;
   background: url('../img/homepage-headline-pattern.png');
   /* or any other overlay image/color */
   transition: all 0.5s ease-in-out;
 }
 #block-views-news-block .pixel-overlay:hover {
-  opacity: 0.4;
+  opacity: 0;
 }
 #block-views-news-block .view-id-news .views-field-field-image {
   position: absolute;
@@ -8251,16 +8277,19 @@ h1.lead {
   padding: 0px 17px 19px 17px;
   text-transform: uppercase;
 }
-#block-views-news-block .view-id-news .views-field-title h2 {
+#block-views-news-block .view-id-news .views-field-title p {
   font-size: 1.1em;
   color: #fff;
   padding: 20px;
   font-weight: 400;
 }
-#block-views-news-block .view-id-news .views-field-title h2.Evenement,
-#block-views-news-block .view-id-news .views-field-title h2.Event {
+#block-views-news-block .view-id-news .views-field-title p.Evenement,
+#block-views-news-block .view-id-news .views-field-title p.Evenements,
+#block-views-news-block .view-id-news .views-field-title p.Event,
+#block-views-news-block .view-id-news .views-field-title p.Events {
   left: 104px;
-  position: absolute;
+  top: 5px;
+  position: relative;
 }
 #block-views-news-block .view-id-news .views-field-body {
   position: relative;
@@ -8295,7 +8324,9 @@ h1.lead {
   background-color: #eab013;
 }
 #block-views-news-block .view-id-news .views-field-type h3.Evenement,
-#block-views-news-block .view-id-news .views-field-type h3.Event {
+#block-views-news-block .view-id-news .views-field-type h3.Evenements,
+#block-views-news-block .view-id-news .views-field-type h3.Event,
+#block-views-news-block .view-id-news .views-field-type h3.Events {
   background-color: #1cbdd5;
 }
 #block-views-news-block .views-field-views-conditional,
@@ -8376,12 +8407,13 @@ footer.footer #block-views-partner-block .view-id-partner .view-content .contain
   height: 100%;
   top: 0;
   left: 0;
+  opacity: 0.75;
   background: url('../img/homepage-headline-pattern.png');
   /* or any other overlay image/color */
   transition: all 0.5s ease-in-out;
 }
 #block-views-news-block-1 .pixel-overlay:hover {
-  opacity: 0.4;
+  opacity: 0;
 }
 #block-views-news-block-1 .view-id-news .views-field-field-image {
   position: relative;
@@ -8487,7 +8519,9 @@ footer.footer #block-views-partner-block .view-id-partner .view-content .contain
   background-color: #eab013;
 }
 #block-views-news-block-1 .view-id-news .views-field-type h3.Evenement,
-#block-views-news-block-1 .view-id-news .views-field-type h3.Event {
+#block-views-news-block-1 .view-id-news .views-field-type h3.Evenements,
+#block-views-news-block-1 .view-id-news .views-field-type h3.Event,
+#block-views-news-block-1 .view-id-news .views-field-type h3.Events {
   background-color: #1cbdd5;
 }
 #block-views-webform-block {
