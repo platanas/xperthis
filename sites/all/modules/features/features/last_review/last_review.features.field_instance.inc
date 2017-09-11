@@ -10,6 +10,162 @@
 function last_review_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-domaine-field_hompage_icon'.
+  $field_instances['node-domaine-field_hompage_icon'] = array(
+    'bundle' => 'domaine',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_hompage_icon',
+    'label' => 'Homepage Icon',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'domaine/hompage-icons',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '84x76',
+      'min_resolution' => '84x76',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-domaine-field_paragraphs'.
+  $field_instances['node-domaine-field_paragraphs'] = array(
+    'bundle' => 'domaine',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_paragraphs',
+    'label' => 'Paragraphs',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'button',
+      'allowed_bundles' => array(
+        'call_to_action_block' => 'call_to_action_block',
+        'card_round' => 'card_round',
+        'card_square' => 'card_square',
+        'image_background_block' => 'image_background_block',
+        'image_block' => 'image_block',
+        'image_left_block' => 'image_left_block',
+        'image_right_block' => 'image_right_block',
+        'testimonials' => 'testimonials',
+        'text_block' => 'text_block',
+      ),
+      'bundle_weights' => array(
+        'call_to_action_block' => 2,
+        'card_round' => 10,
+        'card_square' => 11,
+        'image_background_block' => 3,
+        'image_block' => 4,
+        'image_left_block' => 5,
+        'image_right_block' => 6,
+        'testimonials' => 16,
+        'text_block' => 7,
+      ),
+      'default_edit_mode' => 'open',
+      'title' => 'Paragraph',
+      'title_multiple' => 'Paragraphs',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-domaine-field_subtitle'.
+  $field_instances['node-domaine-field_subtitle'] = array(
+    'bundle' => 'domaine',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Title used on Homepage',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_subtitle',
+    'label' => 'Subtitle (Baseline)',
+    'required' => 1,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Rechercher',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-event-body'.
   $field_instances['node-event-body'] = array(
     'bundle' => 'event',
@@ -619,6 +775,136 @@ function last_review_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_paragraphs'.
+  $field_instances['node-page-field_paragraphs'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_paragraphs',
+    'label' => 'Paragraphs',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'button',
+      'allowed_bundles' => array(
+        'call_to_action_block' => 'call_to_action_block',
+        'card_round' => 'card_round',
+        'card_square' => 'card_square',
+        'image_background_block' => 'image_background_block',
+        'image_block' => 'image_block',
+        'image_left_block' => 'image_left_block',
+        'image_right_block' => 'image_right_block',
+        'testimonials' => 'testimonials',
+        'text_block' => 'text_block',
+      ),
+      'bundle_weights' => array(
+        'call_to_action_block' => 6,
+        'card_round' => 14,
+        'card_square' => 15,
+        'image_background_block' => 7,
+        'image_block' => 8,
+        'image_left_block' => 4,
+        'image_right_block' => 2,
+        'testimonials' => -18,
+        'text_block' => 11,
+      ),
+      'default_edit_mode' => 'open',
+      'title' => 'Paragraph',
+      'title_multiple' => 'Paragraphs',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-product-field_paragraphs'.
+  $field_instances['node-product-field_paragraphs'] = array(
+    'bundle' => 'product',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_paragraphs',
+    'label' => 'Paragraphs',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'select',
+      'allowed_bundles' => array(
+        'call_to_action_block' => 'call_to_action_block',
+        'card_round' => 'card_round',
+        'card_square' => 'card_square',
+        'image_background_block' => 'image_background_block',
+        'image_block' => 'image_block',
+        'image_left_block' => 'image_left_block',
+        'image_right_block' => 'image_right_block',
+        'testimonials' => 'testimonials',
+        'text_block' => 'text_block',
+      ),
+      'bundle_weights' => array(
+        'call_to_action_block' => 2,
+        'card_round' => 3,
+        'card_square' => 4,
+        'image_background_block' => 5,
+        'image_block' => 6,
+        'image_left_block' => 7,
+        'image_right_block' => 8,
+        'testimonials' => 9,
+        'text_block' => 10,
+      ),
+      'default_edit_mode' => 'open',
+      'title' => 'Paragraph',
+      'title_multiple' => 'Paragraphs',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-white_paper-body'.
   $field_instances['node-white_paper-body'] = array(
     'bundle' => 'white_paper',
@@ -757,10 +1043,9 @@ function last_review_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'list',
+        'label' => 'hidden',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 8,
       ),
       'teaser' => array(
@@ -994,12 +1279,257 @@ function last_review_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'paragraphs_item-image_background_block-field_category'.
+  $field_instances['paragraphs_item-image_background_block-field_category'] = array(
+    'bundle' => 'image_background_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_category',
+    'label' => 'Category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-image_background_block-field_image'.
+  $field_instances['paragraphs_item-image_background_block-field_image'] = array(
+    'bundle' => 'image_background_block',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_image',
+    'label' => 'Image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'paragraphs-bloc-content/images',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 'upload',
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-image_background_block-field_label'.
+  $field_instances['paragraphs_item-image_background_block-field_label'] = array(
+    'bundle' => 'image_background_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_label',
+    'label' => 'Label',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-image_background_block-field_link'.
+  $field_instances['paragraphs_item-image_background_block-field_link'] = array(
+    'bundle' => 'image_background_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_link',
+    'label' => 'Link',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'linkit' => array(
+        'button_text' => 'Search Xperthis website URL',
+        'enable' => 1,
+        'profile' => 'url_management_field',
+      ),
+      'rel_remove' => 'default',
+      'title' => 'required',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-image_background_block-field_paragraph'.
+  $field_instances['paragraphs_item-image_background_block-field_paragraph'] = array(
+    'bundle' => 'image_background_block',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph',
+    'label' => 'Paragraph',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Address');
   t('Body');
   t('Capacity');
   t('Categories');
+  t('Category');
   t('Date');
   t('Details');
   t('Display on News list Headline');
@@ -1007,15 +1537,22 @@ function last_review_field_default_field_instances() {
   t('Do not forget to uncheck "Node registration enable"');
   t('Document');
   t('Enter a comma-separated list of words to describe your content.');
+  t('Homepage Icon');
   t('Image');
+  t('Label');
+  t('Link');
   t('Link Event Brite');
+  t('Paragraph');
+  t('Paragraphs');
   t('Price');
   t('Program');
   t('Short Address');
   t('Subscription Date');
   t('Subtitle');
+  t('Subtitle (Baseline)');
   t('Tags');
   t('Title Event');
+  t('Title used on Homepage');
   t('You have to use title 3 > h3');
 
   return $field_instances;

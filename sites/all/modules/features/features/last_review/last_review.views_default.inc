@@ -342,7 +342,7 @@ function last_review_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['max_length'] = '200';
   $handler->display->display_options['fields']['title']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_type'] = 'p';
   $handler->display->display_options['fields']['title']['element_class'] = '[type]';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
@@ -435,7 +435,7 @@ function last_review_views_default_views() {
   $handler->display->display_options['fields']['views_conditional_4']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['views_conditional_4']['if'] = 'type';
   $handler->display->display_options['fields']['views_conditional_4']['condition'] = '1';
-  $handler->display->display_options['fields']['views_conditional_4']['equalto'] = 'Event';
+  $handler->display->display_options['fields']['views_conditional_4']['equalto'] = 'Events';
   $handler->display->display_options['fields']['views_conditional_4']['then'] = '[view_node_1]';
   $handler->display->display_options['fields']['views_conditional_4']['strip_tags'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -531,9 +531,10 @@ function last_review_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['max_length'] = '80';
+  $handler->display->display_options['fields']['title']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_type'] = 'p';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Champ: Contenu: Date */
@@ -603,10 +604,12 @@ function last_review_views_default_views() {
   $handler->display->display_options['fields']['field_title_event']['table'] = 'field_data_field_title_event';
   $handler->display->display_options['fields']['field_title_event']['field'] = 'field_title_event';
   $handler->display->display_options['fields']['field_title_event']['label'] = '';
-  $handler->display->display_options['fields']['field_title_event']['alter']['max_length'] = '80';
+  $handler->display->display_options['fields']['field_title_event']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['field_title_event']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_title_event']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['field_title_event']['element_type'] = 'p';
   $handler->display->display_options['fields']['field_title_event']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_title_event']['empty'] = '<h3 class="view-field-body">[title]</h3>';
+  $handler->display->display_options['fields']['field_title_event']['empty'] = '<p>[title]</p>';
   $handler->display->display_options['fields']['field_title_event']['hide_alter_empty'] = FALSE;
   /* Champ: Contenu: Langue */
   $handler->display->display_options['fields']['language']['id'] = 'language';
@@ -701,7 +704,7 @@ function last_review_views_default_views() {
   $handler->display->display_options['fields']['views_conditional_4']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['views_conditional_4']['if'] = 'type';
   $handler->display->display_options['fields']['views_conditional_4']['condition'] = '1';
-  $handler->display->display_options['fields']['views_conditional_4']['equalto'] = 'Event';
+  $handler->display->display_options['fields']['views_conditional_4']['equalto'] = 'Events';
   $handler->display->display_options['fields']['views_conditional_4']['then'] = '[view_node_2]';
   $handler->display->display_options['fields']['views_conditional_4']['strip_tags'] = 0;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -833,11 +836,10 @@ function last_review_views_default_views() {
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Programme et inscription >';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Contenu: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Contenu: Date -  start date (field_date) */
+  $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
+  $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';
+  $handler->display->display_options['sorts']['field_date_value']['field'] = 'field_date_value';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Contenu: Publié */
@@ -1161,7 +1163,7 @@ function last_review_views_default_views() {
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['max_length'] = '30';
+  $handler->display->display_options['fields']['title']['alter']['max_length'] = '60';
   $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h2';
   $handler->display->display_options['fields']['title']['element_class'] = 'text-center white medium';
@@ -1302,7 +1304,7 @@ function last_review_views_default_views() {
     t('En savoir plus >'),
     t('Headline News Card'),
     t('<p class="text-center"><a href="fr/taxonomy/term/all">Voir toutes les actualités</a></p>'),
-    t('<h3 class="view-field-body">[title]</h3>'),
+    t('<p>[title]</p>'),
     t('Next Event bloc'),
     t('<div class="date-day">
 [field_date]

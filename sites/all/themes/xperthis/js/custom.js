@@ -8,44 +8,6 @@
 +function ($) {
         var $ = jQuery.noConflict();
         
-        // Track submission events.
-        $('.block-e-book-download .webform-client-form').submit(function() {
-            ga('send','event','Whitepaper','Download', {nomduwhitepaper}, 1)
-
-        });
-        $(document).ready(function () {
-            $('.modal').on('shown.bs.modal', function() {
-            $(this).find('[autofocus]').focus();
-            $("#edit-email").attr("placeholder", "E-mail").placeholder();
-        });
-
-        $("#block-views-news-block-4").cornerSlider({
-            showAtScrollingHeight : 800,
-            directionEffect       : "right",
-            speedEffect           : 300,
-            right                 : 20,
-            bottom                : 200,
-            cookieMinutesToExpiry : 15,
-            //onClose               : function() {
-            //alert("Not to be seen again in the near future.");
-            //},
-        });
-            
-            $("#block-views-news-block-6").insertAfter(".view-taxonomy-term .view-content .views-row-1");
-            $("#block-views-news-block-6").css('display', 'block');
-            
-            //$(".webform-confirmation").insertAfter(".col-sm-8 .page-header");
-            //$(".webform-confirmation").css('display', 'block');
-            
-            //console.log($('.date-month .date-display-single').text().length); 
-            
-            $(".date-month .date-display-single").each(function() {
-               if ($(this).text().length == 3){
-                   $(this).text($(this).text()+'.');
-               }
-            });
-        });
-        
         $(window).scroll(function(){
             var scroll = $(this).scrollTop();
             $('.banner-wrapper').css({'background-position':'0px '+scroll/2+'px'});
@@ -53,32 +15,8 @@
             //console.log(scroll/1.5);
         });
         
-        
         setTimeout(function(){
-            
-        $('ul.nav li.dropdown').hover(function() {
-            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-          }, function() {
-            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-          });
-            // Whole icon product homepage clickable
-            $(".homepage-icons-bg").click(function() {
-                window.location = $(this).find('.views-field-field-hompage-icon').find('.field-content').find("a").attr("href"); 
-                return false;
-            });
-            $(".pixel-overlay").hover(
-                function() {
-                  $( this ).addClass( "no-overlay" );
-                }, function() {
-                  $( this ).removeClass( "no-overlay" );
-                }
-            );
-            if ($('li .categories a').hasClass('active')) {
-                $('li:has(> .categories .active)').addClass("active");
-            } else {            
-                $('li.all .categories a').addClass("active");
-                $('li.all').addClass("active");
-            }
+            //Partner slider
             var partnerHeight = $(".row-partner .row").height();
             $('.row-partner').css('max-height', partnerHeight+'px');
             z=0;
@@ -88,6 +26,7 @@
                 });
                     z++;
             });
+            
             // Define a random integer function
             function random(n) {
                 return Math.floor((Math.random() * n));
@@ -121,37 +60,109 @@
                 var currentClassCol = random(currentClass);
                 //console.log(currentClass);
                 
-                images.eq(current).fadeOut(transition_time, function () {
-                    var currentClassCol = random(currentClass);
-                    //console.log('fadeout'+current);
-                    //console.log(current);
-                    while(ok==false){
-                        current = random(n);
-                        //console.log(images.eq(current).parent().parent().parent().attr('class'));
-                        if (images.eq(current).parent().parent().parent().attr('class')==currentClass && current!=currentKeep){
-                            ok=true;
+                    images.eq(current).fadeOut(transition_time, function () {
+                        var currentClassCol = random(currentClass);
+                        //console.log('fadeout'+current);
+                        //console.log(current);
+                        while(ok==false){
+                            current = random(n);
+                            //console.log(images.eq(current).parent().parent().parent().attr('class'));
+                            if (images.eq(current).parent().parent().parent().attr('class')==currentClass && current!=currentKeep){
+                                ok=true;
+                            }
                         }
-                    }
-                    
-                    
-                    images.eq(current).fadeIn(transition_time);
-                    //console.log(current*currentRow+'okok');
-                    //console.log('fadein'+current);
-                    ok=false;
-                    
-                    while(ok==false){
-                        current = random(n);
-                        if (images.eq(current).css('opacity')==1){
-                            ok=true;
-                        }
-                    }
-                    currentRow = random(x);
-                    
-                });
-            }, 4 * transition_time + waiting_time);
 
-            // You can then stop the effect with:
-            //clearInterval(interval_id);
+
+                        images.eq(current).fadeIn(transition_time);
+                        //console.log(current*currentRow+'okok');
+                        //console.log('fadein'+current);
+                        ok=false;
+
+                        while(ok==false){
+                            current = random(n);
+                            if (images.eq(current).css('opacity')==1){
+                                ok=true;
+                            }
+                        }
+                        currentRow = random(x);
+
+                    });
+                }, 4 * transition_time + waiting_time);
+
+                // You can then stop the effect with:
+                //clearInterval(interval_id);
+            }, 3000);
+        $(document).ready(function () {
+            $('.modal').on('shown.bs.modal', function() {
+            $(this).find('[autofocus]').focus();
+            $("#edit-email").attr("placeholder", "E-mail").placeholder();
+            });
+            
+            $('ul.nav li.dropdown').hover(function() {
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+            }, function() {
+              $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+            });
+            
+            $(".date-month .date-display-single").each(function() {
+                console.log('ok');
+               if ($(this).text().length == 3){
+                   $(this).text($(this).text()+'.');
+               }
+            });
+            
+            // Whole icon product homepage clickable
+            $(".homepage-icons-bg").click(function() {
+                window.location = $(this).find('.views-field-field-hompage-icon').find('.field-content').find("a").attr("href"); 
+                return false;
+            });
+            $(".pixel-overlay").hover(
+                function() {
+                  $( this ).addClass( "no-overlay" );
+                }, function() {
+                  $( this ).removeClass( "no-overlay" );
+                }
+            );
+            if ($('li .categories a').hasClass('active')) {
+                $('li:has(> .categories .active)').addClass("active");
+            } else {            
+                $('li.all .categories a').addClass("active");
+                $('li.all').addClass("active");
+            }
+            
+           
+            
+            // Track submission events.
+            if ($('.block-e-book-download .webform-client-form').length) {
+                $('.block-e-book-download .webform-client-form').submit(function() {
+                    ga('send','event','Whitepaper','Download', 'ok', 1);
+                });
+            }
+            
+             
+            if ($("#block-views-news-block-4").length) {
+                $("#block-views-news-block-4").cornerSlider({
+                    showAtScrollingHeight : 800,
+                    directionEffect       : "right",
+                    speedEffect           : 300,
+                    right                 : 20,
+                    bottom                : 200,
+                    cookieMinutesToExpiry : 15,
+                    //onClose               : function() {
+                    //alert("Not to be seen again in the near future.");
+                    //},
+                });
+            }
+            if ($("#block-views-news-block-6").length) {
+                $("#block-views-news-block-6").insertAfter(".view-taxonomy-term .view-content .views-row-1");
+                $("#block-views-news-block-6").css('display', 'block');
+            }
+            //$(".webform-confirmation").insertAfter(".col-sm-8 .page-header");
+            //$(".webform-confirmation").css('display', 'block');
+            
+            //console.log($('.date-month .date-display-single').text().length); 
+            
+            
         });
     
 }(jQuery);

@@ -7491,7 +7491,7 @@ body {
   padding-top: 142px;
 }
 .page-no-hero .content-product-page {
-  padding-top: 62px;
+  padding-top: 20px;
 }
 .page-thin-menu {
   padding-top: 142px;
@@ -7709,7 +7709,7 @@ and open the template in the editor.
   font-size: 14px;
   margin: 5px 0 10px 30px;
   padding: 0;
-  width: 170px;
+  width: 200px;
 }
 .block-e-book-download .squared label {
   width: 20px;
