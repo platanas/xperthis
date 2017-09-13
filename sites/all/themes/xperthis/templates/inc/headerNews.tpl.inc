@@ -23,7 +23,7 @@ print $language->name;
             <?php endif; ?>
         </div>
     <div class="menu-news col-md-7 mt-4">
-        <ol class="breadcrumb"><li><a href="/<?php print $language->language; ?>/taxonomy/term/all" class="disabled"><?php print t('News'); ?></a></li>
+        <ol class="breadcrumb"><li><a href="/<?php print $language->language; ?>/actualites/all" class="disabled"><?php print t('News'); ?></a></li>
             <li class="active"><?php print truncate_utf8($title, 50, false, true, 1); ?></li>
         </ol>
     </div>

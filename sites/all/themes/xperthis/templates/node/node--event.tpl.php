@@ -102,6 +102,7 @@
     hide($content['links']);
     hide($content['field_tags']);
     hide($content['field_categories']);
+    hide($content['field_short_address']);
     hide($content['field_display_in_article_list']);
     hide($content['field_link']);
     hide($content['field_subtitle']);
@@ -121,9 +122,9 @@
     if (isset($content['body']['#title'])):
     print 
         '<div class="field field-name-field-body field-type-text-long field-label-above">'
-        . '<div class="field-label">'
+        . '<div class="field-label"><h2 class="light">'
             .t('program').
-        '</div>'
+        '</h2></div>'
     . '</div>';
     endif;
     print render($content['body']);
@@ -151,7 +152,7 @@
         </p>
     </div>
     <div class="clearfix"></div>
-    <?php print '<h3 class="regular">'.render($content['field_title_event']).'</h3>'; ?>
+    <?php print '<h2 class="regular">'.render($content['field_title_event']).'</h2>'; ?>
     
     <?php if (!empty(render($content['field_price']))): ?>
         <h4 class="light"><?php print render($content['field_price']); ?></h4>
@@ -180,7 +181,7 @@
             <div class="modal-header popups-title">         
                 <span id="modal-title" class="modal-title">
                     <h2><?php print t('Subscribe'); ?></h2>
-                        <?php print '<h3 class="regular">'.render($content['field_title_event']).'</h3>'; ?></span>              
+                        <?php print '<h2 class="regular">'.render($content['field_title_event']).'</h2>'; ?></span>              
                 <div class="clear-block"></div>      
             </div>
             <div class="modal-content">
@@ -195,11 +196,11 @@
                 
     
     <?php if (isset($content['field_details']['#title'])): ?>
-    <?php print '<div class="field field-name-field-details field-type-text-long field-label-above"><div class="field-label">'.t('details').'</div></div>'; ?>
+    <?php print '<div class="field field-name-field-details field-type-text-long field-label-above"><div class="field-label"><h2 class="light">'.t('details').'</h2></div></div>'; ?>
     <?php endif; ?>
     <?php print render($content['field_details']); ?>
     <?php if (isset($content['field_adresse']['#title'])): ?>
-    <?php print '<div class="field field-name-field-adresse-title field-type-text-long field-label-above"><div class="field-label">'.t('Place').'</div></div>'; ?>
+    <?php print '<div class="field field-name-field-adresse-title field-type-text-long field-label-above"><div class="field-label"><h2 class="light">'.t('Place').'</h2></div></div>'; ?>
     <?php endif; ?>
     <?php print render($content['field_adresse']); ?>
     

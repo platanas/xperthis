@@ -19,7 +19,7 @@
             <?php endif; ?>
         </div>
     <div class="menu-news col-md-7 mt-4">
-        <p class="annotation"><a href="/fr/taxonomy/term/all" ><?php print t('News').'</a> <span class="breadcrumb-rail">></span> '.truncate_utf8($title, 50, false, true, 1); ?></p>
+        <p class="annotation"><a href="/fr/actualites/all" ><?php print t('News').'</a> <span class="breadcrumb-rail">></span> '.truncate_utf8($title, 50, false, true, 1); ?></p>
     </div>
     <div class="col-md-3 menu-secondary">
       <div class="row row-no-padding">

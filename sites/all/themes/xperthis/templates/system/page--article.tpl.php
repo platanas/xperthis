@@ -100,7 +100,7 @@
         <div class="breadcrumb">
             <span class="inline odd first"><a href="/<?php print $language->language; ?>">Home</a></span>
             <span class="delimiter">&gt;</span>
-            <span class="inline even"><a href="/<?php print $language->language; ?>/taxonomy/term/all" class="disabled active-trail"><?php print t('News'); ?></a></span>
+            <span class="inline even"><a href="/<?php print $language->language; ?>/<?php print t('news'); ?>/all" class="disabled active-trail"><?php print t('News'); ?></a></span>
             <span class="delimiter">&gt;</span>
             <span class="active"><?php print $title; ?></span>
         </div>

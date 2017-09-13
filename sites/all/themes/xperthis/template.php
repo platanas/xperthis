@@ -71,11 +71,12 @@ function xperthis_remove_tabs($label, &$variables) {
  * Implements template_preprocess_node()
  */
 function xperthis_preprocess_node(&$vars) {
-  if($vars['view_mode'] == 'teaser') {
-      $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__teaser';
-      //var_dump($vars);
-  }
+    if($vars['view_mode'] == 'teaser') {
+        $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__teaser';
+        //var_dump($vars);
+    }
 }
+
 
 /**
  * Implements template_preprocess_field

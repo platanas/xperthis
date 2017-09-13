@@ -51,7 +51,7 @@
               <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
             <?php endif;?>
             <?php print render($title_suffix); ?>
-<h2><span style="font-weight:300;"><?php print t('Download this Whitepaper');?></span> <span style="font-weight:500;"> Whitepaper</span></h2>
+<p class="title_download_whitepaper"><span style="font-weight:300;"><?php print t('Download this Whitepaper');?></span> <span style="font-weight:500;"> Whitepaper</span></p>
 
             <?php print $content ?>
               

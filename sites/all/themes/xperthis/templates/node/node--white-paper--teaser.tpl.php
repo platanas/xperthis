@@ -97,6 +97,7 @@
     hide($content['field_capacity']);
     hide($content['field_adresse']);
     hide($content['body']);
+    hide($content['language']);
     print render($content);
   ?>
     <?php print '<p>'.truncate_utf8(strip_tags($title), 100, TRUE, TRUE).'</p>'; ?>

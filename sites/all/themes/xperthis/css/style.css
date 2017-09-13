@@ -7693,8 +7693,11 @@ and open the template in the editor.
 .block-e-book-download .webform-component-email label {
   display: none;
 }
-.block-e-book-download h2 {
+.block-e-book-download p.title_download_whitepaper {
   text-align: center;
+  line-height: 35px;
+  font-size: 25px;
+  color: #0d4866;
 }
 .block-e-book-download .btn-primary {
   width: 100%;
@@ -7918,7 +7921,7 @@ and open the template in the editor.
 .page-event .container {
   padding-top: 42px;
 }
-.page-event .field .field-label {
+.page-event .field .field-label h2 {
   color: #0d4866;
   font-size: 22px;
   font-weight: 300;
@@ -7938,6 +7941,11 @@ and open the template in the editor.
 .page-event .block-event-info {
   background: url(../img/xperthis-top-bloc-event-bg.jpg) white top center repeat-x;
   padding: 0 30px 30px;
+}
+.page-event .block-event-info h1 {
+  line-height: 30px;
+  font-size: 20px;
+  color: #0d4866;
 }
 .page-event .block-event-info h3 {
   min-height: 145px;
@@ -9058,47 +9066,73 @@ and open the template in the editor.
     Created on : 09-juin-2017, 16:08:42
     Author     : platanas
 */
+.page-actualites .col-md-8.col-sm-12.col-xs-12,
+.page-nieuws .col-md-8.col-sm-12.col-xs-12,
 .page-taxonomy .col-md-8.col-sm-12.col-xs-12 {
   padding-right: 26px;
 }
+.page-actualites .col-sm-8,
+.page-nieuws .col-sm-8,
 .page-taxonomy .col-sm-8 {
   padding-right: 53px;
 }
+.page-actualites h1.page-header,
+.page-nieuws h1.page-header,
 .page-taxonomy h1.page-header {
   margin-bottom: 30px;
 }
+.page-actualites .teasing img.img-responsive,
+.page-nieuws .teasing img.img-responsive,
 .page-taxonomy .teasing img.img-responsive {
   max-height: 200px;
   min-height: 200px;
 }
+.page-actualites .node-teaser .teasing,
+.page-nieuws .node-teaser .teasing,
 .page-taxonomy .node-teaser .teasing {
   background-color: white;
   margin-bottom: 20px;
   min-height: 380px;
 }
+.page-actualites .node-teaser .teasing h4,
+.page-nieuws .node-teaser .teasing h4,
 .page-taxonomy .node-teaser .teasing h4,
+.page-actualites .node-teaser .teasing p,
+.page-nieuws .node-teaser .teasing p,
 .page-taxonomy .node-teaser .teasing p {
   padding: 25px 20px 0 25px;
 }
+.page-actualites .node-teaser .teasing footer,
+.page-nieuws .node-teaser .teasing footer,
 .page-taxonomy .node-teaser .teasing footer {
   position: absolute;
   bottom: 20px;
   right: 20px;
 }
+.page-actualites .node-teaser .teasing footer .list-inline,
+.page-nieuws .node-teaser .teasing footer .list-inline,
 .page-taxonomy .node-teaser .teasing footer .list-inline {
   text-align: right;
   padding: 25px 25px 25px 0;
 }
+.page-actualites .node-article .teasing .field-type-text-with-summary,
+.page-nieuws .node-article .teasing .field-type-text-with-summary,
 .page-taxonomy .node-article .teasing .field-type-text-with-summary {
   min-height: 74px;
 }
+.page-actualites .node-article .teasing p,
+.page-nieuws .node-article .teasing p,
 .page-taxonomy .node-article .teasing p {
   padding: 25px 20px 0 25px;
 }
+.page-actualites .node-article .teasing p.annotation,
+.page-nieuws .node-article .teasing p.annotation,
 .page-taxonomy .node-article .teasing p.annotation {
   padding: 25px 20px 0 25px;
   color: #93a2b3;
 }
+.page-actualites .node-article .teasing a,
+.page-nieuws .node-article .teasing a,
 .page-taxonomy .node-article .teasing a {
   color: #58afd6;
 }

@@ -105,7 +105,7 @@
             });
             
             $(".date-month .date-display-single").each(function() {
-                console.log('ok');
+                       //console.log('ok');
                if ($(this).text().length == 3){
                    $(this).text($(this).text()+'.');
                }
@@ -116,6 +116,7 @@
                 window.location = $(this).find('.views-field-field-hompage-icon').find('.field-content').find("a").attr("href"); 
                 return false;
             });
+            
             $(".pixel-overlay").hover(
                 function() {
                   $( this ).addClass( "no-overlay" );
@@ -123,6 +124,7 @@
                   $( this ).removeClass( "no-overlay" );
                 }
             );
+    
             if ($('li .categories a').hasClass('active')) {
                 $('li:has(> .categories .active)').addClass("active");
             } else {            
