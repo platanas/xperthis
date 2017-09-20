@@ -59,11 +59,9 @@ endif;
                 <?php if (!empty($content['field_link']['#items'][0]['url'])): ?>
                 <div class="wrapper-btn">
                     <p>
-                    <button class="field-content btn btn-primary">
-                        <a href="<?php print render($content['field_link']['#items'][0]['url']); ?>">
+                        <a  class="field-content btn btn-primary" href="<?php print render($content['field_link']['#items'][0]['url']); ?>">
                             <?php print render($content['field_link']['#items'][0]['title']); ?>
                         </a>
-                    </button>
                     </p>
                 </div>
                 <?php endif; ?>
@@ -85,11 +83,9 @@ endif;
                 <?php if (!empty($content['field_link_card_2']['#items'][0]['url'])): ?>
                 <div class="wrapper-btn">
                     <p>
-                        <button class="field-content btn btn-primary">
-                            <a href="<?php print render($content['field_link_card_2']['#items'][0]['url']); ?>">
-                                <?php print render($content['field_link_card_2']['#items'][0]['title']); ?>
-                            </a>
-                        </button>
+                        <a class="field-content btn btn-primary" href="<?php print render($content['field_link_card_2']['#items'][0]['url']); ?>">
+                            <?php print render($content['field_link_card_2']['#items'][0]['title']); ?>
+                        </a>
                     </p>
                 </div>
                 <?php endif; ?>
@@ -111,11 +107,9 @@ endif;
                 <?php if (!empty($content['field_link_card_3']['#items'][0]['url'])): ?>
                 <div class="wrapper-btn">
                     <p>
-                        <button class="field-content btn btn-primary">
-                            <a href="<?php print render($content['field_link_card_3']['#items'][0]['url']); ?>">
-                                <?php print render($content['field_link_card_3']['#items'][0]['title']); ?>
-                            </a>
-                        </button>
+                        <a class="field-content btn btn-primary" href="<?php print render($content['field_link_card_3']['#items'][0]['url']); ?>">
+                            <?php print render($content['field_link_card_3']['#items'][0]['title']); ?>
+                        </a>
                     </p>
                 </div>
                 <?php endif; ?>
@@ -137,11 +131,9 @@ endif;
                 <?php if (!empty($content['field_link_card_4']['#items'][0]['url'])): ?>
                 <div class="wrapper-btn">
                     <p>
-                        <button class="field-content btn btn-primary">
-                            <a href="<?php print render($content['field_link_card_4']['#items'][0]['url']); ?>">
-                                <?php print render($content['field_link_card_4']['#items'][0]['title']); ?>
-                            </a>
-                        </button>
+                        <a class="field-content btn btn-primary" href="<?php print render($content['field_link_card_4']['#items'][0]['url']); ?>">
+                            <?php print render($content['field_link_card_4']['#items'][0]['title']); ?>
+                        </a>
                     </p>
                 </div>
                 <?php endif; ?>

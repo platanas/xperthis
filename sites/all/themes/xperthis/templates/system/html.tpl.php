@@ -85,13 +85,13 @@
     <!-- End Google Tag Manager -->
 
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-576c5522c9272c0b"></script> 
-    <script>
-jQuery(function() {
-  jQuery.scrollDepth();
-});
- var addthis_config = {
-    data_ga_property: 'UA-123456-1'
- }; 
+<script>
+    jQuery(function() {
+        jQuery.scrollDepth();
+    });
+    var addthis_config = {
+       data_ga_property: 'UA-123456-1'
+    }; 
 </script>
 </head>
 <body<?php print $body_attributes; ?>>

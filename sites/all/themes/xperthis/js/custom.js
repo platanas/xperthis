@@ -127,24 +127,13 @@
                 }
             );
     
-            if ($('li .categories a').hasClass('active')) {
-                $('li:has(> .categories .active)').addClass("active");
+            if ($('li .categories').hasClass('active')) {
+                $('li .categories.active a').addClass("active");
             } else {            
                 $('li.all .categories a').addClass("active");
                 $('li.all').addClass("active");
             }
             
-           
-            
-            // Track submission events.
-            if ($('.block-e-book-download .webform-client-form').length) {
-                $('.block-e-book-download .webform-client-form').submit(function() {
-                    ga('send','event','Whitepaper','Download', $("input[name=form_id]"), 1);
-                });
-            }
-            
-             
-            if ($("#block-views-news-block-4").length) {
                 $("#block-views-news-block-4").cornerSlider({
                     showAtScrollingHeight : 800,
                     directionEffect       : "right",
@@ -156,10 +145,26 @@
                     //alert("Not to be seen again in the near future.");
                     //},
                 });
+            
+            // Track submission events.
+            if ($('.block-e-book-download .webform-client-form').length) {
+                $('.block-e-book-download .webform-client-form').submit(function() {
+                    ga('send','event','Whitepaper','Download', $("input[name=form_id]").val(), 1);
+                });
             }
+            
+             
+            
+           
+            
             if ($("#block-views-news-block-6").length) {
-                $("#block-views-news-block-6").insertAfter(".view-taxonomy-term .view-content .views-row-1");
-                $("#block-views-news-block-6").css('display', 'block');
+                if ($(".view-taxonomy-term .view-content .views-row-1").length) {
+                    $("#block-views-news-block-6").insertAfter(".view-taxonomy-term .view-content .views-row-1");
+                    $("#block-views-news-block-6").css('display', 'block');
+                } else {
+                    $("#block-views-news-block-6").insertAfter(".view-taxonomy-term .view-content .row article:nth-child(3)");
+                    $("#block-views-news-block-6").css('display', 'block');
+                }
             }
             //$(".webform-confirmation").insertAfter(".col-sm-8 .page-header");
             //$(".webform-confirmation").css('display', 'block');

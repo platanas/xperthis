@@ -90,27 +90,33 @@
     <?php endif; ?>
 
     <section<?php print $content_column_class; ?>>
-      <?php if (!empty($page['highlighted'])): ?>
-        <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-      <?php endif; ?>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if (!empty($title)): ?>
-        <h1 class="page-header"><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php if (!empty($tabs)): ?>
-        <?php print render($tabs); ?>
-      <?php endif; ?>
-      <?php if (!empty($page['help'])): ?>
-        <?php print render($page['help']); ?>
-      <?php endif; ?>
-      <?php if (!empty($action_links)): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
+    <?php if (!empty($page['highlighted'])): ?>
+      <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+    <?php endif; ?>
+    <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+    <a id="main-content"></a>
+    <?php print render($title_prefix); ?>
+    <?php if (!empty($title)): ?>
+      <h1 class="page-header"><?php print $title; ?></h1>
+    <?php endif; ?>
+    <?php print render($title_suffix); ?>
+    <?php print $messages; ?>
+    <?php if (!empty($tabs)): ?>
+      <?php print render($tabs); ?>
+    <?php endif; ?>
+    <?php if (!empty($page['help'])): ?>
+      <?php print render($page['help']); ?>
+    <?php endif; ?>
+    <?php if (!empty($action_links)): ?>
+      <ul class="action-links"><?php print render($action_links); ?></ul>
+    <?php endif; ?>
+    <div class="view view-taxonomy-term view-id-taxonomy_term view-display-id-page ">
+        <div class="view-content">
+            <div class="views-row row">
+                <?php print render($page['content']); ?>
+            </div>  
+        </div>              
+    </div>
     </section>
 
     <?php if (!empty($page['sidebar_second'])): ?>

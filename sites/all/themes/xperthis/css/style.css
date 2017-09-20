@@ -9136,7 +9136,9 @@ and open the template in the editor.
 .page-taxonomy .node-article .teasing a {
   color: #58afd6;
 }
-.view-display-id-block_6 .img-responsive {
+.page-actualites .img-responsive,
+.page-nieuws .img-responsive,
+.page-taxonomy .img-responsive {
   width: 100%;
 }
 /* TAGS BLOCS */
@@ -9184,6 +9186,9 @@ and open the template in the editor.
 /* TAGS BLOCS */
 #block-views-news-tags-block {
   margin-left: 10px;
+}
+#block-views-news-tags-block .active {
+  display: none;
 }
 #block-views-news-tags-block h2.block-title {
   font-weight: 300;
@@ -9240,6 +9245,11 @@ and open the template in the editor.
     Created on : 27-juin-2017, 9:27:32
     Author     : platanas
 */
+.modal .page-event .block-event-info h1 {
+  line-height: 30px;
+  font-size: 20px;
+  color: #fff;
+}
 #modalBackdrop,
 .modal-backdrop {
   background-color: #0d2537 !important;

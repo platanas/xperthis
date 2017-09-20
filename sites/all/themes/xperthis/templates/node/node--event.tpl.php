@@ -181,7 +181,7 @@
             <div class="modal-header popups-title">         
                 <span id="modal-title" class="modal-title">
                     <h2><?php print t('Subscribe'); ?></h2>
-                        <?php print '<h2 class="regular">'.render($content['field_title_event']).'</h2>'; ?></span>              
+                        <?php print '<h2 class="regular">'.strip_tags(render($content['field_title_event'])).'</h2>'; ?></span>              
                 <div class="clear-block"></div>      
             </div>
             <div class="modal-content">
