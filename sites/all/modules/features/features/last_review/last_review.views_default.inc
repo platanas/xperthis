@@ -490,7 +490,7 @@ function last_review_views_default_views() {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<p class="text-center"><a href="fr/taxonomy/term/all">Voir toutes les actualités</a></p>';
+  $handler->display->display_options['footer']['area']['content'] = '<p class="text-center"><a href="actualites/all">Voir toutes les actualités</a></p>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Champ: Contenu: Type */
@@ -1303,7 +1303,7 @@ function last_review_views_default_views() {
     t('Lire la suite >'),
     t('En savoir plus >'),
     t('Headline News Card'),
-    t('<p class="text-center"><a href="fr/taxonomy/term/all">Voir toutes les actualités</a></p>'),
+    t('<p class="text-center"><a href="actualites/all">Voir toutes les actualités</a></p>'),
     t('<p>[title]</p>'),
     t('Next Event bloc'),
     t('<div class="date-day">
@@ -1325,6 +1325,213 @@ function last_review_views_default_views() {
     t('Découvrir'),
   );
   $export['news'] = $view;
+
+  $view = new view();
+  $view->name = 'news_tags';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'taxonomy_term_data';
+  $view->human_name = 'News Tags';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Tags populaires';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  /* Relationship: Terme de taxonomie: Content with term */
+  $handler->display->display_options['relationships']['nid']['id'] = 'nid';
+  $handler->display->display_options['relationships']['nid']['table'] = 'taxonomy_index';
+  $handler->display->display_options['relationships']['nid']['field'] = 'nid';
+  $handler->display->display_options['relationships']['nid']['required'] = TRUE;
+  /* Champ: Terme de taxonomie: Nom */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_type'] = 'div';
+  $handler->display->display_options['fields']['name']['element_class'] = 'btn btn-default';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Filter criterion: Vocabulaire de taxonomie: Nom système */
+  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['value'] = array(
+    'tags' => 'tags',
+  );
+  /* Filter criterion: Contenu: Langue */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['relationship'] = 'nid';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
+
+  /* Display: Events tags Block */
+  $handler = $view->new_display('block', 'Events tags Block', 'block');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Étiquettes';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Terme de taxonomie: Nom */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'actualites/[name]';
+  $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['link_class'] = 'btn btn-default';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
+  /* Champ: Contenu: Langue */
+  $handler->display->display_options['fields']['language']['id'] = 'language';
+  $handler->display->display_options['fields']['language']['table'] = 'node';
+  $handler->display->display_options['fields']['language']['field'] = 'language';
+  $handler->display->display_options['fields']['language']['relationship'] = 'nid';
+  $handler->display->display_options['fields']['language']['label'] = '';
+  $handler->display->display_options['fields']['language']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['language']['element_label_colon'] = FALSE;
+  /* Champ: Terme de taxonomie: Nom */
+  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+  $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name_1']['field'] = 'name';
+  $handler->display->display_options['fields']['name_1']['label'] = '';
+  $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['name_1']['alter']['path'] = 'nieuws/[name]';
+  $handler->display->display_options['fields']['name_1']['alter']['replace_spaces'] = TRUE;
+  $handler->display->display_options['fields']['name_1']['alter']['path_case'] = 'lower';
+  $handler->display->display_options['fields']['name_1']['alter']['link_class'] = 'btn btn-default';
+  $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
+  /* Champ: Views: Views Conditional */
+  $handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['label'] = '';
+  $handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['views_conditional']['if'] = 'language';
+  $handler->display->display_options['fields']['views_conditional']['condition'] = '1';
+  $handler->display->display_options['fields']['views_conditional']['equalto'] = 'Français';
+  $handler->display->display_options['fields']['views_conditional']['then'] = '[name]';
+  $handler->display->display_options['fields']['views_conditional']['or'] = '[name_1]';
+  $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
+  $handler->display->display_options['block_description'] = 'Étiquettes';
+
+  /* Display: Catégories tags Block */
+  $handler = $view->new_display('block', 'Catégories tags Block', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '--aucun--';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Contenu: Langue */
+  $handler->display->display_options['fields']['language']['id'] = 'language';
+  $handler->display->display_options['fields']['language']['table'] = 'node';
+  $handler->display->display_options['fields']['language']['field'] = 'language';
+  $handler->display->display_options['fields']['language']['relationship'] = 'nid';
+  $handler->display->display_options['fields']['language']['label'] = '';
+  $handler->display->display_options['fields']['language']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['language']['element_label_colon'] = FALSE;
+  /* Champ: Terme de taxonomie: Nom */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'actualites/[name]';
+  $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_type'] = 'div';
+  $handler->display->display_options['fields']['name']['element_class'] = 'categories';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_default_classes'] = FALSE;
+  /* Champ: Terme de taxonomie: Nom */
+  $handler->display->display_options['fields']['name_1']['id'] = 'name_1';
+  $handler->display->display_options['fields']['name_1']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name_1']['field'] = 'name';
+  $handler->display->display_options['fields']['name_1']['label'] = '';
+  $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['name_1']['alter']['path'] = 'nieuws/[name]';
+  $handler->display->display_options['fields']['name_1']['alter']['replace_spaces'] = TRUE;
+  $handler->display->display_options['fields']['name_1']['alter']['path_case'] = 'lower';
+  $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;
+  /* Champ: Views: Views Conditional */
+  $handler->display->display_options['fields']['views_conditional']['id'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['table'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['field'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional']['label'] = '';
+  $handler->display->display_options['fields']['views_conditional']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['views_conditional']['if'] = 'language';
+  $handler->display->display_options['fields']['views_conditional']['condition'] = '1';
+  $handler->display->display_options['fields']['views_conditional']['equalto'] = 'Français';
+  $handler->display->display_options['fields']['views_conditional']['then'] = '[name]';
+  $handler->display->display_options['fields']['views_conditional']['or'] = '[name_1]';
+  $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Vocabulaire de taxonomie: Nom système */
+  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['value'] = array(
+    'categories' => 'categories',
+  );
+  /* Filter criterion: Contenu: Langue */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'node';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['relationship'] = 'nid';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
+  );
+  $handler->display->display_options['block_description'] = 'Catégories';
+  $translatables['news_tags'] = array(
+    t('Master'),
+    t('Tags populaires'),
+    t('more'),
+    t('Apply'),
+    t('Réinitialiser'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('nœud'),
+    t('Events tags Block'),
+    t('Étiquettes'),
+    t('Catégories tags Block'),
+    t('--aucun--'),
+    t('Catégories'),
+  );
+  $export['news_tags'] = $view;
 
   $view = new view();
   $view->name = 'products';

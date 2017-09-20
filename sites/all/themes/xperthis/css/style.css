@@ -9136,6 +9136,9 @@ and open the template in the editor.
 .page-taxonomy .node-article .teasing a {
   color: #58afd6;
 }
+.view-display-id-block_6 .img-responsive {
+  width: 100%;
+}
 /* TAGS BLOCS */
 #block-views-news-tags-block-1 .view-display-id-block_1 {
   background: url(../img/xperthis-categorie-bg.png) transparent repeat-y left top;

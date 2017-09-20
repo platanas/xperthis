@@ -25,6 +25,14 @@ function last_review_views_api($module = NULL, $api = NULL) {
  */
 function last_review_node_info() {
   $items = array(
+    'article' => array(
+      'name' => t('Article'),
+      'base' => 'node_content',
+      'description' => t('Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'domaine' => array(
       'name' => t('Domaine'),
       'base' => 'node_content',
@@ -45,6 +53,14 @@ function last_review_node_info() {
       'name' => t('Basic page'),
       'base' => 'node_content',
       'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'partner' => array(
+      'name' => t('Client'),
+      'base' => 'node_content',
+      'description' => t('Partner\'s logo'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',

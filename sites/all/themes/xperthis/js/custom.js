@@ -87,11 +87,13 @@
                         currentRow = random(x);
 
                     });
-                }, 4 * transition_time + waiting_time);
+                }, 4000);
 
                 // You can then stop the effect with:
                 //clearInterval(interval_id);
             }, 3000);
+            
+            
         $(document).ready(function () {
             $('.modal').on('shown.bs.modal', function() {
             $(this).find('[autofocus]').focus();
@@ -137,7 +139,7 @@
             // Track submission events.
             if ($('.block-e-book-download .webform-client-form').length) {
                 $('.block-e-book-download .webform-client-form').submit(function() {
-                    ga('send','event','Whitepaper','Download', 'ok', 1);
+                    ga('send','event','Whitepaper','Download', $("input[name=form_id]"), 1);
                 });
             }
             

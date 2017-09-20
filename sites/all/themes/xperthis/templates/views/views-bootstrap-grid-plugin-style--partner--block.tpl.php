@@ -31,6 +31,24 @@
         <?php 
         $counter++;
         endforeach ?>
+          <?php
+          if (($counter-1) % 4 != 0) {
+              //print ($counter-1)%4;
+              $restart=$counter;
+              for ($i=1;$i<=(4-($counter-1));$i++) {
+                  ?>
+              
+                  <div class="col col-lg-<?php print $column_type ?>">
+                    <div class="col-<?php print $restart ?>">
+                        
+            <?php print $column['content'] ?>
+                    </div>
+                    </div>
+              <?php
+              $restart++;
+              }
+          }
+          ?>
       </div>
         
 <div class="clearfix"></div>
