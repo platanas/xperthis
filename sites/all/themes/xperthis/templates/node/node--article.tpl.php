@@ -103,7 +103,7 @@
     hide($content['body']);
     
     
-    print '<p class="annotation">'. t('Published on').' '.date('d/m/Y', $node->published_at).' </p>';
+    print '<p class="annotation">'. t('Published on').' '.date('d/m/Y', $created).' </p>';
     print render($content);
   ?>
     <div class="addthis_sharing_toolbox"></div>

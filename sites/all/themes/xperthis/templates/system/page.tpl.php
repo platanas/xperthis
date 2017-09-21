@@ -113,6 +113,7 @@
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
       </div>
+      <div class="clearfix"></div>
       <?php print render($page['content']); ?>
     </section>
 

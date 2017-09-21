@@ -135,7 +135,7 @@
             }
             
                 $("#block-views-news-block-4").cornerSlider({
-                    showAtScrollingHeight : 800,
+                    showAtScrollingHeight : 1500,
                     directionEffect       : "right",
                     speedEffect           : 300,
                     right                 : 20,

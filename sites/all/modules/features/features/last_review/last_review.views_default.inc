@@ -1007,19 +1007,19 @@ function last_review_views_default_views() {
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['relationship'] = 'field_article_on_the_same_subjec_target_id';
   $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['max_length'] = '20';
+  $handler->display->display_options['fields']['title']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h4';
+  $handler->display->display_options['fields']['title']['element_type'] = 'p';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   /* Champ: Contenu: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['relationship'] = 'field_article_on_the_same_subjec_target_id';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['max_length'] = '40';
   $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
@@ -1395,7 +1395,7 @@ function last_review_views_default_views() {
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'actualites/[name]';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'news/tags/[name]';
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['link_class'] = 'btn btn-default';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
@@ -1417,7 +1417,7 @@ function last_review_views_default_views() {
   $handler->display->display_options['fields']['name_1']['label'] = '';
   $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['name_1']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name_1']['alter']['path'] = 'nieuws/[name]';
+  $handler->display->display_options['fields']['name_1']['alter']['path'] = 'news/tags/[name]';
   $handler->display->display_options['fields']['name_1']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name_1']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name_1']['alter']['link_class'] = 'btn btn-default';
@@ -1465,7 +1465,7 @@ function last_review_views_default_views() {
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['exclude'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['path'] = 'actualites/[name]';
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'news/categories/[name]';
   $handler->display->display_options['fields']['name']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
@@ -1481,7 +1481,7 @@ function last_review_views_default_views() {
   $handler->display->display_options['fields']['name_1']['label'] = '';
   $handler->display->display_options['fields']['name_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['name_1']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['name_1']['alter']['path'] = 'nieuws/[name]';
+  $handler->display->display_options['fields']['name_1']['alter']['path'] = 'news/categorieen/[name]';
   $handler->display->display_options['fields']['name_1']['alter']['replace_spaces'] = TRUE;
   $handler->display->display_options['fields']['name_1']['alter']['path_case'] = 'lower';
   $handler->display->display_options['fields']['name_1']['element_label_colon'] = FALSE;

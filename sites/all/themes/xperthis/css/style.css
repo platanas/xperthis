@@ -1117,6 +1117,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 .img-rounded {
   border-radius: 4px;
@@ -7643,6 +7644,13 @@ footer .region-blockgroup-sticky-footer-behind {
   color: #fff;
   z-index: -1;
 }
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+}
 @media (max-width: 992px) {
   body {
     margin-bottom: 677px;
@@ -7652,7 +7660,9 @@ footer .region-blockgroup-sticky-footer-behind {
   }
   #block-views-partner-block,
   #block-menu-menu-about,
-  #block-menu-menu-our-offer {
+  #block-menu-menu-our-offer,
+  #block-menu-menu-footer-3,
+  .copyright {
     display: none;
   }
 }
@@ -9057,6 +9067,12 @@ form#search-block-form {
     color: #dee8ee;
   }
 }
+@media (max-width: 992px) {
+  header#navbar .logo-container {
+    padding-left: 0px !important;
+    text-align: center;
+  }
+}
 /*
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -9324,7 +9340,7 @@ div.modal-forms-modal-content .modal-header .modal-title,
   overflow: hidden;
   /*Change to your own dimensions*/
   height: 150px;
-  width: 269px;
+  width: 360px;
   /*Change to your own colors*/
   border: 1px solid #b3b3b3;
   background: #efefef;
@@ -9334,6 +9350,9 @@ div.modal-forms-modal-content .modal-header .modal-title,
 }
 #block-views-news-block-4 img {
   margin: 0 5px;
+}
+#block-views-news-block-4 .img-responsive {
+  width: initial;
 }
 #block-views-news-block-4 h2 {
   font-size: 16px;
@@ -9352,6 +9371,7 @@ div.modal-forms-modal-content .modal-header .modal-title,
 #block-views-news-block-4 p {
   font-size: 14px;
   margin: 5px 0 0 5px;
+  font-weight: 500;
 }
 #block-views-news-block-4 .views-field-view-node {
   float: right;
