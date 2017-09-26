@@ -4,6 +4,13 @@
 // See around line 1330 in views_handler_field.inc.(drupal 7)
 
 function custom_views_onclick_views_pre_render(&$view) {
+        if (get_class($view->query->pager) == 'views_plugin_pager_full') {
+          $strings = array('next' , 'last', 'previous', 'first');
+          foreach ($strings as $string) {
+            $name = 'views:' . $view->name . ':' . $view->current_display . ':pager:tags:' . $string;
+            $view->query->pager->options['tags'][$string] = i18n_string($name, $view->query->pager->options['tags'][$string]);
+          }
+        }
     if ($view->name == 'products'){
         if ($view->current_display == 'homepage_products_block' && isset($view->field['field_hompage_icon'])) {
             //$attributes = array();

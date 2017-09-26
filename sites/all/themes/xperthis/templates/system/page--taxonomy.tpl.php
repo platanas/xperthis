@@ -112,7 +112,7 @@
     <?php endif; ?>
     <div class="view view-taxonomy-term view-id-taxonomy_term view-display-id-page ">
         <div class="view-content">
-            <div class="views-row row">
+            <div class="views-row ">
                 <?php print render($page['content']); ?>
             </div>  
         </div>              

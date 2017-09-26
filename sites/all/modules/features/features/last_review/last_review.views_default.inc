@@ -70,6 +70,7 @@ function last_review_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Contenu: Date -  start date (field_date) */
   $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
@@ -146,25 +147,6 @@ function last_review_views_default_views() {
   $handler->display->display_options['filters']['field_date_value_1']['form_type'] = 'date_text';
   $handler->display->display_options['filters']['field_date_value_1']['default_date'] = 'now -1 day';
   $handler->display->display_options['path'] = 'evenements-passes';
-  $translatables['events'] = array(
-    t('Master'),
-    t('Événements passés'),
-    t('more'),
-    t('Apply'),
-    t('Réinitialiser'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« premier'),
-    t('‹ précédent'),
-    t('suivant ›'),
-    t('dernier »'),
-    t('Page'),
-    t('Page past'),
-  );
   $export['events'] = $view;
 
   $view = new view();
@@ -968,7 +950,7 @@ function last_review_views_default_views() {
   /* Display: Pop up News */
   $handler = $view->new_display('block', 'Pop up News', 'block_4');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Article sur le même sujet';
+  $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
@@ -1047,7 +1029,7 @@ function last_review_views_default_views() {
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
   $handler->display->display_options['arguments']['tid']['relationship'] = 'field_tags_tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['tid']['exception']['title'] = 'Toutes les actualités';
+  $handler->display->display_options['arguments']['tid']['exception']['title'] = 'Tout';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = TRUE;
   $handler->display->display_options['arguments']['tid']['default_argument_options']['anyall'] = '+';
@@ -1064,7 +1046,7 @@ function last_review_views_default_views() {
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
   $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['nid']['exception']['title'] = 'Toutes les actualités';
+  $handler->display->display_options['arguments']['nid']['exception']['title'] = 'Tout';
   $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
@@ -1283,47 +1265,6 @@ function last_review_views_default_views() {
   $handler->display->display_options['filters']['field_display_on_news_list_headl_value']['value'] = array(
     1 => '1',
   );
-  $translatables['news'] = array(
-    t('Master'),
-    t('Headline News'),
-    t('Lire la suite'),
-    t('Apply'),
-    t('Réinitialiser'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('<span class="medium">A la une</span> <span class="light">chez Xperthis</span>'),
-    t('more'),
-    t('<div class="pixel-overlay"></div>
-[field_image]'),
-    t('<div class="date-day">[field_date]</div>'),
-    t('<div class="date-month">[field_date_1]</div>'),
-    t('[field_date][field_date_1]'),
-    t('Télécharger le whitepaper >'),
-    t('Lire la suite >'),
-    t('En savoir plus >'),
-    t('Headline News Card'),
-    t('<p class="text-center"><a href="actualites/all">Voir toutes les actualités</a></p>'),
-    t('<p>[title]</p>'),
-    t('Next Event bloc'),
-    t('<div class="date-day">
-[field_date]
-</div>
-<div class="date-month">
-[field_date_1]
-</div>'),
-    t('Programme et inscription >'),
-    t('Evénements à venir'),
-    t('last news bloc'),
-    t('Actualités récentes'),
-    t('Pop up News'),
-    t('Article sur le même sujet'),
-    t('term from field_tags'),
-    t('En savoir plus'),
-    t('Toutes les actualités'),
-    t('Highlighted E-book'),
-    t('Découvrir'),
-  );
   $export['news'] = $view;
 
   $view = new view();
@@ -1386,7 +1327,7 @@ function last_review_views_default_views() {
   /* Display: Events tags Block */
   $handler = $view->new_display('block', 'Events tags Block', 'block');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Étiquettes';
+  $handler->display->display_options['title'] = 'Tags';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Champ: Terme de taxonomie: Nom */
   $handler->display->display_options['fields']['name']['id'] = 'name';
@@ -1434,12 +1375,12 @@ function last_review_views_default_views() {
   $handler->display->display_options['fields']['views_conditional']['then'] = '[name]';
   $handler->display->display_options['fields']['views_conditional']['or'] = '[name_1]';
   $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
-  $handler->display->display_options['block_description'] = 'Étiquettes';
+  $handler->display->display_options['block_description'] = 'Tags';
 
   /* Display: Catégories tags Block */
   $handler = $view->new_display('block', 'Catégories tags Block', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = '--aucun--';
+  $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['style_options']['default_row_class'] = FALSE;
@@ -1515,22 +1456,6 @@ function last_review_views_default_views() {
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
   $handler->display->display_options['block_description'] = 'Catégories';
-  $translatables['news_tags'] = array(
-    t('Master'),
-    t('Tags populaires'),
-    t('more'),
-    t('Apply'),
-    t('Réinitialiser'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('nœud'),
-    t('Events tags Block'),
-    t('Étiquettes'),
-    t('Catégories tags Block'),
-    t('--aucun--'),
-    t('Catégories'),
-  );
   $export['news_tags'] = $view;
 
   $view = new view();
@@ -1686,17 +1611,6 @@ function last_review_views_default_views() {
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
   );
   $handler->display->display_options['path'] = 'products';
-  $translatables['products'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Réinitialiser'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('FR homepage_products_block'),
-    t('Products'),
-  );
   $export['products'] = $view;
 
   return $export;

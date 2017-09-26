@@ -7,9 +7,7 @@
  * @ingroup views_templates
  */
 ?>
-<?php if (!empty($title)): ?>
-  <h4><?php print $title; ?></h4>
-<?php endif; ?>
+  <h2 class="block-title"><?php print t('Article sur le même sujet'); ?></h2>
 <?php foreach ($rows as $id => $row): ?>
   <div<?php if ($classes_array[$id]) { print ' class="' . $classes_array[$id] .'"';  } ?>>
     <?php print $row; ?>
