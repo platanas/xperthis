@@ -1016,7 +1016,7 @@ function template_preprocess_mmenu(&$variables) {
       $subject = $mmenu_block['title'];
     }
     elseif (isset($block['subject'])) {
-      $subject = $block['subject'];
+      $subject = i18n_string(array('blocks', 'menu', $mmenu_block['delta'], 'title'),$block['subject']);
     }
     else {
       $subject = '';

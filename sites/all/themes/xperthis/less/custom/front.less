@@ -48,6 +48,7 @@ h1.lead {
         padding-top: 10px;
         margin-top: 0;
         line-height: 24px;
+        max-width: 225px;
     }
     .img-responsive {
         width: 73px;
@@ -91,6 +92,10 @@ h1.lead {
         height:250px;
         width:100%;
         overflow: hidden;
+        .img-responsive {
+            width: auto;
+            max-width: initial;
+        }
     }
 
     .view-id-news .views-field-title, 
@@ -511,7 +516,9 @@ footer.footer {
     
 }
 @media(min-width:992px){
-    
+  .front { 
+      margin-bottom:545px;
+  }
 }
 @media(max-width:1200px){
     h1.lead {

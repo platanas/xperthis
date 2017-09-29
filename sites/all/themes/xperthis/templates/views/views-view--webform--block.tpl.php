@@ -36,7 +36,7 @@ $lang_name = $language->language ;
       <?php print $rows; ?>
         <br />
         
-        <p class="white">ou <a class="white" href="<?php if ($language->language == 'nl') { print '/nl/node/29'; } else if ($language->language == 'fr') { print '/fr/node/29';} ?>"><?php print t('discover our approach'); ?></a></p>
+        <p class="white"><?php print t('or_webform_bloc') ?> <a class="white" href="<?php if ($language->language == 'nl') { print '/nl/node/29'; } else if ($language->language == 'fr') { print '/fr/node/29';} ?>"><?php print t('discover our approach'); ?></a></p>
     </div>
   <?php elseif ($empty): ?>
     <div class="view-empty">

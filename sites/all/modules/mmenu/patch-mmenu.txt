@@ -1,0 +1,11 @@
+--- a/mmenu.module	2016-05-09 22:28:26.000000000 +0100
++++ b/mmenu.module	2017-07-22 11:07:20.981495342 +0100
+@@ -1202,7 +1202,7 @@
+       $subject = $mmenu_block['title'];
+     }
+     elseif (isset($block['subject'])) {
+-      $subject = $block['subject'];
++      $subject = i18n_string(array('blocks', 'menu', $mmenu_block['delta'], 'title'),$block['subject']);
+     }
+     else {
+       $subject = '';

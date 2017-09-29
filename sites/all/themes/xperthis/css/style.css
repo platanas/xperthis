@@ -5,10 +5,10 @@
  * Modify this file to override the Bootstrap Framework variables. You can copy
  * these variables directly from ../bootstrap/less/variables.less to this file.
  */
+@import url('http://xperthis.com/sites/all/themes/xperthis/fonts/font-awesome/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import "../fonts/font-awesome/css/font-awesome.min.css";
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -259,8 +259,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('http://xperthis.com/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.eot');
+  src: url('http://xperthis.com/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('http://xperthis.com/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('http://xperthis.com/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.woff') format('woff'), url('http://xperthis.com/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('http://xperthis.com/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -8210,6 +8210,7 @@ h1.lead {
   padding-top: 10px;
   margin-top: 0;
   line-height: 24px;
+  max-width: 225px;
 }
 .homepage-icons-bg .img-responsive {
   width: 73px;
@@ -8253,6 +8254,10 @@ h1.lead {
   height: 250px;
   width: 100%;
   overflow: hidden;
+}
+#block-views-news-block .view-id-news .views-field-field-image .img-responsive {
+  width: auto;
+  max-width: initial;
 }
 #block-views-news-block .view-id-news .views-field-title,
 #block-views-news-block .view-id-news .views-field-body,
@@ -8654,6 +8659,11 @@ footer.footer #block-views-partner-block .view-id-partner .view-content .contain
   }
   .homepage-icons-bg:hover {
     background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+@media (min-width: 992px) {
+  .front {
+    margin-bottom: 545px;
   }
 }
 @media (max-width: 1200px) {
@@ -10302,4 +10312,18 @@ a.icon-after .glyphicon {
 .btn.icon-after .glyphicon {
   margin-left: .25em;
   margin-right: -0.25em;
+}
+/**
+ * Mmenu
+ */
+.mm-list a.mm-subopen:after,
+.mm-list a.mm-subclose:before {
+  bottom: 75% !important;
+}
+.mmenu-nav.mm-basic .mm-subopen::before,
+.mmenu-nav.mm-basic .mm-subclose::before {
+  border-left: 0;
+}
+.mm-list a.mm-subclose {
+  padding-top: 15px !important;
 }
