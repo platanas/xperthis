@@ -84,7 +84,6 @@
     })(window,document,'script','dataLayer','GTM-NK438KS');</script>
     <!-- End Google Tag Manager -->
 
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-576c5522c9272c0b"></script> 
 <script>
     jQuery(function() {
         jQuery.scrollDepth();
@@ -101,6 +100,8 @@
   <?php print $page_top; ?>
   <?php print $page; ?>
   <?php print $page_bottom; ?>
+  <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59809f776d8bfa17"></script> 
 </body>
 
 <div class="modal fade bannerformmodal" tabindex="-1" role="dialog" aria-labelledby="bannerformmodal" aria-hidden="true" id="bannerformmodal">

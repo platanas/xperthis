@@ -106,7 +106,7 @@
     print '<p class="annotation">'. t('Published on').' '.date('d/m/Y', $created).' </p>';
     print render($content);
   ?>
-    <div class="addthis_sharing_toolbox"></div>
+    <div class="addthis_inline_share_toolbox"></div>
   <?php
     print render($content['body']);
     // Only display the wrapper div if there are tags or links.
