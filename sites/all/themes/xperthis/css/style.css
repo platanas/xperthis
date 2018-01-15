@@ -5,7 +5,7 @@
  * Modify this file to override the Bootstrap Framework variables. You can copy
  * these variables directly from ../bootstrap/less/variables.less to this file.
  */
-@import url('http://xperthis.com/sites/all/themes/xperthis/fonts/font-awesome/css/font-awesome.min.css');
+@import url('/sites/all/themes/xperthis/fonts/font-awesome/css/font-awesome.min.css');
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -259,8 +259,8 @@ th {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('http://xperthis.com/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.eot');
-  src: url('http://xperthis.com/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('http://xperthis.com/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('http://xperthis.com/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.woff') format('woff'), url('http://xperthis.com/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('http://xperthis.com/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.eot');
+  src: url('/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/sites/all/themes/xperthis/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
